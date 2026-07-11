@@ -1,64 +1,35 @@
 # Academic Project Page Template
 
-> **Update (September 2025)**: This template has been modernized with better design, SEO, and mobile support. For the original version, see the [original-version branch](https://github.com/eliahuhorwitz/Academic-project-page-template/tree/original-version).
+## Configuration
 
-A clean, responsive template for academic project pages.
+### Fork this repo
 
+Click the top fork button to fork the repository.
 
-Example project pages built using this template are:
-- https://horwitz.ai/probex
-- https://vision.huji.ac.il/probegen
-- https://horwitz.ai/mother
-- https://horwitz.ai/spectral_detuning
-- https://vision.huji.ac.il/ladeda
-- https://vision.huji.ac.il/dsire
-- https://horwitz.ai/podd
-- https://dreamix-video-editing.github.io
-- https://horwitz.ai/conffusion
-- https://horwitz.ai/3d_ads/
-- https://vision.huji.ac.il/ssrl_ad
-- https://vision.huji.ac.il/deepsim
+Select a suitable name for the repository; for example, 'gpsfsm_2026' was used for the paper 'A Generative Partially Specified Finite State Machine Approach to Complex Behaviour Planning' published in 2026. This would appear as [https://collaborativeroboticslab.github.io/gpsfsm-2026/](https://collaborativeroboticslab.github.io/gpsfsm-2026/).
 
+## Publishing the page.
 
+Once the repository has been created, follow the instructions here about [publishing-from-a-branch](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site#publishing-from-a-branch)
 
-## Start using the template
-To start using the template click on `Use this Template`.
-
-The template uses html for controlling the content and css for controlling the style. 
-To edit the websites contents edit the `index.html` file. It contains different HTML "building blocks", use whichever ones you need and comment out the rest.  
-
-**IMPORTANT!** Make sure to replace the `favicon.ico` under `static/images/` with one of your own, otherwise your favicon is going to be a dreambooth image of me.
-
-## What's New
-
-- Modern, clean design with better mobile support
-- Improved SEO with proper meta tags and structured data
-- Performance improvements (lazy loading, optimized assets)
-- More Works dropdown
-- Copy button for BibTeX citations
-- Better accessibility
-
-## Components
-
-- Teaser video
-- Image carousel
-- YouTube video embedding
-- Video carousel
-- PDF poster viewer
-- BibTeX citation
+- Go to repo's `Settings` -> `Pages` (under `Code and automation` section)
+- Under `source` select `deploy from branch`
+- Under `branch` select `master` and then `/docs` option and press `save`
+- In a few minutes, you will get a new info box with "Your site is now live at..." with the link to the site.
 
 ## Customization
 
-The HTML file has TODO comments showing what to replace:
+The HTML file is at the `/docs/index.html` and has TODO comments showing what to replace:
 
 - Paper title, authors, institution, conference
 - Links (arXiv, GitHub, etc.)
-- Abstract and descriptions  
+- Abstract and descriptions
 - Videos, images, and PDFs
 - Related works in the dropdown
 - Meta tags for SEO and social sharing
 
 ### Meta Tags
+
 The template includes meta tags for better search engine visibility and social media sharing. These appear in the `<head>` section and help with:
 - Google Scholar indexing
 - Social media previews (Twitter, Facebook, LinkedIn)
