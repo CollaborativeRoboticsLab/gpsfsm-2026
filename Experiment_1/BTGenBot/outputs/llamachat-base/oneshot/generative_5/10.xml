@@ -1,0 +1,10 @@
+<root BTCPP_format="4">
+    <BehaviorTree ID="root">
+        <Sequence>
+            <Fallback>
+                <SubTree ID="visit_stations" />
+            </Fallback>
+            <SubTree ID="visit_stations" />
+        </Sequence>
+    </BehaviorTree>
+</root>

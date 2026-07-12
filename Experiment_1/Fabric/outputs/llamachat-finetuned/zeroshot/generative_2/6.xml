@@ -1,0 +1,8 @@
+<Plan ID="MainTree">
+    <Sequence>
+      <MoveBase goal="2.0;-0.5"/>
+      <MoveBase goal="0.0;2.0"/>
+      <MoveBase goal="-2.0;0.0"/>
+      <MoveBase goal="0.0;-2.0"/>
+    </Sequence>
+  </Plan>

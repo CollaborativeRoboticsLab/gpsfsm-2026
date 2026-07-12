@@ -1,0 +1,45 @@
+<root main_tree_to_execute="MainTree">
+    <BehaviorTree ID="MainTree">
+        <Sequence>
+           ; Visit StationA, StationE, StationF, StationD in order. If StationE
+           ; cannot be reached, move to StationB. If StationF cannot be
+           ; reached, move to StationC.
+            <Sequence>
+                <SubTree ID="StationA" />
+                <SubTree ID="StationE" />
+                <Fallback>
+                    <SubTree ID="StationF" />
+                    <SubTree ID="StationC" />
+                </Fallback>
+                <SubTree ID="StationD" />
+            </Sequence>
+        </Sequence>
+    </BehaviorTree>
+
+    <BehaviorTree ID="StationA">
+        <MoveToAction name="MoveTo" goal="1" />
+    </BehaviorTree>
+
+    <BehaviorTree ID="StationC">
+        <MoveToAction name="MoveTo" goal="8" />
+    </BehaviorTree>
+
+    <BehaviorTree ID="StationD">
+        <MoveToAction name="MoveTo" goal="9" />
+    </BehaviorTree>
+
+    <BehaviorTree ID="StationE">
+        <Fallback>
+            <Sequence>
+                <MoveToAction name="MoveTo" goal="4" />
+            </Sequence>
+            <Sequence>
+                <MoveToAction name="MoveTo" goal="2" />
+            </Sequence>
+        </Fallback>
+    </BehaviorTree>
+
+    <BehaviorTree ID="StationF">
+        <MoveToAction name="MoveTo" goal="7" />
+    </BehaviorTree>
+</root>

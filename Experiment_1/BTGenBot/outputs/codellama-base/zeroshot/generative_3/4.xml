@@ -1,0 +1,25 @@
+<root main_tree_to_execute="MainTree">
+    <BehaviorTree ID="MainTree">
+        <Sequence name="root_sequence">
+            <!-- UtilityNode will always return "FAILURE" if "StationE" is not provided as input -->
+            <UtilityNode ID="UtilityNode1">
+                <Fallback>
+                    <Sequence name="Sequence1">
+                        <Action ID="MoveTo" goal="StationA"/>
+                    </Sequence>
+                    <Sequence name="Sequence2">
+                        <Action ID="MoveTo" goal="StationE"/>
+                    </Sequence>
+                </Fallback>
+            </UtilityNode>
+            <Action ID="MoveTo" goal="StationC"/>
+            <Action ID="MoveTo" goal="StationD"/>
+            <Action ID="MoveTo" goal="StationB"/>
+        </Sequence>
+    </BehaviorTree>
+    <TreeNodesModel>
+        <Action ID="MoveTo">
+            <inout_port default="0" name="goal">StationA, StationB, StationC, StationD, StationE</inout_port>
+        </Action>
+    </TreeNodesModel>
+</root>

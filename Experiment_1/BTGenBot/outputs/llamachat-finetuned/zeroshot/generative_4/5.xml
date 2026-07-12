@@ -1,0 +1,52 @@
+<root main_tree_to_execute="MainTree">
+    <BehaviorTree ID="MainTree">
+        <Sequence>
+           ; Visit Stations in sequence
+            <SubTree ID="StationA" />
+            <SubTree ID="StationE" fallback="StationB" />
+            <SubTree ID="StationF" fallback="StationC" />
+            <SubTree ID="StationD" />
+        </Sequence>
+    </BehaviorTree>
+
+    <BehaviorTree ID="StationA">
+        <Sequence>
+            <MoveTo goal="1.258;2.023" />
+        </Sequence>
+    </BehaviorTree>
+
+    <BehaviorTree ID="StationB">
+        <Sequence>
+            <MoveTo goal="0.985;2.183" />
+        </Sequence>
+    </BehaviorTree>
+
+    <BehaviorTree ID="StationC">
+        <Sequence>
+            <MoveTo goal="0.723;2.276" />
+        </Sequence>
+    </BehaviorTree>
+
+    <BehaviorTree ID="StationD">
+        <Sequence>
+            <MoveTo goal="1.061;2.353" />
+        </Sequence>
+    </BehaviorTree>
+
+    <BehaviorTree ID="StationE">
+        <Fallback>
+            <Sequence>
+                <MoveTo goal="0.989;2.061" />
+            </Sequence>
+            <Sequence>
+                <MoveTo goal="0.723;2.276" />
+            </Sequence>
+        </Fallback>
+    </BehaviorTree>
+
+    <BehaviorTree ID="StationF">
+        <Sequence>
+            <MoveTo goal="1.455;2.343" />
+        </Sequence>
+    </BehaviorTree>
+</root>

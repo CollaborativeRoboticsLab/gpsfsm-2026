@@ -1,0 +1,8 @@
+<Plan ID="MainTree">
+        <Sequence>
+            <!-- <ApplyNamedAction name="moveRobot" action="moveRobot" x="2.0" y="-0.5" /> -->
+            <ApplyNamedAction name="moveRobot" action="moveRobot" x="1.0" y="3.0" />
+            <!-- <ApplyNamedAction name="moveRobot" action="moveRobot" x="-3.0" y="-1.0" /> -->
+            <ApplyNamedAction name="moveRobot" action="moveRobot" x="0.0" y="-2.0" />
+        </Sequence>
+    </Plan>

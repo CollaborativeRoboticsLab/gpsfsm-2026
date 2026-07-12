@@ -1,0 +1,13 @@
+<Plan ID="MainTree">
+    <Sequence>
+      <RetryUntilSuccesful num_attempts="2" name="Move through waypoints">
+        <Sequence>
+          <SubTree ID="moveTo2" target="2.0;-0.5" />
+        </Sequence>
+      </RetryUntilSuccesful>
+
+      <SubTree ID="moveTo3" target="1.0;3.0" />
+      <SubTree ID="moveTo4" target="-3.0;-1.0" />
+      <SubTree ID="moveTo1" target="0.0;-2.0" />
+    </Sequence>
+  </Plan>

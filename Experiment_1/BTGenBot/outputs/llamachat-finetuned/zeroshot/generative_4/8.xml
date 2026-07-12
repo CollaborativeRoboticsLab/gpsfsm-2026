@@ -1,0 +1,20 @@
+<root main_tree_to_execute = "MainTree" >
+    <BehaviorTree ID="MainTree">
+        <Sequence>
+            <!-- StationA, StationE, StationF, StationD in sequence -->
+            <SubTree ID="SubTree" />
+            <SubTree ID="SubTree" />
+            <SubTree ID="SubTree" />
+            <SubTree ID="SubTree" />
+            <!-- if StationE cannot be reached, move to StationB, if StationF cannot be reached move to StationC -->
+            <Fallback name="Fallback1">
+                <Sequence>
+                    <SubTree ID="SubTree" />
+                </Sequence>
+                <Sequence>
+                    <SubTree ID="SubTree" />
+                </Sequence>
+            </Fallback>
+        </Sequence>
+    </BehaviorTree>
+ </root>

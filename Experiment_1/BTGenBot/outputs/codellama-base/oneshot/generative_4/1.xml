@@ -1,0 +1,16 @@
+<root main_tree_to_execute="BehaviorTree">
+        <BehaviorTree ID="BehaviorTree">
+            <Sequence>
+                <Fallback>
+                    <SubTree ID="MoveTo" name="go_to_station_A" location="StationA"/>
+                    <SubTree ID="MoveTo" name="go_to_station_B" location="StationB"/>
+                </Fallback>
+                <SubTree ID="MoveTo" name="go_to_station_E" location="StationE"/>
+                <Fallback>
+                    <SubTree ID="MoveTo" name="go_to_station_F" location="StationF"/>
+                    <SubTree ID="MoveTo" name="go_to_station_C" location="StationC"/>
+                </Fallback>
+                <SubTree ID="MoveTo" name="go_to_station_D" location="StationD"/>
+            </Sequence>
+        </BehaviorTree>
+    </root>

@@ -1,0 +1,9 @@
+<Plan ID="MainTree">
+    <Control type="sequential" name="name_of_flow">
+      <Fallback>
+        <Sequence>
+          <MoveBase goal="2.0,-0.5" />
+        </Sequence>
+      </Fallback>
+    </Control>
+  </Plan>

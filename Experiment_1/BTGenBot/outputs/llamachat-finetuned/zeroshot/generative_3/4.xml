@@ -1,0 +1,41 @@
+<root main_tree_to_execute="MainTree">
+    <BehaviorTree ID="MainTree">
+        <Sequence>
+            <!-- Pinged once -->
+            <SubTree ID="StationA" />
+
+            <!-- Pinged twice -->
+            <SubTree ID="StationE" fallback_action="MoveTo" ID_of_action="MoveTo" />
+            <SubTree ID="StationC" />
+
+            <!-- Pinged 3 times -->
+            <SubTree ID="StationD" />
+            <SubTree ID="StationB" />
+        </Sequence>
+    </BehaviorTree>
+
+    <BehaviorTree ID="StationA">
+        <Action ID="MoveTo" goal="0.579;-1.344;" />
+    </BehaviorTree>
+
+    <BehaviorTree ID="StationB">
+        <Action ID="MoveTo" goal="0;0;" />
+    </BehaviorTree>
+
+    <BehaviorTree ID="StationC">
+        <Action ID="MoveTo" goal="0.708;-0.567;" />
+    </BehaviorTree>
+
+    <BehaviorTree ID="StationD">
+        <Action ID="MoveTo" goal="-0.984;0.374;" />
+    </BehaviorTree>
+
+    <BehaviorTree ID="StationE">
+        <Fallback>
+            <Action ID="MoveTo" goal="-0.347;1.557;" />
+            <ForceFailure>
+                <Action ID="MoveTo" goal="-0.984;0.374;" />
+            </ForceFailure>
+        </Fallback>
+    </BehaviorTree>
+</root>

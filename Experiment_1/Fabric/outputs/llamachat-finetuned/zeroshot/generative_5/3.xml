@@ -1,0 +1,5 @@
+<Plan ID="stay_at_orientation_plan">
+        <Sequence name="stay_at_orientation_sequence">
+            <Nav2PreCheck goal="1.0;0.0;0.0;0.0;1.57" />
+        </Sequence>
+    </Plan>

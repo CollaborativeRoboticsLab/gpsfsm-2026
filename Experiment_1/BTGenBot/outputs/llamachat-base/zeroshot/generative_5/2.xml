@@ -1,0 +1,55 @@
+<root main_tree_to_execute = "MainTree" >
+    <BehaviorTree ID="MainTree">
+        <Sequence>
+            <Fallback name="root_Fallback">
+                <Sequence name="station_A_and_B">
+                    <SubTree ID="StationA" />
+                    <SubTree ID="StationB" />
+                </Sequence>
+                <Sequence name="station_E_and_C">
+                    <SubTree ID="StationE" />
+                    <SubTree ID="StationC" />
+                </Sequence>
+                <Sequence name="station_F_and_D">
+                    <SubTree ID="StationF" />
+                    <SubTree ID="StationD" />
+                </Sequence>
+            </Fallback>
+        </Sequence>
+    </BehaviorTree>
+
+    <BehaviorTree ID="StationA">
+        <Sequence>
+            <MoveTo goal="-4.5,-4" />
+        </Sequence>
+    </BehaviorTree>
+
+    <BehaviorTree ID="StationB">
+        <Sequence>
+            <MoveTo goal="4,4" />
+        </Sequence>
+    </BehaviorTree>
+
+    <BehaviorTree ID="StationC">
+        <Sequence>
+            <MoveTo goal="-6,6" />
+        </Sequence>
+    </BehaviorTree>
+
+    <BehaviorTree ID="StationD">
+        <Sequence>
+            <MoveTo goal="6,-6" />
+        </Sequence>
+    </BehaviorTree>
+
+    <BehaviorTree ID="StationE">
+        <Sequence>
+            <MoveTo goal="4,-4" />
+        </Sequence>
+    </BehaviorTree>
+
+    <BehaviorTree ID="MoveTo">
+        <Action ID="MoveTo" goal="{goal}" />
+    </BehaviorTree>
+
+</root>

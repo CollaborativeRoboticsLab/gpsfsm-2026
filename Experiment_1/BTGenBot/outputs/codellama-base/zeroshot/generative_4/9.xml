@@ -1,0 +1,37 @@
+<root main_tree_to_execute="MainTree">
+    <!-- ////////// -->
+    <BehaviorTree ID="MainTree">
+        <Sequence name="root_sequence">
+            <Fallback>
+                <Sequence>
+                    <Action ID="MoveTo" goal="StationA"/>
+                </Sequence>
+                <Sequence>
+                    <Fallback>
+                        <Sequence>
+                            <Action ID="MoveTo" goal="StationE"/>
+                        </Sequence>
+                        <Sequence>
+                            <Action ID="MoveTo" goal="StationB"/>
+                        </Sequence>
+                    </Fallback>
+                    <Fallback>
+                        <Sequence>
+                            <Action ID="MoveTo" goal="StationF"/>
+                        </Sequence>
+                        <Sequence>
+                            <Action ID="MoveTo" goal="StationC"/>
+                        </Sequence>
+                    </Fallback>
+                </Sequence>
+            </Fallback>
+        </Sequence>
+    </BehaviorTree>
+    <!-- ////////// -->
+    <TreeNodesModel>
+        <Action ID="MoveTo">
+            <input_port name="goal"/>
+        </Action>
+    </TreeNodesModel>
+    <!-- ////////// -->
+</root>

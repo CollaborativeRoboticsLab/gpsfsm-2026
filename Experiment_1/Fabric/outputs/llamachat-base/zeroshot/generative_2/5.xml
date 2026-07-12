@@ -1,0 +1,8 @@
+<Plan ID="MainTree">
+    <Sequence>
+      <Control ID="moveTo2" Coord="2;-0.5" />
+      <Control ID="moveTo2" Coord="0;2" />
+      <Control ID="moveTo2" Coord="-2;0" />
+      <Control ID="moveTo2" Coord="0;-2" />
+    </Sequence>
+  </Plan>

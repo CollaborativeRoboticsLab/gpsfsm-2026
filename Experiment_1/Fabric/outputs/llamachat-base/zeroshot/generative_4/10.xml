@@ -1,0 +1,27 @@
+<Plan ID="MainTree">
+        <Sequence name="move_to_locations">
+            <!-- Move to (2.0, -0.5) -->
+            <ApplyNodeName name="move" goal="2.0;-0.5"/>
+            <!-- Move to (1.0, 3.0) -->
+            <CheckBlackboard input="1.0" compare_to="0.0">
+                <ApplyNodeName name="move" goal="1.0;3.0"/>
+            </CheckBlackboard>
+            <!-- Move to (-3.0, -1.0) -->
+            <CheckBlackboard input="-3.0" compare_to="0.0">
+                <ApplyNodeName name="move" goal="-3.0;-1.0"/>
+            </CheckBlackboard>
+            <!-- Move to (0.0, -2.0) if (1.0, 3.0) cannot be reached -->
+            <Fallback>
+                <CheckBlackboard input="1.0" compare_to="0.0">
+                    <ApplyNodeName name="move" goal="0.0;-2.0"/>
+                </CheckBlackboard>
+                <CheckBlackboard input="1.0" compare_to="0.0">
+                    <ApplyNodeName name="move" goal="1.0;3.0"/>
+                </CheckBlackboard>
+            </Fallback>
+            <!-- Move to (-2.0, 0.0) if (-3.0, -1.0) cannot be reached -->
+            <CheckBlackboard input="-3.0" compare_to="0.0">
+                <ApplyNodeName name="move" goal="-2.0;0.0"/>
+            </CheckBlackboard>
+        </Sequence>
+    </Plan>

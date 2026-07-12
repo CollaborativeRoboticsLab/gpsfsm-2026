@@ -1,0 +1,6 @@
+<Plan ID="MoveToWp4">
+    <Sequence name="Move to (0, -2)">
+      <CheckBlackboard input="wp_goal" output="wp_goal"/>
+      <Nav2AroundPoint pose=wp_goal/>
+    </Sequence>
+  </Plan>

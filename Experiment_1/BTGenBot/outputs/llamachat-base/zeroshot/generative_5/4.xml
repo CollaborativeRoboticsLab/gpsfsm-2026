@@ -1,0 +1,33 @@
+<root main_tree_to_execute = "MainTree" >
+    <BehaviorTree ID="MainTree">
+        <Sequence>
+            <!-- StationA, StationE, StationF, StationD in order -->
+            <Fallback>
+                <Sequence>
+                    <Sequence>
+                        <GetPathToPosition action="MoveTo" target="StationA" />
+                        <MoveTo action="MoveTo" target="StationA" />
+                    </Sequence>
+                    <Sequence>
+                        <GetPathToPosition action="MoveTo" target="StationE" />
+                        <MoveTo action="MoveTo" target="StationE" />
+                    </Sequence>
+                    <Sequence>
+                        <GetPathToPosition action="MoveTo" target="StationF" />
+                        <MoveTo action="MoveTo" target="StationF" />
+                    </Sequence>
+                    <Sequence>
+                        <GetPathToPosition action="MoveTo" target="StationD" />
+                        <MoveTo action="MoveTo" target="StationD" />
+                    </Sequence>
+                    <ForceFailure>
+                        <Sequence>
+                            <GetPathToPosition action="MoveTo" target="StationB" />
+                            <MoveTo action="MoveTo" target="StationB" />
+                        </Sequence>
+                    </ForceFailure>
+                </Sequence>
+            </Fallback>
+        </Sequence>
+    </BehaviorTree>
+</root>

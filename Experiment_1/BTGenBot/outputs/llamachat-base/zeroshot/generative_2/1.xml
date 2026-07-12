@@ -1,0 +1,16 @@
+<root main_tree_to_execute = "MainTree" >
+    <BehaviorTree ID="MainTree">
+        <Sequence>
+            <SetBlackboard output_key="stationA" value="0.00;0.00;0.0;1.0" />
+            <SetBlackboard output_key="stationB" value="0.50;0.50;0.0;1.0" />
+            <SetBlackboard output_key="stationC" value="1.00;1.00;0.0;1.0" />
+            <SetBlackboard output_key="stationD" value="1.50;0.00;0.0;1.0" />
+            <Sequence>
+                <Action ID="MoveTo" goal="stationA" />
+                <Action ID="MoveTo" goal="stationB" />
+                <Action ID="MoveTo" goal="stationC" />
+                <Action ID="MoveTo" goal="stationD" />
+            </Sequence>
+        </Sequence>
+    </BehaviorTree>
+ </root>

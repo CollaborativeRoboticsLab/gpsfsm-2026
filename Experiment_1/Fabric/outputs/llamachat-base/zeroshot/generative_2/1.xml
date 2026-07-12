@@ -1,0 +1,38 @@
+<Plan ID="MainTree">
+    <Control type="parallel_any" name="name_of_flow">
+      <Fallback>
+        <Sequence>
+          <RetryUntilSuccesful num_attempts="2" until_succesful="false">
+            <Sequence>
+              <MoveBase goal="2.0 -0.5" />
+            </Sequence>
+          </RetryUntilSuccesful>
+          <MoveBase goal="0.0 2.0" />
+          <MoveBase goal="-2.0 0.0" />
+          <MoveBase goal="0.0 -2.0" />
+        </Sequence>
+      </Fallback>
+    </Control>
+    <Control type="parallel_all" name="name_of_flow">
+      <Fallback>
+        <Sequence>
+          <MoveBase goal="2.0 -0.5" />
+          <MoveBase goal="0.0 2.0" />
+          <MoveBase goal="-2.0 0.0" />
+          <MoveBase goal="0.0 -2.0" />
+        </Sequence>
+      </Fallback>
+    </Control>
+    <Control type="recovery" name="name_of_flow">
+      <Fallback>
+        <Sequence>
+          <MoveBase goal="2.0 -0.5" />
+          <MoveBase goal="0.0 2.0" />
+          <MoveBase goal="-2.0 0.0" />
+        </Sequence>
+        <Sequence>
+          <SetBlackboard value="0" output_key="bt_value" />
+        </Sequence>
+      </Fallback>
+    </Control>
+  </Plan>

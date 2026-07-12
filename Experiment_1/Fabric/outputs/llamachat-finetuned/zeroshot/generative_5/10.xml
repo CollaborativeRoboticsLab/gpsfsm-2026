@@ -1,0 +1,25 @@
+<Plan ID="MainTree">
+        <Sequence name="move_to_coords">
+            <!-- If (2.0, -0.5) cannot be reached -->
+            <Fallback name="move_to_coords_fallback">
+                <!-- If (1.0, 3.0) cannot be reached -->
+                <Fallback name="move_to_coords_fallback_2">
+                    <!-- If (-3.0, -1.0) cannot be reached -->
+                    <Fallback name="move_to_coords_fallback_3">
+                        <!-- If (0.0, -2.0) cannot be reached -->
+                        <MoveBase distance="5.0"/>
+                    </Fallback>
+                </Fallback>
+                <!-- If (0.0, 2.0) cannot be reached -->
+                <MoveBase distance="5.0"/>
+            </Fallback>
+            <!-- If (2.0, -0.5) can be reached -->
+            <MoveBase distance="2.0"/>
+            <!-- If (1.0, 3.0) can be reached -->
+            <MoveBase distance="3.0"/>
+            <!-- If (-3.0, -1.0) can be reached -->
+            <MoveBase distance="-3.0"/>
+            <!-- If (0.0, -2.0) can be reached -->
+            <MoveBase distance="-2.0"/>
+        </Sequence>
+    </Plan>

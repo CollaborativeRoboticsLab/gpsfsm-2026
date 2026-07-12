@@ -1,0 +1,7 @@
+<Plan ID="MoveTo13" name="Move to specific coordinates">
+        <PoseTargetAction 
+            name="Move to" 
+            pose_goal="1.0;0.5;0.0;0.0" 
+            vehicle_name="robot" 
+            group_name="g1"/>
+    </Plan>

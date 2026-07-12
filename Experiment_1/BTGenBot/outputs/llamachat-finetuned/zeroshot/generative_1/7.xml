@@ -1,0 +1,9 @@
+<root main_tree_to_execute = "MainTree" >
+    <BehaviorTree ID="MainTree">
+        <Sequence>
+            <SetBlackboard output_key="station_a" value="-4.3,-4,180.0" />
+            <MoveTo name="MoveTo"
+                    goal="${station_a}"/>
+        </Sequence>
+    </BehaviorTree>
+</root>

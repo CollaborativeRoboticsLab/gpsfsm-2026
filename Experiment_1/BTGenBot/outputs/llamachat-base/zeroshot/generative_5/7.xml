@@ -1,0 +1,29 @@
+<root main_tree_to_execute="MainTree">
+    <BehaviorTree ID="MainTree">
+        <Sequence>
+            <!-- StationA, StationE, StationF, StationD in order -->
+            <Fallback>
+                <Sequence>
+                    <GetPoseFromNav2 goal="StationA" />
+                    <MoveTo goal="{pose}" />
+                </Sequence>
+                <Sequence>
+                    <GetPoseFromNav2 goal="StationE" />
+                    <MoveTo goal="{pose}" />
+                </Sequence>
+                <Sequence>
+                    <GetPoseFromNav2 goal="StationF" />
+                    <MoveTo goal="{pose}" />
+                </Sequence>
+                <Sequence>
+                    <GetPoseFromNav2 goal="StationD" />
+                    <MoveTo goal="{pose}" />
+                </Sequence>
+            </Fallback>
+            <Sequence>
+                <GetPoseFromNav2 goal="StationB" />
+                <MoveTo goal="{pose}" />
+            </Sequence>
+        </Sequence>
+    </BehaviorTree>
+</root>

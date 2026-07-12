@@ -1,0 +1,29 @@
+<root BTCPP_format="4">
+    <BehaviorTree ID="BehaviorTree">
+        <Sequence>
+            <SetBlackboard output_key="StationA" value="0.0;0.0;0.0" />
+            <SetBlackboard output_key="StationB" value="0.0;0.0;1.0" />
+            <SetBlackboard output_key="StationC" value="0.0;0.0;2.0" />
+            <SetBlackboard output_key="StationD" value="0.0;0.0;3.0" />
+            <SetBlackboard output_key="StationE" value="0.0;0.0;4.0" />
+            <SetBlackboard output_key="StationF" value="0.0;0.0;5.0" />
+            <Fallback>
+                <Sequence>
+                    <MoveTo name="go_to_station_A" location="StationA" />
+                    <ForceFailure>
+                        <Sequence>
+                            <MoveTo name="go_to_station_E" location="StationE" />
+                        </Sequence>
+                        <MoveTo name="go_to_station_F" location="StationF" />
+                    </ForceFailure>
+                </Sequence>
+                <Sequence>
+                    <MoveTo name="go_to_station_E" location="StationE" />
+                    <MoveTo name="go_to_station_F" location="StationF" />
+                    <MoveTo name="go_to_station_D" location="StationD" />
+                </Sequence>
+            </Fallback>
+            <MoveTo name="go_to_station_B" location="StationB" />
+        </Sequence>
+    </BehaviorTree>
+</root>

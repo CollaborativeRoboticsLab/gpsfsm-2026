@@ -1,68 +1,35 @@
-# Academic Project Page Template
+# Fabric vs BTGenBot comparison
 
-## Configuration
+This repository contains the experiments designed and executed to evaluate the properties of the Fabric.
 
-### Fork this repo
+## **Experiment 1** 
 
-Click the top fork button to fork the repository.
+Experiment 1 was designed to compare the generative properties of the Fabric against BTGenBot. All the source code required to test the system are linked within the `Experiment_1` folder with instructions.
 
-Select a suitable name for the repository that includes the year in which the paper was published.
+### Results
 
-For example, 'gpsfsm-2026' was used as the repo name for the paper 'A Generative Partially Specified Finite State Machine Approach to Complex Behaviour Planning' published in 2026. This would appear as [https://collaborativeroboticslab.github.io/gpsfsm-2026/](https://collaborativeroboticslab.github.io/gpsfsm-2026/).
+#### Test 1
 
-This is required to avoid conflicts with other navigation links under the same GitHub Pages organization, in our case [https://collaborativeroboticslab.github.io/](https://collaborativeroboticslab.github.io/).
+![Test 1](./Experiment_1/docs/1.png)
 
-## Publishing the page.
+#### Test 2
 
-Once the repository has been created, follow the instructions here about [publishing-from-a-branch](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site#publishing-from-a-branch)
+![Test 2](./Experiment_1/docs/2.png)
 
-To summarize the steps:
+#### Test 3
 
-- Go to repo's `Settings` -> `Pages` (under `Code and automation` section)
-- Under `source` select `deploy from branch`
-- Under `branch` select `main` and then `/docs` option and press `save`
-- In a few minutes, you will get a new info box with "Your site is now live at..." with the link to the site.
+![Test 3](./Experiment_1/docs/3.png)
 
-## Customization
+#### Test 4
 
-## `index.html`
+![Test 4](./Experiment_1/docs/4.png)
 
-The HTML file is the main file and is at [`/docs/index.html`](./docs/index.html) and has TODO comments showing what to replace:
+#### Test 5
 
-- Paper title, authors, institution, conference
-- Links (arXiv, GitHub, etc.)
-- Abstract and descriptions
-- Videos, images, and PDFs
-- Related works in the dropdown
-- Meta tags for SEO and social sharing
+![Test 5](./Experiment_1/docs/5.png)
 
-The template includes meta tags for better search engine visibility and social media sharing. These appear in the `<head>` section and help with:
+## **Experiment 2**
 
-- Google Scholar indexing
-- Social media previews (Twitter, Facebook, LinkedIn)
-- Search engine optimization
+Experiment 2 was designed to orchestrate complex behaviour planning using Fabric and was developed for the IROS2026 paper. All the source code required to test the system are linked within the `Experiment_2` folder with instructions.
 
-## ReadME.md
-
-Replace this file with information about the paper as well as any setup and run instructions.
-
-## Additional Content
-
-You can also add additional content such as images, logs and results as separate files or folders. But do not rename or change the `docs` folder.
-
-Remember to link new content in the `index.html` file so that it is accessible from the main page.
-
-## Tips
-
-- Compress images with [TinyPNG](https://tinypng.com)
-- Use YouTube for large videos (>10MB)  
-- Replace the favicon in `static/images/`
-- Works with GitHub Pages
-
-## Acknowledgments
-
-Parts of this project page were adopted from the [Nerfies](https://nerfies.github.io/) page.
-
-## Website License
-
-<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+> Please note that the software used in Experiment 2 is a newer version compared to Experiment 1, resulting in minor changes in syntax between the two experiments.

@@ -1,0 +1,31 @@
+<root main_tree_to_execute="MainTree">
+    <BehaviorTree ID="MainTree">
+        <Sequence>
+            <!-- StationA, StationE, StationC, StationD are known -->
+            <SubTree ID="VisitStations" />
+            <!-- StationB is an alternative if StationE cannot be reached -->
+            <Sequence>
+                <SubTree ID="VisitStations" />
+            </Sequence>
+        </Sequence>
+    </BehaviorTree>
+
+    <BehaviorTree ID="VisitStations">
+        <Fallback>
+            <ForceFailure>
+                <Action ID="MoveTo" goal="StationE" />
+            </ForceFailure>
+            <Sequence>
+                <Action ID="MoveTo" goal="StationA" />
+                <Action ID="MoveTo" goal="StationC" />
+                <Action ID="MoveTo" goal="StationD" />
+            </Sequence>
+        </Fallback>
+    </BehaviorTree>
+
+    <TreeNodesModel>
+        <Action ID="MoveTo">
+            <input_port name="goal">Default: StationA, StationC, StationD, StationE</input_port>
+        </Action>
+    </TreeNodesModel>
+</root>

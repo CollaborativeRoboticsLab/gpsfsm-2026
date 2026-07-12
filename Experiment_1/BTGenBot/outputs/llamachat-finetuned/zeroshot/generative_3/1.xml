@@ -1,0 +1,32 @@
+<root main_tree_to_execute="MainTree">
+    <BehaviorTree ID="MainTree">
+        <Sequence>
+            <!-- StationA, StationE, StationC, StationD in sequence -->
+            <SubTree ID="VisitStations" />
+        </Sequence>
+    </BehaviorTree>
+
+    <BehaviorTree ID="VisitStations">
+        <Fallback>
+            <!-- If StationE cannot be reached, move to StationB -->
+            <Sequence>
+                <SubTree ID="MoveToStationE" />
+            </Sequence>
+            <Sequence>
+                <Action ID="MoveTo" goal="StationA" />
+                <Action ID="MoveTo" goal="StationC" />
+                <Action ID="MoveTo" goal="StationD" />
+            </Sequence>
+        </Fallback>
+    </BehaviorTree>
+
+    <BehaviorTree ID="MoveToStationE">
+        <Action ID="MoveTo" goal="StationE" />
+    </BehaviorTree>
+
+    <TreeNodesModel>
+        <Action ID="MoveTo">
+            <input_port name="goal"/>
+        </Action>
+    </TreeNodesModel>
+</root>

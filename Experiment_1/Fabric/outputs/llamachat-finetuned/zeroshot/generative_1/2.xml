@@ -1,0 +1,7 @@
+<Plan ID="MainTree">
+    <Control 
+      type="navigation2_controller" 
+      name="name_of_flow" 
+      goal_position="2.0;-0.5" >
+    </Control>
+  </Plan>

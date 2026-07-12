@@ -1,0 +1,35 @@
+<root main_tree_to_execute="MainTree">
+    <BehaviorTree ID="MainTree">
+        <Sequence>
+            <!-- StationA to StationE to StationC to StationD in sequence -->
+            <SetBlackboard output_key="StationA" value="0.00,0.00,180.0" />
+            <SetBlackboard output_key="StationE" value="-1,1,270.0" />
+            <SetBlackboard output_key="StationC" value="-3,0,240.0" />
+            <SetBlackboard output_key="StationD" value="3.0,0.0,200.0" />
+            <ForceFailure>
+                <Sequence>
+                    <SetBlackboard output_key="StationE" value="-1,1,0.0" />
+                </Sequence>
+            </ForceFailure>
+            <SetBlackboard output_key="StationB" value="-0.5,0.0,0.0" />
+            <Sequence>
+                <SubTree ID="MoveTo" target="StationA" />
+                <SubTree ID="MoveTo" target="StationB" />
+                <SubTree ID="MoveTo" target="StationC" />
+                <SubTree ID="MoveTo" target="StationD" />
+                <SubTree ID="MoveTo" target="StationE" />
+            </Sequence>
+        </Sequence>
+    </BehaviorTree>
+    <BehaviorTree ID="MoveTo">
+        <InputPort default="0" name="target">A location object</InputPort>
+        <Action ID="MoveTo">
+            <output_port name="result"/>
+            <BehaviorTree ID="MoveRobot">
+                <Action ID="MoiveRobot">
+                    <input_port default="0" name="target"/>
+                </Action>
+            </BehaviorTree>
+        </Action>
+    </BehaviorTree>
+</root>

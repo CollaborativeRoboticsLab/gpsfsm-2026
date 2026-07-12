@@ -1,0 +1,48 @@
+<root main_tree_to_execute="BehaviorTree">
+    <BehaviorTree ID="BehaviorTree">
+        <Sequence>
+            <Fallback>
+                <SubTree ID="go_to_station_A"/>                            <!-- move to Station A -->
+                <SubTree ID="go_to_station_B"/>                            <!-- move to Station B -->
+            </Fallback>
+            <SubTree ID="go_to_station_E"/>                                <!-- move to Station E -->
+            <SubTree ID="go_to_station_C"/>                                <!-- move to Station C -->
+            <SubTree ID="go_to_station_D"/>                                <!-- move to Station D -->
+        </Sequence>
+    </BehaviorTree>
+    <BehaviorTree ID="go_to_station_A">
+        <Sequence name="go_to_station_A">
+            <Condition ID="IsFinished"/>
+            <Condition ID="IsInitialized"/>
+            <Action ID="MoveTo" name="go_to_station_A" location="StationA"/>
+        </Sequence>
+    </BehaviorTree>
+    <BehaviorTree ID="go_to_station_B">
+        <Sequence name="go_to_station_B">
+            <Condition ID="IsFinished"/>
+            <Condition ID="IsInitialized"/>
+            <Action ID="MoveTo" name="go_to_station_B" location="StationB"/>
+        </Sequence>
+    </BehaviorTree>
+    <BehaviorTree ID="go_to_station_C">
+        <Sequence name="go_to_station_C">
+            <Condition ID="IsFinished"/>
+            <Condition ID="IsInitialized"/>
+            <Action ID="MoveTo" name="go_to_station_C" location="StationC"/>
+        </Sequence>
+    </BehaviorTree>
+    <BehaviorTree ID="go_to_station_D">
+        <Sequence name="go_to_station_D">
+            <Condition ID="IsFinished"/>
+            <Condition ID="IsInitialized"/>
+            <Action ID="MoveTo" name="go_to_station_D" location="StationD"/>
+        </Sequence>
+    </BehaviorTree>
+    <BehaviorTree ID="go_to_station_E">
+        <Sequence name="go_to_station_E">
+            <Condition ID="IsFinished"/>
+            <Condition ID="IsInitialized"/>
+            <Action ID="MoveTo" name="go_to_station_E" location="StationE"/>
+        </Sequence>
+    </BehaviorTree>
+</root>

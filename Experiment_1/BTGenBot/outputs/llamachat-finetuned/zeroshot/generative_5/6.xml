@@ -1,0 +1,25 @@
+<root main_tree_to_execute="MainTree">
+    <BehaviorTree ID="MainTree">
+        <Sequence>
+            <!-- StationA, StationE, StationF, StationD  in order -->
+            <Fallback>
+                <Sequence>
+                    <GetRetreatPath attacker_id="none" target_pose="{StationA}" />
+                </Sequence>
+                <Sequence>
+                    <GetRetreatPath attacker_id="none" target_pose="{StationB}" />
+                </Sequence>
+                <Sequence>
+                    <GetRetreatPath attacker_id="none" target_pose="{StationF}" />
+                </Sequence>
+                <Sequence>
+                    <GetRetreatPath attacker_id="none" target_pose="{StationD}" />
+                </Sequence>
+            </Fallback>
+            <!-- StationC  after all the above -->
+            <Sequence>
+                <GetRetreatPath attacker_id="none" target_pose="{StationC}" />
+            </Sequence>
+        </Sequence>
+    </BehaviorTree>
+</root>

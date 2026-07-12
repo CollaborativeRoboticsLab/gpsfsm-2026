@@ -1,0 +1,11 @@
+<Plan ID="MainTree">
+    <Control type="sequential" name="name_of_flow">
+      <Fallback>
+        <Sequence>
+          <RetryUntilSuccesful num_attempts="999999999" until_succesful_condition="isPredecessorSuccesful">
+            <MoveBase goal="2.0;-0.5" />
+          </RetryUntilSuccesful>
+        </Sequence>
+      </Fallback>
+    </Control>
+  </Plan>

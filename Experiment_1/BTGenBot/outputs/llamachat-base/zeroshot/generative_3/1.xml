@@ -1,0 +1,27 @@
+<root main_tree_to_execute="MainTree">
+    <BehaviorTree ID="MainTree">
+        <Sequence>
+           ; Visit Stations A, E, C, D in order
+            <Fallback>
+                <HasVisitedAction node_name="StationA" has_visited="{hasVisitedA}"/>
+                <Sequence>
+                    <HasVisitedAction node_name="StationE" has_visited="{hasVisitedE}"/>
+                    <IfAction node_name="IfFalse" value="false" ID="SkipStraightToStationD"/>
+                    <MoveTo node_name="MoveTo" goal_pose="{stationE}"/>
+                </Sequence>
+            </Fallback>
+            <Fallback>
+                <HasVisitedAction node_name="StationC" has_visited="{hasVisitedC}"/>
+                <Sequence>
+                    <MoveTo node_name="MoveTo" goal_pose="{stationC}"/>
+                </Sequence>
+            </Fallback>
+            <Fallback>
+                <HasVisitedAction node_name="StationD" has_visited="{hasVisitedD}"/>
+                <Sequence>
+                    <MoveTo node_name="MoveTo" goal_pose="{stationD}"/>
+                </Sequence>
+            </Fallback>
+        </Sequence>
+    </BehaviorTree>
+</root>

@@ -1,0 +1,21 @@
+<Plan ID="MainTree">
+    <Sequence>
+      <RetryUntilSuccesful num_attempts="20" name="retry2">
+        <Fallback name="fallback2">
+          <Sequence name="sequence2">
+            <MoveBase goal="2.0 -0.5" />
+          </Sequence>
+          <MoveBase goal="0.0 2.0" />
+        </Fallback>
+      </RetryUntilSuccesful>
+      <Sequence>
+        <MoveBase goal="1.0 3.0" />
+        <SubTree ID="SubTree1" />
+      </Sequence>
+      <Sequence>
+        <MoveBase goal="-2.0 0.0" />
+        <SubTree ID="SubTree2" />
+      </Sequence>
+      <MoveBase goal="0.0 -2.0" />
+    </Sequence>
+  </Plan>

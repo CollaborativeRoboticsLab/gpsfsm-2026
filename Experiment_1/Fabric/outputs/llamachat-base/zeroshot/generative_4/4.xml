@@ -1,0 +1,13 @@
+<Plan ID="MainTree">
+        <Sequence>
+            <RetryUntilSuccesful num_attempts="20">
+                <Sequence>
+                    <GetPoint position="2.0;-0.5" />
+                </Sequence>
+            </RetryUntilSuccesful>
+            <GetPoint position="1.0;3.0" />
+            <GetPoint position="-3.0;-1.0" />
+            <GetPoint position="0.0;-2.0" />
+            <GetPoint position="2.0;0.0" />
+        </Sequence>
+    </Plan>

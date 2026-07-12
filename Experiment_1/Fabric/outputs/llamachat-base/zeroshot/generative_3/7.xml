@@ -1,0 +1,15 @@
+<Plan ID="MainTree">
+    <Sequence>
+      <RetryUntilSuccesful num_attempts="2">
+        <MoveBase goal="2.0 -0.5" />
+      </RetryUntilSuccesful>
+      <MoveBase goal="1.0 3.0" />
+      <Sequence>
+        <RetryUntilSuccesful num_attempts="2">
+          <MoveBase goal="-2.0 0.0" />
+        </RetryUntilSuccesful>
+        <MoveBase goal="0.0 -2.0" />
+      </Sequence>
+      <MoveBase goal="-0.5 1.5" />
+    </Sequence>
+  </Plan>

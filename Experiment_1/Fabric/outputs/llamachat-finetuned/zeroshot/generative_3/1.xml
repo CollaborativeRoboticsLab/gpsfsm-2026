@@ -1,0 +1,10 @@
+<Plan ID="MainTree">
+    <Sequence>
+      <RetryUntilSuccesful num_attempts="10" name="retry_client_request">
+        <MoveBase goal="2.0;-0.5" />
+      </RetryUntilSuccesful>
+      <MoveBase goal="1.0;3.0" />
+      <MoveBase goal="-2.0;0.0" />
+      <MoveBase goal="0.0;-2.0" />
+    </Sequence>
+  </Plan>

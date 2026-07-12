@@ -1,0 +1,15 @@
+<Plan ID="MainTree">
+    <Control type="sequential" name="name_of_flow">
+      <Fallback>
+        <RetryUntilSuccesful num_attempts="2" name="move_Retry">
+          <Sequence>
+            <Nav2PreCheck goal="2;-0.5" />
+            <MoveBase goal="2;-0.5" />
+          </Sequence>
+          <ForceFailure>
+            <Nav2PreCheck goal="2;0.5" />
+          </ForceFailure>
+        </RetryUntilSuccesful>
+      </Fallback>
+    </Control>
+  </Plan>

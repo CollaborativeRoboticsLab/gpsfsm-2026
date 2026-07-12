@@ -1,0 +1,10 @@
+<root main_tree_to_execute="MainTree">
+    <BehaviorTree ID="MainTree">
+        <Sequence>
+            <VisitStations order="A,B,C,D" />
+        </Sequence>
+    </BehaviorTree>
+   <Action ID="MoveTo">
+        <input_port default="1" name="goal">Position of destination in format("-x,y,theta")</input_port>
+    </Action>
+</root>

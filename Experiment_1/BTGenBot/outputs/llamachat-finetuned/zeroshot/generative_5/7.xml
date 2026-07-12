@@ -1,0 +1,29 @@
+<root main_tree_to_execute="MainTree">
+    <BehaviorTree ID="MainTree">
+        <Sequence>
+            <!-- StationA, StationE, StationF, StationD in order -->
+            <Fallback>
+                <Sequence>
+                    <GetPathToPosition action="MoveTo" target="StationA" />
+                    <MoveTo action="MoveTo" pose= "{getPathToPosition}" />
+                </Sequence>
+                <Sequence>
+                    <GetPathToPosition action="MoveTo" target="StationE" />
+                    <MoveTo action="MoveTo" pose=="{getPathToPosition}" />
+                </Sequence>
+                <Sequence>
+                    <GetPathToPosition action="MoveTo" target="StationF" />
+                    <MoveTo action="MoveTo" pose=="{getPathToPosition}" />
+                </Sequence>
+                <Sequence>
+                    <GetPathToPosition action="MoveTo" target="StationD" />
+                    <MoveTo action="MoveTo" pose=="{getPathToPosition}" />
+                </Sequence>
+            </Fallback>
+            <Sequence>
+                <GetPathToPosition action="MoveTo" target="StationB" />
+                <MoveTo action="MoveTo" pose=="{getPathToPosition}" />
+            </Sequence>
+        </Sequence>
+    </BehaviorTree>
+</root>

@@ -1,0 +1,12 @@
+<root main_tree_to_execute="MainTree">
+    <BehaviorTree ID="MainTree">
+        <Sequence>
+           ; Visit StationA
+            <DropFollowAction name="GoToNext" goal="-0.57,-0.27,1.0" />
+            <MoveToAction goal="StationA" />
+            <MoveToAction goal="StationE" /> (else)
+            <MoveToAction goal="StationC" />
+            <MoveToAction goal="StationD" />
+        </Sequence>
+    </BehaviorTree>
+</root>

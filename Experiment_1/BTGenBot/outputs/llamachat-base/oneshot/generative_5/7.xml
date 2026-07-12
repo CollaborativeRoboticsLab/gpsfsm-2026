@@ -1,0 +1,20 @@
+<root BTCPP_format="4">
+    <BehaviorTree ID="RobotNav">
+        <Sequence>
+            <Fallback>
+                <SubTree ID="StationA" location="StationA"/>
+                <SubTree ID="StationB" location="StationB"/>
+                <SubTree ID="StationC" location="StationC"/>
+                <SubTree ID="StationD" location="StationD"/>
+                <SubTree ID="StationE" location="StationE"/>
+                <SubTree ID="StationF" location="StationF"/>
+            </Fallback>
+            <MoveTo name="go_to_station_A" location="StationA"/>      <!-- move to Station A -->
+            <MoveTo name="go_to_station_B" location="StationB"/>      <!-- move to Station B -->
+            <MoveTo name="go_to_station_C" location="StationC"/>      <!-- move to Station C -->
+            <MoveTo name="go_to_station_D" location="StationD"/>      <!-- move to Station D -->
+            <MoveTo name="go_to_station_E" location="StationE"/>      <!-- move to Station E -->
+            <MoveTo name="go_to_station_F" location="StationF"/>      <!-- move to Station F -->
+        </Sequence>
+    </BehaviorTree>
+</root>

@@ -1,0 +1,14 @@
+<Plan ID="MainTree">
+        <Sequence>
+            <RetryUntilSuccesful num_attempts="20">
+                <GetField name="2.0" field="x" />
+            </RetryUntilSuccesful>
+            <GetField name="-0.5" field="y" />
+            <Sequence>
+                <SubPlan ID="sub_plan" target="(2.0, -0.5)" />
+                <SubPlan ID="sub_plan" target="(1.0, 3.0)" />
+            </Sequence>
+            <SubPlan ID="sub_plan" target="(-3.0, -1.0)" />
+            <SubPlan ID="sub_plan" target="(0.0, -2.0)" />
+        </Sequence>
+    </Plan>

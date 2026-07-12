@@ -1,0 +1,9 @@
+<Plan ID="MainTree">
+        <Sequence>
+            <RetryUntilSuccesful num_attempts="2">
+                <SubTree ID="MoveToPredefinedPositions" 
+                    goal_poses="(2.0, -0.5), (1.0, 3.0), (-3.0, -1.0), (0.0, -2.0)" 
+                    round_poses="(0.0, 2.0)" />
+            </SubTree>
+        </Sequence>
+    </Plan>

@@ -1,0 +1,10 @@
+<Plan ID="MoveTo5">
+    <Sequence>
+      <SubTree ID="0.0, -2.0" />
+      <SubTree ID="-2.0, -1.0" />
+      <SubTree ID="-3.0, -1.0" />
+      <SubTree ID="-2.0, 0.0" />
+      <SubTree ID="0.0, 2.0" />
+      <SubTree ID="1.0, 3.0" />
+    </Sequence>
+  </Plan>

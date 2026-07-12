@@ -1,0 +1,18 @@
+<root main_tree_to_execute="MainTree">
+    <BehaviorTree ID="MainTree">
+        <Sequence>
+            <!-- StationA, StationE, StationC, StationD must be visited in order -->
+            <Sequence>
+                <Action ID="MoveTo" goal="StationA" />
+                <Action ID="MoveTo" goal="StationE" />
+                <Action ID="MoveTo" goal="StationC" />
+                <Action ID="MoveTo" goal="StationD" />
+            </Sequence>
+            <!-- If StationE cannot be reached, move to StationB -->
+            <Fallback>
+                <Action ID="MoveTo" goal="StationD" />
+                <Action ID="MoveTo" goal="StationB" />
+            </Fallback>
+        </Sequence>
+    </BehaviorTree>
+</root>

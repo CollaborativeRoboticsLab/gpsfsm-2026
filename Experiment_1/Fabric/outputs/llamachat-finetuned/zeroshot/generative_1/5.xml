@@ -1,0 +1,8 @@
+<Plan ID="MainTree">
+    <Control 
+      type="navigation2_controller" 
+      name="move_to_position" 
+      goal_pose="{pose}" 
+      frame_id="base_footprint">
+    </Control>
+  </Plan>

@@ -1,0 +1,28 @@
+<Plan ID="MainTree">
+    <Sequence>
+      <RetryUntilSuccesful num_attempts="20" name="move to (2.0, -0.5)">
+        <Sequence name="move to (1.0, 3.0)">
+          <RetryUntilSuccesful num_attempts="5" name="move to (1.0, 3.0)">
+            <Sequence name="move to (0.0, -2.0)">
+              <Sequence name="move to (-3.0, -1.0)">
+                <Sequence name="move to (-2.0, 0.0)">
+                  <ParallelAny name="move to (2.0, -0.5)">
+                    <ParallelAll name="move to (1.0, 3.0)">
+                      <Sequence name="move to (0.0, -2.0)">
+                        <Sequence name="move to (-3.0, -1.0)">
+                          <SubTree ID="move to (-3.0, -1.0)"/>
+                        </Sequence>
+                      </Sequence>
+                    </ParallelAll>
+                    <SubTree ID="move to (-3.0, -1.0)"/>
+                  </ParallelAll>
+                  <SubTree ID="move to (0.0, -2.0)"/>
+                  <SubTree ID="move to (2.0, -0.5)"/>
+                </ParallelAny>
+              </Sequence>
+            </Sequence>
+          </RetryUntilSuccesful>
+        </Sequence>
+      </RetryUntilSuccesful>
+    </Sequence>
+  </Plan>

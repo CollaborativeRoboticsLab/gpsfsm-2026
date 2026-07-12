@@ -1,0 +1,34 @@
+<Plan ID="move to (-3.0, -1.0)">
+    <WhenEvent event="reached" />
+    <ThenAction goal="-4.0;0.0" />
+  }
+
+  <Plan ID="move to (0.0, -2.0)">
+    <WhenEvent event="reached" />
+    <ThenAction goal="0.0;2.0" />
+  }
+
+  <Plan ID="move to (2.0, -0.5)">
+    <WhenEvent event="reached" />
+    <ThenAction goal="2.0;-0.5" />
+  }
+
+  <Plan ID="move to (-3.0, -1.0)">
+    <WhenEvent event="reached" />
+    <ThenAction goal="-4.0;0.0" />
+  }
+
+  <Plan ID="move to (0.0, -2.0)">
+    <WhenEvent event="reached" />
+    <ThenAction goal="0.0;2.0" />
+  }
+
+  <Plan ID="move to (1.0, 3.0)">
+    <WhenEvent event="reached" />
+    <ThenAction goal="0.5;3.0" />
+  }
+
+  <Plan ID="recovery">
+    <WhenEvent event="FAILED" />
+    <ThenAction goal="0.0;0.0" />
+  </Plan>

@@ -1,0 +1,12 @@
+<Plan ID="MainTree">
+        <Sequence>
+            <RetryUntilSuccesful num_attempts="5" name="move to specific locations">
+                <Sequence>
+                    <SubTree ID="move to (2.0, -0.5)" />
+                    <SubTree ID="move to (1.0, 3.0)" />
+                    <SubTree ID="move to (-3.0, -1.0)" />
+                    <SubTree ID="move to (0.0, -2.0)" />
+                </Sequence>
+            </RetryUntilSuccesful>
+        </Sequence>
+    </Plan>

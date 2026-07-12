@@ -1,0 +1,78 @@
+<root main_tree_to_execute = "MainTree" >
+    <BehaviorTree ID="MainTree">
+        <Sequence>
+            <!-- StationA, StationE, StationF, StationD in order -->
+            <SubTree ID="StationA" />
+            <SubTree ID="StationE" />
+            <SubTree ID="StationF" />
+            <SubTree ID="StationD" />
+            <SubTree ID="StationB" />
+        </Sequence>
+    </BehaviorTree>
+
+    <BehaviorTree ID="StationA">
+        <Fallback>
+            <Condition ID="IsAtStationA" />
+            <Action ID="MoveTo" label="Move to StationA" goal="1" />
+        </Fallback>
+    </BehaviorTree>
+
+    <BehaviorTree ID="StationB">
+        <Fallback>
+            <Condition ID="IsAtStationB" />
+            <Action ID="MoveTo" label="Move to StationB" goal="2" />
+        </Fallback>
+    </BehaviorTree>
+
+    <BehaviorTree ID="StationC">
+        <Fallback>
+            <Condition ID="IsAtStationC" />
+            <Action ID="MoveTo" label="Move to StationC" goal="3" />
+        </Fallback>
+    </BehaviorTree>
+
+    <BehaviorTree ID="StationD">
+        <Fallback>
+            <Condition ID="IsAtStationD" />
+            <Action ID="MoveTo" label="Move to StationD" goal="4" />
+        </Fallback>
+    </BehaviorTree>
+
+    <BehaviorTree ID="StationE">
+        <Fallback>
+            <Condition ID="IsAtStationE" />
+            <Action ID="MoveTo" label="Move to StationE" goal="5" />
+        </Fallback>
+    </BehaviorTree>
+
+    <BehaviorTree ID="StationF">
+        <Fallback>
+            <Condition ID="IsAtStationF" />
+            <Action ID="MoveTo" label="Move to StationF" goal="6" />
+        </Fallback>
+    </BehaviorTree>
+
+    <TreeNodesModel>
+        <Action ID="MoveTo">
+            <input_port name="goal"/>
+        </Action>
+        <Condition ID="IsAtStationA">
+            <input_port name="station_id"/>
+        </Condition>
+        <Condition ID="IsAtStationB">
+            <input_port name="station_id"/>
+        </Condition>
+        <Condition ID="IsAtStationC">
+            <input_port name="station_id"/>
+        </Condition>
+        <Condition ID="IsAtStationD">
+            <input_port name="station_id"/>
+        </Condition>
+        <Condition ID="IsAtStationE">
+            <input_port name="station_id"/>
+        </Condition>
+        <Condition ID="IsAtStationF">
+            <input_port name="station_id"/>
+        </Condition>
+    </TreeNodesModel>
+</root>

@@ -1,0 +1,16 @@
+<Plan ID="MainTree">
+        <Sequence>
+            <RetryUntilSuccesful num_attempts="20">
+                <GetBodyPose goal="2.0;-0.5" />
+            </RetryUntilSuccesful>
+            <RetryUntilSuccesful num_attempts="20">
+                <GetBodyPose goal="1.0;3.0" />
+            </RetryUntilSuccesful>
+            <RetryUntilSuccesful num_attempts="20">
+                <GetBodyPose goal="-3.0;-1.0" />
+            </RetryUntilSuccesful>
+            <RetryUntilSuccesful num_attempts="20">
+                <GetBodyPose goal="0.0;-2.0" />
+            </RetryUntilSuccesful>
+        </Sequence>
+    </Plan>

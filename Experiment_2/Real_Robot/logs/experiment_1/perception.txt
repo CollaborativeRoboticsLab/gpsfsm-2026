@@ -1,0 +1,114 @@
+[INFO] [launch]: All log files can be found below /home/ubuntu/.ros/log/2026-03-07-04-30-53-496096-kalana-laptop-50451
+[INFO] [launch]: Default logging verbosity is set to INFO
+[INFO] [perception_node-1]: process started with pid [50455]
+[perception_node-1] [INFO] [1772857853.696388643] [perception_node]: Initializing PerceptionServer...
+[perception_node-1] [INFO] [1772857853.696713446] [perception_node]: Audio input publish: false
+[perception_node-1] [INFO] [1772857853.696727252] [perception_node]: Audio input topic: perception/microphone
+[perception_node-1] [INFO] [1772857853.696731550] [perception_node]: Audio input frame_id: microphone_frame
+[perception_node-1] [INFO] [1772857853.696734726] [perception_node]: Audio input frequency: 10
+[perception_node-1] [INFO] [1772857853.696738323] [perception_node]: Audio output subscribe: false
+[perception_node-1] [INFO] [1772857853.696741729] [perception_node]: Audio output topic: perception/speaker
+[perception_node-1] [INFO] [1772857853.696745466] [perception_node]: Vision input publish: false
+[perception_node-1] [INFO] [1772857853.696748803] [perception_node]: Vision input topic: perception/camera
+[perception_node-1] [INFO] [1772857853.696751869] [perception_node]: Vision input frame_id: camera_frame
+[perception_node-1] [INFO] [1772857853.696754934] [perception_node]: Vision input frequency: 10
+[perception_node-1] [INFO] [1772857853.696758120] [perception_node]: Transcription enabled: false
+[perception_node-1] [INFO] [1772857853.696761978] [perception_node]: Transcription service: perception/transcription
+[perception_node-1] [INFO] [1772857853.696765234] [perception_node]: Transcription buffer duration: 10 seconds
+[perception_node-1] [INFO] [1772857853.696769181] [perception_node]: Speech synthesis enabled: false
+[perception_node-1] [INFO] [1772857853.696772838] [perception_node]: Speech synthesis service name: perception/speech
+[perception_node-1] [INFO] [1772857853.696776715] [perception_node]: Sentiment analysis enabled: false
+[perception_node-1] [INFO] [1772857853.696780092] [perception_node]: Sentiment analysis service name: perception/sentiment_analysis
+[perception_node-1] [INFO] [1772857853.696784330] [perception_node]: Image analysis enabled: false
+[perception_node-1] [INFO] [1772857853.696787325] [perception_node]: Image analysis service name: perception/image_analysis
+[perception_node-1] [INFO] [1772857853.696798517] [perception_node]: Loading vision driver plugin: perception::DefaultDriver
+[perception_node-1] [INFO] [1772857853.750782068] [perception_node]: Assigned driver name: DefaultDriver
+[perception_node-1] [INFO] [1772857853.750823877] [perception_node]: Assigned driver topic: /oakd/rgb/preview/image_raw
+[perception_node-1] [INFO] [1772857853.750831622] [perception_node]: DefaultDriver subscribing on topic /oakd/rgb/preview/image_raw
+[perception_node-1] [INFO] [1772857853.757891219] [perception_node]: Started. Subscribed to image topic: /oakd/rgb/preview/image_raw
+[perception_node-1] [INFO] [1772857853.757937286] [perception_node]: Started vision driver plugin: perception::DefaultDriver
+[perception_node-1] [INFO] [1772857853.758011586] [perception_node]: Loading microphone driver plugin: perception::MicrophoneAudioDriver
+[perception_node-1] ALSA lib pcm_dsnoop.c:567:(snd_pcm_dsnoop_open) unable to open slave
+[perception_node-1] ALSA lib pcm_dmix.c:1000:(snd_pcm_dmix_open) unable to open slave
+[perception_node-1] ALSA lib pcm.c:2721:(snd_pcm_open_noupdate) Unknown PCM cards.pcm.rear
+[perception_node-1] ALSA lib pcm.c:2721:(snd_pcm_open_noupdate) Unknown PCM cards.pcm.center_lfe
+[perception_node-1] ALSA lib pcm.c:2721:(snd_pcm_open_noupdate) Unknown PCM cards.pcm.side
+[perception_node-1] ALSA lib pcm_dsnoop.c:567:(snd_pcm_dsnoop_open) unable to open slave
+[perception_node-1] ALSA lib pcm_dmix.c:1000:(snd_pcm_dmix_open) unable to open slave
+[perception_node-1] ALSA lib pcm_dmix.c:1000:(snd_pcm_dmix_open) unable to open slave
+[perception_node-1] Cannot connect to server socket err = No such file or directory
+[perception_node-1] Cannot connect to server request channel
+[perception_node-1] jack server is not running or cannot be started
+[perception_node-1] JackShmReadWritePtr::~JackShmReadWritePtr - Init not done for -1, skipping unlock
+[perception_node-1] JackShmReadWritePtr::~JackShmReadWritePtr - Init not done for -1, skipping unlock
+[perception_node-1] [INFO] [1772857855.409120433] [perception_node]: Device ID for name 'ALC285 Analog' is 6
+[perception_node-1] [INFO] [1772857855.409187199] [perception_node]: Assigned driver name: MicrophoneAudioDriver
+[perception_node-1] [INFO] [1772857855.409200574] [perception_node]: Assigned driver device_name: ALC285 Analog
+[perception_node-1] [INFO] [1772857855.409208169] [perception_node]: Assigned driver device_id: 6
+[perception_node-1] [INFO] [1772857855.409215522] [perception_node]: Assigned driver chunk_size: 48000
+[perception_node-1] [INFO] [1772857855.409223117] [perception_node]: Assigned driver sample_rate: 48000
+[perception_node-1] [INFO] [1772857855.409230841] [perception_node]: Assigned driver channels: 2
+[perception_node-1] [INFO] [1772857855.409238556] [perception_node]: Assigned driver buffer_time: 10
+[perception_node-1] [INFO] [1772857855.409245870] [perception_node]: Assigned driver timeout_sec: -1
+[perception_node-1] [INFO] [1772857855.409253274] [perception_node]: Assigned driver buffer size: 2037539186
+[perception_node-1] [INFO] [1772857855.409260808] [perception_node]: starting on device 6
+[perception_node-1] [INFO] [1772857855.412799994] [perception_node]: starting driver thread for audio capture...
+[perception_node-1] [INFO] [1772857855.412989181] [perception_node]: Initialized
+[perception_node-1] [INFO] [1772857855.413007806] [perception_node]: Started microphone driver plugin: perception::MicrophoneAudioDriver
+[perception_node-1] [INFO] [1772857855.413527957] [perception_node]: Loading speaker driver plugin: perception::SpeakerAudioDriver
+[perception_node-1] [INFO] [1772857855.414981689] [perception_node]: Device ID for name 'ALC285 Analog' is 6
+[perception_node-1] [INFO] [1772857855.414998371] [perception_node]: Assigned driver name: SpeakerAudioDriver
+[perception_node-1] [INFO] [1772857855.415004683] [perception_node]: Assigned driver device_name: ALC285 Analog
+[perception_node-1] [INFO] [1772857855.415009742] [perception_node]: Assigned driver device_id: 6
+[perception_node-1] [INFO] [1772857855.415044227] [perception_node]: Assigned driver sample_rate: 48000
+[perception_node-1] [INFO] [1772857855.415049257] [perception_node]: Assigned driver channels: 2
+[perception_node-1] [INFO] [1772857855.415052563] [perception_node]: Initialized
+[perception_node-1] [INFO] [1772857855.415056681] [perception_node]: Started speaker driver plugin: perception::SpeakerAudioDriver
+[perception_node-1] [INFO] [1772857855.415371785] [perception_node]: Loading transcription driver plugin: perception::OpenAIDriver
+[perception_node-1] [INFO] [1772857855.418635562] [perception_node]: Assigned driver URI: https://api.openai.com/v1/audio/transcriptions
+[perception_node-1] [INFO] [1772857855.418652594] [perception_node]: Assigned driver Method: POST
+[perception_node-1] [INFO] [1772857855.418658706] [perception_node]: Assigned driver SSL Verify: true
+[perception_node-1] [INFO] [1772857855.418663695] [perception_node]: Assigned driver Auth Type: Bearer
+[perception_node-1] [INFO] [1772857855.418670728] [perception_node]: API key loaded from environment variables: OPENAI_API_KEY
+[perception_node-1] [INFO] [1772857855.418674656] [perception_node]: Assigned driver Name: OpenAIDriver
+[perception_node-1] [INFO] [1772857855.418677922] [perception_node]: Assigned driver Model: whisper-1
+[perception_node-1] [INFO] [1772857855.418681318] [perception_node]: Assigned driver Test Audio Path: install/perception_driver_audio/share/perception_driver_audio/audio/hello-1.wav
+[perception_node-1] [INFO] [1772857855.418685045] [perception_node]: Initialized
+[perception_node-1] [INFO] [1772857855.418688662] [perception_node]: Started transcription driver plugin: perception::OpenAIDriver
+[perception_node-1] [INFO] [1772857855.418935458] [perception_node]: Loading speech synthesis driver plugin: perception::OpenAISpeechDriver
+[perception_node-1] [INFO] [1772857855.422901309] [perception_node]: Assigned driver URI: https://api.openai.com/v1/audio/speech
+[perception_node-1] [INFO] [1772857855.422922809] [perception_node]: Assigned driver Method: POST
+[perception_node-1] [INFO] [1772857855.422928851] [perception_node]: Assigned driver SSL Verify: true
+[perception_node-1] [INFO] [1772857855.422934431] [perception_node]: Assigned driver Auth Type: Bearer
+[perception_node-1] [INFO] [1772857855.422943368] [perception_node]: API key loaded from environment variables: OPENAI_API_KEY
+[perception_node-1] [INFO] [1772857855.422949960] [perception_node]: Assigned driver name: OpenAISpeechDriver
+[perception_node-1] [INFO] [1772857855.422956343] [perception_node]: Assigned driver model: gpt-4o-mini-tts
+[perception_node-1] [INFO] [1772857855.422961432] [perception_node]: Assigned driver test text: Hello this is a test speech for ROS2 perception speech driver.
+[perception_node-1] [INFO] [1772857855.422967393] [perception_node]: Assigned driver test file path: test/speech.wav
+[perception_node-1] [INFO] [1772857855.422972613] [perception_node]: Assigned driver voice: coral
+[perception_node-1] [INFO] [1772857855.422977953] [perception_node]: Assigned driver instructions: Please speak clearly and slowly.
+[perception_node-1] [INFO] [1772857855.422984085] [perception_node]: Initialized
+[perception_node-1] [INFO] [1772857855.422990106] [perception_node]: Started speech synthesis driver plugin: perception::OpenAISpeechDriver
+[perception_node-1] [INFO] [1772857855.423362318] [perception_node]: Loading image analysis driver plugin: perception::OpenAIImageAnalysisDriver
+[perception_node-1] [INFO] [1772857855.430131587] [perception_node]: Assigned driver URI: https://api.openai.com/v1/responses
+[perception_node-1] [INFO] [1772857855.430176312] [perception_node]: Assigned driver Method: POST
+[perception_node-1] [INFO] [1772857855.430183455] [perception_node]: Assigned driver SSL Verify: true
+[perception_node-1] [INFO] [1772857855.430189216] [perception_node]: Assigned driver Auth Type: Bearer
+[perception_node-1] [INFO] [1772857855.430199405] [perception_node]: API key loaded from environment variables: OPENAI_API_KEY
+[perception_node-1] [INFO] [1772857855.430205186] [perception_node]: Assigned driver Name: OpenAIImageAnalysisDriver
+[perception_node-1] [INFO] [1772857855.430211158] [perception_node]: Assigned driver Model: gpt-5-mini
+[perception_node-1] [INFO] [1772857855.430217109] [perception_node]: Assigned driver Test Image Path: install/perception_driver_image_analysis/share/perception_driver_image_analysis/image/image.png
+[perception_node-1] [INFO] [1772857855.430223621] [perception_node]: Assigned driver Test Prompt: Does this image contain a cat?
+[perception_node-1] [INFO] [1772857855.430228631] [perception_node]: Assigned driver Image Detail: low
+[perception_node-1] [INFO] [1772857855.430233650] [perception_node]: Initialized
+[perception_node-1] [INFO] [1772857855.430238679] [perception_node]: Started image analysis driver plugin: perception::OpenAIImageAnalysisDriver
+[perception_node-1] [ERROR] [1772857879.414722298] [perception_node]: Error reading from PortAudio stream: Input overflowed
+[perception_node-1] [ERROR] [1772857921.416338288] [perception_node]: Error reading from PortAudio stream: Input overflowed
+[perception_node-1] [ERROR] [1772857944.417544570] [perception_node]: Error reading from PortAudio stream: Input overflowed
+[perception_node-1] [ERROR] [1772857961.418630853] [perception_node]: Error reading from PortAudio stream: Input overflowed
+[perception_node-1] [ERROR] [1772857994.419843722] [perception_node]: Error reading from PortAudio stream: Input overflowed
+[perception_node-1] [ERROR] [1772858001.420807537] [perception_node]: Error reading from PortAudio stream: Input overflowed
+[perception_node-1] [ERROR] [1772858081.422621424] [perception_node]: Error reading from PortAudio stream: Input overflowed
+[perception_node-1] [ERROR] [1772858105.423847557] [perception_node]: Error reading from PortAudio stream: Input overflowed
+[perception_node-1] [ERROR] [1772858128.425838994] [perception_node]: Error reading from PortAudio stream: Input overflowed
+[perception_node-1] [ERROR] [1772858129.425887368] [perception_node]: Error reading from PortAudio stream: Input overflowed

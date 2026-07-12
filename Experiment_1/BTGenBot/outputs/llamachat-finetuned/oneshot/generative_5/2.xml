@@ -1,0 +1,50 @@
+<root BTCPP_format="4">
+    <BehaviorTree ID="root">
+        <Sequence>
+            <Fallback>
+                <SubTree ID="station_A_fallback" />
+                <SubTree ID="station_E_fallback" />
+                <SubTree ID="station_F_fallback" />
+                <SubTree ID="station_D_fallback" />
+            </Fallback>
+            <SubTree ID="station_B_sequence" />
+        </Sequence>
+    </BehaviorTree>
+
+    <BehaviorTree ID="station_A_fallback">
+        <MoveTo name="go_to_station_A" location="StationD"/>
+    </BehaviorTree>
+
+    <BehaviorTree ID="station_B_sequence">
+        <MoveTo name="go_to_station_B" location="StationB"/>
+        <MoveTo name="go_to_station_C" location="StationC"/>
+    </BehaviorTree>
+
+    <BehaviorTree ID="station_D_fallback">
+        <MoveTo name="go_to_station_D" location="StationC"/>
+    </BehaviorTree>
+
+    <BehaviorTree ID="station_E_fallback">
+        <MoveTo name="go_to_station_E" location="StationB"/>
+    </BehaviorTree>
+
+    <BehaviorTree ID="station_F_fallback">
+        <MoveTo name="go_to_station_F" location="StationC"/>
+    </BehaviorTree>
+
+    <BehaviorTree ID="station_B_sequence">
+        <AddActionActions name="add_action_stations" location="StationB" action_A="MoveTo" action_B="MoveTo"/>
+    </BehaviorTree>
+
+    <TreeNodesModel>
+        <Action ID="moveTo">
+            <input_port name="action_name"/>
+            <input_port name="location"/>
+        </Action>
+        <Action ID="addActions">
+            <input_port name="action_A"/>
+            <input_port name="action_B"/>
+            <input_port name="location"/>
+        </Action>
+    </TreeNodesModel>
+</root>

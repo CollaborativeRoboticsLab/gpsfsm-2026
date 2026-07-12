@@ -1,0 +1,13 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence name="VisitStationsInOrder">
+      <Action ID="MoveTo" goal="StationA"/>
+      <Fallback name="ReachEorB">
+        <Action ID="MoveTo" goal="StationE"/>
+        <Action ID="MoveTo" goal="StationB"/>
+      </Fallback>
+      <Action ID="MoveTo" goal="StationC"/>
+      <Action ID="MoveTo" goal="StationD"/>
+    </Sequence>
+  </BehaviorTree>
+</root>

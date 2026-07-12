@@ -1,0 +1,13 @@
+<Plan ID="MainTree">
+    <Sequence>
+      <RetryUntilSuccesful num_attempts="10" name="MoveRetry">
+        <Sequence name="Move">
+          <SubTree ID="MoveTo" Coords="2.0;-0.5" />
+        </Sequence>
+      </RetryUntilSuccesful>
+      <SubTree ID="MoveTo" Coords="1.0;3.0" />
+      <SubTree ID="MoveTo" Coords="-2.0;0.0" />
+      <SubTree ID="MoveTo" Coords="0.0;-2.0" />
+      <SubTree ID="MoveTo" Coords="0.0;2.0" />
+    </Sequence>
+  </Plan>

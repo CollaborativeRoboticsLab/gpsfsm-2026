@@ -1,0 +1,8 @@
+<Plan ID="recoveryPlan">
+        <Sequence name="recoverySequence">
+            <SubTree ID="checkReachToSubTree" output_x="reachOutputX" output_y="reachOutputY"/>
+            <Sequence name="reachPlan">
+                <SubTree ID="reachSubTree" output_x="reachOutputX" output_y="reachOutputY"/>
+            </Sequence>
+        </Sequence>
+    </Plan>

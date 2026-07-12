@@ -1,0 +1,9 @@
+<root main_tree_to_execute="MainTree">
+    <BehaviorTree ID="MainTree">
+        <Sequence>
+            <!-- StationA, StationE, StationC, StationD in sequence -->
+            <SubTree ID="VisitStations" />
+            <!-- If StationE cannot be reached, move to StationB -->
+        </Sequence>
+    </BehaviorTree>
+</root>

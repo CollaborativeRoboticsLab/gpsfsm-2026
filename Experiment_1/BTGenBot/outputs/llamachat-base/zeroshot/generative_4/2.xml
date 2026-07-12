@@ -1,0 +1,52 @@
+<root main_tree_to_execute = "MainTree" >
+    <BehaviorTree ID="MainTree">
+        <Sequence>
+            <!-- StationA to StationE to StationF to StationD  -->
+            <Sequence>
+                <SubTree ID="StationAToStationE" />
+                <SubTree ID="StationEToStationF" />
+                <SubTree ID="StationFToStationD" />
+            </Sequence>
+            <!-- If StationE is not reach, go to StationB  -->
+            <Fallback>
+                <SubTree ID="StationAToStationE" />
+                <Action ID="MoveTo" goal="StationB" />
+            </Fallback>
+            <!-- If StationF is not reach, go to StationC  -->
+            <Fallback>
+                <SubTree ID="StationAToStationE" />
+                <Action ID="MoveTo" goal="StationC" />
+            </Fallback>
+        </Sequence>
+    </BehaviorTree>
+
+    <BehaviorTree ID="StationAToStationE">
+        <Sequence>
+            <Action ID="MoveTo" goal="StationE" />
+        </Sequence>
+    </BehaviorTree>
+
+    <BehaviorTree ID="StationEToStationF">
+        <Sequence>
+            <Action ID="MoveTo" goal="StationF" />
+        </Sequence>
+    </BehaviorTree>
+
+    <BehaviorTree ID="StationEToStationB">
+        <Sequence>
+            <Action ID="MoveTo" goal="StationB" />
+        </Sequence>
+    </BehaviorTree>
+
+    <BehaviorTree ID="StationFToStationD">
+        <Sequence>
+            <Action ID="MoveTo" goal="StationD" />
+        </Sequence>
+    </BehaviorTree>
+
+    <TreeNodesModel>
+        <Action ID="MoveTo">
+            <input_port name="goal">Target destination</input_port>
+        </Action>
+    </TreeNodesModel>
+</root>

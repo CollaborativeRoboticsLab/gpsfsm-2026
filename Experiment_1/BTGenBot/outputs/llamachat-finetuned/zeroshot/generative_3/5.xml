@@ -1,0 +1,16 @@
+<root main_tree_to_execute="MainTree">
+    <BehaviorTree ID="MainTree">
+        <Sequence>
+           ; Visit Stations in sequence
+            <VisitStations>
+                <Sequence>
+                    <SubTree ID="VisitStation" station_id="StationA" />
+                    <SubTree ID="VisitStation" station_id="StationE" />
+                    <SubTree ID="VisitStation" station_id="StationC" />
+                    <SubTree ID="VisitStation" station_id="StationD" />
+                </Sequence>
+            </VisitStations>
+            <SubTree ID="VisitStation" station_id="StationB" />
+        </Sequence>
+    </BehaviorTree>
+</root>

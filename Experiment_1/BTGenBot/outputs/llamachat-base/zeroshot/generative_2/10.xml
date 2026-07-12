@@ -1,0 +1,10 @@
+<root main_tree_to_execute = "MainTree">
+    <BehaviorTree ID="MainTree">
+        <Sequence>
+            <SubTree ID="StationA" />
+            <SubTree ID="StationB" />
+            <SubTree ID="StationC" />
+            <SubTree ID="StationD" />
+        </Sequence>
+    </BehaviorTree>
+</root>

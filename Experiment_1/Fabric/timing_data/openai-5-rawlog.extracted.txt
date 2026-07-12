@@ -1,0 +1,218 @@
+Running inference on task file: generative_1.txt
+
+Iteration 1 on openai-gpt-5:
+Zero-shot OpenAI result (time: 10.69 seconds):
+One-shot OpenAI result (time: 12.08 seconds):
+
+Iteration 2 on openai-gpt-5:
+Zero-shot OpenAI result (time: 9.55 seconds):
+One-shot OpenAI result (time: 10.34 seconds):
+
+Iteration 3 on openai-gpt-5:
+Zero-shot OpenAI result (time: 10.53 seconds):
+One-shot OpenAI result (time: 7.17 seconds):
+
+Iteration 4 on openai-gpt-5:
+Zero-shot OpenAI result (time: 9.63 seconds):
+One-shot OpenAI result (time: 11.37 seconds):
+
+Iteration 5 on openai-gpt-5:
+Zero-shot OpenAI result (time: 8.51 seconds):
+One-shot OpenAI result (time: 8.87 seconds):
+
+Iteration 6 on openai-gpt-5:
+Zero-shot OpenAI result (time: 11.88 seconds):
+One-shot OpenAI result (time: 7.26 seconds):
+
+Iteration 7 on openai-gpt-5:
+Zero-shot OpenAI result (time: 11.47 seconds):
+One-shot OpenAI result (time: 10.99 seconds):
+
+Iteration 8 on openai-gpt-5:
+Zero-shot OpenAI result (time: 11.85 seconds):
+One-shot OpenAI result (time: 14.02 seconds):
+
+Iteration 9 on openai-gpt-5:
+Zero-shot OpenAI result (time: 13.62 seconds):
+One-shot OpenAI result (time: 9.73 seconds):
+
+Iteration 10 on openai-gpt-5:
+Zero-shot OpenAI result (time: 15.04 seconds):
+One-shot OpenAI result (time: 16.40 seconds):
+
+
+
+Running inference on task file: generative_2.txt
+
+Iteration 1 on openai-gpt-5:
+Zero-shot OpenAI result (time: 15.97 seconds):
+One-shot OpenAI result (time: 7.68 seconds):
+
+Iteration 2 on openai-gpt-5:
+Zero-shot OpenAI result (time: 12.61 seconds):
+One-shot OpenAI result (time: 9.55 seconds):
+
+Iteration 3 on openai-gpt-5:
+Zero-shot OpenAI result (time: 16.24 seconds):
+One-shot OpenAI result (time: 8.60 seconds):
+
+Iteration 4 on openai-gpt-5:
+Zero-shot OpenAI result (time: 12.19 seconds):
+One-shot OpenAI result (time: 12.22 seconds):
+
+Iteration 5 on openai-gpt-5:
+Zero-shot OpenAI result (time: 23.72 seconds):
+One-shot OpenAI result (time: 9.42 seconds):
+
+Iteration 6 on openai-gpt-5:
+Zero-shot OpenAI result (time: 14.02 seconds):
+One-shot OpenAI result (time: 13.31 seconds):
+
+Iteration 7 on openai-gpt-5:
+Zero-shot OpenAI result (time: 10.56 seconds):
+One-shot OpenAI result (time: 9.82 seconds):
+
+Iteration 8 on openai-gpt-5:
+Zero-shot OpenAI result (time: 19.29 seconds):
+One-shot OpenAI result (time: 14.51 seconds):
+
+Iteration 9 on openai-gpt-5:
+Zero-shot OpenAI result (time: 11.06 seconds):
+One-shot OpenAI result (time: 11.00 seconds):
+
+Iteration 10 on openai-gpt-5:
+Zero-shot OpenAI result (time: 9.06 seconds):
+One-shot OpenAI result (time: 8.82 seconds):
+
+
+
+Running inference on task file: generative_3.txt
+
+Iteration 1 on openai-gpt-5:
+Zero-shot OpenAI result (time: 35.60 seconds):
+One-shot OpenAI result (time: 12.70 seconds):
+
+Iteration 2 on openai-gpt-5:
+Zero-shot OpenAI result (time: 38.19 seconds):
+One-shot OpenAI result (time: 13.93 seconds):
+
+Iteration 3 on openai-gpt-5:
+Zero-shot OpenAI result (time: 31.24 seconds):
+One-shot OpenAI result (time: 14.02 seconds):
+
+Iteration 4 on openai-gpt-5:
+Zero-shot OpenAI result (time: 18.73 seconds):
+One-shot OpenAI result (time: 10.34 seconds):
+
+Iteration 5 on openai-gpt-5:
+Zero-shot OpenAI result (time: 20.28 seconds):
+One-shot OpenAI result (time: 18.76 seconds):
+
+Iteration 6 on openai-gpt-5:
+Zero-shot OpenAI result (time: 12.68 seconds):
+One-shot OpenAI result (time: 19.26 seconds):
+
+Iteration 7 on openai-gpt-5:
+Zero-shot OpenAI result (time: 18.52 seconds):
+One-shot OpenAI result (time: 24.38 seconds):
+
+Iteration 8 on openai-gpt-5:
+Zero-shot OpenAI result (time: 20.95 seconds):
+One-shot OpenAI result (time: 27.38 seconds):
+
+Iteration 9 on openai-gpt-5:
+Zero-shot OpenAI result (time: 21.33 seconds):
+One-shot OpenAI result (time: 15.80 seconds):
+
+Iteration 10 on openai-gpt-5:
+Zero-shot OpenAI result (time: 17.50 seconds):
+One-shot OpenAI result (time: 11.72 seconds):
+
+
+
+Running inference on task file: generative_4.txt
+
+Iteration 1 on openai-gpt-5:
+Zero-shot OpenAI result (time: 21.06 seconds):
+One-shot OpenAI result (time: 11.95 seconds):
+
+Iteration 2 on openai-gpt-5:
+Zero-shot OpenAI result (time: 30.25 seconds):
+One-shot OpenAI result (time: 17.00 seconds):
+
+Iteration 3 on openai-gpt-5:
+Zero-shot OpenAI result (time: 18.85 seconds):
+One-shot OpenAI result (time: 14.03 seconds):
+
+Iteration 4 on openai-gpt-5:
+Zero-shot OpenAI result (time: 14.03 seconds):
+One-shot OpenAI result (time: 12.12 seconds):
+
+Iteration 5 on openai-gpt-5:
+Zero-shot OpenAI result (time: 17.59 seconds):
+One-shot OpenAI result (time: 46.68 seconds):
+
+Iteration 6 on openai-gpt-5:
+Zero-shot OpenAI result (time: 20.48 seconds):
+One-shot OpenAI result (time: 19.55 seconds):
+
+Iteration 7 on openai-gpt-5:
+Zero-shot OpenAI result (time: 23.66 seconds):
+One-shot OpenAI result (time: 23.76 seconds):
+
+Iteration 8 on openai-gpt-5:
+Zero-shot OpenAI result (time: 22.62 seconds):
+One-shot OpenAI result (time: 31.03 seconds):
+
+Iteration 9 on openai-gpt-5:
+Zero-shot OpenAI result (time: 45.88 seconds):
+One-shot OpenAI result (time: 15.89 seconds):
+
+Iteration 10 on openai-gpt-5:
+Zero-shot OpenAI result (time: 21.99 seconds):
+One-shot OpenAI result (time: 20.18 seconds):
+
+
+
+Running inference on task file: generative_5.txt
+
+Iteration 1 on openai-gpt-5:
+Zero-shot OpenAI result (time: 20.87 seconds):
+One-shot OpenAI result (time: 38.14 seconds):
+
+Iteration 2 on openai-gpt-5:
+Zero-shot OpenAI result (time: 29.58 seconds):
+One-shot OpenAI result (time: 11.55 seconds):
+
+Iteration 3 on openai-gpt-5:
+Zero-shot OpenAI result (time: 22.21 seconds):
+One-shot OpenAI result (time: 17.41 seconds):
+
+Iteration 4 on openai-gpt-5:
+Zero-shot OpenAI result (time: 19.25 seconds):
+One-shot OpenAI result (time: 15.98 seconds):
+
+Iteration 5 on openai-gpt-5:
+Zero-shot OpenAI result (time: 26.72 seconds):
+One-shot OpenAI result (time: 12.28 seconds):
+
+Iteration 6 on openai-gpt-5:
+Zero-shot OpenAI result (time: 37.90 seconds):
+One-shot OpenAI result (time: 14.54 seconds):
+
+Iteration 7 on openai-gpt-5:
+Zero-shot OpenAI result (time: 23.65 seconds):
+One-shot OpenAI result (time: 16.34 seconds):
+
+Iteration 8 on openai-gpt-5:
+Zero-shot OpenAI result (time: 19.41 seconds):
+One-shot OpenAI result (time: 40.35 seconds):
+
+Iteration 9 on openai-gpt-5:
+Zero-shot OpenAI result (time: 29.71 seconds):
+One-shot OpenAI result (time: 24.05 seconds):
+
+Iteration 10 on openai-gpt-5:
+Zero-shot OpenAI result (time: 38.91 seconds):
+One-shot OpenAI result (time: 23.45 seconds):
+

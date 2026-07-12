@@ -1,0 +1,23 @@
+<root main_tree_to_execute = "MainTree">
+    <BehaviorTree ID="MainTree">
+        <Sequence>
+            <SetBlackboard output_key="stationA" value="-4.3,-4.0,3.1" />
+            <SetBlackboard output_key="stationB" value="-4,0,0" />
+            <SetBlackboard output_key="stationC" value="0,0,3.1" />
+            <SetBlackboard output_key="stationD" value="4,0,0" />
+            <Sequence>
+                <SubTree ID="MoveTo" target="stationA" />
+                <SubTree ID="MoveTo" target="stationB" />
+                <SubTree ID="MoveTo" target="stationC" />
+                <SubTree ID="MoveTo" target="stationD" />
+            </Sequence>
+        </Sequence>
+    </BehaviorTree>
+
+    <BehaviorTree ID="MoveTo">
+        <Sequence>
+            <Action ID="NavigateTo" goal="{target}" />
+        </Sequence>
+    </BehaviorTree>
+
+</root>

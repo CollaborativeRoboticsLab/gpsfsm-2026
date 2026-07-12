@@ -1,0 +1,19 @@
+<Plan ID="MainTree">
+    <Sequence>
+      <RetryUntilSuccesful num_attempts="10" name="move to (2.0, -0.5)">
+        <Sequence name="move to (1.0, 3.0)">
+          <RetryUntilSuccesful num_attempts="10" name="move to (1.0, 3.0)">
+            <Sequence name="move to (0.0, -2.0)">
+              <Sequence name="move to (-2.0, 0.0)">
+                <SubTree ID="MoveRobot" Coords="-2.0;0.0" />
+              </Sequence>
+              <SubTree ID="MoveRobot" Coords="0.0;-2.0" />
+            </Sequence>
+          </RetryUntilSuccesful>
+        </Sequence>
+        <SubTree ID="MoveRobot" Coords="2.0;-0.5" />
+      </RetryUntilSuccesful>
+      <SubTree ID="MoveRobot" Coords="1.0;3.0" />
+      <SubTree ID="MoveRobot" Coords="0.0;2.0" />
+    </Sequence>
+  </Plan>

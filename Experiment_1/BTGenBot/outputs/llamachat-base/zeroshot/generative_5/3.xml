@@ -1,0 +1,30 @@
+<root main_tree_to_execute="MainTree">
+    <BehaviorTree ID="MainTree">
+        <Sequence>
+            <!-- StationA, StationE, StationF, StationD  order -->
+            <Fallback>
+                <Sequence>
+                    <GetField output_key="stationA" value="{stationA}"/>
+                    <Condition ID="IsStationReached" field="{stationA}" />
+                    <Action ID="MoveTo" field="{positionA}" />
+                </Sequence>
+                <Sequence>
+                    <GetField output_key="stationE" value="{stationE}"/>
+                    <Condition ID="IsStationReached" field="{stationE}" />
+                    <Action ID="MoveTo" field="{positionE}" />
+                </Sequence>
+                <Sequence>
+                    <GetField output_key="stationF" value="{stationF}" />
+                    <Condition ID="IsStationReached" field="{stationF}" />
+                    <Action ID="MoveTo" field="{positionF}" />
+                </Sequence>
+                <Sequence>
+                    <GetField output_key="stationD" value="{stationD}" />
+                    <Condition ID="IsStationReached" field="{stationD}" />
+                    <Action ID="MoveTo" field="{positionD}" />
+                </Sequence>
+                <Action ID="MoveTo" field="{stationB}" />
+            </Fallback>
+        </Sequence>
+    </BehaviorTree>
+</root>

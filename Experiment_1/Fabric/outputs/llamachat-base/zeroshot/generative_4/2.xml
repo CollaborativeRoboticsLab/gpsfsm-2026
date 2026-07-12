@@ -1,0 +1,42 @@
+<Plan ID="MainTree">
+    <Sequence>
+      <RetryUntilSuccesful num_attempts="2" name="move to specific locations">
+        <Sequence name="move to (2.0, -0.5)">
+          <Sequence name="move to (1.0, 3.0)">
+            <Sequence name="move to (0.0, -2.0)">
+              <Sequence name="move to (-3.0, -1.0)">
+                <Sequence name="move to (-2.0, 0.0)">
+                  <ParallelNode threshold="1">
+                    <Sequence name="move to (2.0, -0.5)">
+                      <Sequence name="move to (1.0, 3.0)">
+                        <Sequence name="move to (0.0, -2.0)">
+                          <Sequence name="move to (-3.0, -1.0)">
+                            <Sequence name="move to (-2.0, 0.0)">
+                              <SubTree ID="move to specific locations" __shared_blackboard="true">
+                                <Sequence name="move to (2.0, -0.5)">
+                                  <Sequence name="move to (1.0, 3.0)">
+                                    <Sequence name="move to (0.0, -2.0)">
+                                      <Sequence name="move to (-3.0, -1.0)">
+                                        <Sequence name="move to (-2.0, 0.0)">
+                                          <SequenceStar name="move to a given position">
+                                            <Action ID="navigationAction" category="move" name="move" pose_mode="2" position="2.0;-0.5" robot_name="myRobot" />
+                                          </SequenceStar>
+                                        </Sequence>
+                                      </Sequence>
+                                    </Sequence>
+                                </Sequence>
+                              </SubTree>
+                            </Sequence>
+                          </Sequence>
+                        </Sequence>
+                      </Sequence>
+                    </Sequence>
+                  </ParallelNode>
+                </Sequence>
+              </Sequence>
+            </Sequence>
+          </Sequence>
+        </Sequence>
+      </RetryUntilSuccesful>
+    </Sequence>
+  </Plan>

@@ -1,0 +1,5 @@
+<Plan ID="move to (0.0, 2.0)">
+    <Sequence name="move to (0.0, 2.0)">
+      <NavigationAction ID="navigate" goal="0;2;0;1.2;"/>
+    </Sequence>
+  </Plan>

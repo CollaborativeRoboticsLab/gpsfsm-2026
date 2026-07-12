@@ -1,0 +1,28 @@
+<Plan ID="MainTree">
+        <Sequence>
+            <RetryUntilSuccesful num_attempts="2">
+                <Sequence>
+                    <GetField value="{moving_position}" field="x">
+                        0.0
+                    </GetField>
+                    <GetField value="{moving_position}" field="y">
+                        -2.0
+                    </GetField>
+                    <MoveBase distance="0.5">
+                        <SetField field="x" value="{x}"/>
+                    </MoveBase>
+                    <SetField field="y" value="{y}"/>
+                    <MoveBase distance="0.5">
+                        <SetField field="y" value="{y}"/>
+                    </MoveBase>
+                    <SetField field="y" value="0.5"/>
+                    <SetField field="x" value="1.0"/>
+                    <SetField field="y" value="3.0"/>
+                    <SetField field="y" value="-3.0"/>
+                    <SetField field="y" value="-2.0"/>
+                    <SetField field="x" value="0.0"/>
+                    <SetField field="y" value="-2.0"/>
+                </Sequence>
+            </RetryUntilSuccesful>
+        </Sequence>
+    </Plan>

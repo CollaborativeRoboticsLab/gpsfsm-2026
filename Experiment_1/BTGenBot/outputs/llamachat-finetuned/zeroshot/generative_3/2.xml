@@ -1,0 +1,62 @@
+<root main_tree_to_execute="navigate">
+    <BehaviorTree ID="navigate">
+        <Sequence>
+            <!-- StationA, StationE, StationC, StationD in order -->
+            <SubTree ID="visitStations" />
+            <!-- If StationE cannot be reached, move to StationB -->
+            <Fallback ID="visitStations" name="stationE_not_reached">
+                <SubTree ID="moveToStationB" name="stationB" />
+                <SubTree ID="visitStations" name="stationA" />
+                <SubTree ID="visitStations" name="stationC" />
+                <SubTree ID="visitStations" name="stationD" />
+            </Fallback>
+        </Sequence>
+    </BehaviorTree>
+
+    <BehaviorTree ID="moveToStationA">
+        <Sequence>
+            <MoveBase distance="5.0"/>
+            <SetBlackboard value="0" output_key="value" />
+            <WriteBlackboard value="value" output_key=" StationA" />
+        </Sequence>
+    </BehaviorTree>
+
+    <BehaviorTree ID="moveToStationB">
+        <Sequence>
+            <MoveBase distance="5.0"/>
+            <SetBlackboard value="1" output_key="value" />
+            <WriteBlackboard value="value" output_key=" StationB" />
+        </Sequence>
+    </BehaviorTree>
+
+    <BehaviorTree ID="moveToStationC">
+        <Sequence>
+            <MoveBase distance="5.0"/>
+            <SetBlackboard value="2" output_key="value" />
+            <WriteBlackboard value="value" output_key=" StationC" />
+        </Sequence>
+    </BehaviorTree>
+
+    <BehaviorTree ID="moveToStationD">
+        <Sequence>
+            <MoveBase distance="5.0"/>
+            <SetBlackboard value="3" output_key="value" />
+            <WriteBlackboard value="value" output_key=" StationD" />
+        </Sequence>
+    </BehaviorTree>
+
+    <BehaviorTree ID="visitStations">
+        <Sequence>
+            <MoveToPose position="-1.962;-4.224;0.0" />
+            <SetBlackboard value="0" output_key="value" />
+            <SubTree ID="moveToStationA" name="stationA" />
+            <SetBlackboard value="1" output_key="value" />
+            <SubTree ID="moveToStationB" name="stationB" />
+            <SetBlackboard value="2" output_key="value" />
+            <SubTree ID="moveToStationC" name="stationC" />
+            <SetBlackboard value="3" output_key="value" />
+            <SubTree ID="moveToStationD" name="stationD" />
+            <SetBlackboard value="0" output_key="value" />
+        </Sequence>
+    </BehaviorTree>
+</root>

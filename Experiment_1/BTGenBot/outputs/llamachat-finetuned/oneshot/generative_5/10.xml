@@ -1,0 +1,21 @@
+<root BTCPP_format="4">
+    <BehaviorTree>
+        <Sequence>
+            <SetBlackboard value="StationA" output="station"/>
+            <SetBlackboard value="StationB" output="station"/>
+            <SetBlackboard value="StationC" output="station"/>
+            <SetBlackboard value="StationD" output="station"/>
+            <SetBlackboard value="StationE" output="station"/>
+            <SetBlackboard value="StationF" output="station"/>
+            <Fallback>
+                <Switch4 case_1="StationA" case_2="StationB" case_3="StationC" case_4="StationD" case_5="StationE" variable="station">
+                    <MoveTo name="go_to_station" location="{variable}"/>
+                </Switch4>
+                <Switch4 case_1="StationA" case_2="StationE" case_3="StationF" case_4="StationD" case_5="StationC" variable="station">
+                    <MoveTo name="go_to_station" location="{variable}"/>
+                </Switch4>
+                <MoveTo name="go_to_station" location="StationD"/>
+            </Fallback>
+        </Sequence>
+    </BehaviorTree>
+</root>

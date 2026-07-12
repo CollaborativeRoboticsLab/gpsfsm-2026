@@ -1,0 +1,13 @@
+<root BTCPP_format="4">
+    <BehaviorTree>
+        <Sequence>
+            <SetBlackboard output_key="station_order" value="StationA, StationB, StationC, StationD" />
+            <Fallback>
+                <Sequence>
+                    <MoveTo name="go_to_station" location="{station_order}" />
+                </Sequence>
+                <SubTree ID="StationA_Reachable_Check" />
+            </Fallback>
+        </Sequence>
+    </BehaviorTree>
+</root>

@@ -1,0 +1,56 @@
+<root main_tree_to_execute="MainTree">
+    <BehaviorTree ID="MainTree">
+        <Sequence>
+           ; Visit StationA, StationE, StationC, StationD in sequence. If StationE cannot be reached, proceed to StationB.
+            <Sequence>
+                <SubTree ID="StationA" />
+                <SubTree ID="StationE" />
+                <SubTree ID="StationC" />
+                <SubTree ID="StationD" />
+                <Fallback>
+                    <SubTree ID="StationB" />
+                </Fallback>
+            </Sequence>
+        </Sequence>
+    </BehaviorTree>
+    <BehaviorTree ID="StationA">
+        <Sequence>
+            <MoveTo goal="1.17;2.05;0.00" />
+        </Sequence>
+    </BehaviorTree>
+    <BehaviorTree ID="StationB">
+        <Sequence>
+            <MoveTo goal="0.75;2.0;0.00" />
+        </Sequence>
+    </BehaviorTree>
+    <BehaviorTree ID="StationC">
+        <Sequence>
+            <MoveTo goal="1.72;2.0;0.00" />
+        </Sequence>
+    </BehaviorTree>
+    <BehaviorTree ID="StationD">
+        <Sequence>
+            <MoveTo goal="0.0;2.0;0.00" />
+        </Sequence>
+    </BehaviorTree>
+    <BehaviorTree ID="StationE">
+        <Sequence>
+            <Sequence>
+                <Fallback>
+                    <Sequence>
+                        <MoveTo goal="0.75;2.0;0.00" />
+                    </Sequence>
+                    <Sequence>
+                        <MoveTo goal="0.0;2.0;0.00" />
+                    </Sequence>
+                </Fallback>
+                <Sequence>
+                    <MoveTo goal="1.17;2.05;0.00" />
+                </Sequence>
+            </Sequence>
+        </Sequence>
+    </BehaviorTree>
+    <BehaviorTree ID="MoveTo">
+        <Input_Port default="1.0;2.0;0.0" name="goal">The destination positiom</Input_Port>
+    </BehaviorTree>
+</root>

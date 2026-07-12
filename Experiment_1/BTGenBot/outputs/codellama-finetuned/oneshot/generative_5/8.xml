@@ -1,0 +1,24 @@
+<root main_tree_to_execute="MainTree">
+	<BehaviorTree ID="MainTree">
+		<Sequence>
+			<Fallback>
+				<Fallback>
+					<Condition ID="IsLocationReachable" location="StationA"/>
+					<Action ID="MoveTo" name="go_to_station_B" location="StationB"/>
+				</Fallback>
+				<Action ID="MoveTo" name="go_to_station_A" location="StationA"/>
+			</Fallback>
+			<Action ID="MoveTo" name="go_to_station_E" location="StationE"/>
+			<Fallback>
+				<Condition ID="IsLocationReachable" location="StationF"/>
+				<Action ID="MoveTo" name="go_to_station_C" location="StationC"/>
+			</Fallback>
+			<Action ID="MoveTo" name="go_to_station_F" location="StationF"/>
+			<Fallback>
+				<Condition ID="IsLocationReachable" location="StationD"/>
+				<Action ID="MoveTo" name="go_to_station_C" location="StationC"/>
+			</Fallback>
+			<Action ID="MoveTo" name="go_to_station_D" location="StationD"/>
+		</Sequence>
+	</BehaviorTree>
+</root>

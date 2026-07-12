@@ -1,0 +1,7 @@
+<root main_tree_to_execute="BehaviorTree">
+    <BehaviorTree name="BehaviorTree">
+        <Sequence>
+            <MoveTo name="go_to_station_A" location="StationA"/>
+        </Sequence>
+    </BehaviorTree>
+</root>

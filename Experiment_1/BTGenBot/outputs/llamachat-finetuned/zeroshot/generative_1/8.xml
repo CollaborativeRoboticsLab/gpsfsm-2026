@@ -1,0 +1,14 @@
+<root main_tree_to_execute="MainTree">
+    <BehaviorTree ID="MainTree">
+        <Sequence>
+            <FindPoseAction 
+                    state_topic="station_a" 
+                    pose_topic="station_a_pose" 
+                    global_frame="map" 
+                    position_in_scene="back" />
+            <MoveToAction 
+                goal_pose="{position_in_scene}" 
+                frame="map" />
+        </Sequence>
+    </BehaviorTree>
+</root>

@@ -1,0 +1,59 @@
+<root main_tree_to_execute = "MainTree" >
+    <BehaviorTree ID="MainTree">
+        <Sequence>
+            <SubTree ID="StationEReached" />
+            <SubTree ID="StationFReached" />
+            <SubTree ID="StationDReached" />
+            <SubTree ID="StationBReached" />
+            <SubTree ID="StationCReched" />
+        </Sequence>
+    </BehaviorTree>
+   <BehaviorTree ID="StationEReached">
+        <Fallback>
+            <Sequence>
+                <Action ID="MoveTo" goal="StationE" />
+            </Sequence>
+            <Sequence>
+                <Action ID="MoveTo" goal="StationE" />
+            </Sequence>
+        </Fallback>
+   </BehaviorTree>
+   <BehaviorTree ID="StationFReached">
+        <Fallback>
+            <Sequence>
+                <Action ID="MoveTo" goal="StationF" />
+            </Sequence>
+            <Sequence>
+                <Action ID="MoveTo" goal="StationF" />
+            </Sequence>
+        </Fallback>
+   </BehaviorTree>
+   <BehaviorTree ID="StationDReached">
+        <Fallback>
+            <Sequence>
+                <Action ID="MoveTo" goal="StationD" />
+            </Sequence>
+            <Sequence>
+                <Action ID="MoveTo" goal="StationD" />
+            </Sequence>
+        </Fallback>
+   </BehaviorTree>
+   <BehaviorTree ID="StationBReached">
+        <Fallback>
+            <Sequence>
+                <Action ID="MoveTo" goal="StationB" />
+            </Sequence>
+            <Sequence>
+                <Action ID="MoveTo" goal="StationB" />
+            </Sequence>
+        </Fallback>
+   </BehaviorTree>
+   <BehaviorTree ID="StationCReched">
+        <Sequence>
+            <Action ID="MoveTo" goal="StationC" />
+        </Sequence>
+   </BehaviorTree>
+   <BehaviorTree ID="MoveTo">
+        <Input_port default="1" name="goal">Where to move?</input_port>
+   </BehaviorTree>
+</root>

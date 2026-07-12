@@ -1,0 +1,31 @@
+<root main_tree_to_execute="navigate">
+    <BehaviorTree ID="navigate">
+        <Sequence>
+            <!-- StationA, StationE, StationC, StationD in order -->
+            <SubTree ID="visitStations" />
+            <!-- if StationE cannot be reached -->
+            <Fallback ID="visitStationB" name="stationE_not_reached">
+                <SubTree ID="visitStations" />
+            </Fallback>
+        </Sequence>
+    </BehaviorTree>
+
+    <BehaviorTree ID="visitStations">
+        <Sequence>
+            <MoveTo action_name="moveTo" target="StationA" />
+            <MoveTo action_name="moveTo" target="StationC" />
+            <MoveTo action_name="moveTo" target="StationD" />
+            <MoveTo action_name="moveTo" target="StationE" />
+        </Sequence>
+    </BehaviorTree>
+
+    <BehaviorTree ID="visitStationB">
+        <Sequence>
+            <MoveTo action_name="moveTo" target="StationB" />
+        </Sequence>
+    </BehaviorTree>
+
+    <Action ID="moveTo">
+        <input_port default="stationA" name="target">A string indicating the destination</input_port>
+    </Action>
+</root>

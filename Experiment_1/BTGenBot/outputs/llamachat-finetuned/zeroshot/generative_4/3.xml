@@ -1,0 +1,57 @@
+<root main_tree_to_execute="MainTree">
+    <BehaviorTree ID="MainTree">
+        <Sequence>
+           ; Visit StationA, StationE, StationF, StationD in sequence
+            <Sequence>
+                <SubTree ID="StationA" />
+                <SubTree ID="StationE" />
+                <SubTree ID="StationF" />
+                <SubTree ID="StationD" />
+            </Sequence>
+            <SubTree ID="StationB" />
+        </Sequence>
+    </BehaviorTree>
+
+    <BehaviorTree ID="StationA">
+        <Sequence>
+            <Action ID="MoveTo" goal="StationA" />
+        </Sequence>
+    </BehaviorTree>
+
+    <BehaviorTree ID="StationB">
+        <Sequence>
+            <Action ID="MoveTo" goal="StationB" />
+        </Sequence>
+    </BehaviorTree>
+
+    <BehaviorTree ID="StationC">
+        <Sequence>
+            <Action ID="MoveTo" goal="StationC" />
+        </Sequence>
+    </BehaviorTree>
+
+    <BehaviorTree ID="StationD">
+        <Sequence>
+            <Action ID="MoveTo" goal="StationD" />
+        </Sequence>
+    </BehaviorTree>
+
+    <BehaviorTree ID="StationE">
+        <Sequence>
+            <Fallback>
+                <Sequence>
+                    <Action ID="MoveTo" goal="StationE" />
+                </Sequence>
+                <Sequence>
+                    <Action ID="MoveTo" goal="StationB" />
+                </Sequence>
+            </Fallback>
+        </Sequence>
+    </BehaviorTree>
+
+    <BehaviorTree ID="StationF">
+        <Sequence>
+            <Action ID="MoveTo" goal="StationF" />
+        </Sequence>
+    </BehaviorTree>
+</root>

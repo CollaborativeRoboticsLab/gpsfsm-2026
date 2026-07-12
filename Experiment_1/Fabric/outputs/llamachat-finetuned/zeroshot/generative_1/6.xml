@@ -1,0 +1,34 @@
+<Plan>
+  <Control type="sequential" name="name_of_flow">
+    <Sequence name="sequence1">
+      <MoveBase goal="2.0,-0.5" />
+    </Sequence>
+  </Control>
+
+  <Control type="parallel_any" name="name_of_flow">
+    <Sequence>
+      <GetBaseMovementgoal modulename="navigation" navigation_goal="2.0;-0.5;0.0;1.0" />
+      <MoveBase goal="4.0;-0.5" />
+    </Sequence>
+  </Control>
+
+  <Control type="parallel_all" name="name_of_flow">
+    <Sequence>
+      <GetBaseMovementgoal modulename="navigation" navigation_goal="2.0;-0.5;0.0;1.0" />
+      <MoveBase goal="6.0;-0.5" />
+      <GetBaseMovementgoal modulename="navigation" navigation_goal="2.0;-0.5;0.0;1.0" />
+      <MoveBase goal="8.0;-0.5" />
+    </Sequence>
+  </Control>
+
+  <Control type="recovery" name="name_of_flow">
+    <Sequence>
+      <MoveBase goal="0.0;0.0;0.0;1.0" />
+      <Repeat num_cycles="-1">
+        <GetBaseMovementgoal modulename="navigation" navigation_goal="2.0;-0.5;0.0;1.0" />
+        <MoveBase goal="2.0;-0.5" />
+      </Repeat>
+    </Sequence>
+  </Control>
+
+</Plan>

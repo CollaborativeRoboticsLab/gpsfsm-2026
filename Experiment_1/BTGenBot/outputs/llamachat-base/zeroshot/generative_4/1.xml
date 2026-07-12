@@ -1,0 +1,27 @@
+<root main_tree_to_execute="MainTree">
+    <BehaviorTree ID="MainTree">
+        <Sequence>
+           ; Visit StationA
+            <Action ID="MoveTo" goal="1.17;-3.65;0.00" name="Go to StationA"/>
+
+            ; Visit StationE
+            <Fallback>
+                <Action ID="MoveTo" goal="0.98;-4.69;0.00" name="Go to StationE"/>
+                <ForceFailure>
+                    <Action ID="MoveTo" goal="0.00;-4.00;0.00" name="Move to StationB"/>
+                </ForceFailure>
+            </Fallback>
+
+            ; Visit StationF
+            <Fallback>
+                <Action ID="MoveTo" goal="-0.98;-4.69;0.00" name="Go to StationF"/>
+                <ForceFailure>
+                    <Action ID="MoveTo" goal="-0.00;-4.00;0.00" name="Move to StationC"/>
+                </ForceFailure>
+            </Fallback>
+
+            ; Visit StationD
+            <Action ID="MoveTo" goal="-1.17;-3.65;0.00" name="Go to StationD"/>
+        </Sequence>
+    </BehaviorTree>
+</root>

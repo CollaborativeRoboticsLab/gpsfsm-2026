@@ -1,0 +1,16 @@
+<root BTCPP_format="4">
+    <BehaviorTree>
+        <Sequence>
+            <MoveTo name="go_to_StationA" location="StationA"/>
+            <Fallback>
+                <MoveTo name="go_to_StationE" location="StationE"/>
+                <MoveTo name="go_to_StationB" location="StationB"/>
+            </Fallback>
+            <Fallback>
+                <MoveTo name="go_to_StationF" location="StationF"/>
+                <MoveTo name="go_to_StationC" location="StationC"/>
+            </Fallback>
+            <MoveTo name="go_to_StationD" location="StationD"/>
+        </Sequence>
+    </BehaviorTree>
+</root>

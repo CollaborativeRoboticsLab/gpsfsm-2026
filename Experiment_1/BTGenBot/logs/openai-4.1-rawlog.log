@@ -1,0 +1,2862 @@
+
+Running inference on task file: generative_1.txt
+
+Iteration 1 on openai-gpt-4.1:
+Task:
+"""The behavior tree represents a robot's navigation system. The robot must visit the location "StationA". actions that must be used in the behavior tree are: "MoveTo"."""
+Prompt used: 
+[{'role': 'system', 'content': '<<SYS>> You will be provided a summary of a task performed by a behavior tree, and your objective is to express this behavior tree in XML format.\n <</SYS>>'}, {'role': 'user', 'content': '"""The behavior tree represents a robot\'s navigation system. The robot must visit the location "StationA". actions that must be used in the behavior tree are: "MoveTo"."""'}]
+
+Zero-shot OpenAI result (time: 2.45 seconds):
+Zero-shot OpenAI result:
+<BehaviorTree>
+    <Sequence name="NavigateToStationA">
+        <MoveTo target="StationA"/>
+    </Sequence>
+</BehaviorTree>
+No valid behavior tree found in the output.
+Prompt used: 
+[{'role': 'system', 'content': '<<SYS>> You will be provided a summary of a task performed by a behavior tree, and your objective is to express this behavior tree in XML format.\n <</SYS>>'}, {'role': 'user', 'content': 'The behavior tree represents a robot\'s navigation system with arm activity. The robot must visit the locations "Station A", "Station B", "Station C". \n                  If "Station A" is not reachable, move to "Station D". The only available actions that must be used in the behavior tree are: "MoveTo".'}, {'role': 'assistant', 'content': '<root BTCPP_format="4">\n    <BehaviorTree>\n        <Sequence>\n            <Fallback>\n                <MoveTo name="go_to_station_A" location="Station A"/>      <!-- move to Station A -->\n                <MoveTo name="go_to_station_D" location="Station D"/>      <!-- move to Station D -->\n            </Fallback>\n            <MoveTo name="go_to_station_B" location="Station B"/>      <!-- move to Station B -->\n            <MoveTo name="go_to_station_C" location="Station C"/>      <!-- move to Station C -->\n        </Sequence>\n    </BehaviorTree>\n</root>'}, {'role': 'user', 'content': '"""The behavior tree represents a robot\'s navigation system. The robot must visit the location "StationA". actions that must be used in the behavior tree are: "MoveTo"."""'}]
+
+One-shot OpenAI result (time: 0.77 seconds):
+One-shot OpenAI result:
+<root BTCPP_format="4">
+    <BehaviorTree>
+        <Sequence>
+            <MoveTo name="go_to_stationA" location="StationA"/>
+        </Sequence>
+    </BehaviorTree>
+</root>
+Final tree tree is : 
+ <root BTCPP_format="4">
+    <BehaviorTree>
+        <Sequence>
+            <MoveTo name="go_to_stationA" location="StationA"/>
+        </Sequence>
+    </BehaviorTree>
+</root>
+Output saved to outputs/openai-gpt-4.1/oneshot/generative_1/1.xml
+
+Iteration 2 on openai-gpt-4.1:
+Task:
+"""The behavior tree represents a robot's navigation system. The robot must visit the location "StationA". actions that must be used in the behavior tree are: "MoveTo"."""
+Prompt used: 
+[{'role': 'system', 'content': '<<SYS>> You will be provided a summary of a task performed by a behavior tree, and your objective is to express this behavior tree in XML format.\n <</SYS>>'}, {'role': 'user', 'content': '"""The behavior tree represents a robot\'s navigation system. The robot must visit the location "StationA". actions that must be used in the behavior tree are: "MoveTo"."""'}]
+
+Zero-shot OpenAI result (time: 2.10 seconds):
+Zero-shot OpenAI result:
+<BehaviorTree>
+    <Sequence name="NavigateToStationA">
+        <MoveTo target="StationA"/>
+    </Sequence>
+</BehaviorTree>
+No valid behavior tree found in the output.
+Prompt used: 
+[{'role': 'system', 'content': '<<SYS>> You will be provided a summary of a task performed by a behavior tree, and your objective is to express this behavior tree in XML format.\n <</SYS>>'}, {'role': 'user', 'content': 'The behavior tree represents a robot\'s navigation system with arm activity. The robot must visit the locations "Station A", "Station B", "Station C". \n                  If "Station A" is not reachable, move to "Station D". The only available actions that must be used in the behavior tree are: "MoveTo".'}, {'role': 'assistant', 'content': '<root BTCPP_format="4">\n    <BehaviorTree>\n        <Sequence>\n            <Fallback>\n                <MoveTo name="go_to_station_A" location="Station A"/>      <!-- move to Station A -->\n                <MoveTo name="go_to_station_D" location="Station D"/>      <!-- move to Station D -->\n            </Fallback>\n            <MoveTo name="go_to_station_B" location="Station B"/>      <!-- move to Station B -->\n            <MoveTo name="go_to_station_C" location="Station C"/>      <!-- move to Station C -->\n        </Sequence>\n    </BehaviorTree>\n</root>'}, {'role': 'user', 'content': '"""The behavior tree represents a robot\'s navigation system. The robot must visit the location "StationA". actions that must be used in the behavior tree are: "MoveTo"."""'}]
+
+One-shot OpenAI result (time: 1.03 seconds):
+One-shot OpenAI result:
+<root BTCPP_format="4">
+    <BehaviorTree>
+        <Sequence>
+            <MoveTo name="go_to_stationA" location="StationA"/>
+        </Sequence>
+    </BehaviorTree>
+</root>
+Final tree tree is : 
+ <root BTCPP_format="4">
+    <BehaviorTree>
+        <Sequence>
+            <MoveTo name="go_to_stationA" location="StationA"/>
+        </Sequence>
+    </BehaviorTree>
+</root>
+Output saved to outputs/openai-gpt-4.1/oneshot/generative_1/2.xml
+
+Iteration 3 on openai-gpt-4.1:
+Task:
+"""The behavior tree represents a robot's navigation system. The robot must visit the location "StationA". actions that must be used in the behavior tree are: "MoveTo"."""
+Prompt used: 
+[{'role': 'system', 'content': '<<SYS>> You will be provided a summary of a task performed by a behavior tree, and your objective is to express this behavior tree in XML format.\n <</SYS>>'}, {'role': 'user', 'content': '"""The behavior tree represents a robot\'s navigation system. The robot must visit the location "StationA". actions that must be used in the behavior tree are: "MoveTo"."""'}]
+
+Zero-shot OpenAI result (time: 1.29 seconds):
+Zero-shot OpenAI result:
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence name="NavigateToStationA">
+      <MoveTo goal="StationA"/>
+    </Sequence>
+  </BehaviorTree>
+</root>
+Final tree tree is : 
+ <root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence name="NavigateToStationA">
+      <MoveTo goal="StationA"/>
+    </Sequence>
+  </BehaviorTree>
+</root>
+Output saved to outputs/openai-gpt-4.1/zeroshot/generative_1/3.xml
+Prompt used: 
+[{'role': 'system', 'content': '<<SYS>> You will be provided a summary of a task performed by a behavior tree, and your objective is to express this behavior tree in XML format.\n <</SYS>>'}, {'role': 'user', 'content': 'The behavior tree represents a robot\'s navigation system with arm activity. The robot must visit the locations "Station A", "Station B", "Station C". \n                  If "Station A" is not reachable, move to "Station D". The only available actions that must be used in the behavior tree are: "MoveTo".'}, {'role': 'assistant', 'content': '<root BTCPP_format="4">\n    <BehaviorTree>\n        <Sequence>\n            <Fallback>\n                <MoveTo name="go_to_station_A" location="Station A"/>      <!-- move to Station A -->\n                <MoveTo name="go_to_station_D" location="Station D"/>      <!-- move to Station D -->\n            </Fallback>\n            <MoveTo name="go_to_station_B" location="Station B"/>      <!-- move to Station B -->\n            <MoveTo name="go_to_station_C" location="Station C"/>      <!-- move to Station C -->\n        </Sequence>\n    </BehaviorTree>\n</root>'}, {'role': 'user', 'content': '"""The behavior tree represents a robot\'s navigation system. The robot must visit the location "StationA". actions that must be used in the behavior tree are: "MoveTo"."""'}]
+
+One-shot OpenAI result (time: 0.83 seconds):
+One-shot OpenAI result:
+<root BTCPP_format="4">
+    <BehaviorTree>
+        <Sequence>
+            <MoveTo name="go_to_stationA" location="StationA"/>
+        </Sequence>
+    </BehaviorTree>
+</root>
+Final tree tree is : 
+ <root BTCPP_format="4">
+    <BehaviorTree>
+        <Sequence>
+            <MoveTo name="go_to_stationA" location="StationA"/>
+        </Sequence>
+    </BehaviorTree>
+</root>
+Output saved to outputs/openai-gpt-4.1/oneshot/generative_1/3.xml
+
+Iteration 4 on openai-gpt-4.1:
+Task:
+"""The behavior tree represents a robot's navigation system. The robot must visit the location "StationA". actions that must be used in the behavior tree are: "MoveTo"."""
+Prompt used: 
+[{'role': 'system', 'content': '<<SYS>> You will be provided a summary of a task performed by a behavior tree, and your objective is to express this behavior tree in XML format.\n <</SYS>>'}, {'role': 'user', 'content': '"""The behavior tree represents a robot\'s navigation system. The robot must visit the location "StationA". actions that must be used in the behavior tree are: "MoveTo"."""'}]
+
+Zero-shot OpenAI result (time: 1.37 seconds):
+Zero-shot OpenAI result:
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence name="VisitStationA">
+      <MoveTo goal="StationA"/>
+    </Sequence>
+  </BehaviorTree>
+</root>
+Final tree tree is : 
+ <root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence name="VisitStationA">
+      <MoveTo goal="StationA"/>
+    </Sequence>
+  </BehaviorTree>
+</root>
+Output saved to outputs/openai-gpt-4.1/zeroshot/generative_1/4.xml
+Prompt used: 
+[{'role': 'system', 'content': '<<SYS>> You will be provided a summary of a task performed by a behavior tree, and your objective is to express this behavior tree in XML format.\n <</SYS>>'}, {'role': 'user', 'content': 'The behavior tree represents a robot\'s navigation system with arm activity. The robot must visit the locations "Station A", "Station B", "Station C". \n                  If "Station A" is not reachable, move to "Station D". The only available actions that must be used in the behavior tree are: "MoveTo".'}, {'role': 'assistant', 'content': '<root BTCPP_format="4">\n    <BehaviorTree>\n        <Sequence>\n            <Fallback>\n                <MoveTo name="go_to_station_A" location="Station A"/>      <!-- move to Station A -->\n                <MoveTo name="go_to_station_D" location="Station D"/>      <!-- move to Station D -->\n            </Fallback>\n            <MoveTo name="go_to_station_B" location="Station B"/>      <!-- move to Station B -->\n            <MoveTo name="go_to_station_C" location="Station C"/>      <!-- move to Station C -->\n        </Sequence>\n    </BehaviorTree>\n</root>'}, {'role': 'user', 'content': '"""The behavior tree represents a robot\'s navigation system. The robot must visit the location "StationA". actions that must be used in the behavior tree are: "MoveTo"."""'}]
+
+One-shot OpenAI result (time: 0.84 seconds):
+One-shot OpenAI result:
+<root BTCPP_format="4">
+    <BehaviorTree>
+        <Sequence>
+            <MoveTo name="go_to_stationA" location="StationA"/>
+        </Sequence>
+    </BehaviorTree>
+</root>
+Final tree tree is : 
+ <root BTCPP_format="4">
+    <BehaviorTree>
+        <Sequence>
+            <MoveTo name="go_to_stationA" location="StationA"/>
+        </Sequence>
+    </BehaviorTree>
+</root>
+Output saved to outputs/openai-gpt-4.1/oneshot/generative_1/4.xml
+
+Iteration 5 on openai-gpt-4.1:
+Task:
+"""The behavior tree represents a robot's navigation system. The robot must visit the location "StationA". actions that must be used in the behavior tree are: "MoveTo"."""
+Prompt used: 
+[{'role': 'system', 'content': '<<SYS>> You will be provided a summary of a task performed by a behavior tree, and your objective is to express this behavior tree in XML format.\n <</SYS>>'}, {'role': 'user', 'content': '"""The behavior tree represents a robot\'s navigation system. The robot must visit the location "StationA". actions that must be used in the behavior tree are: "MoveTo"."""'}]
+
+Zero-shot OpenAI result (time: 1.24 seconds):
+Zero-shot OpenAI result:
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence name="VisitStationA">
+      <MoveTo goal="StationA"/>
+    </Sequence>
+  </BehaviorTree>
+</root>
+Final tree tree is : 
+ <root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence name="VisitStationA">
+      <MoveTo goal="StationA"/>
+    </Sequence>
+  </BehaviorTree>
+</root>
+Output saved to outputs/openai-gpt-4.1/zeroshot/generative_1/5.xml
+Prompt used: 
+[{'role': 'system', 'content': '<<SYS>> You will be provided a summary of a task performed by a behavior tree, and your objective is to express this behavior tree in XML format.\n <</SYS>>'}, {'role': 'user', 'content': 'The behavior tree represents a robot\'s navigation system with arm activity. The robot must visit the locations "Station A", "Station B", "Station C". \n                  If "Station A" is not reachable, move to "Station D". The only available actions that must be used in the behavior tree are: "MoveTo".'}, {'role': 'assistant', 'content': '<root BTCPP_format="4">\n    <BehaviorTree>\n        <Sequence>\n            <Fallback>\n                <MoveTo name="go_to_station_A" location="Station A"/>      <!-- move to Station A -->\n                <MoveTo name="go_to_station_D" location="Station D"/>      <!-- move to Station D -->\n            </Fallback>\n            <MoveTo name="go_to_station_B" location="Station B"/>      <!-- move to Station B -->\n            <MoveTo name="go_to_station_C" location="Station C"/>      <!-- move to Station C -->\n        </Sequence>\n    </BehaviorTree>\n</root>'}, {'role': 'user', 'content': '"""The behavior tree represents a robot\'s navigation system. The robot must visit the location "StationA". actions that must be used in the behavior tree are: "MoveTo"."""'}]
+
+One-shot OpenAI result (time: 0.78 seconds):
+One-shot OpenAI result:
+<root BTCPP_format="4">
+    <BehaviorTree>
+        <Sequence>
+            <MoveTo name="go_to_stationA" location="StationA"/>
+        </Sequence>
+    </BehaviorTree>
+</root>
+Final tree tree is : 
+ <root BTCPP_format="4">
+    <BehaviorTree>
+        <Sequence>
+            <MoveTo name="go_to_stationA" location="StationA"/>
+        </Sequence>
+    </BehaviorTree>
+</root>
+Output saved to outputs/openai-gpt-4.1/oneshot/generative_1/5.xml
+
+Iteration 6 on openai-gpt-4.1:
+Task:
+"""The behavior tree represents a robot's navigation system. The robot must visit the location "StationA". actions that must be used in the behavior tree are: "MoveTo"."""
+Prompt used: 
+[{'role': 'system', 'content': '<<SYS>> You will be provided a summary of a task performed by a behavior tree, and your objective is to express this behavior tree in XML format.\n <</SYS>>'}, {'role': 'user', 'content': '"""The behavior tree represents a robot\'s navigation system. The robot must visit the location "StationA". actions that must be used in the behavior tree are: "MoveTo"."""'}]
+
+Zero-shot OpenAI result (time: 1.03 seconds):
+Zero-shot OpenAI result:
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <MoveTo goal="StationA"/>
+    </Sequence>
+  </BehaviorTree>
+</root>
+Final tree tree is : 
+ <root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <MoveTo goal="StationA"/>
+    </Sequence>
+  </BehaviorTree>
+</root>
+Output saved to outputs/openai-gpt-4.1/zeroshot/generative_1/6.xml
+Prompt used: 
+[{'role': 'system', 'content': '<<SYS>> You will be provided a summary of a task performed by a behavior tree, and your objective is to express this behavior tree in XML format.\n <</SYS>>'}, {'role': 'user', 'content': 'The behavior tree represents a robot\'s navigation system with arm activity. The robot must visit the locations "Station A", "Station B", "Station C". \n                  If "Station A" is not reachable, move to "Station D". The only available actions that must be used in the behavior tree are: "MoveTo".'}, {'role': 'assistant', 'content': '<root BTCPP_format="4">\n    <BehaviorTree>\n        <Sequence>\n            <Fallback>\n                <MoveTo name="go_to_station_A" location="Station A"/>      <!-- move to Station A -->\n                <MoveTo name="go_to_station_D" location="Station D"/>      <!-- move to Station D -->\n            </Fallback>\n            <MoveTo name="go_to_station_B" location="Station B"/>      <!-- move to Station B -->\n            <MoveTo name="go_to_station_C" location="Station C"/>      <!-- move to Station C -->\n        </Sequence>\n    </BehaviorTree>\n</root>'}, {'role': 'user', 'content': '"""The behavior tree represents a robot\'s navigation system. The robot must visit the location "StationA". actions that must be used in the behavior tree are: "MoveTo"."""'}]
+
+One-shot OpenAI result (time: 1.43 seconds):
+One-shot OpenAI result:
+<root BTCPP_format="4">
+    <BehaviorTree>
+        <Sequence>
+            <MoveTo name="go_to_stationA" location="StationA"/>
+        </Sequence>
+    </BehaviorTree>
+</root>
+Final tree tree is : 
+ <root BTCPP_format="4">
+    <BehaviorTree>
+        <Sequence>
+            <MoveTo name="go_to_stationA" location="StationA"/>
+        </Sequence>
+    </BehaviorTree>
+</root>
+Output saved to outputs/openai-gpt-4.1/oneshot/generative_1/6.xml
+
+Iteration 7 on openai-gpt-4.1:
+Task:
+"""The behavior tree represents a robot's navigation system. The robot must visit the location "StationA". actions that must be used in the behavior tree are: "MoveTo"."""
+Prompt used: 
+[{'role': 'system', 'content': '<<SYS>> You will be provided a summary of a task performed by a behavior tree, and your objective is to express this behavior tree in XML format.\n <</SYS>>'}, {'role': 'user', 'content': '"""The behavior tree represents a robot\'s navigation system. The robot must visit the location "StationA". actions that must be used in the behavior tree are: "MoveTo"."""'}]
+
+Zero-shot OpenAI result (time: 1.03 seconds):
+Zero-shot OpenAI result:
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence name="VisitStationA">
+      <MoveTo goal="StationA"/>
+    </Sequence>
+  </BehaviorTree>
+</root>
+Final tree tree is : 
+ <root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence name="VisitStationA">
+      <MoveTo goal="StationA"/>
+    </Sequence>
+  </BehaviorTree>
+</root>
+Output saved to outputs/openai-gpt-4.1/zeroshot/generative_1/7.xml
+Prompt used: 
+[{'role': 'system', 'content': '<<SYS>> You will be provided a summary of a task performed by a behavior tree, and your objective is to express this behavior tree in XML format.\n <</SYS>>'}, {'role': 'user', 'content': 'The behavior tree represents a robot\'s navigation system with arm activity. The robot must visit the locations "Station A", "Station B", "Station C". \n                  If "Station A" is not reachable, move to "Station D". The only available actions that must be used in the behavior tree are: "MoveTo".'}, {'role': 'assistant', 'content': '<root BTCPP_format="4">\n    <BehaviorTree>\n        <Sequence>\n            <Fallback>\n                <MoveTo name="go_to_station_A" location="Station A"/>      <!-- move to Station A -->\n                <MoveTo name="go_to_station_D" location="Station D"/>      <!-- move to Station D -->\n            </Fallback>\n            <MoveTo name="go_to_station_B" location="Station B"/>      <!-- move to Station B -->\n            <MoveTo name="go_to_station_C" location="Station C"/>      <!-- move to Station C -->\n        </Sequence>\n    </BehaviorTree>\n</root>'}, {'role': 'user', 'content': '"""The behavior tree represents a robot\'s navigation system. The robot must visit the location "StationA". actions that must be used in the behavior tree are: "MoveTo"."""'}]
+
+One-shot OpenAI result (time: 0.89 seconds):
+One-shot OpenAI result:
+<root BTCPP_format="4">
+    <BehaviorTree>
+        <Sequence>
+            <MoveTo name="go_to_stationA" location="StationA"/>
+        </Sequence>
+    </BehaviorTree>
+</root>
+Final tree tree is : 
+ <root BTCPP_format="4">
+    <BehaviorTree>
+        <Sequence>
+            <MoveTo name="go_to_stationA" location="StationA"/>
+        </Sequence>
+    </BehaviorTree>
+</root>
+Output saved to outputs/openai-gpt-4.1/oneshot/generative_1/7.xml
+
+Iteration 8 on openai-gpt-4.1:
+Task:
+"""The behavior tree represents a robot's navigation system. The robot must visit the location "StationA". actions that must be used in the behavior tree are: "MoveTo"."""
+Prompt used: 
+[{'role': 'system', 'content': '<<SYS>> You will be provided a summary of a task performed by a behavior tree, and your objective is to express this behavior tree in XML format.\n <</SYS>>'}, {'role': 'user', 'content': '"""The behavior tree represents a robot\'s navigation system. The robot must visit the location "StationA". actions that must be used in the behavior tree are: "MoveTo"."""'}]
+
+Zero-shot OpenAI result (time: 1.27 seconds):
+Zero-shot OpenAI result:
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence name="NavigateToStationA">
+      <MoveTo goal="StationA"/>
+    </Sequence>
+  </BehaviorTree>
+</root>
+Final tree tree is : 
+ <root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence name="NavigateToStationA">
+      <MoveTo goal="StationA"/>
+    </Sequence>
+  </BehaviorTree>
+</root>
+Output saved to outputs/openai-gpt-4.1/zeroshot/generative_1/8.xml
+Prompt used: 
+[{'role': 'system', 'content': '<<SYS>> You will be provided a summary of a task performed by a behavior tree, and your objective is to express this behavior tree in XML format.\n <</SYS>>'}, {'role': 'user', 'content': 'The behavior tree represents a robot\'s navigation system with arm activity. The robot must visit the locations "Station A", "Station B", "Station C". \n                  If "Station A" is not reachable, move to "Station D". The only available actions that must be used in the behavior tree are: "MoveTo".'}, {'role': 'assistant', 'content': '<root BTCPP_format="4">\n    <BehaviorTree>\n        <Sequence>\n            <Fallback>\n                <MoveTo name="go_to_station_A" location="Station A"/>      <!-- move to Station A -->\n                <MoveTo name="go_to_station_D" location="Station D"/>      <!-- move to Station D -->\n            </Fallback>\n            <MoveTo name="go_to_station_B" location="Station B"/>      <!-- move to Station B -->\n            <MoveTo name="go_to_station_C" location="Station C"/>      <!-- move to Station C -->\n        </Sequence>\n    </BehaviorTree>\n</root>'}, {'role': 'user', 'content': '"""The behavior tree represents a robot\'s navigation system. The robot must visit the location "StationA". actions that must be used in the behavior tree are: "MoveTo"."""'}]
+
+One-shot OpenAI result (time: 0.89 seconds):
+One-shot OpenAI result:
+<root BTCPP_format="4">
+    <BehaviorTree>
+        <Sequence>
+            <MoveTo name="go_to_stationA" location="StationA"/>
+        </Sequence>
+    </BehaviorTree>
+</root>
+Final tree tree is : 
+ <root BTCPP_format="4">
+    <BehaviorTree>
+        <Sequence>
+            <MoveTo name="go_to_stationA" location="StationA"/>
+        </Sequence>
+    </BehaviorTree>
+</root>
+Output saved to outputs/openai-gpt-4.1/oneshot/generative_1/8.xml
+
+Iteration 9 on openai-gpt-4.1:
+Task:
+"""The behavior tree represents a robot's navigation system. The robot must visit the location "StationA". actions that must be used in the behavior tree are: "MoveTo"."""
+Prompt used: 
+[{'role': 'system', 'content': '<<SYS>> You will be provided a summary of a task performed by a behavior tree, and your objective is to express this behavior tree in XML format.\n <</SYS>>'}, {'role': 'user', 'content': '"""The behavior tree represents a robot\'s navigation system. The robot must visit the location "StationA". actions that must be used in the behavior tree are: "MoveTo"."""'}]
+
+Zero-shot OpenAI result (time: 2.45 seconds):
+Zero-shot OpenAI result:
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence name="NavigateToStationA">
+      <MoveTo goal="StationA"/>
+    </Sequence>
+  </BehaviorTree>
+</root>
+Final tree tree is : 
+ <root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence name="NavigateToStationA">
+      <MoveTo goal="StationA"/>
+    </Sequence>
+  </BehaviorTree>
+</root>
+Output saved to outputs/openai-gpt-4.1/zeroshot/generative_1/9.xml
+Prompt used: 
+[{'role': 'system', 'content': '<<SYS>> You will be provided a summary of a task performed by a behavior tree, and your objective is to express this behavior tree in XML format.\n <</SYS>>'}, {'role': 'user', 'content': 'The behavior tree represents a robot\'s navigation system with arm activity. The robot must visit the locations "Station A", "Station B", "Station C". \n                  If "Station A" is not reachable, move to "Station D". The only available actions that must be used in the behavior tree are: "MoveTo".'}, {'role': 'assistant', 'content': '<root BTCPP_format="4">\n    <BehaviorTree>\n        <Sequence>\n            <Fallback>\n                <MoveTo name="go_to_station_A" location="Station A"/>      <!-- move to Station A -->\n                <MoveTo name="go_to_station_D" location="Station D"/>      <!-- move to Station D -->\n            </Fallback>\n            <MoveTo name="go_to_station_B" location="Station B"/>      <!-- move to Station B -->\n            <MoveTo name="go_to_station_C" location="Station C"/>      <!-- move to Station C -->\n        </Sequence>\n    </BehaviorTree>\n</root>'}, {'role': 'user', 'content': '"""The behavior tree represents a robot\'s navigation system. The robot must visit the location "StationA". actions that must be used in the behavior tree are: "MoveTo"."""'}]
+
+One-shot OpenAI result (time: 0.95 seconds):
+One-shot OpenAI result:
+<root BTCPP_format="4">
+    <BehaviorTree>
+        <Sequence>
+            <MoveTo name="go_to_stationA" location="StationA"/>
+        </Sequence>
+    </BehaviorTree>
+</root>
+Final tree tree is : 
+ <root BTCPP_format="4">
+    <BehaviorTree>
+        <Sequence>
+            <MoveTo name="go_to_stationA" location="StationA"/>
+        </Sequence>
+    </BehaviorTree>
+</root>
+Output saved to outputs/openai-gpt-4.1/oneshot/generative_1/9.xml
+
+Iteration 10 on openai-gpt-4.1:
+Task:
+"""The behavior tree represents a robot's navigation system. The robot must visit the location "StationA". actions that must be used in the behavior tree are: "MoveTo"."""
+Prompt used: 
+[{'role': 'system', 'content': '<<SYS>> You will be provided a summary of a task performed by a behavior tree, and your objective is to express this behavior tree in XML format.\n <</SYS>>'}, {'role': 'user', 'content': '"""The behavior tree represents a robot\'s navigation system. The robot must visit the location "StationA". actions that must be used in the behavior tree are: "MoveTo"."""'}]
+
+Zero-shot OpenAI result (time: 1.48 seconds):
+Zero-shot OpenAI result:
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence name="VisitStationA">
+      <MoveTo goal="StationA"/>
+    </Sequence>
+  </BehaviorTree>
+</root>
+Final tree tree is : 
+ <root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence name="VisitStationA">
+      <MoveTo goal="StationA"/>
+    </Sequence>
+  </BehaviorTree>
+</root>
+Output saved to outputs/openai-gpt-4.1/zeroshot/generative_1/10.xml
+Prompt used: 
+[{'role': 'system', 'content': '<<SYS>> You will be provided a summary of a task performed by a behavior tree, and your objective is to express this behavior tree in XML format.\n <</SYS>>'}, {'role': 'user', 'content': 'The behavior tree represents a robot\'s navigation system with arm activity. The robot must visit the locations "Station A", "Station B", "Station C". \n                  If "Station A" is not reachable, move to "Station D". The only available actions that must be used in the behavior tree are: "MoveTo".'}, {'role': 'assistant', 'content': '<root BTCPP_format="4">\n    <BehaviorTree>\n        <Sequence>\n            <Fallback>\n                <MoveTo name="go_to_station_A" location="Station A"/>      <!-- move to Station A -->\n                <MoveTo name="go_to_station_D" location="Station D"/>      <!-- move to Station D -->\n            </Fallback>\n            <MoveTo name="go_to_station_B" location="Station B"/>      <!-- move to Station B -->\n            <MoveTo name="go_to_station_C" location="Station C"/>      <!-- move to Station C -->\n        </Sequence>\n    </BehaviorTree>\n</root>'}, {'role': 'user', 'content': '"""The behavior tree represents a robot\'s navigation system. The robot must visit the location "StationA". actions that must be used in the behavior tree are: "MoveTo"."""'}]
+
+One-shot OpenAI result (time: 1.50 seconds):
+One-shot OpenAI result:
+<root BTCPP_format="4">
+    <BehaviorTree>
+        <Sequence>
+            <MoveTo name="go_to_stationA" location="StationA"/>
+        </Sequence>
+    </BehaviorTree>
+</root>
+Final tree tree is : 
+ <root BTCPP_format="4">
+    <BehaviorTree>
+        <Sequence>
+            <MoveTo name="go_to_stationA" location="StationA"/>
+        </Sequence>
+    </BehaviorTree>
+</root>
+Output saved to outputs/openai-gpt-4.1/oneshot/generative_1/10.xml
+
+Running inference on task file: generative_2.txt
+
+Iteration 1 on openai-gpt-4.1:
+Task:
+"""The behavior tree represents a robot's navigation system. The robot must visit the location "StationA", "StationB", "StationC", "StationD" in order. actions that must be used in the behavior tree are: "MoveTo"."""
+Prompt used: 
+[{'role': 'system', 'content': '<<SYS>> You will be provided a summary of a task performed by a behavior tree, and your objective is to express this behavior tree in XML format.\n <</SYS>>'}, {'role': 'user', 'content': '"""The behavior tree represents a robot\'s navigation system. The robot must visit the location "StationA", "StationB", "StationC", "StationD" in order. actions that must be used in the behavior tree are: "MoveTo"."""'}]
+
+Zero-shot OpenAI result (time: 1.30 seconds):
+Zero-shot OpenAI result:
+<Sequence>
+    <MoveTo goal="StationA"/>
+    <MoveTo goal="StationB"/>
+    <MoveTo goal="StationC"/>
+    <MoveTo goal="StationD"/>
+</Sequence>
+No valid behavior tree found in the output.
+Prompt used: 
+[{'role': 'system', 'content': '<<SYS>> You will be provided a summary of a task performed by a behavior tree, and your objective is to express this behavior tree in XML format.\n <</SYS>>'}, {'role': 'user', 'content': 'The behavior tree represents a robot\'s navigation system with arm activity. The robot must visit the locations "Station A", "Station B", "Station C". \n                  If "Station A" is not reachable, move to "Station D". The only available actions that must be used in the behavior tree are: "MoveTo".'}, {'role': 'assistant', 'content': '<root BTCPP_format="4">\n    <BehaviorTree>\n        <Sequence>\n            <Fallback>\n                <MoveTo name="go_to_station_A" location="Station A"/>      <!-- move to Station A -->\n                <MoveTo name="go_to_station_D" location="Station D"/>      <!-- move to Station D -->\n            </Fallback>\n            <MoveTo name="go_to_station_B" location="Station B"/>      <!-- move to Station B -->\n            <MoveTo name="go_to_station_C" location="Station C"/>      <!-- move to Station C -->\n        </Sequence>\n    </BehaviorTree>\n</root>'}, {'role': 'user', 'content': '"""The behavior tree represents a robot\'s navigation system. The robot must visit the location "StationA", "StationB", "StationC", "StationD" in order. actions that must be used in the behavior tree are: "MoveTo"."""'}]
+
+One-shot OpenAI result (time: 1.07 seconds):
+One-shot OpenAI result:
+<root BTCPP_format="4">
+    <BehaviorTree>
+        <Sequence>
+            <MoveTo name="go_to_stationA" location="StationA"/>
+            <MoveTo name="go_to_stationB" location="StationB"/>
+            <MoveTo name="go_to_stationC" location="StationC"/>
+            <MoveTo name="go_to_stationD" location="StationD"/>
+        </Sequence>
+    </BehaviorTree>
+</root>
+Final tree tree is : 
+ <root BTCPP_format="4">
+    <BehaviorTree>
+        <Sequence>
+            <MoveTo name="go_to_stationA" location="StationA"/>
+            <MoveTo name="go_to_stationB" location="StationB"/>
+            <MoveTo name="go_to_stationC" location="StationC"/>
+            <MoveTo name="go_to_stationD" location="StationD"/>
+        </Sequence>
+    </BehaviorTree>
+</root>
+Output saved to outputs/openai-gpt-4.1/oneshot/generative_2/1.xml
+
+Iteration 2 on openai-gpt-4.1:
+Task:
+"""The behavior tree represents a robot's navigation system. The robot must visit the location "StationA", "StationB", "StationC", "StationD" in order. actions that must be used in the behavior tree are: "MoveTo"."""
+Prompt used: 
+[{'role': 'system', 'content': '<<SYS>> You will be provided a summary of a task performed by a behavior tree, and your objective is to express this behavior tree in XML format.\n <</SYS>>'}, {'role': 'user', 'content': '"""The behavior tree represents a robot\'s navigation system. The robot must visit the location "StationA", "StationB", "StationC", "StationD" in order. actions that must be used in the behavior tree are: "MoveTo"."""'}]
+
+Zero-shot OpenAI result (time: 1.73 seconds):
+Zero-shot OpenAI result:
+<Sequence>
+    <MoveTo goal="StationA"/>
+    <MoveTo goal="StationB"/>
+    <MoveTo goal="StationC"/>
+    <MoveTo goal="StationD"/>
+</Sequence>
+No valid behavior tree found in the output.
+Prompt used: 
+[{'role': 'system', 'content': '<<SYS>> You will be provided a summary of a task performed by a behavior tree, and your objective is to express this behavior tree in XML format.\n <</SYS>>'}, {'role': 'user', 'content': 'The behavior tree represents a robot\'s navigation system with arm activity. The robot must visit the locations "Station A", "Station B", "Station C". \n                  If "Station A" is not reachable, move to "Station D". The only available actions that must be used in the behavior tree are: "MoveTo".'}, {'role': 'assistant', 'content': '<root BTCPP_format="4">\n    <BehaviorTree>\n        <Sequence>\n            <Fallback>\n                <MoveTo name="go_to_station_A" location="Station A"/>      <!-- move to Station A -->\n                <MoveTo name="go_to_station_D" location="Station D"/>      <!-- move to Station D -->\n            </Fallback>\n            <MoveTo name="go_to_station_B" location="Station B"/>      <!-- move to Station B -->\n            <MoveTo name="go_to_station_C" location="Station C"/>      <!-- move to Station C -->\n        </Sequence>\n    </BehaviorTree>\n</root>'}, {'role': 'user', 'content': '"""The behavior tree represents a robot\'s navigation system. The robot must visit the location "StationA", "StationB", "StationC", "StationD" in order. actions that must be used in the behavior tree are: "MoveTo"."""'}]
+
+One-shot OpenAI result (time: 1.62 seconds):
+One-shot OpenAI result:
+<root BTCPP_format="4">
+    <BehaviorTree>
+        <Sequence>
+            <MoveTo name="go_to_stationA" location="StationA"/>
+            <MoveTo name="go_to_stationB" location="StationB"/>
+            <MoveTo name="go_to_stationC" location="StationC"/>
+            <MoveTo name="go_to_stationD" location="StationD"/>
+        </Sequence>
+    </BehaviorTree>
+</root>
+Final tree tree is : 
+ <root BTCPP_format="4">
+    <BehaviorTree>
+        <Sequence>
+            <MoveTo name="go_to_stationA" location="StationA"/>
+            <MoveTo name="go_to_stationB" location="StationB"/>
+            <MoveTo name="go_to_stationC" location="StationC"/>
+            <MoveTo name="go_to_stationD" location="StationD"/>
+        </Sequence>
+    </BehaviorTree>
+</root>
+Output saved to outputs/openai-gpt-4.1/oneshot/generative_2/2.xml
+
+Iteration 3 on openai-gpt-4.1:
+Task:
+"""The behavior tree represents a robot's navigation system. The robot must visit the location "StationA", "StationB", "StationC", "StationD" in order. actions that must be used in the behavior tree are: "MoveTo"."""
+Prompt used: 
+[{'role': 'system', 'content': '<<SYS>> You will be provided a summary of a task performed by a behavior tree, and your objective is to express this behavior tree in XML format.\n <</SYS>>'}, {'role': 'user', 'content': '"""The behavior tree represents a robot\'s navigation system. The robot must visit the location "StationA", "StationB", "StationC", "StationD" in order. actions that must be used in the behavior tree are: "MoveTo"."""'}]
+
+Zero-shot OpenAI result (time: 1.10 seconds):
+Zero-shot OpenAI result:
+<Sequence>
+    <MoveTo goal="StationA"/>
+    <MoveTo goal="StationB"/>
+    <MoveTo goal="StationC"/>
+    <MoveTo goal="StationD"/>
+</Sequence>
+No valid behavior tree found in the output.
+Prompt used: 
+[{'role': 'system', 'content': '<<SYS>> You will be provided a summary of a task performed by a behavior tree, and your objective is to express this behavior tree in XML format.\n <</SYS>>'}, {'role': 'user', 'content': 'The behavior tree represents a robot\'s navigation system with arm activity. The robot must visit the locations "Station A", "Station B", "Station C". \n                  If "Station A" is not reachable, move to "Station D". The only available actions that must be used in the behavior tree are: "MoveTo".'}, {'role': 'assistant', 'content': '<root BTCPP_format="4">\n    <BehaviorTree>\n        <Sequence>\n            <Fallback>\n                <MoveTo name="go_to_station_A" location="Station A"/>      <!-- move to Station A -->\n                <MoveTo name="go_to_station_D" location="Station D"/>      <!-- move to Station D -->\n            </Fallback>\n            <MoveTo name="go_to_station_B" location="Station B"/>      <!-- move to Station B -->\n            <MoveTo name="go_to_station_C" location="Station C"/>      <!-- move to Station C -->\n        </Sequence>\n    </BehaviorTree>\n</root>'}, {'role': 'user', 'content': '"""The behavior tree represents a robot\'s navigation system. The robot must visit the location "StationA", "StationB", "StationC", "StationD" in order. actions that must be used in the behavior tree are: "MoveTo"."""'}]
+
+One-shot OpenAI result (time: 1.19 seconds):
+One-shot OpenAI result:
+<root BTCPP_format="4">
+    <BehaviorTree>
+        <Sequence>
+            <MoveTo name="go_to_stationA" location="StationA"/>
+            <MoveTo name="go_to_stationB" location="StationB"/>
+            <MoveTo name="go_to_stationC" location="StationC"/>
+            <MoveTo name="go_to_stationD" location="StationD"/>
+        </Sequence>
+    </BehaviorTree>
+</root>
+Final tree tree is : 
+ <root BTCPP_format="4">
+    <BehaviorTree>
+        <Sequence>
+            <MoveTo name="go_to_stationA" location="StationA"/>
+            <MoveTo name="go_to_stationB" location="StationB"/>
+            <MoveTo name="go_to_stationC" location="StationC"/>
+            <MoveTo name="go_to_stationD" location="StationD"/>
+        </Sequence>
+    </BehaviorTree>
+</root>
+Output saved to outputs/openai-gpt-4.1/oneshot/generative_2/3.xml
+
+Iteration 4 on openai-gpt-4.1:
+Task:
+"""The behavior tree represents a robot's navigation system. The robot must visit the location "StationA", "StationB", "StationC", "StationD" in order. actions that must be used in the behavior tree are: "MoveTo"."""
+Prompt used: 
+[{'role': 'system', 'content': '<<SYS>> You will be provided a summary of a task performed by a behavior tree, and your objective is to express this behavior tree in XML format.\n <</SYS>>'}, {'role': 'user', 'content': '"""The behavior tree represents a robot\'s navigation system. The robot must visit the location "StationA", "StationB", "StationC", "StationD" in order. actions that must be used in the behavior tree are: "MoveTo"."""'}]
+
+Zero-shot OpenAI result (time: 0.87 seconds):
+Zero-shot OpenAI result:
+<Sequence>
+    <MoveTo goal="StationA"/>
+    <MoveTo goal="StationB"/>
+    <MoveTo goal="StationC"/>
+    <MoveTo goal="StationD"/>
+</Sequence>
+No valid behavior tree found in the output.
+Prompt used: 
+[{'role': 'system', 'content': '<<SYS>> You will be provided a summary of a task performed by a behavior tree, and your objective is to express this behavior tree in XML format.\n <</SYS>>'}, {'role': 'user', 'content': 'The behavior tree represents a robot\'s navigation system with arm activity. The robot must visit the locations "Station A", "Station B", "Station C". \n                  If "Station A" is not reachable, move to "Station D". The only available actions that must be used in the behavior tree are: "MoveTo".'}, {'role': 'assistant', 'content': '<root BTCPP_format="4">\n    <BehaviorTree>\n        <Sequence>\n            <Fallback>\n                <MoveTo name="go_to_station_A" location="Station A"/>      <!-- move to Station A -->\n                <MoveTo name="go_to_station_D" location="Station D"/>      <!-- move to Station D -->\n            </Fallback>\n            <MoveTo name="go_to_station_B" location="Station B"/>      <!-- move to Station B -->\n            <MoveTo name="go_to_station_C" location="Station C"/>      <!-- move to Station C -->\n        </Sequence>\n    </BehaviorTree>\n</root>'}, {'role': 'user', 'content': '"""The behavior tree represents a robot\'s navigation system. The robot must visit the location "StationA", "StationB", "StationC", "StationD" in order. actions that must be used in the behavior tree are: "MoveTo"."""'}]
+
+One-shot OpenAI result (time: 1.20 seconds):
+One-shot OpenAI result:
+<root BTCPP_format="4">
+    <BehaviorTree>
+        <Sequence>
+            <MoveTo name="go_to_stationA" location="StationA"/>
+            <MoveTo name="go_to_stationB" location="StationB"/>
+            <MoveTo name="go_to_stationC" location="StationC"/>
+            <MoveTo name="go_to_stationD" location="StationD"/>
+        </Sequence>
+    </BehaviorTree>
+</root>
+Final tree tree is : 
+ <root BTCPP_format="4">
+    <BehaviorTree>
+        <Sequence>
+            <MoveTo name="go_to_stationA" location="StationA"/>
+            <MoveTo name="go_to_stationB" location="StationB"/>
+            <MoveTo name="go_to_stationC" location="StationC"/>
+            <MoveTo name="go_to_stationD" location="StationD"/>
+        </Sequence>
+    </BehaviorTree>
+</root>
+Output saved to outputs/openai-gpt-4.1/oneshot/generative_2/4.xml
+
+Iteration 5 on openai-gpt-4.1:
+Task:
+"""The behavior tree represents a robot's navigation system. The robot must visit the location "StationA", "StationB", "StationC", "StationD" in order. actions that must be used in the behavior tree are: "MoveTo"."""
+Prompt used: 
+[{'role': 'system', 'content': '<<SYS>> You will be provided a summary of a task performed by a behavior tree, and your objective is to express this behavior tree in XML format.\n <</SYS>>'}, {'role': 'user', 'content': '"""The behavior tree represents a robot\'s navigation system. The robot must visit the location "StationA", "StationB", "StationC", "StationD" in order. actions that must be used in the behavior tree are: "MoveTo"."""'}]
+
+Zero-shot OpenAI result (time: 0.94 seconds):
+Zero-shot OpenAI result:
+<Sequence>
+    <MoveTo goal="StationA"/>
+    <MoveTo goal="StationB"/>
+    <MoveTo goal="StationC"/>
+    <MoveTo goal="StationD"/>
+</Sequence>
+No valid behavior tree found in the output.
+Prompt used: 
+[{'role': 'system', 'content': '<<SYS>> You will be provided a summary of a task performed by a behavior tree, and your objective is to express this behavior tree in XML format.\n <</SYS>>'}, {'role': 'user', 'content': 'The behavior tree represents a robot\'s navigation system with arm activity. The robot must visit the locations "Station A", "Station B", "Station C". \n                  If "Station A" is not reachable, move to "Station D". The only available actions that must be used in the behavior tree are: "MoveTo".'}, {'role': 'assistant', 'content': '<root BTCPP_format="4">\n    <BehaviorTree>\n        <Sequence>\n            <Fallback>\n                <MoveTo name="go_to_station_A" location="Station A"/>      <!-- move to Station A -->\n                <MoveTo name="go_to_station_D" location="Station D"/>      <!-- move to Station D -->\n            </Fallback>\n            <MoveTo name="go_to_station_B" location="Station B"/>      <!-- move to Station B -->\n            <MoveTo name="go_to_station_C" location="Station C"/>      <!-- move to Station C -->\n        </Sequence>\n    </BehaviorTree>\n</root>'}, {'role': 'user', 'content': '"""The behavior tree represents a robot\'s navigation system. The robot must visit the location "StationA", "StationB", "StationC", "StationD" in order. actions that must be used in the behavior tree are: "MoveTo"."""'}]
+
+One-shot OpenAI result (time: 1.47 seconds):
+One-shot OpenAI result:
+<root BTCPP_format="4">
+    <BehaviorTree>
+        <Sequence>
+            <MoveTo name="go_to_stationA" location="StationA"/>
+            <MoveTo name="go_to_stationB" location="StationB"/>
+            <MoveTo name="go_to_stationC" location="StationC"/>
+            <MoveTo name="go_to_stationD" location="StationD"/>
+        </Sequence>
+    </BehaviorTree>
+</root>
+Final tree tree is : 
+ <root BTCPP_format="4">
+    <BehaviorTree>
+        <Sequence>
+            <MoveTo name="go_to_stationA" location="StationA"/>
+            <MoveTo name="go_to_stationB" location="StationB"/>
+            <MoveTo name="go_to_stationC" location="StationC"/>
+            <MoveTo name="go_to_stationD" location="StationD"/>
+        </Sequence>
+    </BehaviorTree>
+</root>
+Output saved to outputs/openai-gpt-4.1/oneshot/generative_2/5.xml
+
+Iteration 6 on openai-gpt-4.1:
+Task:
+"""The behavior tree represents a robot's navigation system. The robot must visit the location "StationA", "StationB", "StationC", "StationD" in order. actions that must be used in the behavior tree are: "MoveTo"."""
+Prompt used: 
+[{'role': 'system', 'content': '<<SYS>> You will be provided a summary of a task performed by a behavior tree, and your objective is to express this behavior tree in XML format.\n <</SYS>>'}, {'role': 'user', 'content': '"""The behavior tree represents a robot\'s navigation system. The robot must visit the location "StationA", "StationB", "StationC", "StationD" in order. actions that must be used in the behavior tree are: "MoveTo"."""'}]
+
+Zero-shot OpenAI result (time: 1.36 seconds):
+Zero-shot OpenAI result:
+<Sequence>
+    <MoveTo goal="StationA"/>
+    <MoveTo goal="StationB"/>
+    <MoveTo goal="StationC"/>
+    <MoveTo goal="StationD"/>
+</Sequence>
+No valid behavior tree found in the output.
+Prompt used: 
+[{'role': 'system', 'content': '<<SYS>> You will be provided a summary of a task performed by a behavior tree, and your objective is to express this behavior tree in XML format.\n <</SYS>>'}, {'role': 'user', 'content': 'The behavior tree represents a robot\'s navigation system with arm activity. The robot must visit the locations "Station A", "Station B", "Station C". \n                  If "Station A" is not reachable, move to "Station D". The only available actions that must be used in the behavior tree are: "MoveTo".'}, {'role': 'assistant', 'content': '<root BTCPP_format="4">\n    <BehaviorTree>\n        <Sequence>\n            <Fallback>\n                <MoveTo name="go_to_station_A" location="Station A"/>      <!-- move to Station A -->\n                <MoveTo name="go_to_station_D" location="Station D"/>      <!-- move to Station D -->\n            </Fallback>\n            <MoveTo name="go_to_station_B" location="Station B"/>      <!-- move to Station B -->\n            <MoveTo name="go_to_station_C" location="Station C"/>      <!-- move to Station C -->\n        </Sequence>\n    </BehaviorTree>\n</root>'}, {'role': 'user', 'content': '"""The behavior tree represents a robot\'s navigation system. The robot must visit the location "StationA", "StationB", "StationC", "StationD" in order. actions that must be used in the behavior tree are: "MoveTo"."""'}]
+
+One-shot OpenAI result (time: 1.08 seconds):
+One-shot OpenAI result:
+<root BTCPP_format="4">
+    <BehaviorTree>
+        <Sequence>
+            <MoveTo name="go_to_stationA" location="StationA"/>
+            <MoveTo name="go_to_stationB" location="StationB"/>
+            <MoveTo name="go_to_stationC" location="StationC"/>
+            <MoveTo name="go_to_stationD" location="StationD"/>
+        </Sequence>
+    </BehaviorTree>
+</root>
+Final tree tree is : 
+ <root BTCPP_format="4">
+    <BehaviorTree>
+        <Sequence>
+            <MoveTo name="go_to_stationA" location="StationA"/>
+            <MoveTo name="go_to_stationB" location="StationB"/>
+            <MoveTo name="go_to_stationC" location="StationC"/>
+            <MoveTo name="go_to_stationD" location="StationD"/>
+        </Sequence>
+    </BehaviorTree>
+</root>
+Output saved to outputs/openai-gpt-4.1/oneshot/generative_2/6.xml
+
+Iteration 7 on openai-gpt-4.1:
+Task:
+"""The behavior tree represents a robot's navigation system. The robot must visit the location "StationA", "StationB", "StationC", "StationD" in order. actions that must be used in the behavior tree are: "MoveTo"."""
+Prompt used: 
+[{'role': 'system', 'content': '<<SYS>> You will be provided a summary of a task performed by a behavior tree, and your objective is to express this behavior tree in XML format.\n <</SYS>>'}, {'role': 'user', 'content': '"""The behavior tree represents a robot\'s navigation system. The robot must visit the location "StationA", "StationB", "StationC", "StationD" in order. actions that must be used in the behavior tree are: "MoveTo"."""'}]
+
+Zero-shot OpenAI result (time: 1.05 seconds):
+Zero-shot OpenAI result:
+<Sequence>
+    <MoveTo goal="StationA"/>
+    <MoveTo goal="StationB"/>
+    <MoveTo goal="StationC"/>
+    <MoveTo goal="StationD"/>
+</Sequence>
+No valid behavior tree found in the output.
+Prompt used: 
+[{'role': 'system', 'content': '<<SYS>> You will be provided a summary of a task performed by a behavior tree, and your objective is to express this behavior tree in XML format.\n <</SYS>>'}, {'role': 'user', 'content': 'The behavior tree represents a robot\'s navigation system with arm activity. The robot must visit the locations "Station A", "Station B", "Station C". \n                  If "Station A" is not reachable, move to "Station D". The only available actions that must be used in the behavior tree are: "MoveTo".'}, {'role': 'assistant', 'content': '<root BTCPP_format="4">\n    <BehaviorTree>\n        <Sequence>\n            <Fallback>\n                <MoveTo name="go_to_station_A" location="Station A"/>      <!-- move to Station A -->\n                <MoveTo name="go_to_station_D" location="Station D"/>      <!-- move to Station D -->\n            </Fallback>\n            <MoveTo name="go_to_station_B" location="Station B"/>      <!-- move to Station B -->\n            <MoveTo name="go_to_station_C" location="Station C"/>      <!-- move to Station C -->\n        </Sequence>\n    </BehaviorTree>\n</root>'}, {'role': 'user', 'content': '"""The behavior tree represents a robot\'s navigation system. The robot must visit the location "StationA", "StationB", "StationC", "StationD" in order. actions that must be used in the behavior tree are: "MoveTo"."""'}]
+
+One-shot OpenAI result (time: 0.86 seconds):
+One-shot OpenAI result:
+<root BTCPP_format="4">
+    <BehaviorTree>
+        <Sequence>
+            <MoveTo name="go_to_stationA" location="StationA"/>
+            <MoveTo name="go_to_stationB" location="StationB"/>
+            <MoveTo name="go_to_stationC" location="StationC"/>
+            <MoveTo name="go_to_stationD" location="StationD"/>
+        </Sequence>
+    </BehaviorTree>
+</root>
+Final tree tree is : 
+ <root BTCPP_format="4">
+    <BehaviorTree>
+        <Sequence>
+            <MoveTo name="go_to_stationA" location="StationA"/>
+            <MoveTo name="go_to_stationB" location="StationB"/>
+            <MoveTo name="go_to_stationC" location="StationC"/>
+            <MoveTo name="go_to_stationD" location="StationD"/>
+        </Sequence>
+    </BehaviorTree>
+</root>
+Output saved to outputs/openai-gpt-4.1/oneshot/generative_2/7.xml
+
+Iteration 8 on openai-gpt-4.1:
+Task:
+"""The behavior tree represents a robot's navigation system. The robot must visit the location "StationA", "StationB", "StationC", "StationD" in order. actions that must be used in the behavior tree are: "MoveTo"."""
+Prompt used: 
+[{'role': 'system', 'content': '<<SYS>> You will be provided a summary of a task performed by a behavior tree, and your objective is to express this behavior tree in XML format.\n <</SYS>>'}, {'role': 'user', 'content': '"""The behavior tree represents a robot\'s navigation system. The robot must visit the location "StationA", "StationB", "StationC", "StationD" in order. actions that must be used in the behavior tree are: "MoveTo"."""'}]
+
+Zero-shot OpenAI result (time: 0.97 seconds):
+Zero-shot OpenAI result:
+```xml
+<Sequence>
+    <MoveTo goal="StationA"/>
+    <MoveTo goal="StationB"/>
+    <MoveTo goal="StationC"/>
+    <MoveTo goal="StationD"/>
+</Sequence>
+```
+No valid behavior tree found in the output.
+Prompt used: 
+[{'role': 'system', 'content': '<<SYS>> You will be provided a summary of a task performed by a behavior tree, and your objective is to express this behavior tree in XML format.\n <</SYS>>'}, {'role': 'user', 'content': 'The behavior tree represents a robot\'s navigation system with arm activity. The robot must visit the locations "Station A", "Station B", "Station C". \n                  If "Station A" is not reachable, move to "Station D". The only available actions that must be used in the behavior tree are: "MoveTo".'}, {'role': 'assistant', 'content': '<root BTCPP_format="4">\n    <BehaviorTree>\n        <Sequence>\n            <Fallback>\n                <MoveTo name="go_to_station_A" location="Station A"/>      <!-- move to Station A -->\n                <MoveTo name="go_to_station_D" location="Station D"/>      <!-- move to Station D -->\n            </Fallback>\n            <MoveTo name="go_to_station_B" location="Station B"/>      <!-- move to Station B -->\n            <MoveTo name="go_to_station_C" location="Station C"/>      <!-- move to Station C -->\n        </Sequence>\n    </BehaviorTree>\n</root>'}, {'role': 'user', 'content': '"""The behavior tree represents a robot\'s navigation system. The robot must visit the location "StationA", "StationB", "StationC", "StationD" in order. actions that must be used in the behavior tree are: "MoveTo"."""'}]
+
+One-shot OpenAI result (time: 1.39 seconds):
+One-shot OpenAI result:
+<root BTCPP_format="4">
+    <BehaviorTree>
+        <Sequence>
+            <MoveTo name="go_to_stationA" location="StationA"/>
+            <MoveTo name="go_to_stationB" location="StationB"/>
+            <MoveTo name="go_to_stationC" location="StationC"/>
+            <MoveTo name="go_to_stationD" location="StationD"/>
+        </Sequence>
+    </BehaviorTree>
+</root>
+Final tree tree is : 
+ <root BTCPP_format="4">
+    <BehaviorTree>
+        <Sequence>
+            <MoveTo name="go_to_stationA" location="StationA"/>
+            <MoveTo name="go_to_stationB" location="StationB"/>
+            <MoveTo name="go_to_stationC" location="StationC"/>
+            <MoveTo name="go_to_stationD" location="StationD"/>
+        </Sequence>
+    </BehaviorTree>
+</root>
+Output saved to outputs/openai-gpt-4.1/oneshot/generative_2/8.xml
+
+Iteration 9 on openai-gpt-4.1:
+Task:
+"""The behavior tree represents a robot's navigation system. The robot must visit the location "StationA", "StationB", "StationC", "StationD" in order. actions that must be used in the behavior tree are: "MoveTo"."""
+Prompt used: 
+[{'role': 'system', 'content': '<<SYS>> You will be provided a summary of a task performed by a behavior tree, and your objective is to express this behavior tree in XML format.\n <</SYS>>'}, {'role': 'user', 'content': '"""The behavior tree represents a robot\'s navigation system. The robot must visit the location "StationA", "StationB", "StationC", "StationD" in order. actions that must be used in the behavior tree are: "MoveTo"."""'}]
+
+Zero-shot OpenAI result (time: 0.70 seconds):
+Zero-shot OpenAI result:
+<Sequence>
+    <MoveTo goal="StationA"/>
+    <MoveTo goal="StationB"/>
+    <MoveTo goal="StationC"/>
+    <MoveTo goal="StationD"/>
+</Sequence>
+No valid behavior tree found in the output.
+Prompt used: 
+[{'role': 'system', 'content': '<<SYS>> You will be provided a summary of a task performed by a behavior tree, and your objective is to express this behavior tree in XML format.\n <</SYS>>'}, {'role': 'user', 'content': 'The behavior tree represents a robot\'s navigation system with arm activity. The robot must visit the locations "Station A", "Station B", "Station C". \n                  If "Station A" is not reachable, move to "Station D". The only available actions that must be used in the behavior tree are: "MoveTo".'}, {'role': 'assistant', 'content': '<root BTCPP_format="4">\n    <BehaviorTree>\n        <Sequence>\n            <Fallback>\n                <MoveTo name="go_to_station_A" location="Station A"/>      <!-- move to Station A -->\n                <MoveTo name="go_to_station_D" location="Station D"/>      <!-- move to Station D -->\n            </Fallback>\n            <MoveTo name="go_to_station_B" location="Station B"/>      <!-- move to Station B -->\n            <MoveTo name="go_to_station_C" location="Station C"/>      <!-- move to Station C -->\n        </Sequence>\n    </BehaviorTree>\n</root>'}, {'role': 'user', 'content': '"""The behavior tree represents a robot\'s navigation system. The robot must visit the location "StationA", "StationB", "StationC", "StationD" in order. actions that must be used in the behavior tree are: "MoveTo"."""'}]
+
+One-shot OpenAI result (time: 1.03 seconds):
+One-shot OpenAI result:
+<root BTCPP_format="4">
+    <BehaviorTree>
+        <Sequence>
+            <MoveTo name="go_to_stationA" location="StationA"/>
+            <MoveTo name="go_to_stationB" location="StationB"/>
+            <MoveTo name="go_to_stationC" location="StationC"/>
+            <MoveTo name="go_to_stationD" location="StationD"/>
+        </Sequence>
+    </BehaviorTree>
+</root>
+Final tree tree is : 
+ <root BTCPP_format="4">
+    <BehaviorTree>
+        <Sequence>
+            <MoveTo name="go_to_stationA" location="StationA"/>
+            <MoveTo name="go_to_stationB" location="StationB"/>
+            <MoveTo name="go_to_stationC" location="StationC"/>
+            <MoveTo name="go_to_stationD" location="StationD"/>
+        </Sequence>
+    </BehaviorTree>
+</root>
+Output saved to outputs/openai-gpt-4.1/oneshot/generative_2/9.xml
+
+Iteration 10 on openai-gpt-4.1:
+Task:
+"""The behavior tree represents a robot's navigation system. The robot must visit the location "StationA", "StationB", "StationC", "StationD" in order. actions that must be used in the behavior tree are: "MoveTo"."""
+Prompt used: 
+[{'role': 'system', 'content': '<<SYS>> You will be provided a summary of a task performed by a behavior tree, and your objective is to express this behavior tree in XML format.\n <</SYS>>'}, {'role': 'user', 'content': '"""The behavior tree represents a robot\'s navigation system. The robot must visit the location "StationA", "StationB", "StationC", "StationD" in order. actions that must be used in the behavior tree are: "MoveTo"."""'}]
+
+Zero-shot OpenAI result (time: 2.26 seconds):
+Zero-shot OpenAI result:
+<Sequence>
+    <MoveTo goal="StationA"/>
+    <MoveTo goal="StationB"/>
+    <MoveTo goal="StationC"/>
+    <MoveTo goal="StationD"/>
+</Sequence>
+No valid behavior tree found in the output.
+Prompt used: 
+[{'role': 'system', 'content': '<<SYS>> You will be provided a summary of a task performed by a behavior tree, and your objective is to express this behavior tree in XML format.\n <</SYS>>'}, {'role': 'user', 'content': 'The behavior tree represents a robot\'s navigation system with arm activity. The robot must visit the locations "Station A", "Station B", "Station C". \n                  If "Station A" is not reachable, move to "Station D". The only available actions that must be used in the behavior tree are: "MoveTo".'}, {'role': 'assistant', 'content': '<root BTCPP_format="4">\n    <BehaviorTree>\n        <Sequence>\n            <Fallback>\n                <MoveTo name="go_to_station_A" location="Station A"/>      <!-- move to Station A -->\n                <MoveTo name="go_to_station_D" location="Station D"/>      <!-- move to Station D -->\n            </Fallback>\n            <MoveTo name="go_to_station_B" location="Station B"/>      <!-- move to Station B -->\n            <MoveTo name="go_to_station_C" location="Station C"/>      <!-- move to Station C -->\n        </Sequence>\n    </BehaviorTree>\n</root>'}, {'role': 'user', 'content': '"""The behavior tree represents a robot\'s navigation system. The robot must visit the location "StationA", "StationB", "StationC", "StationD" in order. actions that must be used in the behavior tree are: "MoveTo"."""'}]
+
+One-shot OpenAI result (time: 0.96 seconds):
+One-shot OpenAI result:
+<root BTCPP_format="4">
+    <BehaviorTree>
+        <Sequence>
+            <MoveTo name="go_to_stationA" location="StationA"/>
+            <MoveTo name="go_to_stationB" location="StationB"/>
+            <MoveTo name="go_to_stationC" location="StationC"/>
+            <MoveTo name="go_to_stationD" location="StationD"/>
+        </Sequence>
+    </BehaviorTree>
+</root>
+Final tree tree is : 
+ <root BTCPP_format="4">
+    <BehaviorTree>
+        <Sequence>
+            <MoveTo name="go_to_stationA" location="StationA"/>
+            <MoveTo name="go_to_stationB" location="StationB"/>
+            <MoveTo name="go_to_stationC" location="StationC"/>
+            <MoveTo name="go_to_stationD" location="StationD"/>
+        </Sequence>
+    </BehaviorTree>
+</root>
+Output saved to outputs/openai-gpt-4.1/oneshot/generative_2/10.xml
+
+Running inference on task file: generative_3.txt
+
+Iteration 1 on openai-gpt-4.1:
+Task:
+"""The behavior tree represents a robot's navigation system. The robot must visit the location "StationA", "StationE", "StationC", "StationD" in order. If "StationE" cannot be reached, move to "StationB". actions that must be used in the behavior tree are: "MoveTo"."""
+Prompt used: 
+[{'role': 'system', 'content': '<<SYS>> You will be provided a summary of a task performed by a behavior tree, and your objective is to express this behavior tree in XML format.\n <</SYS>>'}, {'role': 'user', 'content': '"""The behavior tree represents a robot\'s navigation system. The robot must visit the location "StationA", "StationE", "StationC", "StationD" in order. If "StationE" cannot be reached, move to "StationB". actions that must be used in the behavior tree are: "MoveTo"."""'}]
+
+Zero-shot OpenAI result (time: 1.37 seconds):
+Zero-shot OpenAI result:
+<Sequence>
+    <MoveTo goal="StationA"/>
+    <Fallback>
+        <MoveTo goal="StationE"/>
+        <MoveTo goal="StationB"/>
+    </Fallback>
+    <MoveTo goal="StationC"/>
+    <MoveTo goal="StationD"/>
+</Sequence>
+No valid behavior tree found in the output.
+Prompt used: 
+[{'role': 'system', 'content': '<<SYS>> You will be provided a summary of a task performed by a behavior tree, and your objective is to express this behavior tree in XML format.\n <</SYS>>'}, {'role': 'user', 'content': 'The behavior tree represents a robot\'s navigation system with arm activity. The robot must visit the locations "Station A", "Station B", "Station C". \n                  If "Station A" is not reachable, move to "Station D". The only available actions that must be used in the behavior tree are: "MoveTo".'}, {'role': 'assistant', 'content': '<root BTCPP_format="4">\n    <BehaviorTree>\n        <Sequence>\n            <Fallback>\n                <MoveTo name="go_to_station_A" location="Station A"/>      <!-- move to Station A -->\n                <MoveTo name="go_to_station_D" location="Station D"/>      <!-- move to Station D -->\n            </Fallback>\n            <MoveTo name="go_to_station_B" location="Station B"/>      <!-- move to Station B -->\n            <MoveTo name="go_to_station_C" location="Station C"/>      <!-- move to Station C -->\n        </Sequence>\n    </BehaviorTree>\n</root>'}, {'role': 'user', 'content': '"""The behavior tree represents a robot\'s navigation system. The robot must visit the location "StationA", "StationE", "StationC", "StationD" in order. If "StationE" cannot be reached, move to "StationB". actions that must be used in the behavior tree are: "MoveTo"."""'}]
+
+One-shot OpenAI result (time: 1.45 seconds):
+One-shot OpenAI result:
+<root BTCPP_format="4">
+    <BehaviorTree>
+        <Sequence>
+            <MoveTo name="go_to_StationA" location="StationA"/>
+            <Fallback>
+                <MoveTo name="go_to_StationE" location="StationE"/>
+                <MoveTo name="go_to_StationB" location="StationB"/>
+            </Fallback>
+            <MoveTo name="go_to_StationC" location="StationC"/>
+            <MoveTo name="go_to_StationD" location="StationD"/>
+        </Sequence>
+    </BehaviorTree>
+</root>
+Final tree tree is : 
+ <root BTCPP_format="4">
+    <BehaviorTree>
+        <Sequence>
+            <MoveTo name="go_to_StationA" location="StationA"/>
+            <Fallback>
+                <MoveTo name="go_to_StationE" location="StationE"/>
+                <MoveTo name="go_to_StationB" location="StationB"/>
+            </Fallback>
+            <MoveTo name="go_to_StationC" location="StationC"/>
+            <MoveTo name="go_to_StationD" location="StationD"/>
+        </Sequence>
+    </BehaviorTree>
+</root>
+Output saved to outputs/openai-gpt-4.1/oneshot/generative_3/1.xml
+
+Iteration 2 on openai-gpt-4.1:
+Task:
+"""The behavior tree represents a robot's navigation system. The robot must visit the location "StationA", "StationE", "StationC", "StationD" in order. If "StationE" cannot be reached, move to "StationB". actions that must be used in the behavior tree are: "MoveTo"."""
+Prompt used: 
+[{'role': 'system', 'content': '<<SYS>> You will be provided a summary of a task performed by a behavior tree, and your objective is to express this behavior tree in XML format.\n <</SYS>>'}, {'role': 'user', 'content': '"""The behavior tree represents a robot\'s navigation system. The robot must visit the location "StationA", "StationE", "StationC", "StationD" in order. If "StationE" cannot be reached, move to "StationB". actions that must be used in the behavior tree are: "MoveTo"."""'}]
+
+Zero-shot OpenAI result (time: 1.51 seconds):
+Zero-shot OpenAI result:
+<Sequence>
+    <MoveTo goal="StationA"/>
+    <Selector>
+        <MoveTo goal="StationE"/>
+        <MoveTo goal="StationB"/>
+    </Selector>
+    <MoveTo goal="StationC"/>
+    <MoveTo goal="StationD"/>
+</Sequence>
+No valid behavior tree found in the output.
+Prompt used: 
+[{'role': 'system', 'content': '<<SYS>> You will be provided a summary of a task performed by a behavior tree, and your objective is to express this behavior tree in XML format.\n <</SYS>>'}, {'role': 'user', 'content': 'The behavior tree represents a robot\'s navigation system with arm activity. The robot must visit the locations "Station A", "Station B", "Station C". \n                  If "Station A" is not reachable, move to "Station D". The only available actions that must be used in the behavior tree are: "MoveTo".'}, {'role': 'assistant', 'content': '<root BTCPP_format="4">\n    <BehaviorTree>\n        <Sequence>\n            <Fallback>\n                <MoveTo name="go_to_station_A" location="Station A"/>      <!-- move to Station A -->\n                <MoveTo name="go_to_station_D" location="Station D"/>      <!-- move to Station D -->\n            </Fallback>\n            <MoveTo name="go_to_station_B" location="Station B"/>      <!-- move to Station B -->\n            <MoveTo name="go_to_station_C" location="Station C"/>      <!-- move to Station C -->\n        </Sequence>\n    </BehaviorTree>\n</root>'}, {'role': 'user', 'content': '"""The behavior tree represents a robot\'s navigation system. The robot must visit the location "StationA", "StationE", "StationC", "StationD" in order. If "StationE" cannot be reached, move to "StationB". actions that must be used in the behavior tree are: "MoveTo"."""'}]
+
+One-shot OpenAI result (time: 0.97 seconds):
+One-shot OpenAI result:
+<root BTCPP_format="4">
+    <BehaviorTree>
+        <Sequence>
+            <MoveTo name="go_to_StationA" location="StationA"/>
+            <Fallback>
+                <MoveTo name="go_to_StationE" location="StationE"/>
+                <MoveTo name="go_to_StationB" location="StationB"/>
+            </Fallback>
+            <MoveTo name="go_to_StationC" location="StationC"/>
+            <MoveTo name="go_to_StationD" location="StationD"/>
+        </Sequence>
+    </BehaviorTree>
+</root>
+Final tree tree is : 
+ <root BTCPP_format="4">
+    <BehaviorTree>
+        <Sequence>
+            <MoveTo name="go_to_StationA" location="StationA"/>
+            <Fallback>
+                <MoveTo name="go_to_StationE" location="StationE"/>
+                <MoveTo name="go_to_StationB" location="StationB"/>
+            </Fallback>
+            <MoveTo name="go_to_StationC" location="StationC"/>
+            <MoveTo name="go_to_StationD" location="StationD"/>
+        </Sequence>
+    </BehaviorTree>
+</root>
+Output saved to outputs/openai-gpt-4.1/oneshot/generative_3/2.xml
+
+Iteration 3 on openai-gpt-4.1:
+Task:
+"""The behavior tree represents a robot's navigation system. The robot must visit the location "StationA", "StationE", "StationC", "StationD" in order. If "StationE" cannot be reached, move to "StationB". actions that must be used in the behavior tree are: "MoveTo"."""
+Prompt used: 
+[{'role': 'system', 'content': '<<SYS>> You will be provided a summary of a task performed by a behavior tree, and your objective is to express this behavior tree in XML format.\n <</SYS>>'}, {'role': 'user', 'content': '"""The behavior tree represents a robot\'s navigation system. The robot must visit the location "StationA", "StationE", "StationC", "StationD" in order. If "StationE" cannot be reached, move to "StationB". actions that must be used in the behavior tree are: "MoveTo"."""'}]
+
+Zero-shot OpenAI result (time: 1.35 seconds):
+Zero-shot OpenAI result:
+<Sequence>
+    <MoveTo goal="StationA"/>
+    <Selector>
+        <MoveTo goal="StationE"/>
+        <MoveTo goal="StationB"/>
+    </Selector>
+    <MoveTo goal="StationC"/>
+    <MoveTo goal="StationD"/>
+</Sequence>
+No valid behavior tree found in the output.
+Prompt used: 
+[{'role': 'system', 'content': '<<SYS>> You will be provided a summary of a task performed by a behavior tree, and your objective is to express this behavior tree in XML format.\n <</SYS>>'}, {'role': 'user', 'content': 'The behavior tree represents a robot\'s navigation system with arm activity. The robot must visit the locations "Station A", "Station B", "Station C". \n                  If "Station A" is not reachable, move to "Station D". The only available actions that must be used in the behavior tree are: "MoveTo".'}, {'role': 'assistant', 'content': '<root BTCPP_format="4">\n    <BehaviorTree>\n        <Sequence>\n            <Fallback>\n                <MoveTo name="go_to_station_A" location="Station A"/>      <!-- move to Station A -->\n                <MoveTo name="go_to_station_D" location="Station D"/>      <!-- move to Station D -->\n            </Fallback>\n            <MoveTo name="go_to_station_B" location="Station B"/>      <!-- move to Station B -->\n            <MoveTo name="go_to_station_C" location="Station C"/>      <!-- move to Station C -->\n        </Sequence>\n    </BehaviorTree>\n</root>'}, {'role': 'user', 'content': '"""The behavior tree represents a robot\'s navigation system. The robot must visit the location "StationA", "StationE", "StationC", "StationD" in order. If "StationE" cannot be reached, move to "StationB". actions that must be used in the behavior tree are: "MoveTo"."""'}]
+
+One-shot OpenAI result (time: 1.35 seconds):
+One-shot OpenAI result:
+<root BTCPP_format="4">
+    <BehaviorTree>
+        <Sequence>
+            <MoveTo name="go_to_stationA" location="StationA"/>
+            <Fallback>
+                <MoveTo name="go_to_stationE" location="StationE"/>
+                <MoveTo name="go_to_stationB" location="StationB"/>
+            </Fallback>
+            <MoveTo name="go_to_stationC" location="StationC"/>
+            <MoveTo name="go_to_stationD" location="StationD"/>
+        </Sequence>
+    </BehaviorTree>
+</root>
+Final tree tree is : 
+ <root BTCPP_format="4">
+    <BehaviorTree>
+        <Sequence>
+            <MoveTo name="go_to_stationA" location="StationA"/>
+            <Fallback>
+                <MoveTo name="go_to_stationE" location="StationE"/>
+                <MoveTo name="go_to_stationB" location="StationB"/>
+            </Fallback>
+            <MoveTo name="go_to_stationC" location="StationC"/>
+            <MoveTo name="go_to_stationD" location="StationD"/>
+        </Sequence>
+    </BehaviorTree>
+</root>
+Output saved to outputs/openai-gpt-4.1/oneshot/generative_3/3.xml
+
+Iteration 4 on openai-gpt-4.1:
+Task:
+"""The behavior tree represents a robot's navigation system. The robot must visit the location "StationA", "StationE", "StationC", "StationD" in order. If "StationE" cannot be reached, move to "StationB". actions that must be used in the behavior tree are: "MoveTo"."""
+Prompt used: 
+[{'role': 'system', 'content': '<<SYS>> You will be provided a summary of a task performed by a behavior tree, and your objective is to express this behavior tree in XML format.\n <</SYS>>'}, {'role': 'user', 'content': '"""The behavior tree represents a robot\'s navigation system. The robot must visit the location "StationA", "StationE", "StationC", "StationD" in order. If "StationE" cannot be reached, move to "StationB". actions that must be used in the behavior tree are: "MoveTo"."""'}]
+
+Zero-shot OpenAI result (time: 1.44 seconds):
+Zero-shot OpenAI result:
+<Sequence name="VisitStationsInOrder">
+    <MoveTo goal="StationA"/>
+    <Selector name="StationE_or_B">
+        <MoveTo goal="StationE"/>
+        <MoveTo goal="StationB"/>
+    </Selector>
+    <MoveTo goal="StationC"/>
+    <MoveTo goal="StationD"/>
+</Sequence>
+No valid behavior tree found in the output.
+Prompt used: 
+[{'role': 'system', 'content': '<<SYS>> You will be provided a summary of a task performed by a behavior tree, and your objective is to express this behavior tree in XML format.\n <</SYS>>'}, {'role': 'user', 'content': 'The behavior tree represents a robot\'s navigation system with arm activity. The robot must visit the locations "Station A", "Station B", "Station C". \n                  If "Station A" is not reachable, move to "Station D". The only available actions that must be used in the behavior tree are: "MoveTo".'}, {'role': 'assistant', 'content': '<root BTCPP_format="4">\n    <BehaviorTree>\n        <Sequence>\n            <Fallback>\n                <MoveTo name="go_to_station_A" location="Station A"/>      <!-- move to Station A -->\n                <MoveTo name="go_to_station_D" location="Station D"/>      <!-- move to Station D -->\n            </Fallback>\n            <MoveTo name="go_to_station_B" location="Station B"/>      <!-- move to Station B -->\n            <MoveTo name="go_to_station_C" location="Station C"/>      <!-- move to Station C -->\n        </Sequence>\n    </BehaviorTree>\n</root>'}, {'role': 'user', 'content': '"""The behavior tree represents a robot\'s navigation system. The robot must visit the location "StationA", "StationE", "StationC", "StationD" in order. If "StationE" cannot be reached, move to "StationB". actions that must be used in the behavior tree are: "MoveTo"."""'}]
+
+One-shot OpenAI result (time: 1.09 seconds):
+One-shot OpenAI result:
+<root BTCPP_format="4">
+    <BehaviorTree>
+        <Sequence>
+            <MoveTo name="go_to_stationA" location="StationA"/>
+            <Fallback>
+                <MoveTo name="go_to_stationE" location="StationE"/>
+                <MoveTo name="go_to_stationB" location="StationB"/>
+            </Fallback>
+            <MoveTo name="go_to_stationC" location="StationC"/>
+            <MoveTo name="go_to_stationD" location="StationD"/>
+        </Sequence>
+    </BehaviorTree>
+</root>
+Final tree tree is : 
+ <root BTCPP_format="4">
+    <BehaviorTree>
+        <Sequence>
+            <MoveTo name="go_to_stationA" location="StationA"/>
+            <Fallback>
+                <MoveTo name="go_to_stationE" location="StationE"/>
+                <MoveTo name="go_to_stationB" location="StationB"/>
+            </Fallback>
+            <MoveTo name="go_to_stationC" location="StationC"/>
+            <MoveTo name="go_to_stationD" location="StationD"/>
+        </Sequence>
+    </BehaviorTree>
+</root>
+Output saved to outputs/openai-gpt-4.1/oneshot/generative_3/4.xml
+
+Iteration 5 on openai-gpt-4.1:
+Task:
+"""The behavior tree represents a robot's navigation system. The robot must visit the location "StationA", "StationE", "StationC", "StationD" in order. If "StationE" cannot be reached, move to "StationB". actions that must be used in the behavior tree are: "MoveTo"."""
+Prompt used: 
+[{'role': 'system', 'content': '<<SYS>> You will be provided a summary of a task performed by a behavior tree, and your objective is to express this behavior tree in XML format.\n <</SYS>>'}, {'role': 'user', 'content': '"""The behavior tree represents a robot\'s navigation system. The robot must visit the location "StationA", "StationE", "StationC", "StationD" in order. If "StationE" cannot be reached, move to "StationB". actions that must be used in the behavior tree are: "MoveTo"."""'}]
+
+Zero-shot OpenAI result (time: 1.58 seconds):
+Zero-shot OpenAI result:
+<Sequence>
+    <MoveTo goal="StationA"/>
+    <Selector>
+        <MoveTo goal="StationE"/>
+        <MoveTo goal="StationB"/>
+    </Selector>
+    <MoveTo goal="StationC"/>
+    <MoveTo goal="StationD"/>
+</Sequence>
+No valid behavior tree found in the output.
+Prompt used: 
+[{'role': 'system', 'content': '<<SYS>> You will be provided a summary of a task performed by a behavior tree, and your objective is to express this behavior tree in XML format.\n <</SYS>>'}, {'role': 'user', 'content': 'The behavior tree represents a robot\'s navigation system with arm activity. The robot must visit the locations "Station A", "Station B", "Station C". \n                  If "Station A" is not reachable, move to "Station D". The only available actions that must be used in the behavior tree are: "MoveTo".'}, {'role': 'assistant', 'content': '<root BTCPP_format="4">\n    <BehaviorTree>\n        <Sequence>\n            <Fallback>\n                <MoveTo name="go_to_station_A" location="Station A"/>      <!-- move to Station A -->\n                <MoveTo name="go_to_station_D" location="Station D"/>      <!-- move to Station D -->\n            </Fallback>\n            <MoveTo name="go_to_station_B" location="Station B"/>      <!-- move to Station B -->\n            <MoveTo name="go_to_station_C" location="Station C"/>      <!-- move to Station C -->\n        </Sequence>\n    </BehaviorTree>\n</root>'}, {'role': 'user', 'content': '"""The behavior tree represents a robot\'s navigation system. The robot must visit the location "StationA", "StationE", "StationC", "StationD" in order. If "StationE" cannot be reached, move to "StationB". actions that must be used in the behavior tree are: "MoveTo"."""'}]
+
+One-shot OpenAI result (time: 1.80 seconds):
+One-shot OpenAI result:
+<root BTCPP_format="4">
+    <BehaviorTree>
+        <Sequence>
+            <MoveTo name="go_to_stationA" location="StationA"/>
+            <Fallback>
+                <MoveTo name="go_to_stationE" location="StationE"/>
+                <MoveTo name="go_to_stationB" location="StationB"/>
+            </Fallback>
+            <MoveTo name="go_to_stationC" location="StationC"/>
+            <MoveTo name="go_to_stationD" location="StationD"/>
+        </Sequence>
+    </BehaviorTree>
+</root>
+Final tree tree is : 
+ <root BTCPP_format="4">
+    <BehaviorTree>
+        <Sequence>
+            <MoveTo name="go_to_stationA" location="StationA"/>
+            <Fallback>
+                <MoveTo name="go_to_stationE" location="StationE"/>
+                <MoveTo name="go_to_stationB" location="StationB"/>
+            </Fallback>
+            <MoveTo name="go_to_stationC" location="StationC"/>
+            <MoveTo name="go_to_stationD" location="StationD"/>
+        </Sequence>
+    </BehaviorTree>
+</root>
+Output saved to outputs/openai-gpt-4.1/oneshot/generative_3/5.xml
+
+Iteration 6 on openai-gpt-4.1:
+Task:
+"""The behavior tree represents a robot's navigation system. The robot must visit the location "StationA", "StationE", "StationC", "StationD" in order. If "StationE" cannot be reached, move to "StationB". actions that must be used in the behavior tree are: "MoveTo"."""
+Prompt used: 
+[{'role': 'system', 'content': '<<SYS>> You will be provided a summary of a task performed by a behavior tree, and your objective is to express this behavior tree in XML format.\n <</SYS>>'}, {'role': 'user', 'content': '"""The behavior tree represents a robot\'s navigation system. The robot must visit the location "StationA", "StationE", "StationC", "StationD" in order. If "StationE" cannot be reached, move to "StationB". actions that must be used in the behavior tree are: "MoveTo"."""'}]
+
+Zero-shot OpenAI result (time: 0.96 seconds):
+Zero-shot OpenAI result:
+<Sequence>
+    <MoveTo goal="StationA"/>
+    <Selector>
+        <MoveTo goal="StationE"/>
+        <MoveTo goal="StationB"/>
+    </Selector>
+    <MoveTo goal="StationC"/>
+    <MoveTo goal="StationD"/>
+</Sequence>
+No valid behavior tree found in the output.
+Prompt used: 
+[{'role': 'system', 'content': '<<SYS>> You will be provided a summary of a task performed by a behavior tree, and your objective is to express this behavior tree in XML format.\n <</SYS>>'}, {'role': 'user', 'content': 'The behavior tree represents a robot\'s navigation system with arm activity. The robot must visit the locations "Station A", "Station B", "Station C". \n                  If "Station A" is not reachable, move to "Station D". The only available actions that must be used in the behavior tree are: "MoveTo".'}, {'role': 'assistant', 'content': '<root BTCPP_format="4">\n    <BehaviorTree>\n        <Sequence>\n            <Fallback>\n                <MoveTo name="go_to_station_A" location="Station A"/>      <!-- move to Station A -->\n                <MoveTo name="go_to_station_D" location="Station D"/>      <!-- move to Station D -->\n            </Fallback>\n            <MoveTo name="go_to_station_B" location="Station B"/>      <!-- move to Station B -->\n            <MoveTo name="go_to_station_C" location="Station C"/>      <!-- move to Station C -->\n        </Sequence>\n    </BehaviorTree>\n</root>'}, {'role': 'user', 'content': '"""The behavior tree represents a robot\'s navigation system. The robot must visit the location "StationA", "StationE", "StationC", "StationD" in order. If "StationE" cannot be reached, move to "StationB". actions that must be used in the behavior tree are: "MoveTo"."""'}]
+
+One-shot OpenAI result (time: 1.78 seconds):
+One-shot OpenAI result:
+<root BTCPP_format="4">
+    <BehaviorTree>
+        <Sequence>
+            <MoveTo name="go_to_stationA" location="StationA"/>
+            <Fallback>
+                <MoveTo name="go_to_stationE" location="StationE"/>
+                <MoveTo name="go_to_stationB" location="StationB"/>
+            </Fallback>
+            <MoveTo name="go_to_stationC" location="StationC"/>
+            <MoveTo name="go_to_stationD" location="StationD"/>
+        </Sequence>
+    </BehaviorTree>
+</root>
+Final tree tree is : 
+ <root BTCPP_format="4">
+    <BehaviorTree>
+        <Sequence>
+            <MoveTo name="go_to_stationA" location="StationA"/>
+            <Fallback>
+                <MoveTo name="go_to_stationE" location="StationE"/>
+                <MoveTo name="go_to_stationB" location="StationB"/>
+            </Fallback>
+            <MoveTo name="go_to_stationC" location="StationC"/>
+            <MoveTo name="go_to_stationD" location="StationD"/>
+        </Sequence>
+    </BehaviorTree>
+</root>
+Output saved to outputs/openai-gpt-4.1/oneshot/generative_3/6.xml
+
+Iteration 7 on openai-gpt-4.1:
+Task:
+"""The behavior tree represents a robot's navigation system. The robot must visit the location "StationA", "StationE", "StationC", "StationD" in order. If "StationE" cannot be reached, move to "StationB". actions that must be used in the behavior tree are: "MoveTo"."""
+Prompt used: 
+[{'role': 'system', 'content': '<<SYS>> You will be provided a summary of a task performed by a behavior tree, and your objective is to express this behavior tree in XML format.\n <</SYS>>'}, {'role': 'user', 'content': '"""The behavior tree represents a robot\'s navigation system. The robot must visit the location "StationA", "StationE", "StationC", "StationD" in order. If "StationE" cannot be reached, move to "StationB". actions that must be used in the behavior tree are: "MoveTo"."""'}]
+
+Zero-shot OpenAI result (time: 0.88 seconds):
+Zero-shot OpenAI result:
+<Sequence>
+    <MoveTo goal="StationA"/>
+    <Fallback>
+        <MoveTo goal="StationE"/>
+        <MoveTo goal="StationB"/>
+    </Fallback>
+    <MoveTo goal="StationC"/>
+    <MoveTo goal="StationD"/>
+</Sequence>
+No valid behavior tree found in the output.
+Prompt used: 
+[{'role': 'system', 'content': '<<SYS>> You will be provided a summary of a task performed by a behavior tree, and your objective is to express this behavior tree in XML format.\n <</SYS>>'}, {'role': 'user', 'content': 'The behavior tree represents a robot\'s navigation system with arm activity. The robot must visit the locations "Station A", "Station B", "Station C". \n                  If "Station A" is not reachable, move to "Station D". The only available actions that must be used in the behavior tree are: "MoveTo".'}, {'role': 'assistant', 'content': '<root BTCPP_format="4">\n    <BehaviorTree>\n        <Sequence>\n            <Fallback>\n                <MoveTo name="go_to_station_A" location="Station A"/>      <!-- move to Station A -->\n                <MoveTo name="go_to_station_D" location="Station D"/>      <!-- move to Station D -->\n            </Fallback>\n            <MoveTo name="go_to_station_B" location="Station B"/>      <!-- move to Station B -->\n            <MoveTo name="go_to_station_C" location="Station C"/>      <!-- move to Station C -->\n        </Sequence>\n    </BehaviorTree>\n</root>'}, {'role': 'user', 'content': '"""The behavior tree represents a robot\'s navigation system. The robot must visit the location "StationA", "StationE", "StationC", "StationD" in order. If "StationE" cannot be reached, move to "StationB". actions that must be used in the behavior tree are: "MoveTo"."""'}]
+
+One-shot OpenAI result (time: 1.91 seconds):
+One-shot OpenAI result:
+<root BTCPP_format="4">
+    <BehaviorTree>
+        <Sequence>
+            <MoveTo name="go_to_stationA" location="StationA"/>
+            <Fallback>
+                <MoveTo name="go_to_stationE" location="StationE"/>
+                <MoveTo name="go_to_stationB" location="StationB"/>
+            </Fallback>
+            <MoveTo name="go_to_stationC" location="StationC"/>
+            <MoveTo name="go_to_stationD" location="StationD"/>
+        </Sequence>
+    </BehaviorTree>
+</root>
+Final tree tree is : 
+ <root BTCPP_format="4">
+    <BehaviorTree>
+        <Sequence>
+            <MoveTo name="go_to_stationA" location="StationA"/>
+            <Fallback>
+                <MoveTo name="go_to_stationE" location="StationE"/>
+                <MoveTo name="go_to_stationB" location="StationB"/>
+            </Fallback>
+            <MoveTo name="go_to_stationC" location="StationC"/>
+            <MoveTo name="go_to_stationD" location="StationD"/>
+        </Sequence>
+    </BehaviorTree>
+</root>
+Output saved to outputs/openai-gpt-4.1/oneshot/generative_3/7.xml
+
+Iteration 8 on openai-gpt-4.1:
+Task:
+"""The behavior tree represents a robot's navigation system. The robot must visit the location "StationA", "StationE", "StationC", "StationD" in order. If "StationE" cannot be reached, move to "StationB". actions that must be used in the behavior tree are: "MoveTo"."""
+Prompt used: 
+[{'role': 'system', 'content': '<<SYS>> You will be provided a summary of a task performed by a behavior tree, and your objective is to express this behavior tree in XML format.\n <</SYS>>'}, {'role': 'user', 'content': '"""The behavior tree represents a robot\'s navigation system. The robot must visit the location "StationA", "StationE", "StationC", "StationD" in order. If "StationE" cannot be reached, move to "StationB". actions that must be used in the behavior tree are: "MoveTo"."""'}]
+
+Zero-shot OpenAI result (time: 1.16 seconds):
+Zero-shot OpenAI result:
+<Sequence>
+    <MoveTo goal="StationA"/>
+    <Fallback>
+        <MoveTo goal="StationE"/>
+        <MoveTo goal="StationB"/>
+    </Fallback>
+    <MoveTo goal="StationC"/>
+    <MoveTo goal="StationD"/>
+</Sequence>
+No valid behavior tree found in the output.
+Prompt used: 
+[{'role': 'system', 'content': '<<SYS>> You will be provided a summary of a task performed by a behavior tree, and your objective is to express this behavior tree in XML format.\n <</SYS>>'}, {'role': 'user', 'content': 'The behavior tree represents a robot\'s navigation system with arm activity. The robot must visit the locations "Station A", "Station B", "Station C". \n                  If "Station A" is not reachable, move to "Station D". The only available actions that must be used in the behavior tree are: "MoveTo".'}, {'role': 'assistant', 'content': '<root BTCPP_format="4">\n    <BehaviorTree>\n        <Sequence>\n            <Fallback>\n                <MoveTo name="go_to_station_A" location="Station A"/>      <!-- move to Station A -->\n                <MoveTo name="go_to_station_D" location="Station D"/>      <!-- move to Station D -->\n            </Fallback>\n            <MoveTo name="go_to_station_B" location="Station B"/>      <!-- move to Station B -->\n            <MoveTo name="go_to_station_C" location="Station C"/>      <!-- move to Station C -->\n        </Sequence>\n    </BehaviorTree>\n</root>'}, {'role': 'user', 'content': '"""The behavior tree represents a robot\'s navigation system. The robot must visit the location "StationA", "StationE", "StationC", "StationD" in order. If "StationE" cannot be reached, move to "StationB". actions that must be used in the behavior tree are: "MoveTo"."""'}]
+
+One-shot OpenAI result (time: 1.24 seconds):
+One-shot OpenAI result:
+<root BTCPP_format="4">
+    <BehaviorTree>
+        <Sequence>
+            <MoveTo name="go_to_stationA" location="StationA"/>
+            <Fallback>
+                <MoveTo name="go_to_stationE" location="StationE"/>
+                <MoveTo name="go_to_stationB" location="StationB"/>
+            </Fallback>
+            <MoveTo name="go_to_stationC" location="StationC"/>
+            <MoveTo name="go_to_stationD" location="StationD"/>
+        </Sequence>
+    </BehaviorTree>
+</root>
+Final tree tree is : 
+ <root BTCPP_format="4">
+    <BehaviorTree>
+        <Sequence>
+            <MoveTo name="go_to_stationA" location="StationA"/>
+            <Fallback>
+                <MoveTo name="go_to_stationE" location="StationE"/>
+                <MoveTo name="go_to_stationB" location="StationB"/>
+            </Fallback>
+            <MoveTo name="go_to_stationC" location="StationC"/>
+            <MoveTo name="go_to_stationD" location="StationD"/>
+        </Sequence>
+    </BehaviorTree>
+</root>
+Output saved to outputs/openai-gpt-4.1/oneshot/generative_3/8.xml
+
+Iteration 9 on openai-gpt-4.1:
+Task:
+"""The behavior tree represents a robot's navigation system. The robot must visit the location "StationA", "StationE", "StationC", "StationD" in order. If "StationE" cannot be reached, move to "StationB". actions that must be used in the behavior tree are: "MoveTo"."""
+Prompt used: 
+[{'role': 'system', 'content': '<<SYS>> You will be provided a summary of a task performed by a behavior tree, and your objective is to express this behavior tree in XML format.\n <</SYS>>'}, {'role': 'user', 'content': '"""The behavior tree represents a robot\'s navigation system. The robot must visit the location "StationA", "StationE", "StationC", "StationD" in order. If "StationE" cannot be reached, move to "StationB". actions that must be used in the behavior tree are: "MoveTo"."""'}]
+
+Zero-shot OpenAI result (time: 1.27 seconds):
+Zero-shot OpenAI result:
+<Sequence>
+    <MoveTo goal="StationA"/>
+    <Selector>
+        <MoveTo goal="StationE"/>
+        <MoveTo goal="StationB"/>
+    </Selector>
+    <MoveTo goal="StationC"/>
+    <MoveTo goal="StationD"/>
+</Sequence>
+No valid behavior tree found in the output.
+Prompt used: 
+[{'role': 'system', 'content': '<<SYS>> You will be provided a summary of a task performed by a behavior tree, and your objective is to express this behavior tree in XML format.\n <</SYS>>'}, {'role': 'user', 'content': 'The behavior tree represents a robot\'s navigation system with arm activity. The robot must visit the locations "Station A", "Station B", "Station C". \n                  If "Station A" is not reachable, move to "Station D". The only available actions that must be used in the behavior tree are: "MoveTo".'}, {'role': 'assistant', 'content': '<root BTCPP_format="4">\n    <BehaviorTree>\n        <Sequence>\n            <Fallback>\n                <MoveTo name="go_to_station_A" location="Station A"/>      <!-- move to Station A -->\n                <MoveTo name="go_to_station_D" location="Station D"/>      <!-- move to Station D -->\n            </Fallback>\n            <MoveTo name="go_to_station_B" location="Station B"/>      <!-- move to Station B -->\n            <MoveTo name="go_to_station_C" location="Station C"/>      <!-- move to Station C -->\n        </Sequence>\n    </BehaviorTree>\n</root>'}, {'role': 'user', 'content': '"""The behavior tree represents a robot\'s navigation system. The robot must visit the location "StationA", "StationE", "StationC", "StationD" in order. If "StationE" cannot be reached, move to "StationB". actions that must be used in the behavior tree are: "MoveTo"."""'}]
+
+One-shot OpenAI result (time: 1.38 seconds):
+One-shot OpenAI result:
+<root BTCPP_format="4">
+    <BehaviorTree>
+        <Sequence>
+            <MoveTo name="go_to_stationA" location="StationA"/>
+            <Fallback>
+                <MoveTo name="go_to_stationE" location="StationE"/>
+                <MoveTo name="go_to_stationB" location="StationB"/>
+            </Fallback>
+            <MoveTo name="go_to_stationC" location="StationC"/>
+            <MoveTo name="go_to_stationD" location="StationD"/>
+        </Sequence>
+    </BehaviorTree>
+</root>
+Final tree tree is : 
+ <root BTCPP_format="4">
+    <BehaviorTree>
+        <Sequence>
+            <MoveTo name="go_to_stationA" location="StationA"/>
+            <Fallback>
+                <MoveTo name="go_to_stationE" location="StationE"/>
+                <MoveTo name="go_to_stationB" location="StationB"/>
+            </Fallback>
+            <MoveTo name="go_to_stationC" location="StationC"/>
+            <MoveTo name="go_to_stationD" location="StationD"/>
+        </Sequence>
+    </BehaviorTree>
+</root>
+Output saved to outputs/openai-gpt-4.1/oneshot/generative_3/9.xml
+
+Iteration 10 on openai-gpt-4.1:
+Task:
+"""The behavior tree represents a robot's navigation system. The robot must visit the location "StationA", "StationE", "StationC", "StationD" in order. If "StationE" cannot be reached, move to "StationB". actions that must be used in the behavior tree are: "MoveTo"."""
+Prompt used: 
+[{'role': 'system', 'content': '<<SYS>> You will be provided a summary of a task performed by a behavior tree, and your objective is to express this behavior tree in XML format.\n <</SYS>>'}, {'role': 'user', 'content': '"""The behavior tree represents a robot\'s navigation system. The robot must visit the location "StationA", "StationE", "StationC", "StationD" in order. If "StationE" cannot be reached, move to "StationB". actions that must be used in the behavior tree are: "MoveTo"."""'}]
+
+Zero-shot OpenAI result (time: 1.37 seconds):
+Zero-shot OpenAI result:
+```xml
+<Sequence>
+    <MoveTo goal="StationA"/>
+    <Selector>
+        <MoveTo goal="StationE"/>
+        <MoveTo goal="StationB"/>
+    </Selector>
+    <MoveTo goal="StationC"/>
+    <MoveTo goal="StationD"/>
+</Sequence>
+```
+No valid behavior tree found in the output.
+Prompt used: 
+[{'role': 'system', 'content': '<<SYS>> You will be provided a summary of a task performed by a behavior tree, and your objective is to express this behavior tree in XML format.\n <</SYS>>'}, {'role': 'user', 'content': 'The behavior tree represents a robot\'s navigation system with arm activity. The robot must visit the locations "Station A", "Station B", "Station C". \n                  If "Station A" is not reachable, move to "Station D". The only available actions that must be used in the behavior tree are: "MoveTo".'}, {'role': 'assistant', 'content': '<root BTCPP_format="4">\n    <BehaviorTree>\n        <Sequence>\n            <Fallback>\n                <MoveTo name="go_to_station_A" location="Station A"/>      <!-- move to Station A -->\n                <MoveTo name="go_to_station_D" location="Station D"/>      <!-- move to Station D -->\n            </Fallback>\n            <MoveTo name="go_to_station_B" location="Station B"/>      <!-- move to Station B -->\n            <MoveTo name="go_to_station_C" location="Station C"/>      <!-- move to Station C -->\n        </Sequence>\n    </BehaviorTree>\n</root>'}, {'role': 'user', 'content': '"""The behavior tree represents a robot\'s navigation system. The robot must visit the location "StationA", "StationE", "StationC", "StationD" in order. If "StationE" cannot be reached, move to "StationB". actions that must be used in the behavior tree are: "MoveTo"."""'}]
+
+One-shot OpenAI result (time: 1.71 seconds):
+One-shot OpenAI result:
+<root BTCPP_format="4">
+    <BehaviorTree>
+        <Sequence>
+            <MoveTo name="go_to_stationA" location="StationA"/>
+            <Fallback>
+                <MoveTo name="go_to_stationE" location="StationE"/>
+                <MoveTo name="go_to_stationB" location="StationB"/>
+            </Fallback>
+            <MoveTo name="go_to_stationC" location="StationC"/>
+            <MoveTo name="go_to_stationD" location="StationD"/>
+        </Sequence>
+    </BehaviorTree>
+</root>
+Final tree tree is : 
+ <root BTCPP_format="4">
+    <BehaviorTree>
+        <Sequence>
+            <MoveTo name="go_to_stationA" location="StationA"/>
+            <Fallback>
+                <MoveTo name="go_to_stationE" location="StationE"/>
+                <MoveTo name="go_to_stationB" location="StationB"/>
+            </Fallback>
+            <MoveTo name="go_to_stationC" location="StationC"/>
+            <MoveTo name="go_to_stationD" location="StationD"/>
+        </Sequence>
+    </BehaviorTree>
+</root>
+Output saved to outputs/openai-gpt-4.1/oneshot/generative_3/10.xml
+
+Running inference on task file: generative_4.txt
+
+Iteration 1 on openai-gpt-4.1:
+Task:
+"""The behavior tree represents a robot's navigation system. The robot must visit the location "StationA", "StationE", "StationF", "StationD" in order. If "StationE" cannot be reached, move to "StationB". If "StationF" cannot be reached, move to "StationC". actions that must be used in the behavior tree are: "MoveTo"."""
+Prompt used: 
+[{'role': 'system', 'content': '<<SYS>> You will be provided a summary of a task performed by a behavior tree, and your objective is to express this behavior tree in XML format.\n <</SYS>>'}, {'role': 'user', 'content': '"""The behavior tree represents a robot\'s navigation system. The robot must visit the location "StationA", "StationE", "StationF", "StationD" in order. If "StationE" cannot be reached, move to "StationB". If "StationF" cannot be reached, move to "StationC". actions that must be used in the behavior tree are: "MoveTo"."""'}]
+
+Zero-shot OpenAI result (time: 1.75 seconds):
+Zero-shot OpenAI result:
+```xml
+<Sequence>
+    <MoveTo goal="StationA"/>
+    <Selector>
+        <MoveTo goal="StationE"/>
+        <MoveTo goal="StationB"/>
+    </Selector>
+    <Selector>
+        <MoveTo goal="StationF"/>
+        <MoveTo goal="StationC"/>
+    </Selector>
+    <MoveTo goal="StationD"/>
+</Sequence>
+```
+No valid behavior tree found in the output.
+Prompt used: 
+[{'role': 'system', 'content': '<<SYS>> You will be provided a summary of a task performed by a behavior tree, and your objective is to express this behavior tree in XML format.\n <</SYS>>'}, {'role': 'user', 'content': 'The behavior tree represents a robot\'s navigation system with arm activity. The robot must visit the locations "Station A", "Station B", "Station C". \n                  If "Station A" is not reachable, move to "Station D". The only available actions that must be used in the behavior tree are: "MoveTo".'}, {'role': 'assistant', 'content': '<root BTCPP_format="4">\n    <BehaviorTree>\n        <Sequence>\n            <Fallback>\n                <MoveTo name="go_to_station_A" location="Station A"/>      <!-- move to Station A -->\n                <MoveTo name="go_to_station_D" location="Station D"/>      <!-- move to Station D -->\n            </Fallback>\n            <MoveTo name="go_to_station_B" location="Station B"/>      <!-- move to Station B -->\n            <MoveTo name="go_to_station_C" location="Station C"/>      <!-- move to Station C -->\n        </Sequence>\n    </BehaviorTree>\n</root>'}, {'role': 'user', 'content': '"""The behavior tree represents a robot\'s navigation system. The robot must visit the location "StationA", "StationE", "StationF", "StationD" in order. If "StationE" cannot be reached, move to "StationB". If "StationF" cannot be reached, move to "StationC". actions that must be used in the behavior tree are: "MoveTo"."""'}]
+
+One-shot OpenAI result (time: 1.48 seconds):
+One-shot OpenAI result:
+<root BTCPP_format="4">
+    <BehaviorTree>
+        <Sequence>
+            <MoveTo name="go_to_stationA" location="StationA"/>
+            <Fallback>
+                <MoveTo name="go_to_stationE" location="StationE"/>
+                <MoveTo name="go_to_stationB" location="StationB"/>
+            </Fallback>
+            <Fallback>
+                <MoveTo name="go_to_stationF" location="StationF"/>
+                <MoveTo name="go_to_stationC" location="StationC"/>
+            </Fallback>
+            <MoveTo name="go_to_stationD" location="StationD"/>
+        </Sequence>
+    </BehaviorTree>
+</root>
+Final tree tree is : 
+ <root BTCPP_format="4">
+    <BehaviorTree>
+        <Sequence>
+            <MoveTo name="go_to_stationA" location="StationA"/>
+            <Fallback>
+                <MoveTo name="go_to_stationE" location="StationE"/>
+                <MoveTo name="go_to_stationB" location="StationB"/>
+            </Fallback>
+            <Fallback>
+                <MoveTo name="go_to_stationF" location="StationF"/>
+                <MoveTo name="go_to_stationC" location="StationC"/>
+            </Fallback>
+            <MoveTo name="go_to_stationD" location="StationD"/>
+        </Sequence>
+    </BehaviorTree>
+</root>
+Output saved to outputs/openai-gpt-4.1/oneshot/generative_4/1.xml
+
+Iteration 2 on openai-gpt-4.1:
+Task:
+"""The behavior tree represents a robot's navigation system. The robot must visit the location "StationA", "StationE", "StationF", "StationD" in order. If "StationE" cannot be reached, move to "StationB". If "StationF" cannot be reached, move to "StationC". actions that must be used in the behavior tree are: "MoveTo"."""
+Prompt used: 
+[{'role': 'system', 'content': '<<SYS>> You will be provided a summary of a task performed by a behavior tree, and your objective is to express this behavior tree in XML format.\n <</SYS>>'}, {'role': 'user', 'content': '"""The behavior tree represents a robot\'s navigation system. The robot must visit the location "StationA", "StationE", "StationF", "StationD" in order. If "StationE" cannot be reached, move to "StationB". If "StationF" cannot be reached, move to "StationC". actions that must be used in the behavior tree are: "MoveTo"."""'}]
+
+Zero-shot OpenAI result (time: 1.29 seconds):
+Zero-shot OpenAI result:
+```xml
+<Sequence>
+    <MoveTo goal="StationA"/>
+    <Selector>
+        <MoveTo goal="StationE"/>
+        <MoveTo goal="StationB"/>
+    </Selector>
+    <Selector>
+        <MoveTo goal="StationF"/>
+        <MoveTo goal="StationC"/>
+    </Selector>
+    <MoveTo goal="StationD"/>
+</Sequence>
+```
+No valid behavior tree found in the output.
+Prompt used: 
+[{'role': 'system', 'content': '<<SYS>> You will be provided a summary of a task performed by a behavior tree, and your objective is to express this behavior tree in XML format.\n <</SYS>>'}, {'role': 'user', 'content': 'The behavior tree represents a robot\'s navigation system with arm activity. The robot must visit the locations "Station A", "Station B", "Station C". \n                  If "Station A" is not reachable, move to "Station D". The only available actions that must be used in the behavior tree are: "MoveTo".'}, {'role': 'assistant', 'content': '<root BTCPP_format="4">\n    <BehaviorTree>\n        <Sequence>\n            <Fallback>\n                <MoveTo name="go_to_station_A" location="Station A"/>      <!-- move to Station A -->\n                <MoveTo name="go_to_station_D" location="Station D"/>      <!-- move to Station D -->\n            </Fallback>\n            <MoveTo name="go_to_station_B" location="Station B"/>      <!-- move to Station B -->\n            <MoveTo name="go_to_station_C" location="Station C"/>      <!-- move to Station C -->\n        </Sequence>\n    </BehaviorTree>\n</root>'}, {'role': 'user', 'content': '"""The behavior tree represents a robot\'s navigation system. The robot must visit the location "StationA", "StationE", "StationF", "StationD" in order. If "StationE" cannot be reached, move to "StationB". If "StationF" cannot be reached, move to "StationC". actions that must be used in the behavior tree are: "MoveTo"."""'}]
+
+One-shot OpenAI result (time: 1.74 seconds):
+One-shot OpenAI result:
+<root BTCPP_format="4">
+    <BehaviorTree>
+        <Sequence>
+            <MoveTo name="go_to_stationA" location="StationA"/>
+            <Fallback>
+                <MoveTo name="go_to_stationE" location="StationE"/>
+                <MoveTo name="go_to_stationB" location="StationB"/>
+            </Fallback>
+            <Fallback>
+                <MoveTo name="go_to_stationF" location="StationF"/>
+                <MoveTo name="go_to_stationC" location="StationC"/>
+            </Fallback>
+            <MoveTo name="go_to_stationD" location="StationD"/>
+        </Sequence>
+    </BehaviorTree>
+</root>
+Final tree tree is : 
+ <root BTCPP_format="4">
+    <BehaviorTree>
+        <Sequence>
+            <MoveTo name="go_to_stationA" location="StationA"/>
+            <Fallback>
+                <MoveTo name="go_to_stationE" location="StationE"/>
+                <MoveTo name="go_to_stationB" location="StationB"/>
+            </Fallback>
+            <Fallback>
+                <MoveTo name="go_to_stationF" location="StationF"/>
+                <MoveTo name="go_to_stationC" location="StationC"/>
+            </Fallback>
+            <MoveTo name="go_to_stationD" location="StationD"/>
+        </Sequence>
+    </BehaviorTree>
+</root>
+Output saved to outputs/openai-gpt-4.1/oneshot/generative_4/2.xml
+
+Iteration 3 on openai-gpt-4.1:
+Task:
+"""The behavior tree represents a robot's navigation system. The robot must visit the location "StationA", "StationE", "StationF", "StationD" in order. If "StationE" cannot be reached, move to "StationB". If "StationF" cannot be reached, move to "StationC". actions that must be used in the behavior tree are: "MoveTo"."""
+Prompt used: 
+[{'role': 'system', 'content': '<<SYS>> You will be provided a summary of a task performed by a behavior tree, and your objective is to express this behavior tree in XML format.\n <</SYS>>'}, {'role': 'user', 'content': '"""The behavior tree represents a robot\'s navigation system. The robot must visit the location "StationA", "StationE", "StationF", "StationD" in order. If "StationE" cannot be reached, move to "StationB". If "StationF" cannot be reached, move to "StationC". actions that must be used in the behavior tree are: "MoveTo"."""'}]
+
+Zero-shot OpenAI result (time: 1.34 seconds):
+Zero-shot OpenAI result:
+```xml
+<Sequence>
+    <MoveTo goal="StationA"/>
+    <Selector>
+        <MoveTo goal="StationE"/>
+        <MoveTo goal="StationB"/>
+    </Selector>
+    <Selector>
+        <MoveTo goal="StationF"/>
+        <MoveTo goal="StationC"/>
+    </Selector>
+    <MoveTo goal="StationD"/>
+</Sequence>
+```
+No valid behavior tree found in the output.
+Prompt used: 
+[{'role': 'system', 'content': '<<SYS>> You will be provided a summary of a task performed by a behavior tree, and your objective is to express this behavior tree in XML format.\n <</SYS>>'}, {'role': 'user', 'content': 'The behavior tree represents a robot\'s navigation system with arm activity. The robot must visit the locations "Station A", "Station B", "Station C". \n                  If "Station A" is not reachable, move to "Station D". The only available actions that must be used in the behavior tree are: "MoveTo".'}, {'role': 'assistant', 'content': '<root BTCPP_format="4">\n    <BehaviorTree>\n        <Sequence>\n            <Fallback>\n                <MoveTo name="go_to_station_A" location="Station A"/>      <!-- move to Station A -->\n                <MoveTo name="go_to_station_D" location="Station D"/>      <!-- move to Station D -->\n            </Fallback>\n            <MoveTo name="go_to_station_B" location="Station B"/>      <!-- move to Station B -->\n            <MoveTo name="go_to_station_C" location="Station C"/>      <!-- move to Station C -->\n        </Sequence>\n    </BehaviorTree>\n</root>'}, {'role': 'user', 'content': '"""The behavior tree represents a robot\'s navigation system. The robot must visit the location "StationA", "StationE", "StationF", "StationD" in order. If "StationE" cannot be reached, move to "StationB". If "StationF" cannot be reached, move to "StationC". actions that must be used in the behavior tree are: "MoveTo"."""'}]
+
+One-shot OpenAI result (time: 1.38 seconds):
+One-shot OpenAI result:
+<root BTCPP_format="4">
+    <BehaviorTree>
+        <Sequence>
+            <MoveTo name="go_to_stationA" location="StationA"/>
+            <Fallback>
+                <MoveTo name="go_to_stationE" location="StationE"/>
+                <MoveTo name="go_to_stationB" location="StationB"/>
+            </Fallback>
+            <Fallback>
+                <MoveTo name="go_to_stationF" location="StationF"/>
+                <MoveTo name="go_to_stationC" location="StationC"/>
+            </Fallback>
+            <MoveTo name="go_to_stationD" location="StationD"/>
+        </Sequence>
+    </BehaviorTree>
+</root>
+Final tree tree is : 
+ <root BTCPP_format="4">
+    <BehaviorTree>
+        <Sequence>
+            <MoveTo name="go_to_stationA" location="StationA"/>
+            <Fallback>
+                <MoveTo name="go_to_stationE" location="StationE"/>
+                <MoveTo name="go_to_stationB" location="StationB"/>
+            </Fallback>
+            <Fallback>
+                <MoveTo name="go_to_stationF" location="StationF"/>
+                <MoveTo name="go_to_stationC" location="StationC"/>
+            </Fallback>
+            <MoveTo name="go_to_stationD" location="StationD"/>
+        </Sequence>
+    </BehaviorTree>
+</root>
+Output saved to outputs/openai-gpt-4.1/oneshot/generative_4/3.xml
+
+Iteration 4 on openai-gpt-4.1:
+Task:
+"""The behavior tree represents a robot's navigation system. The robot must visit the location "StationA", "StationE", "StationF", "StationD" in order. If "StationE" cannot be reached, move to "StationB". If "StationF" cannot be reached, move to "StationC". actions that must be used in the behavior tree are: "MoveTo"."""
+Prompt used: 
+[{'role': 'system', 'content': '<<SYS>> You will be provided a summary of a task performed by a behavior tree, and your objective is to express this behavior tree in XML format.\n <</SYS>>'}, {'role': 'user', 'content': '"""The behavior tree represents a robot\'s navigation system. The robot must visit the location "StationA", "StationE", "StationF", "StationD" in order. If "StationE" cannot be reached, move to "StationB". If "StationF" cannot be reached, move to "StationC". actions that must be used in the behavior tree are: "MoveTo"."""'}]
+
+Zero-shot OpenAI result (time: 1.36 seconds):
+Zero-shot OpenAI result:
+```xml
+<Sequence>
+    <MoveTo goal="StationA"/>
+    <Fallback>
+        <MoveTo goal="StationE"/>
+        <MoveTo goal="StationB"/>
+    </Fallback>
+    <Fallback>
+        <MoveTo goal="StationF"/>
+        <MoveTo goal="StationC"/>
+    </Fallback>
+    <MoveTo goal="StationD"/>
+</Sequence>
+```
+No valid behavior tree found in the output.
+Prompt used: 
+[{'role': 'system', 'content': '<<SYS>> You will be provided a summary of a task performed by a behavior tree, and your objective is to express this behavior tree in XML format.\n <</SYS>>'}, {'role': 'user', 'content': 'The behavior tree represents a robot\'s navigation system with arm activity. The robot must visit the locations "Station A", "Station B", "Station C". \n                  If "Station A" is not reachable, move to "Station D". The only available actions that must be used in the behavior tree are: "MoveTo".'}, {'role': 'assistant', 'content': '<root BTCPP_format="4">\n    <BehaviorTree>\n        <Sequence>\n            <Fallback>\n                <MoveTo name="go_to_station_A" location="Station A"/>      <!-- move to Station A -->\n                <MoveTo name="go_to_station_D" location="Station D"/>      <!-- move to Station D -->\n            </Fallback>\n            <MoveTo name="go_to_station_B" location="Station B"/>      <!-- move to Station B -->\n            <MoveTo name="go_to_station_C" location="Station C"/>      <!-- move to Station C -->\n        </Sequence>\n    </BehaviorTree>\n</root>'}, {'role': 'user', 'content': '"""The behavior tree represents a robot\'s navigation system. The robot must visit the location "StationA", "StationE", "StationF", "StationD" in order. If "StationE" cannot be reached, move to "StationB". If "StationF" cannot be reached, move to "StationC". actions that must be used in the behavior tree are: "MoveTo"."""'}]
+
+One-shot OpenAI result (time: 5.10 seconds):
+One-shot OpenAI result:
+<root BTCPP_format="4">
+    <BehaviorTree>
+        <Sequence>
+            <MoveTo name="go_to_stationA" location="StationA"/>
+            <Fallback>
+                <MoveTo name="go_to_stationE" location="StationE"/>
+                <MoveTo name="go_to_stationB" location="StationB"/>
+            </Fallback>
+            <Fallback>
+                <MoveTo name="go_to_stationF" location="StationF"/>
+                <MoveTo name="go_to_stationC" location="StationC"/>
+            </Fallback>
+            <MoveTo name="go_to_stationD" location="StationD"/>
+        </Sequence>
+    </BehaviorTree>
+</root>
+Final tree tree is : 
+ <root BTCPP_format="4">
+    <BehaviorTree>
+        <Sequence>
+            <MoveTo name="go_to_stationA" location="StationA"/>
+            <Fallback>
+                <MoveTo name="go_to_stationE" location="StationE"/>
+                <MoveTo name="go_to_stationB" location="StationB"/>
+            </Fallback>
+            <Fallback>
+                <MoveTo name="go_to_stationF" location="StationF"/>
+                <MoveTo name="go_to_stationC" location="StationC"/>
+            </Fallback>
+            <MoveTo name="go_to_stationD" location="StationD"/>
+        </Sequence>
+    </BehaviorTree>
+</root>
+Output saved to outputs/openai-gpt-4.1/oneshot/generative_4/4.xml
+
+Iteration 5 on openai-gpt-4.1:
+Task:
+"""The behavior tree represents a robot's navigation system. The robot must visit the location "StationA", "StationE", "StationF", "StationD" in order. If "StationE" cannot be reached, move to "StationB". If "StationF" cannot be reached, move to "StationC". actions that must be used in the behavior tree are: "MoveTo"."""
+Prompt used: 
+[{'role': 'system', 'content': '<<SYS>> You will be provided a summary of a task performed by a behavior tree, and your objective is to express this behavior tree in XML format.\n <</SYS>>'}, {'role': 'user', 'content': '"""The behavior tree represents a robot\'s navigation system. The robot must visit the location "StationA", "StationE", "StationF", "StationD" in order. If "StationE" cannot be reached, move to "StationB". If "StationF" cannot be reached, move to "StationC". actions that must be used in the behavior tree are: "MoveTo"."""'}]
+
+Zero-shot OpenAI result (time: 1.93 seconds):
+Zero-shot OpenAI result:
+```xml
+<Sequence>
+    <MoveTo goal="StationA"/>
+    <Selector>
+        <MoveTo goal="StationE"/>
+        <MoveTo goal="StationB"/>
+    </Selector>
+    <Selector>
+        <MoveTo goal="StationF"/>
+        <MoveTo goal="StationC"/>
+    </Selector>
+    <MoveTo goal="StationD"/>
+</Sequence>
+```
+No valid behavior tree found in the output.
+Prompt used: 
+[{'role': 'system', 'content': '<<SYS>> You will be provided a summary of a task performed by a behavior tree, and your objective is to express this behavior tree in XML format.\n <</SYS>>'}, {'role': 'user', 'content': 'The behavior tree represents a robot\'s navigation system with arm activity. The robot must visit the locations "Station A", "Station B", "Station C". \n                  If "Station A" is not reachable, move to "Station D". The only available actions that must be used in the behavior tree are: "MoveTo".'}, {'role': 'assistant', 'content': '<root BTCPP_format="4">\n    <BehaviorTree>\n        <Sequence>\n            <Fallback>\n                <MoveTo name="go_to_station_A" location="Station A"/>      <!-- move to Station A -->\n                <MoveTo name="go_to_station_D" location="Station D"/>      <!-- move to Station D -->\n            </Fallback>\n            <MoveTo name="go_to_station_B" location="Station B"/>      <!-- move to Station B -->\n            <MoveTo name="go_to_station_C" location="Station C"/>      <!-- move to Station C -->\n        </Sequence>\n    </BehaviorTree>\n</root>'}, {'role': 'user', 'content': '"""The behavior tree represents a robot\'s navigation system. The robot must visit the location "StationA", "StationE", "StationF", "StationD" in order. If "StationE" cannot be reached, move to "StationB". If "StationF" cannot be reached, move to "StationC". actions that must be used in the behavior tree are: "MoveTo"."""'}]
+
+One-shot OpenAI result (time: 1.97 seconds):
+One-shot OpenAI result:
+<root BTCPP_format="4">
+    <BehaviorTree>
+        <Sequence>
+            <MoveTo name="go_to_stationA" location="StationA"/>
+            <Fallback>
+                <MoveTo name="go_to_stationE" location="StationE"/>
+                <MoveTo name="go_to_stationB" location="StationB"/>
+            </Fallback>
+            <Fallback>
+                <MoveTo name="go_to_stationF" location="StationF"/>
+                <MoveTo name="go_to_stationC" location="StationC"/>
+            </Fallback>
+            <MoveTo name="go_to_stationD" location="StationD"/>
+        </Sequence>
+    </BehaviorTree>
+</root>
+Final tree tree is : 
+ <root BTCPP_format="4">
+    <BehaviorTree>
+        <Sequence>
+            <MoveTo name="go_to_stationA" location="StationA"/>
+            <Fallback>
+                <MoveTo name="go_to_stationE" location="StationE"/>
+                <MoveTo name="go_to_stationB" location="StationB"/>
+            </Fallback>
+            <Fallback>
+                <MoveTo name="go_to_stationF" location="StationF"/>
+                <MoveTo name="go_to_stationC" location="StationC"/>
+            </Fallback>
+            <MoveTo name="go_to_stationD" location="StationD"/>
+        </Sequence>
+    </BehaviorTree>
+</root>
+Output saved to outputs/openai-gpt-4.1/oneshot/generative_4/5.xml
+
+Iteration 6 on openai-gpt-4.1:
+Task:
+"""The behavior tree represents a robot's navigation system. The robot must visit the location "StationA", "StationE", "StationF", "StationD" in order. If "StationE" cannot be reached, move to "StationB". If "StationF" cannot be reached, move to "StationC". actions that must be used in the behavior tree are: "MoveTo"."""
+Prompt used: 
+[{'role': 'system', 'content': '<<SYS>> You will be provided a summary of a task performed by a behavior tree, and your objective is to express this behavior tree in XML format.\n <</SYS>>'}, {'role': 'user', 'content': '"""The behavior tree represents a robot\'s navigation system. The robot must visit the location "StationA", "StationE", "StationF", "StationD" in order. If "StationE" cannot be reached, move to "StationB". If "StationF" cannot be reached, move to "StationC". actions that must be used in the behavior tree are: "MoveTo"."""'}]
+
+Zero-shot OpenAI result (time: 2.10 seconds):
+Zero-shot OpenAI result:
+```xml
+<Sequence>
+    <MoveTo goal="StationA"/>
+    <Selector>
+        <MoveTo goal="StationE"/>
+        <MoveTo goal="StationB"/>
+    </Selector>
+    <Selector>
+        <MoveTo goal="StationF"/>
+        <MoveTo goal="StationC"/>
+    </Selector>
+    <MoveTo goal="StationD"/>
+</Sequence>
+```
+No valid behavior tree found in the output.
+Prompt used: 
+[{'role': 'system', 'content': '<<SYS>> You will be provided a summary of a task performed by a behavior tree, and your objective is to express this behavior tree in XML format.\n <</SYS>>'}, {'role': 'user', 'content': 'The behavior tree represents a robot\'s navigation system with arm activity. The robot must visit the locations "Station A", "Station B", "Station C". \n                  If "Station A" is not reachable, move to "Station D". The only available actions that must be used in the behavior tree are: "MoveTo".'}, {'role': 'assistant', 'content': '<root BTCPP_format="4">\n    <BehaviorTree>\n        <Sequence>\n            <Fallback>\n                <MoveTo name="go_to_station_A" location="Station A"/>      <!-- move to Station A -->\n                <MoveTo name="go_to_station_D" location="Station D"/>      <!-- move to Station D -->\n            </Fallback>\n            <MoveTo name="go_to_station_B" location="Station B"/>      <!-- move to Station B -->\n            <MoveTo name="go_to_station_C" location="Station C"/>      <!-- move to Station C -->\n        </Sequence>\n    </BehaviorTree>\n</root>'}, {'role': 'user', 'content': '"""The behavior tree represents a robot\'s navigation system. The robot must visit the location "StationA", "StationE", "StationF", "StationD" in order. If "StationE" cannot be reached, move to "StationB". If "StationF" cannot be reached, move to "StationC". actions that must be used in the behavior tree are: "MoveTo"."""'}]
+
+One-shot OpenAI result (time: 1.48 seconds):
+One-shot OpenAI result:
+<root BTCPP_format="4">
+    <BehaviorTree>
+        <Sequence>
+            <MoveTo name="go_to_stationA" location="StationA"/>
+            <Fallback>
+                <MoveTo name="go_to_stationE" location="StationE"/>
+                <MoveTo name="go_to_stationB" location="StationB"/>
+            </Fallback>
+            <Fallback>
+                <MoveTo name="go_to_stationF" location="StationF"/>
+                <MoveTo name="go_to_stationC" location="StationC"/>
+            </Fallback>
+            <MoveTo name="go_to_stationD" location="StationD"/>
+        </Sequence>
+    </BehaviorTree>
+</root>
+Final tree tree is : 
+ <root BTCPP_format="4">
+    <BehaviorTree>
+        <Sequence>
+            <MoveTo name="go_to_stationA" location="StationA"/>
+            <Fallback>
+                <MoveTo name="go_to_stationE" location="StationE"/>
+                <MoveTo name="go_to_stationB" location="StationB"/>
+            </Fallback>
+            <Fallback>
+                <MoveTo name="go_to_stationF" location="StationF"/>
+                <MoveTo name="go_to_stationC" location="StationC"/>
+            </Fallback>
+            <MoveTo name="go_to_stationD" location="StationD"/>
+        </Sequence>
+    </BehaviorTree>
+</root>
+Output saved to outputs/openai-gpt-4.1/oneshot/generative_4/6.xml
+
+Iteration 7 on openai-gpt-4.1:
+Task:
+"""The behavior tree represents a robot's navigation system. The robot must visit the location "StationA", "StationE", "StationF", "StationD" in order. If "StationE" cannot be reached, move to "StationB". If "StationF" cannot be reached, move to "StationC". actions that must be used in the behavior tree are: "MoveTo"."""
+Prompt used: 
+[{'role': 'system', 'content': '<<SYS>> You will be provided a summary of a task performed by a behavior tree, and your objective is to express this behavior tree in XML format.\n <</SYS>>'}, {'role': 'user', 'content': '"""The behavior tree represents a robot\'s navigation system. The robot must visit the location "StationA", "StationE", "StationF", "StationD" in order. If "StationE" cannot be reached, move to "StationB". If "StationF" cannot be reached, move to "StationC". actions that must be used in the behavior tree are: "MoveTo"."""'}]
+
+Zero-shot OpenAI result (time: 2.08 seconds):
+Zero-shot OpenAI result:
+```xml
+<Sequence>
+    <MoveTo goal="StationA"/>
+    <Selector>
+        <MoveTo goal="StationE"/>
+        <MoveTo goal="StationB"/>
+    </Selector>
+    <Selector>
+        <MoveTo goal="StationF"/>
+        <MoveTo goal="StationC"/>
+    </Selector>
+    <MoveTo goal="StationD"/>
+</Sequence>
+```
+No valid behavior tree found in the output.
+Prompt used: 
+[{'role': 'system', 'content': '<<SYS>> You will be provided a summary of a task performed by a behavior tree, and your objective is to express this behavior tree in XML format.\n <</SYS>>'}, {'role': 'user', 'content': 'The behavior tree represents a robot\'s navigation system with arm activity. The robot must visit the locations "Station A", "Station B", "Station C". \n                  If "Station A" is not reachable, move to "Station D". The only available actions that must be used in the behavior tree are: "MoveTo".'}, {'role': 'assistant', 'content': '<root BTCPP_format="4">\n    <BehaviorTree>\n        <Sequence>\n            <Fallback>\n                <MoveTo name="go_to_station_A" location="Station A"/>      <!-- move to Station A -->\n                <MoveTo name="go_to_station_D" location="Station D"/>      <!-- move to Station D -->\n            </Fallback>\n            <MoveTo name="go_to_station_B" location="Station B"/>      <!-- move to Station B -->\n            <MoveTo name="go_to_station_C" location="Station C"/>      <!-- move to Station C -->\n        </Sequence>\n    </BehaviorTree>\n</root>'}, {'role': 'user', 'content': '"""The behavior tree represents a robot\'s navigation system. The robot must visit the location "StationA", "StationE", "StationF", "StationD" in order. If "StationE" cannot be reached, move to "StationB". If "StationF" cannot be reached, move to "StationC". actions that must be used in the behavior tree are: "MoveTo"."""'}]
+
+One-shot OpenAI result (time: 1.56 seconds):
+One-shot OpenAI result:
+<root BTCPP_format="4">
+    <BehaviorTree>
+        <Sequence>
+            <MoveTo name="go_to_stationA" location="StationA"/>
+            <Fallback>
+                <MoveTo name="go_to_stationE" location="StationE"/>
+                <MoveTo name="go_to_stationB" location="StationB"/>
+            </Fallback>
+            <Fallback>
+                <MoveTo name="go_to_stationF" location="StationF"/>
+                <MoveTo name="go_to_stationC" location="StationC"/>
+            </Fallback>
+            <MoveTo name="go_to_stationD" location="StationD"/>
+        </Sequence>
+    </BehaviorTree>
+</root>
+Final tree tree is : 
+ <root BTCPP_format="4">
+    <BehaviorTree>
+        <Sequence>
+            <MoveTo name="go_to_stationA" location="StationA"/>
+            <Fallback>
+                <MoveTo name="go_to_stationE" location="StationE"/>
+                <MoveTo name="go_to_stationB" location="StationB"/>
+            </Fallback>
+            <Fallback>
+                <MoveTo name="go_to_stationF" location="StationF"/>
+                <MoveTo name="go_to_stationC" location="StationC"/>
+            </Fallback>
+            <MoveTo name="go_to_stationD" location="StationD"/>
+        </Sequence>
+    </BehaviorTree>
+</root>
+Output saved to outputs/openai-gpt-4.1/oneshot/generative_4/7.xml
+
+Iteration 8 on openai-gpt-4.1:
+Task:
+"""The behavior tree represents a robot's navigation system. The robot must visit the location "StationA", "StationE", "StationF", "StationD" in order. If "StationE" cannot be reached, move to "StationB". If "StationF" cannot be reached, move to "StationC". actions that must be used in the behavior tree are: "MoveTo"."""
+Prompt used: 
+[{'role': 'system', 'content': '<<SYS>> You will be provided a summary of a task performed by a behavior tree, and your objective is to express this behavior tree in XML format.\n <</SYS>>'}, {'role': 'user', 'content': '"""The behavior tree represents a robot\'s navigation system. The robot must visit the location "StationA", "StationE", "StationF", "StationD" in order. If "StationE" cannot be reached, move to "StationB". If "StationF" cannot be reached, move to "StationC". actions that must be used in the behavior tree are: "MoveTo"."""'}]
+
+Zero-shot OpenAI result (time: 2.04 seconds):
+Zero-shot OpenAI result:
+```xml
+<Sequence>
+    <MoveTo goal="StationA"/>
+    <Selector>
+        <MoveTo goal="StationE"/>
+        <MoveTo goal="StationB"/>
+    </Selector>
+    <Selector>
+        <MoveTo goal="StationF"/>
+        <MoveTo goal="StationC"/>
+    </Selector>
+    <MoveTo goal="StationD"/>
+</Sequence>
+```
+No valid behavior tree found in the output.
+Prompt used: 
+[{'role': 'system', 'content': '<<SYS>> You will be provided a summary of a task performed by a behavior tree, and your objective is to express this behavior tree in XML format.\n <</SYS>>'}, {'role': 'user', 'content': 'The behavior tree represents a robot\'s navigation system with arm activity. The robot must visit the locations "Station A", "Station B", "Station C". \n                  If "Station A" is not reachable, move to "Station D". The only available actions that must be used in the behavior tree are: "MoveTo".'}, {'role': 'assistant', 'content': '<root BTCPP_format="4">\n    <BehaviorTree>\n        <Sequence>\n            <Fallback>\n                <MoveTo name="go_to_station_A" location="Station A"/>      <!-- move to Station A -->\n                <MoveTo name="go_to_station_D" location="Station D"/>      <!-- move to Station D -->\n            </Fallback>\n            <MoveTo name="go_to_station_B" location="Station B"/>      <!-- move to Station B -->\n            <MoveTo name="go_to_station_C" location="Station C"/>      <!-- move to Station C -->\n        </Sequence>\n    </BehaviorTree>\n</root>'}, {'role': 'user', 'content': '"""The behavior tree represents a robot\'s navigation system. The robot must visit the location "StationA", "StationE", "StationF", "StationD" in order. If "StationE" cannot be reached, move to "StationB". If "StationF" cannot be reached, move to "StationC". actions that must be used in the behavior tree are: "MoveTo"."""'}]
+
+One-shot OpenAI result (time: 1.48 seconds):
+One-shot OpenAI result:
+<root BTCPP_format="4">
+    <BehaviorTree>
+        <Sequence>
+            <MoveTo name="go_to_stationA" location="StationA"/>
+            <Fallback>
+                <MoveTo name="go_to_stationE" location="StationE"/>
+                <MoveTo name="go_to_stationB" location="StationB"/>
+            </Fallback>
+            <Fallback>
+                <MoveTo name="go_to_stationF" location="StationF"/>
+                <MoveTo name="go_to_stationC" location="StationC"/>
+            </Fallback>
+            <MoveTo name="go_to_stationD" location="StationD"/>
+        </Sequence>
+    </BehaviorTree>
+</root>
+Final tree tree is : 
+ <root BTCPP_format="4">
+    <BehaviorTree>
+        <Sequence>
+            <MoveTo name="go_to_stationA" location="StationA"/>
+            <Fallback>
+                <MoveTo name="go_to_stationE" location="StationE"/>
+                <MoveTo name="go_to_stationB" location="StationB"/>
+            </Fallback>
+            <Fallback>
+                <MoveTo name="go_to_stationF" location="StationF"/>
+                <MoveTo name="go_to_stationC" location="StationC"/>
+            </Fallback>
+            <MoveTo name="go_to_stationD" location="StationD"/>
+        </Sequence>
+    </BehaviorTree>
+</root>
+Output saved to outputs/openai-gpt-4.1/oneshot/generative_4/8.xml
+
+Iteration 9 on openai-gpt-4.1:
+Task:
+"""The behavior tree represents a robot's navigation system. The robot must visit the location "StationA", "StationE", "StationF", "StationD" in order. If "StationE" cannot be reached, move to "StationB". If "StationF" cannot be reached, move to "StationC". actions that must be used in the behavior tree are: "MoveTo"."""
+Prompt used: 
+[{'role': 'system', 'content': '<<SYS>> You will be provided a summary of a task performed by a behavior tree, and your objective is to express this behavior tree in XML format.\n <</SYS>>'}, {'role': 'user', 'content': '"""The behavior tree represents a robot\'s navigation system. The robot must visit the location "StationA", "StationE", "StationF", "StationD" in order. If "StationE" cannot be reached, move to "StationB". If "StationF" cannot be reached, move to "StationC". actions that must be used in the behavior tree are: "MoveTo"."""'}]
+
+Zero-shot OpenAI result (time: 2.64 seconds):
+Zero-shot OpenAI result:
+```xml
+<Sequence>
+    <MoveTo goal="StationA"/>
+    <Selector>
+        <MoveTo goal="StationE"/>
+        <MoveTo goal="StationB"/>
+    </Selector>
+    <Selector>
+        <MoveTo goal="StationF"/>
+        <MoveTo goal="StationC"/>
+    </Selector>
+    <MoveTo goal="StationD"/>
+</Sequence>
+```
+No valid behavior tree found in the output.
+Prompt used: 
+[{'role': 'system', 'content': '<<SYS>> You will be provided a summary of a task performed by a behavior tree, and your objective is to express this behavior tree in XML format.\n <</SYS>>'}, {'role': 'user', 'content': 'The behavior tree represents a robot\'s navigation system with arm activity. The robot must visit the locations "Station A", "Station B", "Station C". \n                  If "Station A" is not reachable, move to "Station D". The only available actions that must be used in the behavior tree are: "MoveTo".'}, {'role': 'assistant', 'content': '<root BTCPP_format="4">\n    <BehaviorTree>\n        <Sequence>\n            <Fallback>\n                <MoveTo name="go_to_station_A" location="Station A"/>      <!-- move to Station A -->\n                <MoveTo name="go_to_station_D" location="Station D"/>      <!-- move to Station D -->\n            </Fallback>\n            <MoveTo name="go_to_station_B" location="Station B"/>      <!-- move to Station B -->\n            <MoveTo name="go_to_station_C" location="Station C"/>      <!-- move to Station C -->\n        </Sequence>\n    </BehaviorTree>\n</root>'}, {'role': 'user', 'content': '"""The behavior tree represents a robot\'s navigation system. The robot must visit the location "StationA", "StationE", "StationF", "StationD" in order. If "StationE" cannot be reached, move to "StationB". If "StationF" cannot be reached, move to "StationC". actions that must be used in the behavior tree are: "MoveTo"."""'}]
+
+One-shot OpenAI result (time: 1.31 seconds):
+One-shot OpenAI result:
+<root BTCPP_format="4">
+    <BehaviorTree>
+        <Sequence>
+            <MoveTo name="go_to_stationA" location="StationA"/>
+            <Fallback>
+                <MoveTo name="go_to_stationE" location="StationE"/>
+                <MoveTo name="go_to_stationB" location="StationB"/>
+            </Fallback>
+            <Fallback>
+                <MoveTo name="go_to_stationF" location="StationF"/>
+                <MoveTo name="go_to_stationC" location="StationC"/>
+            </Fallback>
+            <MoveTo name="go_to_stationD" location="StationD"/>
+        </Sequence>
+    </BehaviorTree>
+</root>
+Final tree tree is : 
+ <root BTCPP_format="4">
+    <BehaviorTree>
+        <Sequence>
+            <MoveTo name="go_to_stationA" location="StationA"/>
+            <Fallback>
+                <MoveTo name="go_to_stationE" location="StationE"/>
+                <MoveTo name="go_to_stationB" location="StationB"/>
+            </Fallback>
+            <Fallback>
+                <MoveTo name="go_to_stationF" location="StationF"/>
+                <MoveTo name="go_to_stationC" location="StationC"/>
+            </Fallback>
+            <MoveTo name="go_to_stationD" location="StationD"/>
+        </Sequence>
+    </BehaviorTree>
+</root>
+Output saved to outputs/openai-gpt-4.1/oneshot/generative_4/9.xml
+
+Iteration 10 on openai-gpt-4.1:
+Task:
+"""The behavior tree represents a robot's navigation system. The robot must visit the location "StationA", "StationE", "StationF", "StationD" in order. If "StationE" cannot be reached, move to "StationB". If "StationF" cannot be reached, move to "StationC". actions that must be used in the behavior tree are: "MoveTo"."""
+Prompt used: 
+[{'role': 'system', 'content': '<<SYS>> You will be provided a summary of a task performed by a behavior tree, and your objective is to express this behavior tree in XML format.\n <</SYS>>'}, {'role': 'user', 'content': '"""The behavior tree represents a robot\'s navigation system. The robot must visit the location "StationA", "StationE", "StationF", "StationD" in order. If "StationE" cannot be reached, move to "StationB". If "StationF" cannot be reached, move to "StationC". actions that must be used in the behavior tree are: "MoveTo"."""'}]
+
+Zero-shot OpenAI result (time: 1.73 seconds):
+Zero-shot OpenAI result:
+```xml
+<Sequence>
+    <MoveTo goal="StationA"/>
+    <Selector>
+        <MoveTo goal="StationE"/>
+        <MoveTo goal="StationB"/>
+    </Selector>
+    <Selector>
+        <MoveTo goal="StationF"/>
+        <MoveTo goal="StationC"/>
+    </Selector>
+    <MoveTo goal="StationD"/>
+</Sequence>
+```
+No valid behavior tree found in the output.
+Prompt used: 
+[{'role': 'system', 'content': '<<SYS>> You will be provided a summary of a task performed by a behavior tree, and your objective is to express this behavior tree in XML format.\n <</SYS>>'}, {'role': 'user', 'content': 'The behavior tree represents a robot\'s navigation system with arm activity. The robot must visit the locations "Station A", "Station B", "Station C". \n                  If "Station A" is not reachable, move to "Station D". The only available actions that must be used in the behavior tree are: "MoveTo".'}, {'role': 'assistant', 'content': '<root BTCPP_format="4">\n    <BehaviorTree>\n        <Sequence>\n            <Fallback>\n                <MoveTo name="go_to_station_A" location="Station A"/>      <!-- move to Station A -->\n                <MoveTo name="go_to_station_D" location="Station D"/>      <!-- move to Station D -->\n            </Fallback>\n            <MoveTo name="go_to_station_B" location="Station B"/>      <!-- move to Station B -->\n            <MoveTo name="go_to_station_C" location="Station C"/>      <!-- move to Station C -->\n        </Sequence>\n    </BehaviorTree>\n</root>'}, {'role': 'user', 'content': '"""The behavior tree represents a robot\'s navigation system. The robot must visit the location "StationA", "StationE", "StationF", "StationD" in order. If "StationE" cannot be reached, move to "StationB". If "StationF" cannot be reached, move to "StationC". actions that must be used in the behavior tree are: "MoveTo"."""'}]
+
+One-shot OpenAI result (time: 1.78 seconds):
+One-shot OpenAI result:
+<root BTCPP_format="4">
+    <BehaviorTree>
+        <Sequence>
+            <MoveTo name="go_to_stationA" location="StationA"/>
+            <Fallback>
+                <MoveTo name="go_to_stationE" location="StationE"/>
+                <MoveTo name="go_to_stationB" location="StationB"/>
+            </Fallback>
+            <Fallback>
+                <MoveTo name="go_to_stationF" location="StationF"/>
+                <MoveTo name="go_to_stationC" location="StationC"/>
+            </Fallback>
+            <MoveTo name="go_to_stationD" location="StationD"/>
+        </Sequence>
+    </BehaviorTree>
+</root>
+Final tree tree is : 
+ <root BTCPP_format="4">
+    <BehaviorTree>
+        <Sequence>
+            <MoveTo name="go_to_stationA" location="StationA"/>
+            <Fallback>
+                <MoveTo name="go_to_stationE" location="StationE"/>
+                <MoveTo name="go_to_stationB" location="StationB"/>
+            </Fallback>
+            <Fallback>
+                <MoveTo name="go_to_stationF" location="StationF"/>
+                <MoveTo name="go_to_stationC" location="StationC"/>
+            </Fallback>
+            <MoveTo name="go_to_stationD" location="StationD"/>
+        </Sequence>
+    </BehaviorTree>
+</root>
+Output saved to outputs/openai-gpt-4.1/oneshot/generative_4/10.xml
+
+Running inference on task file: generative_5.txt
+
+Iteration 1 on openai-gpt-4.1:
+Task:
+"""The behavior tree represents a robot's navigation system. The robot must visit the location "StationA", "StationE", "StationF", "StationD" in order. If "StationA" cannot be reached, move to "StationB".  If "StationE" cannot be reached, move to "StationB". If "StationF" cannot be reached, move to "StationC". If "StationD" cannot be reached, move to "StationC". actions that must be used in the behavior tree are: "MoveTo"."""
+Prompt used: 
+[{'role': 'system', 'content': '<<SYS>> You will be provided a summary of a task performed by a behavior tree, and your objective is to express this behavior tree in XML format.\n <</SYS>>'}, {'role': 'user', 'content': '"""The behavior tree represents a robot\'s navigation system. The robot must visit the location "StationA", "StationE", "StationF", "StationD" in order. If "StationA" cannot be reached, move to "StationB".  If "StationE" cannot be reached, move to "StationB". If "StationF" cannot be reached, move to "StationC". If "StationD" cannot be reached, move to "StationC". actions that must be used in the behavior tree are: "MoveTo"."""'}]
+
+Zero-shot OpenAI result (time: 1.75 seconds):
+Zero-shot OpenAI result:
+```xml
+<BehaviorTree>
+    <Sequence name="VisitStationsInOrder">
+        <Fallback name="GoToAorB">
+            <MoveTo goal="StationA"/>
+            <MoveTo goal="StationB"/>
+        </Fallback>
+        <Fallback name="GoToEorB">
+            <MoveTo goal="StationE"/>
+            <MoveTo goal="StationB"/>
+        </Fallback>
+        <Fallback name="GoToForC">
+            <MoveTo goal="StationF"/>
+            <MoveTo goal="StationC"/>
+        </Fallback>
+        <Fallback name="GoToDorC">
+            <MoveTo goal="StationD"/>
+            <MoveTo goal="StationC"/>
+        </Fallback>
+    </Sequence>
+</BehaviorTree>
+```
+No valid behavior tree found in the output.
+Prompt used: 
+[{'role': 'system', 'content': '<<SYS>> You will be provided a summary of a task performed by a behavior tree, and your objective is to express this behavior tree in XML format.\n <</SYS>>'}, {'role': 'user', 'content': 'The behavior tree represents a robot\'s navigation system with arm activity. The robot must visit the locations "Station A", "Station B", "Station C". \n                  If "Station A" is not reachable, move to "Station D". The only available actions that must be used in the behavior tree are: "MoveTo".'}, {'role': 'assistant', 'content': '<root BTCPP_format="4">\n    <BehaviorTree>\n        <Sequence>\n            <Fallback>\n                <MoveTo name="go_to_station_A" location="Station A"/>      <!-- move to Station A -->\n                <MoveTo name="go_to_station_D" location="Station D"/>      <!-- move to Station D -->\n            </Fallback>\n            <MoveTo name="go_to_station_B" location="Station B"/>      <!-- move to Station B -->\n            <MoveTo name="go_to_station_C" location="Station C"/>      <!-- move to Station C -->\n        </Sequence>\n    </BehaviorTree>\n</root>'}, {'role': 'user', 'content': '"""The behavior tree represents a robot\'s navigation system. The robot must visit the location "StationA", "StationE", "StationF", "StationD" in order. If "StationA" cannot be reached, move to "StationB".  If "StationE" cannot be reached, move to "StationB". If "StationF" cannot be reached, move to "StationC". If "StationD" cannot be reached, move to "StationC". actions that must be used in the behavior tree are: "MoveTo"."""'}]
+
+One-shot OpenAI result (time: 1.92 seconds):
+One-shot OpenAI result:
+<root BTCPP_format="4">
+    <BehaviorTree>
+        <Sequence>
+            <Fallback>
+                <MoveTo name="go_to_stationA" location="StationA"/>
+                <MoveTo name="go_to_stationB_from_A" location="StationB"/>
+            </Fallback>
+            <Fallback>
+                <MoveTo name="go_to_stationE" location="StationE"/>
+                <MoveTo name="go_to_stationB_from_E" location="StationB"/>
+            </Fallback>
+            <Fallback>
+                <MoveTo name="go_to_stationF" location="StationF"/>
+                <MoveTo name="go_to_stationC_from_F" location="StationC"/>
+            </Fallback>
+            <Fallback>
+                <MoveTo name="go_to_stationD" location="StationD"/>
+                <MoveTo name="go_to_stationC_from_D" location="StationC"/>
+            </Fallback>
+        </Sequence>
+    </BehaviorTree>
+</root>
+Final tree tree is : 
+ <root BTCPP_format="4">
+    <BehaviorTree>
+        <Sequence>
+            <Fallback>
+                <MoveTo name="go_to_stationA" location="StationA"/>
+                <MoveTo name="go_to_stationB_from_A" location="StationB"/>
+            </Fallback>
+            <Fallback>
+                <MoveTo name="go_to_stationE" location="StationE"/>
+                <MoveTo name="go_to_stationB_from_E" location="StationB"/>
+            </Fallback>
+            <Fallback>
+                <MoveTo name="go_to_stationF" location="StationF"/>
+                <MoveTo name="go_to_stationC_from_F" location="StationC"/>
+            </Fallback>
+            <Fallback>
+                <MoveTo name="go_to_stationD" location="StationD"/>
+                <MoveTo name="go_to_stationC_from_D" location="StationC"/>
+            </Fallback>
+        </Sequence>
+    </BehaviorTree>
+</root>
+Output saved to outputs/openai-gpt-4.1/oneshot/generative_5/1.xml
+
+Iteration 2 on openai-gpt-4.1:
+Task:
+"""The behavior tree represents a robot's navigation system. The robot must visit the location "StationA", "StationE", "StationF", "StationD" in order. If "StationA" cannot be reached, move to "StationB".  If "StationE" cannot be reached, move to "StationB". If "StationF" cannot be reached, move to "StationC". If "StationD" cannot be reached, move to "StationC". actions that must be used in the behavior tree are: "MoveTo"."""
+Prompt used: 
+[{'role': 'system', 'content': '<<SYS>> You will be provided a summary of a task performed by a behavior tree, and your objective is to express this behavior tree in XML format.\n <</SYS>>'}, {'role': 'user', 'content': '"""The behavior tree represents a robot\'s navigation system. The robot must visit the location "StationA", "StationE", "StationF", "StationD" in order. If "StationA" cannot be reached, move to "StationB".  If "StationE" cannot be reached, move to "StationB". If "StationF" cannot be reached, move to "StationC". If "StationD" cannot be reached, move to "StationC". actions that must be used in the behavior tree are: "MoveTo"."""'}]
+
+Zero-shot OpenAI result (time: 2.51 seconds):
+Zero-shot OpenAI result:
+```xml
+<BehaviorTree>
+    <Sequence name="VisitStationsInOrder">
+        <Fallback name="GoToStationA">
+            <MoveTo goal="StationA"/>
+            <MoveTo goal="StationB"/>
+        </Fallback>
+        <Fallback name="GoToStationE">
+            <MoveTo goal="StationE"/>
+            <MoveTo goal="StationB"/>
+        </Fallback>
+        <Fallback name="GoToStationF">
+            <MoveTo goal="StationF"/>
+            <MoveTo goal="StationC"/>
+        </Fallback>
+        <Fallback name="GoToStationD">
+            <MoveTo goal="StationD"/>
+            <MoveTo goal="StationC"/>
+        </Fallback>
+    </Sequence>
+</BehaviorTree>
+```
+No valid behavior tree found in the output.
+Prompt used: 
+[{'role': 'system', 'content': '<<SYS>> You will be provided a summary of a task performed by a behavior tree, and your objective is to express this behavior tree in XML format.\n <</SYS>>'}, {'role': 'user', 'content': 'The behavior tree represents a robot\'s navigation system with arm activity. The robot must visit the locations "Station A", "Station B", "Station C". \n                  If "Station A" is not reachable, move to "Station D". The only available actions that must be used in the behavior tree are: "MoveTo".'}, {'role': 'assistant', 'content': '<root BTCPP_format="4">\n    <BehaviorTree>\n        <Sequence>\n            <Fallback>\n                <MoveTo name="go_to_station_A" location="Station A"/>      <!-- move to Station A -->\n                <MoveTo name="go_to_station_D" location="Station D"/>      <!-- move to Station D -->\n            </Fallback>\n            <MoveTo name="go_to_station_B" location="Station B"/>      <!-- move to Station B -->\n            <MoveTo name="go_to_station_C" location="Station C"/>      <!-- move to Station C -->\n        </Sequence>\n    </BehaviorTree>\n</root>'}, {'role': 'user', 'content': '"""The behavior tree represents a robot\'s navigation system. The robot must visit the location "StationA", "StationE", "StationF", "StationD" in order. If "StationA" cannot be reached, move to "StationB".  If "StationE" cannot be reached, move to "StationB". If "StationF" cannot be reached, move to "StationC". If "StationD" cannot be reached, move to "StationC". actions that must be used in the behavior tree are: "MoveTo"."""'}]
+
+One-shot OpenAI result (time: 1.56 seconds):
+One-shot OpenAI result:
+<root BTCPP_format="4">
+    <BehaviorTree>
+        <Sequence>
+            <Fallback>
+                <MoveTo name="go_to_stationA" location="StationA"/>
+                <MoveTo name="go_to_stationB_from_A" location="StationB"/>
+            </Fallback>
+            <Fallback>
+                <MoveTo name="go_to_stationE" location="StationE"/>
+                <MoveTo name="go_to_stationB_from_E" location="StationB"/>
+            </Fallback>
+            <Fallback>
+                <MoveTo name="go_to_stationF" location="StationF"/>
+                <MoveTo name="go_to_stationC_from_F" location="StationC"/>
+            </Fallback>
+            <Fallback>
+                <MoveTo name="go_to_stationD" location="StationD"/>
+                <MoveTo name="go_to_stationC_from_D" location="StationC"/>
+            </Fallback>
+        </Sequence>
+    </BehaviorTree>
+</root>
+Final tree tree is : 
+ <root BTCPP_format="4">
+    <BehaviorTree>
+        <Sequence>
+            <Fallback>
+                <MoveTo name="go_to_stationA" location="StationA"/>
+                <MoveTo name="go_to_stationB_from_A" location="StationB"/>
+            </Fallback>
+            <Fallback>
+                <MoveTo name="go_to_stationE" location="StationE"/>
+                <MoveTo name="go_to_stationB_from_E" location="StationB"/>
+            </Fallback>
+            <Fallback>
+                <MoveTo name="go_to_stationF" location="StationF"/>
+                <MoveTo name="go_to_stationC_from_F" location="StationC"/>
+            </Fallback>
+            <Fallback>
+                <MoveTo name="go_to_stationD" location="StationD"/>
+                <MoveTo name="go_to_stationC_from_D" location="StationC"/>
+            </Fallback>
+        </Sequence>
+    </BehaviorTree>
+</root>
+Output saved to outputs/openai-gpt-4.1/oneshot/generative_5/2.xml
+
+Iteration 3 on openai-gpt-4.1:
+Task:
+"""The behavior tree represents a robot's navigation system. The robot must visit the location "StationA", "StationE", "StationF", "StationD" in order. If "StationA" cannot be reached, move to "StationB".  If "StationE" cannot be reached, move to "StationB". If "StationF" cannot be reached, move to "StationC". If "StationD" cannot be reached, move to "StationC". actions that must be used in the behavior tree are: "MoveTo"."""
+Prompt used: 
+[{'role': 'system', 'content': '<<SYS>> You will be provided a summary of a task performed by a behavior tree, and your objective is to express this behavior tree in XML format.\n <</SYS>>'}, {'role': 'user', 'content': '"""The behavior tree represents a robot\'s navigation system. The robot must visit the location "StationA", "StationE", "StationF", "StationD" in order. If "StationA" cannot be reached, move to "StationB".  If "StationE" cannot be reached, move to "StationB". If "StationF" cannot be reached, move to "StationC". If "StationD" cannot be reached, move to "StationC". actions that must be used in the behavior tree are: "MoveTo"."""'}]
+
+Zero-shot OpenAI result (time: 2.09 seconds):
+Zero-shot OpenAI result:
+```xml
+<BehaviorTree>
+    <Sequence name="VisitStationsInOrder">
+        <Fallback name="GoToStationA">
+            <MoveTo goal="StationA"/>
+            <MoveTo goal="StationB"/>
+        </Fallback>
+        <Fallback name="GoToStationE">
+            <MoveTo goal="StationE"/>
+            <MoveTo goal="StationB"/>
+        </Fallback>
+        <Fallback name="GoToStationF">
+            <MoveTo goal="StationF"/>
+            <MoveTo goal="StationC"/>
+        </Fallback>
+        <Fallback name="GoToStationD">
+            <MoveTo goal="StationD"/>
+            <MoveTo goal="StationC"/>
+        </Fallback>
+    </Sequence>
+</BehaviorTree>
+```
+No valid behavior tree found in the output.
+Prompt used: 
+[{'role': 'system', 'content': '<<SYS>> You will be provided a summary of a task performed by a behavior tree, and your objective is to express this behavior tree in XML format.\n <</SYS>>'}, {'role': 'user', 'content': 'The behavior tree represents a robot\'s navigation system with arm activity. The robot must visit the locations "Station A", "Station B", "Station C". \n                  If "Station A" is not reachable, move to "Station D". The only available actions that must be used in the behavior tree are: "MoveTo".'}, {'role': 'assistant', 'content': '<root BTCPP_format="4">\n    <BehaviorTree>\n        <Sequence>\n            <Fallback>\n                <MoveTo name="go_to_station_A" location="Station A"/>      <!-- move to Station A -->\n                <MoveTo name="go_to_station_D" location="Station D"/>      <!-- move to Station D -->\n            </Fallback>\n            <MoveTo name="go_to_station_B" location="Station B"/>      <!-- move to Station B -->\n            <MoveTo name="go_to_station_C" location="Station C"/>      <!-- move to Station C -->\n        </Sequence>\n    </BehaviorTree>\n</root>'}, {'role': 'user', 'content': '"""The behavior tree represents a robot\'s navigation system. The robot must visit the location "StationA", "StationE", "StationF", "StationD" in order. If "StationA" cannot be reached, move to "StationB".  If "StationE" cannot be reached, move to "StationB". If "StationF" cannot be reached, move to "StationC". If "StationD" cannot be reached, move to "StationC". actions that must be used in the behavior tree are: "MoveTo"."""'}]
+
+One-shot OpenAI result (time: 1.49 seconds):
+One-shot OpenAI result:
+<root BTCPP_format="4">
+    <BehaviorTree>
+        <Sequence>
+            <Fallback>
+                <MoveTo name="go_to_stationA" location="StationA"/>
+                <MoveTo name="go_to_stationB_from_A" location="StationB"/>
+            </Fallback>
+            <Fallback>
+                <MoveTo name="go_to_stationE" location="StationE"/>
+                <MoveTo name="go_to_stationB_from_E" location="StationB"/>
+            </Fallback>
+            <Fallback>
+                <MoveTo name="go_to_stationF" location="StationF"/>
+                <MoveTo name="go_to_stationC_from_F" location="StationC"/>
+            </Fallback>
+            <Fallback>
+                <MoveTo name="go_to_stationD" location="StationD"/>
+                <MoveTo name="go_to_stationC_from_D" location="StationC"/>
+            </Fallback>
+        </Sequence>
+    </BehaviorTree>
+</root>
+Final tree tree is : 
+ <root BTCPP_format="4">
+    <BehaviorTree>
+        <Sequence>
+            <Fallback>
+                <MoveTo name="go_to_stationA" location="StationA"/>
+                <MoveTo name="go_to_stationB_from_A" location="StationB"/>
+            </Fallback>
+            <Fallback>
+                <MoveTo name="go_to_stationE" location="StationE"/>
+                <MoveTo name="go_to_stationB_from_E" location="StationB"/>
+            </Fallback>
+            <Fallback>
+                <MoveTo name="go_to_stationF" location="StationF"/>
+                <MoveTo name="go_to_stationC_from_F" location="StationC"/>
+            </Fallback>
+            <Fallback>
+                <MoveTo name="go_to_stationD" location="StationD"/>
+                <MoveTo name="go_to_stationC_from_D" location="StationC"/>
+            </Fallback>
+        </Sequence>
+    </BehaviorTree>
+</root>
+Output saved to outputs/openai-gpt-4.1/oneshot/generative_5/3.xml
+
+Iteration 4 on openai-gpt-4.1:
+Task:
+"""The behavior tree represents a robot's navigation system. The robot must visit the location "StationA", "StationE", "StationF", "StationD" in order. If "StationA" cannot be reached, move to "StationB".  If "StationE" cannot be reached, move to "StationB". If "StationF" cannot be reached, move to "StationC". If "StationD" cannot be reached, move to "StationC". actions that must be used in the behavior tree are: "MoveTo"."""
+Prompt used: 
+[{'role': 'system', 'content': '<<SYS>> You will be provided a summary of a task performed by a behavior tree, and your objective is to express this behavior tree in XML format.\n <</SYS>>'}, {'role': 'user', 'content': '"""The behavior tree represents a robot\'s navigation system. The robot must visit the location "StationA", "StationE", "StationF", "StationD" in order. If "StationA" cannot be reached, move to "StationB".  If "StationE" cannot be reached, move to "StationB". If "StationF" cannot be reached, move to "StationC". If "StationD" cannot be reached, move to "StationC". actions that must be used in the behavior tree are: "MoveTo"."""'}]
+
+Zero-shot OpenAI result (time: 1.85 seconds):
+Zero-shot OpenAI result:
+```xml
+<BehaviorTree>
+    <Sequence name="VisitStationsInOrder">
+        <Fallback name="GoToAorB">
+            <MoveTo goal="StationA"/>
+            <MoveTo goal="StationB"/>
+        </Fallback>
+        <Fallback name="GoToEorB">
+            <MoveTo goal="StationE"/>
+            <MoveTo goal="StationB"/>
+        </Fallback>
+        <Fallback name="GoToForC">
+            <MoveTo goal="StationF"/>
+            <MoveTo goal="StationC"/>
+        </Fallback>
+        <Fallback name="GoToDorC">
+            <MoveTo goal="StationD"/>
+            <MoveTo goal="StationC"/>
+        </Fallback>
+    </Sequence>
+</BehaviorTree>
+```
+No valid behavior tree found in the output.
+Prompt used: 
+[{'role': 'system', 'content': '<<SYS>> You will be provided a summary of a task performed by a behavior tree, and your objective is to express this behavior tree in XML format.\n <</SYS>>'}, {'role': 'user', 'content': 'The behavior tree represents a robot\'s navigation system with arm activity. The robot must visit the locations "Station A", "Station B", "Station C". \n                  If "Station A" is not reachable, move to "Station D". The only available actions that must be used in the behavior tree are: "MoveTo".'}, {'role': 'assistant', 'content': '<root BTCPP_format="4">\n    <BehaviorTree>\n        <Sequence>\n            <Fallback>\n                <MoveTo name="go_to_station_A" location="Station A"/>      <!-- move to Station A -->\n                <MoveTo name="go_to_station_D" location="Station D"/>      <!-- move to Station D -->\n            </Fallback>\n            <MoveTo name="go_to_station_B" location="Station B"/>      <!-- move to Station B -->\n            <MoveTo name="go_to_station_C" location="Station C"/>      <!-- move to Station C -->\n        </Sequence>\n    </BehaviorTree>\n</root>'}, {'role': 'user', 'content': '"""The behavior tree represents a robot\'s navigation system. The robot must visit the location "StationA", "StationE", "StationF", "StationD" in order. If "StationA" cannot be reached, move to "StationB".  If "StationE" cannot be reached, move to "StationB". If "StationF" cannot be reached, move to "StationC". If "StationD" cannot be reached, move to "StationC". actions that must be used in the behavior tree are: "MoveTo"."""'}]
+
+One-shot OpenAI result (time: 1.67 seconds):
+One-shot OpenAI result:
+<root BTCPP_format="4">
+    <BehaviorTree>
+        <Sequence>
+            <Fallback>
+                <MoveTo name="go_to_stationA" location="StationA"/>
+                <MoveTo name="go_to_stationB_from_A" location="StationB"/>
+            </Fallback>
+            <Fallback>
+                <MoveTo name="go_to_stationE" location="StationE"/>
+                <MoveTo name="go_to_stationB_from_E" location="StationB"/>
+            </Fallback>
+            <Fallback>
+                <MoveTo name="go_to_stationF" location="StationF"/>
+                <MoveTo name="go_to_stationC_from_F" location="StationC"/>
+            </Fallback>
+            <Fallback>
+                <MoveTo name="go_to_stationD" location="StationD"/>
+                <MoveTo name="go_to_stationC_from_D" location="StationC"/>
+            </Fallback>
+        </Sequence>
+    </BehaviorTree>
+</root>
+Final tree tree is : 
+ <root BTCPP_format="4">
+    <BehaviorTree>
+        <Sequence>
+            <Fallback>
+                <MoveTo name="go_to_stationA" location="StationA"/>
+                <MoveTo name="go_to_stationB_from_A" location="StationB"/>
+            </Fallback>
+            <Fallback>
+                <MoveTo name="go_to_stationE" location="StationE"/>
+                <MoveTo name="go_to_stationB_from_E" location="StationB"/>
+            </Fallback>
+            <Fallback>
+                <MoveTo name="go_to_stationF" location="StationF"/>
+                <MoveTo name="go_to_stationC_from_F" location="StationC"/>
+            </Fallback>
+            <Fallback>
+                <MoveTo name="go_to_stationD" location="StationD"/>
+                <MoveTo name="go_to_stationC_from_D" location="StationC"/>
+            </Fallback>
+        </Sequence>
+    </BehaviorTree>
+</root>
+Output saved to outputs/openai-gpt-4.1/oneshot/generative_5/4.xml
+
+Iteration 5 on openai-gpt-4.1:
+Task:
+"""The behavior tree represents a robot's navigation system. The robot must visit the location "StationA", "StationE", "StationF", "StationD" in order. If "StationA" cannot be reached, move to "StationB".  If "StationE" cannot be reached, move to "StationB". If "StationF" cannot be reached, move to "StationC". If "StationD" cannot be reached, move to "StationC". actions that must be used in the behavior tree are: "MoveTo"."""
+Prompt used: 
+[{'role': 'system', 'content': '<<SYS>> You will be provided a summary of a task performed by a behavior tree, and your objective is to express this behavior tree in XML format.\n <</SYS>>'}, {'role': 'user', 'content': '"""The behavior tree represents a robot\'s navigation system. The robot must visit the location "StationA", "StationE", "StationF", "StationD" in order. If "StationA" cannot be reached, move to "StationB".  If "StationE" cannot be reached, move to "StationB". If "StationF" cannot be reached, move to "StationC". If "StationD" cannot be reached, move to "StationC". actions that must be used in the behavior tree are: "MoveTo"."""'}]
+
+Zero-shot OpenAI result (time: 1.71 seconds):
+Zero-shot OpenAI result:
+```xml
+<BehaviorTree>
+    <Sequence name="VisitStationsInOrder">
+        <Fallback name="GoToStationA">
+            <MoveTo goal="StationA"/>
+            <MoveTo goal="StationB"/>
+        </Fallback>
+        <Fallback name="GoToStationE">
+            <MoveTo goal="StationE"/>
+            <MoveTo goal="StationB"/>
+        </Fallback>
+        <Fallback name="GoToStationF">
+            <MoveTo goal="StationF"/>
+            <MoveTo goal="StationC"/>
+        </Fallback>
+        <Fallback name="GoToStationD">
+            <MoveTo goal="StationD"/>
+            <MoveTo goal="StationC"/>
+        </Fallback>
+    </Sequence>
+</BehaviorTree>
+```
+No valid behavior tree found in the output.
+Prompt used: 
+[{'role': 'system', 'content': '<<SYS>> You will be provided a summary of a task performed by a behavior tree, and your objective is to express this behavior tree in XML format.\n <</SYS>>'}, {'role': 'user', 'content': 'The behavior tree represents a robot\'s navigation system with arm activity. The robot must visit the locations "Station A", "Station B", "Station C". \n                  If "Station A" is not reachable, move to "Station D". The only available actions that must be used in the behavior tree are: "MoveTo".'}, {'role': 'assistant', 'content': '<root BTCPP_format="4">\n    <BehaviorTree>\n        <Sequence>\n            <Fallback>\n                <MoveTo name="go_to_station_A" location="Station A"/>      <!-- move to Station A -->\n                <MoveTo name="go_to_station_D" location="Station D"/>      <!-- move to Station D -->\n            </Fallback>\n            <MoveTo name="go_to_station_B" location="Station B"/>      <!-- move to Station B -->\n            <MoveTo name="go_to_station_C" location="Station C"/>      <!-- move to Station C -->\n        </Sequence>\n    </BehaviorTree>\n</root>'}, {'role': 'user', 'content': '"""The behavior tree represents a robot\'s navigation system. The robot must visit the location "StationA", "StationE", "StationF", "StationD" in order. If "StationA" cannot be reached, move to "StationB".  If "StationE" cannot be reached, move to "StationB". If "StationF" cannot be reached, move to "StationC". If "StationD" cannot be reached, move to "StationC". actions that must be used in the behavior tree are: "MoveTo"."""'}]
+
+One-shot OpenAI result (time: 1.66 seconds):
+One-shot OpenAI result:
+<root BTCPP_format="4">
+    <BehaviorTree>
+        <Sequence>
+            <Fallback>
+                <MoveTo name="go_to_stationA" location="StationA"/>
+                <MoveTo name="go_to_stationB_from_A" location="StationB"/>
+            </Fallback>
+            <Fallback>
+                <MoveTo name="go_to_stationE" location="StationE"/>
+                <MoveTo name="go_to_stationB_from_E" location="StationB"/>
+            </Fallback>
+            <Fallback>
+                <MoveTo name="go_to_stationF" location="StationF"/>
+                <MoveTo name="go_to_stationC_from_F" location="StationC"/>
+            </Fallback>
+            <Fallback>
+                <MoveTo name="go_to_stationD" location="StationD"/>
+                <MoveTo name="go_to_stationC_from_D" location="StationC"/>
+            </Fallback>
+        </Sequence>
+    </BehaviorTree>
+</root>
+Final tree tree is : 
+ <root BTCPP_format="4">
+    <BehaviorTree>
+        <Sequence>
+            <Fallback>
+                <MoveTo name="go_to_stationA" location="StationA"/>
+                <MoveTo name="go_to_stationB_from_A" location="StationB"/>
+            </Fallback>
+            <Fallback>
+                <MoveTo name="go_to_stationE" location="StationE"/>
+                <MoveTo name="go_to_stationB_from_E" location="StationB"/>
+            </Fallback>
+            <Fallback>
+                <MoveTo name="go_to_stationF" location="StationF"/>
+                <MoveTo name="go_to_stationC_from_F" location="StationC"/>
+            </Fallback>
+            <Fallback>
+                <MoveTo name="go_to_stationD" location="StationD"/>
+                <MoveTo name="go_to_stationC_from_D" location="StationC"/>
+            </Fallback>
+        </Sequence>
+    </BehaviorTree>
+</root>
+Output saved to outputs/openai-gpt-4.1/oneshot/generative_5/5.xml
+
+Iteration 6 on openai-gpt-4.1:
+Task:
+"""The behavior tree represents a robot's navigation system. The robot must visit the location "StationA", "StationE", "StationF", "StationD" in order. If "StationA" cannot be reached, move to "StationB".  If "StationE" cannot be reached, move to "StationB". If "StationF" cannot be reached, move to "StationC". If "StationD" cannot be reached, move to "StationC". actions that must be used in the behavior tree are: "MoveTo"."""
+Prompt used: 
+[{'role': 'system', 'content': '<<SYS>> You will be provided a summary of a task performed by a behavior tree, and your objective is to express this behavior tree in XML format.\n <</SYS>>'}, {'role': 'user', 'content': '"""The behavior tree represents a robot\'s navigation system. The robot must visit the location "StationA", "StationE", "StationF", "StationD" in order. If "StationA" cannot be reached, move to "StationB".  If "StationE" cannot be reached, move to "StationB". If "StationF" cannot be reached, move to "StationC". If "StationD" cannot be reached, move to "StationC". actions that must be used in the behavior tree are: "MoveTo"."""'}]
+
+Zero-shot OpenAI result (time: 1.50 seconds):
+Zero-shot OpenAI result:
+```xml
+<BehaviorTree>
+    <Sequence name="VisitStationsInOrder">
+        <Fallback name="GoToStationA">
+            <MoveTo goal="StationA"/>
+            <MoveTo goal="StationB"/>
+        </Fallback>
+        <Fallback name="GoToStationE">
+            <MoveTo goal="StationE"/>
+            <MoveTo goal="StationB"/>
+        </Fallback>
+        <Fallback name="GoToStationF">
+            <MoveTo goal="StationF"/>
+            <MoveTo goal="StationC"/>
+        </Fallback>
+        <Fallback name="GoToStationD">
+            <MoveTo goal="StationD"/>
+            <MoveTo goal="StationC"/>
+        </Fallback>
+    </Sequence>
+</BehaviorTree>
+```
+No valid behavior tree found in the output.
+Prompt used: 
+[{'role': 'system', 'content': '<<SYS>> You will be provided a summary of a task performed by a behavior tree, and your objective is to express this behavior tree in XML format.\n <</SYS>>'}, {'role': 'user', 'content': 'The behavior tree represents a robot\'s navigation system with arm activity. The robot must visit the locations "Station A", "Station B", "Station C". \n                  If "Station A" is not reachable, move to "Station D". The only available actions that must be used in the behavior tree are: "MoveTo".'}, {'role': 'assistant', 'content': '<root BTCPP_format="4">\n    <BehaviorTree>\n        <Sequence>\n            <Fallback>\n                <MoveTo name="go_to_station_A" location="Station A"/>      <!-- move to Station A -->\n                <MoveTo name="go_to_station_D" location="Station D"/>      <!-- move to Station D -->\n            </Fallback>\n            <MoveTo name="go_to_station_B" location="Station B"/>      <!-- move to Station B -->\n            <MoveTo name="go_to_station_C" location="Station C"/>      <!-- move to Station C -->\n        </Sequence>\n    </BehaviorTree>\n</root>'}, {'role': 'user', 'content': '"""The behavior tree represents a robot\'s navigation system. The robot must visit the location "StationA", "StationE", "StationF", "StationD" in order. If "StationA" cannot be reached, move to "StationB".  If "StationE" cannot be reached, move to "StationB". If "StationF" cannot be reached, move to "StationC". If "StationD" cannot be reached, move to "StationC". actions that must be used in the behavior tree are: "MoveTo"."""'}]
+
+One-shot OpenAI result (time: 1.97 seconds):
+One-shot OpenAI result:
+<root BTCPP_format="4">
+    <BehaviorTree>
+        <Sequence>
+            <Fallback>
+                <MoveTo name="go_to_stationA" location="StationA"/>
+                <MoveTo name="go_to_stationB_from_A" location="StationB"/>
+            </Fallback>
+            <Fallback>
+                <MoveTo name="go_to_stationE" location="StationE"/>
+                <MoveTo name="go_to_stationB_from_E" location="StationB"/>
+            </Fallback>
+            <Fallback>
+                <MoveTo name="go_to_stationF" location="StationF"/>
+                <MoveTo name="go_to_stationC_from_F" location="StationC"/>
+            </Fallback>
+            <Fallback>
+                <MoveTo name="go_to_stationD" location="StationD"/>
+                <MoveTo name="go_to_stationC_from_D" location="StationC"/>
+            </Fallback>
+        </Sequence>
+    </BehaviorTree>
+</root>
+Final tree tree is : 
+ <root BTCPP_format="4">
+    <BehaviorTree>
+        <Sequence>
+            <Fallback>
+                <MoveTo name="go_to_stationA" location="StationA"/>
+                <MoveTo name="go_to_stationB_from_A" location="StationB"/>
+            </Fallback>
+            <Fallback>
+                <MoveTo name="go_to_stationE" location="StationE"/>
+                <MoveTo name="go_to_stationB_from_E" location="StationB"/>
+            </Fallback>
+            <Fallback>
+                <MoveTo name="go_to_stationF" location="StationF"/>
+                <MoveTo name="go_to_stationC_from_F" location="StationC"/>
+            </Fallback>
+            <Fallback>
+                <MoveTo name="go_to_stationD" location="StationD"/>
+                <MoveTo name="go_to_stationC_from_D" location="StationC"/>
+            </Fallback>
+        </Sequence>
+    </BehaviorTree>
+</root>
+Output saved to outputs/openai-gpt-4.1/oneshot/generative_5/6.xml
+
+Iteration 7 on openai-gpt-4.1:
+Task:
+"""The behavior tree represents a robot's navigation system. The robot must visit the location "StationA", "StationE", "StationF", "StationD" in order. If "StationA" cannot be reached, move to "StationB".  If "StationE" cannot be reached, move to "StationB". If "StationF" cannot be reached, move to "StationC". If "StationD" cannot be reached, move to "StationC". actions that must be used in the behavior tree are: "MoveTo"."""
+Prompt used: 
+[{'role': 'system', 'content': '<<SYS>> You will be provided a summary of a task performed by a behavior tree, and your objective is to express this behavior tree in XML format.\n <</SYS>>'}, {'role': 'user', 'content': '"""The behavior tree represents a robot\'s navigation system. The robot must visit the location "StationA", "StationE", "StationF", "StationD" in order. If "StationA" cannot be reached, move to "StationB".  If "StationE" cannot be reached, move to "StationB". If "StationF" cannot be reached, move to "StationC". If "StationD" cannot be reached, move to "StationC". actions that must be used in the behavior tree are: "MoveTo"."""'}]
+
+Zero-shot OpenAI result (time: 1.72 seconds):
+Zero-shot OpenAI result:
+```xml
+<Sequence>
+    <Fallback>
+        <MoveTo goal="StationA"/>
+        <MoveTo goal="StationB"/>
+    </Fallback>
+    <Fallback>
+        <MoveTo goal="StationE"/>
+        <MoveTo goal="StationB"/>
+    </Fallback>
+    <Fallback>
+        <MoveTo goal="StationF"/>
+        <MoveTo goal="StationC"/>
+    </Fallback>
+    <Fallback>
+        <MoveTo goal="StationD"/>
+        <MoveTo goal="StationC"/>
+    </Fallback>
+</Sequence>
+```
+No valid behavior tree found in the output.
+Prompt used: 
+[{'role': 'system', 'content': '<<SYS>> You will be provided a summary of a task performed by a behavior tree, and your objective is to express this behavior tree in XML format.\n <</SYS>>'}, {'role': 'user', 'content': 'The behavior tree represents a robot\'s navigation system with arm activity. The robot must visit the locations "Station A", "Station B", "Station C". \n                  If "Station A" is not reachable, move to "Station D". The only available actions that must be used in the behavior tree are: "MoveTo".'}, {'role': 'assistant', 'content': '<root BTCPP_format="4">\n    <BehaviorTree>\n        <Sequence>\n            <Fallback>\n                <MoveTo name="go_to_station_A" location="Station A"/>      <!-- move to Station A -->\n                <MoveTo name="go_to_station_D" location="Station D"/>      <!-- move to Station D -->\n            </Fallback>\n            <MoveTo name="go_to_station_B" location="Station B"/>      <!-- move to Station B -->\n            <MoveTo name="go_to_station_C" location="Station C"/>      <!-- move to Station C -->\n        </Sequence>\n    </BehaviorTree>\n</root>'}, {'role': 'user', 'content': '"""The behavior tree represents a robot\'s navigation system. The robot must visit the location "StationA", "StationE", "StationF", "StationD" in order. If "StationA" cannot be reached, move to "StationB".  If "StationE" cannot be reached, move to "StationB". If "StationF" cannot be reached, move to "StationC". If "StationD" cannot be reached, move to "StationC". actions that must be used in the behavior tree are: "MoveTo"."""'}]
+
+One-shot OpenAI result (time: 1.72 seconds):
+One-shot OpenAI result:
+<root BTCPP_format="4">
+    <BehaviorTree>
+        <Sequence>
+            <Fallback>
+                <MoveTo name="go_to_stationA" location="StationA"/>
+                <MoveTo name="go_to_stationB_from_A" location="StationB"/>
+            </Fallback>
+            <Fallback>
+                <MoveTo name="go_to_stationE" location="StationE"/>
+                <MoveTo name="go_to_stationB_from_E" location="StationB"/>
+            </Fallback>
+            <Fallback>
+                <MoveTo name="go_to_stationF" location="StationF"/>
+                <MoveTo name="go_to_stationC_from_F" location="StationC"/>
+            </Fallback>
+            <Fallback>
+                <MoveTo name="go_to_stationD" location="StationD"/>
+                <MoveTo name="go_to_stationC_from_D" location="StationC"/>
+            </Fallback>
+        </Sequence>
+    </BehaviorTree>
+</root>
+Final tree tree is : 
+ <root BTCPP_format="4">
+    <BehaviorTree>
+        <Sequence>
+            <Fallback>
+                <MoveTo name="go_to_stationA" location="StationA"/>
+                <MoveTo name="go_to_stationB_from_A" location="StationB"/>
+            </Fallback>
+            <Fallback>
+                <MoveTo name="go_to_stationE" location="StationE"/>
+                <MoveTo name="go_to_stationB_from_E" location="StationB"/>
+            </Fallback>
+            <Fallback>
+                <MoveTo name="go_to_stationF" location="StationF"/>
+                <MoveTo name="go_to_stationC_from_F" location="StationC"/>
+            </Fallback>
+            <Fallback>
+                <MoveTo name="go_to_stationD" location="StationD"/>
+                <MoveTo name="go_to_stationC_from_D" location="StationC"/>
+            </Fallback>
+        </Sequence>
+    </BehaviorTree>
+</root>
+Output saved to outputs/openai-gpt-4.1/oneshot/generative_5/7.xml
+
+Iteration 8 on openai-gpt-4.1:
+Task:
+"""The behavior tree represents a robot's navigation system. The robot must visit the location "StationA", "StationE", "StationF", "StationD" in order. If "StationA" cannot be reached, move to "StationB".  If "StationE" cannot be reached, move to "StationB". If "StationF" cannot be reached, move to "StationC". If "StationD" cannot be reached, move to "StationC". actions that must be used in the behavior tree are: "MoveTo"."""
+Prompt used: 
+[{'role': 'system', 'content': '<<SYS>> You will be provided a summary of a task performed by a behavior tree, and your objective is to express this behavior tree in XML format.\n <</SYS>>'}, {'role': 'user', 'content': '"""The behavior tree represents a robot\'s navigation system. The robot must visit the location "StationA", "StationE", "StationF", "StationD" in order. If "StationA" cannot be reached, move to "StationB".  If "StationE" cannot be reached, move to "StationB". If "StationF" cannot be reached, move to "StationC". If "StationD" cannot be reached, move to "StationC". actions that must be used in the behavior tree are: "MoveTo"."""'}]
+
+Zero-shot OpenAI result (time: 1.54 seconds):
+Zero-shot OpenAI result:
+```xml
+<BehaviorTree>
+    <Sequence name="VisitStationsInOrder">
+        <Fallback name="GoToAorB">
+            <MoveTo goal="StationA"/>
+            <MoveTo goal="StationB"/>
+        </Fallback>
+        <Fallback name="GoToEorB">
+            <MoveTo goal="StationE"/>
+            <MoveTo goal="StationB"/>
+        </Fallback>
+        <Fallback name="GoToForC">
+            <MoveTo goal="StationF"/>
+            <MoveTo goal="StationC"/>
+        </Fallback>
+        <Fallback name="GoToDorC">
+            <MoveTo goal="StationD"/>
+            <MoveTo goal="StationC"/>
+        </Fallback>
+    </Sequence>
+</BehaviorTree>
+```
+No valid behavior tree found in the output.
+Prompt used: 
+[{'role': 'system', 'content': '<<SYS>> You will be provided a summary of a task performed by a behavior tree, and your objective is to express this behavior tree in XML format.\n <</SYS>>'}, {'role': 'user', 'content': 'The behavior tree represents a robot\'s navigation system with arm activity. The robot must visit the locations "Station A", "Station B", "Station C". \n                  If "Station A" is not reachable, move to "Station D". The only available actions that must be used in the behavior tree are: "MoveTo".'}, {'role': 'assistant', 'content': '<root BTCPP_format="4">\n    <BehaviorTree>\n        <Sequence>\n            <Fallback>\n                <MoveTo name="go_to_station_A" location="Station A"/>      <!-- move to Station A -->\n                <MoveTo name="go_to_station_D" location="Station D"/>      <!-- move to Station D -->\n            </Fallback>\n            <MoveTo name="go_to_station_B" location="Station B"/>      <!-- move to Station B -->\n            <MoveTo name="go_to_station_C" location="Station C"/>      <!-- move to Station C -->\n        </Sequence>\n    </BehaviorTree>\n</root>'}, {'role': 'user', 'content': '"""The behavior tree represents a robot\'s navigation system. The robot must visit the location "StationA", "StationE", "StationF", "StationD" in order. If "StationA" cannot be reached, move to "StationB".  If "StationE" cannot be reached, move to "StationB". If "StationF" cannot be reached, move to "StationC". If "StationD" cannot be reached, move to "StationC". actions that must be used in the behavior tree are: "MoveTo"."""'}]
+
+One-shot OpenAI result (time: 1.73 seconds):
+One-shot OpenAI result:
+<root BTCPP_format="4">
+    <BehaviorTree>
+        <Sequence>
+            <Fallback>
+                <MoveTo name="go_to_stationA" location="StationA"/>
+                <MoveTo name="go_to_stationB_from_A" location="StationB"/>
+            </Fallback>
+            <Fallback>
+                <MoveTo name="go_to_stationE" location="StationE"/>
+                <MoveTo name="go_to_stationB_from_E" location="StationB"/>
+            </Fallback>
+            <Fallback>
+                <MoveTo name="go_to_stationF" location="StationF"/>
+                <MoveTo name="go_to_stationC_from_F" location="StationC"/>
+            </Fallback>
+            <Fallback>
+                <MoveTo name="go_to_stationD" location="StationD"/>
+                <MoveTo name="go_to_stationC_from_D" location="StationC"/>
+            </Fallback>
+        </Sequence>
+    </BehaviorTree>
+</root>
+Final tree tree is : 
+ <root BTCPP_format="4">
+    <BehaviorTree>
+        <Sequence>
+            <Fallback>
+                <MoveTo name="go_to_stationA" location="StationA"/>
+                <MoveTo name="go_to_stationB_from_A" location="StationB"/>
+            </Fallback>
+            <Fallback>
+                <MoveTo name="go_to_stationE" location="StationE"/>
+                <MoveTo name="go_to_stationB_from_E" location="StationB"/>
+            </Fallback>
+            <Fallback>
+                <MoveTo name="go_to_stationF" location="StationF"/>
+                <MoveTo name="go_to_stationC_from_F" location="StationC"/>
+            </Fallback>
+            <Fallback>
+                <MoveTo name="go_to_stationD" location="StationD"/>
+                <MoveTo name="go_to_stationC_from_D" location="StationC"/>
+            </Fallback>
+        </Sequence>
+    </BehaviorTree>
+</root>
+Output saved to outputs/openai-gpt-4.1/oneshot/generative_5/8.xml
+
+Iteration 9 on openai-gpt-4.1:
+Task:
+"""The behavior tree represents a robot's navigation system. The robot must visit the location "StationA", "StationE", "StationF", "StationD" in order. If "StationA" cannot be reached, move to "StationB".  If "StationE" cannot be reached, move to "StationB". If "StationF" cannot be reached, move to "StationC". If "StationD" cannot be reached, move to "StationC". actions that must be used in the behavior tree are: "MoveTo"."""
+Prompt used: 
+[{'role': 'system', 'content': '<<SYS>> You will be provided a summary of a task performed by a behavior tree, and your objective is to express this behavior tree in XML format.\n <</SYS>>'}, {'role': 'user', 'content': '"""The behavior tree represents a robot\'s navigation system. The robot must visit the location "StationA", "StationE", "StationF", "StationD" in order. If "StationA" cannot be reached, move to "StationB".  If "StationE" cannot be reached, move to "StationB". If "StationF" cannot be reached, move to "StationC". If "StationD" cannot be reached, move to "StationC". actions that must be used in the behavior tree are: "MoveTo"."""'}]
+
+Zero-shot OpenAI result (time: 1.56 seconds):
+Zero-shot OpenAI result:
+```xml
+<BehaviorTree>
+    <Sequence name="VisitStationsInOrder">
+        <Fallback name="GoToStationA">
+            <MoveTo goal="StationA"/>
+            <MoveTo goal="StationB"/>
+        </Fallback>
+        <Fallback name="GoToStationE">
+            <MoveTo goal="StationE"/>
+            <MoveTo goal="StationB"/>
+        </Fallback>
+        <Fallback name="GoToStationF">
+            <MoveTo goal="StationF"/>
+            <MoveTo goal="StationC"/>
+        </Fallback>
+        <Fallback name="GoToStationD">
+            <MoveTo goal="StationD"/>
+            <MoveTo goal="StationC"/>
+        </Fallback>
+    </Sequence>
+</BehaviorTree>
+```
+No valid behavior tree found in the output.
+Prompt used: 
+[{'role': 'system', 'content': '<<SYS>> You will be provided a summary of a task performed by a behavior tree, and your objective is to express this behavior tree in XML format.\n <</SYS>>'}, {'role': 'user', 'content': 'The behavior tree represents a robot\'s navigation system with arm activity. The robot must visit the locations "Station A", "Station B", "Station C". \n                  If "Station A" is not reachable, move to "Station D". The only available actions that must be used in the behavior tree are: "MoveTo".'}, {'role': 'assistant', 'content': '<root BTCPP_format="4">\n    <BehaviorTree>\n        <Sequence>\n            <Fallback>\n                <MoveTo name="go_to_station_A" location="Station A"/>      <!-- move to Station A -->\n                <MoveTo name="go_to_station_D" location="Station D"/>      <!-- move to Station D -->\n            </Fallback>\n            <MoveTo name="go_to_station_B" location="Station B"/>      <!-- move to Station B -->\n            <MoveTo name="go_to_station_C" location="Station C"/>      <!-- move to Station C -->\n        </Sequence>\n    </BehaviorTree>\n</root>'}, {'role': 'user', 'content': '"""The behavior tree represents a robot\'s navigation system. The robot must visit the location "StationA", "StationE", "StationF", "StationD" in order. If "StationA" cannot be reached, move to "StationB".  If "StationE" cannot be reached, move to "StationB". If "StationF" cannot be reached, move to "StationC". If "StationD" cannot be reached, move to "StationC". actions that must be used in the behavior tree are: "MoveTo"."""'}]
+
+One-shot OpenAI result (time: 1.90 seconds):
+One-shot OpenAI result:
+<root BTCPP_format="4">
+    <BehaviorTree>
+        <Sequence>
+            <Fallback>
+                <MoveTo name="go_to_stationA" location="StationA"/>
+                <MoveTo name="go_to_stationB_from_A" location="StationB"/>
+            </Fallback>
+            <Fallback>
+                <MoveTo name="go_to_stationE" location="StationE"/>
+                <MoveTo name="go_to_stationB_from_E" location="StationB"/>
+            </Fallback>
+            <Fallback>
+                <MoveTo name="go_to_stationF" location="StationF"/>
+                <MoveTo name="go_to_stationC_from_F" location="StationC"/>
+            </Fallback>
+            <Fallback>
+                <MoveTo name="go_to_stationD" location="StationD"/>
+                <MoveTo name="go_to_stationC_from_D" location="StationC"/>
+            </Fallback>
+        </Sequence>
+    </BehaviorTree>
+</root>
+Final tree tree is : 
+ <root BTCPP_format="4">
+    <BehaviorTree>
+        <Sequence>
+            <Fallback>
+                <MoveTo name="go_to_stationA" location="StationA"/>
+                <MoveTo name="go_to_stationB_from_A" location="StationB"/>
+            </Fallback>
+            <Fallback>
+                <MoveTo name="go_to_stationE" location="StationE"/>
+                <MoveTo name="go_to_stationB_from_E" location="StationB"/>
+            </Fallback>
+            <Fallback>
+                <MoveTo name="go_to_stationF" location="StationF"/>
+                <MoveTo name="go_to_stationC_from_F" location="StationC"/>
+            </Fallback>
+            <Fallback>
+                <MoveTo name="go_to_stationD" location="StationD"/>
+                <MoveTo name="go_to_stationC_from_D" location="StationC"/>
+            </Fallback>
+        </Sequence>
+    </BehaviorTree>
+</root>
+Output saved to outputs/openai-gpt-4.1/oneshot/generative_5/9.xml
+
+Iteration 10 on openai-gpt-4.1:
+Task:
+"""The behavior tree represents a robot's navigation system. The robot must visit the location "StationA", "StationE", "StationF", "StationD" in order. If "StationA" cannot be reached, move to "StationB".  If "StationE" cannot be reached, move to "StationB". If "StationF" cannot be reached, move to "StationC". If "StationD" cannot be reached, move to "StationC". actions that must be used in the behavior tree are: "MoveTo"."""
+Prompt used: 
+[{'role': 'system', 'content': '<<SYS>> You will be provided a summary of a task performed by a behavior tree, and your objective is to express this behavior tree in XML format.\n <</SYS>>'}, {'role': 'user', 'content': '"""The behavior tree represents a robot\'s navigation system. The robot must visit the location "StationA", "StationE", "StationF", "StationD" in order. If "StationA" cannot be reached, move to "StationB".  If "StationE" cannot be reached, move to "StationB". If "StationF" cannot be reached, move to "StationC". If "StationD" cannot be reached, move to "StationC". actions that must be used in the behavior tree are: "MoveTo"."""'}]
+
+Zero-shot OpenAI result (time: 1.79 seconds):
+Zero-shot OpenAI result:
+```xml
+<BehaviorTree>
+    <Sequence name="VisitStationsInOrder">
+        <Fallback name="GoToAorB">
+            <MoveTo goal="StationA"/>
+            <MoveTo goal="StationB"/>
+        </Fallback>
+        <Fallback name="GoToEorB">
+            <MoveTo goal="StationE"/>
+            <MoveTo goal="StationB"/>
+        </Fallback>
+        <Fallback name="GoToForC">
+            <MoveTo goal="StationF"/>
+            <MoveTo goal="StationC"/>
+        </Fallback>
+        <Fallback name="GoToDorC">
+            <MoveTo goal="StationD"/>
+            <MoveTo goal="StationC"/>
+        </Fallback>
+    </Sequence>
+</BehaviorTree>
+```
+No valid behavior tree found in the output.
+Prompt used: 
+[{'role': 'system', 'content': '<<SYS>> You will be provided a summary of a task performed by a behavior tree, and your objective is to express this behavior tree in XML format.\n <</SYS>>'}, {'role': 'user', 'content': 'The behavior tree represents a robot\'s navigation system with arm activity. The robot must visit the locations "Station A", "Station B", "Station C". \n                  If "Station A" is not reachable, move to "Station D". The only available actions that must be used in the behavior tree are: "MoveTo".'}, {'role': 'assistant', 'content': '<root BTCPP_format="4">\n    <BehaviorTree>\n        <Sequence>\n            <Fallback>\n                <MoveTo name="go_to_station_A" location="Station A"/>      <!-- move to Station A -->\n                <MoveTo name="go_to_station_D" location="Station D"/>      <!-- move to Station D -->\n            </Fallback>\n            <MoveTo name="go_to_station_B" location="Station B"/>      <!-- move to Station B -->\n            <MoveTo name="go_to_station_C" location="Station C"/>      <!-- move to Station C -->\n        </Sequence>\n    </BehaviorTree>\n</root>'}, {'role': 'user', 'content': '"""The behavior tree represents a robot\'s navigation system. The robot must visit the location "StationA", "StationE", "StationF", "StationD" in order. If "StationA" cannot be reached, move to "StationB".  If "StationE" cannot be reached, move to "StationB". If "StationF" cannot be reached, move to "StationC". If "StationD" cannot be reached, move to "StationC". actions that must be used in the behavior tree are: "MoveTo"."""'}]
+
+One-shot OpenAI result (time: 1.75 seconds):
+One-shot OpenAI result:
+<root BTCPP_format="4">
+    <BehaviorTree>
+        <Sequence>
+            <Fallback>
+                <MoveTo name="go_to_stationA" location="StationA"/>
+                <MoveTo name="go_to_stationB_from_A" location="StationB"/>
+            </Fallback>
+            <Fallback>
+                <MoveTo name="go_to_stationE" location="StationE"/>
+                <MoveTo name="go_to_stationB_from_E" location="StationB"/>
+            </Fallback>
+            <Fallback>
+                <MoveTo name="go_to_stationF" location="StationF"/>
+                <MoveTo name="go_to_stationC_from_F" location="StationC"/>
+            </Fallback>
+            <Fallback>
+                <MoveTo name="go_to_stationD" location="StationD"/>
+                <MoveTo name="go_to_stationC_from_D" location="StationC"/>
+            </Fallback>
+        </Sequence>
+    </BehaviorTree>
+</root>
+Final tree tree is : 
+ <root BTCPP_format="4">
+    <BehaviorTree>
+        <Sequence>
+            <Fallback>
+                <MoveTo name="go_to_stationA" location="StationA"/>
+                <MoveTo name="go_to_stationB_from_A" location="StationB"/>
+            </Fallback>
+            <Fallback>
+                <MoveTo name="go_to_stationE" location="StationE"/>
+                <MoveTo name="go_to_stationB_from_E" location="StationB"/>
+            </Fallback>
+            <Fallback>
+                <MoveTo name="go_to_stationF" location="StationF"/>
+                <MoveTo name="go_to_stationC_from_F" location="StationC"/>
+            </Fallback>
+            <Fallback>
+                <MoveTo name="go_to_stationD" location="StationD"/>
+                <MoveTo name="go_to_stationC_from_D" location="StationC"/>
+            </Fallback>
+        </Sequence>
+    </BehaviorTree>
+</root>
+Output saved to outputs/openai-gpt-4.1/oneshot/generative_5/10.xml

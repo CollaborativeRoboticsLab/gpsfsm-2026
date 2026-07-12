@@ -1,0 +1,15 @@
+<root main_tree_to_execute = "MainTree">
+    <BehaviorTree ID="MainTree">
+        <Sequence>
+            <VisitStations  name="VisitStations" />
+        </Sequence>
+    </BehaviorTree>
+   <TreeNodesModel>
+      <Action ID="MoveTo">
+         <input_port name="position"/>
+      </Action>
+      <AutonomousNode ID="VisitStations">
+         <input_port name="station_id"/>
+      </AutonomousNode>
+   </TreeNodesModel>
+</root>

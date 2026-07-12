@@ -1,0 +1,32 @@
+<Plan ID="MainTree">
+        <Sequence>
+            <!-- Test (2.0, -0.5) first -->
+            <Repeat num_cycles="1">
+                <Sequence>
+                    <CheckBlackboard input="2.0" ID="CB"/>
+                    <MoveBase distance="0.5" ID="MV"/>
+                </Sequence>
+            </Repeat>
+            <!-- Test (1.0, 3.0) next -->
+            <Repeat num_cycles="1">
+                <Sequence>
+                    <CheckBlackboard input="1.0" ID="CB"/>
+                    <MoveBase distance="3.0" ID="MV"/>
+                </Sequence>
+            </Repeat>
+            <!-- Test (-3.0, -1.0) next -->
+            <Repeat num_cycles="1">
+                <Sequence>
+                    <CheckBlackboard input="-3.0" ID="CB"/>
+                    <MoveBase distance="-1.0" ID="MV"/>
+                </Sequence>
+            </Repeat>
+            <!-- Test (0.0, -2.0) last -->
+            <Repeat num_cycles="1">
+                <Sequence>
+                    <CheckBlackboard input="0.0" ID="CB"/>
+                    <MoveBase distance="-2.0" ID="MV"/>
+                </Sequence>
+            </Repeat>
+        </Sequence>
+    </Plan>

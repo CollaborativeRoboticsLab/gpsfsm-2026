@@ -1,0 +1,13 @@
+<root main_tree_to_execute="MainTree">
+    <BehaviorTree ID="MainTree">
+        <Sequence>
+           ; Visit Stations in sequence
+            <Switch2 case_1="StationA" case_2="StationE" case_3="StationC" case_4="StationD" name="StationSelection">
+                <Action ID="MoveTo" target="StationA"/>
+                <Action ID="MoveTo" target="StationE"/> (when StationE is not reachable, it will be interrupted and the subsequent actions will not be executed)
+                <Action ID="MoveTo" target="StationC"/>
+                <Action ID="MoveTo" target="StationD"/>
+            </Switch2>
+        </Sequence>
+    </BehaviorTree>
+</root>

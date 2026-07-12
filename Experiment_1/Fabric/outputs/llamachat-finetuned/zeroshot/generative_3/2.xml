@@ -1,0 +1,9 @@
+<Plan>
+    <Control type="recovery" name="name_of_flow">
+      <Fallback name="RecoveryFallback">
+        <ReactiveSequence>
+          <CheckBlackboard input="wp_3" compare_to="0.0" />
+        </ReactiveSequence>
+      </Fallback>
+    </Control>
+  </Plan>

@@ -1,0 +1,18 @@
+<Plan ID="MainTree">
+    <Control type="sequential" name="name_of_flow">
+      <Sequence>
+        <CheckBlackboard input="2.0" ID="CompareFloat" output="value"/>
+        <MoveBase goal="value" ID="moveBase"/>
+        <CheckBlackboard input="-0.5" ID="CompareFloat" output="value"/>
+        <MoveBase goal="value" ID="moveBase"/>
+        <CheckBlackboard input="1.0" ID="CompareFloat" output="value"/>
+        <MoveBase goal="value" ID="moveBase"/>
+        <CheckBlackboard input="-3.0" ID="CompareFloat" output="value"/>
+        <MoveBase goal="value" ID="moveBase"/>
+        <CheckBlackboard input="0.0" ID="CompareFloat" output="value"/>
+        <MoveBase goal="value" ID="moveBase"/>
+        <CheckBlackboard input="-2.0" ID="CompareFloat" output="value"/>
+        <MoveBase goal="value" ID="moveBase"/>
+      </Sequence>
+    </Control>
+  </Plan>

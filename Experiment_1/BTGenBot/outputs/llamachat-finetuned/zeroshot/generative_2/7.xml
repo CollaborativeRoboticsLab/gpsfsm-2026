@@ -1,0 +1,10 @@
+<root main_tree_to_execute = "MainTree">
+    <BehaviorTree ID="MainTree">
+        <Sequence>
+            <VisitStations goal="StationA" />
+            <VisitStations goal="StationB" />
+            <VisitStations goal="StationC" />
+            <VisitStations goal="StationD" />
+        </Sequence>
+    </BehaviorTree>
+</root>

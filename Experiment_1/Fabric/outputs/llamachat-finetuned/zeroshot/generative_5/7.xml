@@ -1,0 +1,42 @@
+<Plan ID="MainTree">
+        <Sequence>
+            <!-- Test (2.0, -0.5) first -->
+            <ReactiveSequence>
+                <CheckBlackboard input="2.0" ComparisonOperator="==" />
+                <CheckBlackboard input="-0.5" ComparisonOperator="==" />
+            </ReactiveSequence>
+            <MoveBase distance="2.0"/>
+        </Sequence>
+        <Sequence>
+            <!-- Test (1.0, 3.0) next -->
+            <ReactiveSequence>
+                <CheckBlackboard input="1.0" ComparisonOperator="==" />
+                <CheckBlackboard input="3.0" ComparisonOperator="==" />
+            </ReactiveSequence>
+            <MoveBase distance="3.0"/>
+        </Sequence>
+        <Sequence>
+            <!-- Test (-3.0, -1.0) next -->
+            <ReactiveSequence>
+                <CheckBlackboard input="-3.0" ComparisonOperator="==" />
+                <CheckBlackboard input="-1.0" ComparisonOperator="==" />
+            </ReactiveSequence>
+            <MoveBase distance="-3.0"/>
+        </Sequence>
+        <Sequence>
+            <!-- Test (0.0, -2.0) last -->
+            <ReactiveSequence>
+                <CheckBlackboard input="0.0" ComparisonOperator="==" />
+                <CheckBlackboard input="-2.0" ComparisonOperator="==" />
+            </ReactiveSequence>
+            <MoveBase distance="-2.0"/>
+        </Sequence>
+        <!-- Test (0.0, 2.0) if not reached -->
+        <ReactiveSequence>
+            <CheckBlackboard input="0.0" ComparisonOperator="==" />
+        </ReactiveSequence>
+        <!-- Test (-2.0, 0.0) if not reached -->
+        <ReactiveSequence>
+            <CheckBlackboard input="-2.0" ComparisonOperator="==" />
+        </ReactiveSequence>
+    </Plan>

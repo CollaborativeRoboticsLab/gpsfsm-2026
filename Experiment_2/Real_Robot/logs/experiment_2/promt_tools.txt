@@ -1,0 +1,44 @@
+[INFO] [launch]: All log files can be found below /home/ubuntu/.ros/log/2026-03-07-08-57-46-926052-kalana-laptop-55890
+[INFO] [launch]: Default logging verbosity is set to INFO
+[INFO] [prompt_bridge_node-1]: process started with pid [55894]
+[prompt_bridge_node-1] [INFO] [1772873867.078169910] [prompt_bridge]: Prompt service created at 'prompt/prompt'
+[prompt_bridge_node-1] [INFO] [1772873867.079382081] [prompt_bridge]: Embedding service created at 'prompt/embedding'
+[prompt_bridge_node-1] [INFO] [1772873867.080790961] [prompt_bridge]: Tokenizer service created at 'prompt/tokenizer'
+[prompt_bridge_node-1] [INFO] [1772873867.081280612] [prompt_bridge]: PromptBridge initialized
+[prompt_bridge_node-1] [INFO] [1772873880.662895700] [prompt_bridge]: API key loaded from environment variables
+[prompt_bridge_node-1] [INFO] [1772873880.662971723] [prompt_bridge]: OpenAIProvider Method: POST
+[prompt_bridge_node-1] [INFO] [1772873880.662978275] [prompt_bridge]: OpenAIProvider SSL Verify: true
+[prompt_bridge_node-1] [INFO] [1772873880.662983415] [prompt_bridge]: OpenAIProvider Auth Type: Bearer
+[prompt_bridge_node-1] [INFO] [1772873880.662988334] [prompt_bridge]: OpenAIProvider Plugin initialized
+[prompt_bridge_node-1] [INFO] [1772873880.662997261] [prompt_bridge]: Loading default model options from parameters.
+[prompt_bridge_node-1] [INFO] [1772873880.666708152] [prompt_bridge]: OpenAIProvider Single URI: https://api.openai.com/v1/responses
+[prompt_bridge_node-1] [INFO] [1772873880.666797390] [prompt_bridge]: OpenAIProvider Chat URI: https://api.openai.com/v1/responses
+[prompt_bridge_node-1] [WARN] [1772873880.666816866] [prompt_bridge]: uuid : prompt-test-uuid does not exist in cache. Starting new cache
+[prompt_bridge_node-1] [INFO] [1772873880.666830061] [prompt_bridge]: Prompt cached without flushing in non-chat mode. UUID: prompt-test-uuid.
+[prompt_bridge_node-1] [INFO] [1772873880.689765328] [prompt_bridge]: API key loaded from environment variables
+[prompt_bridge_node-1] [INFO] [1772873880.689818628] [prompt_bridge]: OpenAIProvider Method: POST
+[prompt_bridge_node-1] [INFO] [1772873880.689827094] [prompt_bridge]: OpenAIProvider SSL Verify: true
+[prompt_bridge_node-1] [INFO] [1772873880.689834287] [prompt_bridge]: OpenAIProvider Auth Type: Bearer
+[prompt_bridge_node-1] [INFO] [1772873880.689841271] [prompt_bridge]: OpenAIProvider Plugin initialized
+[prompt_bridge_node-1] [INFO] [1772873880.689847803] [prompt_bridge]: Loading default model options from parameters.
+[prompt_bridge_node-1] [INFO] [1772873880.689883089] [prompt_bridge]: OpenAIProvider Single URI: https://api.openai.com/v1/responses
+[prompt_bridge_node-1] [INFO] [1772873880.689892086] [prompt_bridge]: OpenAIProvider Chat URI: https://api.openai.com/v1/responses
+[prompt_bridge_node-1] [INFO] [1772873880.689966867] [prompt_bridge]: Prompt cached without flushing in non-chat mode. UUID: prompt-test-uuid.
+[prompt_bridge_node-1] [INFO] [1772873881.603495653] [prompt_bridge]: API key loaded from environment variables
+[prompt_bridge_node-1] [INFO] [1772873881.603572968] [prompt_bridge]: OpenAIProvider Method: POST
+[prompt_bridge_node-1] [INFO] [1772873881.603580232] [prompt_bridge]: OpenAIProvider SSL Verify: true
+[prompt_bridge_node-1] [INFO] [1772873881.603586564] [prompt_bridge]: OpenAIProvider Auth Type: Bearer
+[prompt_bridge_node-1] [INFO] [1772873881.603592094] [prompt_bridge]: OpenAIProvider Plugin initialized
+[prompt_bridge_node-1] [INFO] [1772873881.603596903] [prompt_bridge]: Loading default model options from parameters.
+[prompt_bridge_node-1] [INFO] [1772873881.603634825] [prompt_bridge]: OpenAIProvider Single URI: https://api.openai.com/v1/responses
+[prompt_bridge_node-1] [INFO] [1772873881.603641928] [prompt_bridge]: OpenAIProvider Chat URI: https://api.openai.com/v1/responses
+[prompt_bridge_node-1] [INFO] [1772873881.603683777] [prompt_bridge]: Prompt cached without flushing in non-chat mode. UUID: prompt-test-uuid.
+[prompt_bridge_node-1] [INFO] [1772873881.604460939] [prompt_bridge]: API key loaded from environment variables
+[prompt_bridge_node-1] [INFO] [1772873881.604486818] [prompt_bridge]: OpenAIProvider Method: POST
+[prompt_bridge_node-1] [INFO] [1772873881.604492839] [prompt_bridge]: OpenAIProvider SSL Verify: true
+[prompt_bridge_node-1] [INFO] [1772873881.604497217] [prompt_bridge]: OpenAIProvider Auth Type: Bearer
+[prompt_bridge_node-1] [INFO] [1772873881.604501255] [prompt_bridge]: OpenAIProvider Plugin initialized
+[prompt_bridge_node-1] [INFO] [1772873881.604504381] [prompt_bridge]: Loading default model options from parameters.
+[prompt_bridge_node-1] [INFO] [1772873881.604519810] [prompt_bridge]: OpenAIProvider Single URI: https://api.openai.com/v1/responses
+[prompt_bridge_node-1] [INFO] [1772873881.604524679] [prompt_bridge]: OpenAIProvider Chat URI: https://api.openai.com/v1/responses
+[prompt_bridge_node-1] [INFO] [1772873888.158174851] [prompt_bridge]: Prompt processed with flushed cache. UUID: prompt-test-uuid discontinued.

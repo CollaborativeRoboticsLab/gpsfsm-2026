@@ -1,0 +1,28 @@
+<root main_tree_to_execute="MainTree">
+    <BehaviorTree ID="MainTree">
+        <Sequence>
+           ; Visit Stations in sequence
+            <VisitStations>
+                <SetBlackboard output_key="station_id_a" value="StationA" />
+                <SetBlackboard output_key="station_id_e" value="StationE" />
+                <SetBlackboard output_key="station_id_c" value="StationC" />
+                <SetBlackboard output_key="station_id_d" value="StationD" />
+                <SetBlackboard output_key="station_id_b" value="StationB" />
+                <Sequence>
+                    <SubTree ID="MoveTo" target="station_id_a" />
+                    <SubTree ID="MoveTo" target="station_id_c" />
+                    <SubTree ID="MoveTo" target="station_id_d" />
+                    <ForceFailure>
+                        <SubTree ID="MoveTo" target="station_id_e" />
+                    </ForceFailure>
+                    <SubTree ID="MoveTo" target="station_id_b" />
+                </Sequence>
+            </VisitStations>
+        </Sequence>
+    </BehaviorTree>
+    <BehaviorTree ID="MoveTo">
+        <Sequence>
+            <MoveBase goal="{target}" />
+        </Sequence>
+    </BehaviorTree>
+</root>

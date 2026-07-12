@@ -1,0 +1,41 @@
+<root main_tree_to_execute = "MainTree">
+    <BehaviorTree ID="MainTree">
+        <Sequence>
+            <SubTree ID="StationA" />
+            <SubTree ID="StationB" />
+            <SubTree ID="StationC" />
+            <SubTree ID="StationD" />
+        </Sequence>
+    </BehaviorTree>
+   <BehaviorTree ID="StationA">
+       <Sequence>
+           <inverter>
+               <Condition ID="VisitAllStations" />
+           </inverter>
+           <Action ID="MoveTo" goal="StationA" />
+       </Sequence>
+   </BehaviorTree>
+   <BehaviorTree ID="StationB">
+       <Sequence>
+           <Action ID="MoveTo" goal="StationB" />
+       </Sequence>
+   </BehaviorTree>
+   <BehaviorTree ID="StationC">
+       <Sequence>
+           <Action ID="MoveTo" goal="StationC" />
+       </Sequence>
+   </BehaviorTree>
+   <BehaviorTree ID="StationD">
+       <Sequence>
+           <Action ID="MoveTo" goal="StationD" />
+       </Sequence>
+   </BehaviorTree>
+   <TreeNodesModel>
+       <Action ID="MoveTo">
+           <input_port name="goal"/>
+       </Action>
+       <Condition ID="VisitAllStations">
+           <input_port name="visited"/>
+       </Condition>
+   </TreeNodesModel>
+</root>

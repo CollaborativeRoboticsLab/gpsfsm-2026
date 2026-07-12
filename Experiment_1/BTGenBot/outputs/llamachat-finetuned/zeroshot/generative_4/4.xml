@@ -1,0 +1,83 @@
+<root main_tree_to_execute = "MainTree" >
+    <BehaviorTree ID="MainTree">
+        <Sequence>
+            <!-- StationA, StationE, StationF, StationD in order -->
+            <SubTree ID="StationSequence" />
+            <!-- If StationE cannot be reached, move to StationB. If StationF cannot be reached, move to StationC. -->
+            <Fallback name="Fallback4">
+                <SubTree ID="VisitStations" />
+                <SubTree ID="StationEReach" />
+                <SubTree ID="StationFReach" />
+            </Fallback>
+        </Sequence>
+    </BehaviorTree>
+
+    <BehaviorTree ID="StationSequence">
+        <Sequence>
+            <SubTree ID="VisitStationA" />
+            <SubTree ID="VisitStationE" />
+            <SubTree ID="VisitStationF" />
+            <SubTree ID="VisitStationD" />
+        </Sequence>
+    </BehaviorTree>
+
+    <BehaviorTree ID="VisitStationA">
+        <Sequence>
+            <Action ID="MoveTo" goal="1.0;2.0;0.0" />
+        </Sequence>
+    </BehaviorTree>
+
+    <BehaviorTree ID="VisitStationB">
+        <Sequence>
+            <Action ID="MoveTo" goal="0.5;0.5;0.0" />
+        </Sequence>
+    </BehaviorTree>
+
+    <BehaviorTree ID="VisitStationC">
+        <Sequence>
+            <Action ID="MoveTo" goal="0.0;0.0;0.0" />
+        </Sequence>
+    </BehaviorTree>
+
+    <BehaviorTree ID="VisitStationD">
+        <Sequence>
+            <Action ID="MoveTo" goal="2.0;2.0;0.0" />
+        </Sequence>
+    </BehaviorTree>
+
+    <BehaviorTree ID="VisitStationE">
+        <Sequence>
+            <Fallback>
+                <Action ID="MoveTo" goal="0.5;-0.5;0.0" />
+                <Action ID="MoveTo" goal="0.5;0.5;0.0" />
+            </Fallback>
+        </Sequence>
+    </BehaviorTree>
+
+    <BehaviorTree ID="VisitStationF">
+        <Sequence>
+            <Action ID="MoveTo" goal="1.5;1.5;0.0" />
+        </Sequence>
+    </BehaviorTree>
+
+    <BehaviorTree ID="StationEReach">
+        <Sequence>
+            <Fallback>
+                <Action ID="MoveTo" goal="0.5;-0.5;0.0" />
+                <Action ID="MoveTo" goal="0.5;0.5;0.0" />
+            </Fallback>
+        </Sequence>
+    </BehaviorTree>
+
+    <BehaviorTree ID="StationFReach">
+        <Sequence>
+            <Action ID="MoveTo" goal="1.5;1.5;0.0" />
+        </Sequence>
+    </BehaviorTree>
+
+    <TreeNodesModel>
+        <Action ID="MoveTo">
+            <input_port name="goal">Point (x,y,theta)</input_port>
+        </Action>
+    </TreeNodesModel>
+</root>

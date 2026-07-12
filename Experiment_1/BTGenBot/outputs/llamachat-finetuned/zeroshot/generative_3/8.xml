@@ -1,0 +1,19 @@
+<root main_tree_to_execute="MainTree">
+    <BehaviorTree ID="MainTree">
+        <Sequence>
+           ; Visit StationA, StationE, StationC, StationD in sequence
+            <Switch2 case_1="StationA" case_2="StationE" case_3="StationC" case_4="StationD" name="StationSelect" variable="station"/>
+            <MoveTo move_base_finish="true" target="station.pos" name="MoveToStation"/>
+            <MoveTo move_base_finish="true" target="station.pos" name="MoveToStation"/>
+            <MoveTo move_base_finish="true" target="station.pos" name="MoveToStation"/>
+            <Fallback>
+                <Sequence>
+                    <CheckBool condition="false" message="Visited"/>
+                    <Sequence>
+                        <MoveTo move_base_finish="true" target="station_b.pos" name="MoveToStation"/>
+                        <MoveTo move_base_finish="true" target="station_b.pos" name="MoveToStation"/>
+                </Sequence>
+            </Fallback>
+        </Sequence>
+    </BehaviorTree>
+</root>

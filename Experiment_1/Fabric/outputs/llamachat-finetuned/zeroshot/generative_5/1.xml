@@ -1,0 +1,17 @@
+<Plan ID="MainTree">
+        <Sequence>
+            <!-- Move to (2.0, -0.5), (1.0, 3.0), (-3.0, -1.0), (0.0, -2.0) in order. If (2.0, -0.5) cannot be reached, move to (0.0, 2.0). If (1.0, 3.0) cannot be reached, move to (0.0, 2.0). If (-3.0, -1.0) cannot be reached, move to (-2.0, 0.0). If (0.0, -2.0) cannot be reached, move to (-2.0, 0.0) position -->
+            <ReactiveSequence>
+                <CheckBlackboard input="2.0" compare_to="0.0" />
+                <CheckBlackboard input="0.0" compare_to="0.0" />
+                <CheckBlackboard input="-0.5" compare_to="-1.0" />
+                <CheckBlackboard input="1.0" compare_to="-1.0" />
+                <CheckBlackboard input="-3.0" compare_to="-3.5" />
+                <CheckBlackboard input="-2.0" compare_to="-3.0" />
+                <MoveBase distance="2.0" />
+                <MoveBase distance="1.0" />
+                <MoveBase distance="-3.0" />
+                <MoveBase distance="0.0" />
+            </ReactiveSequence>
+        </Sequence>
+    </Plan>

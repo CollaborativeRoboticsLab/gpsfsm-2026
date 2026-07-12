@@ -1,0 +1,22 @@
+<root BTCPP_format="4">
+    <BehaviorTree>
+        <Sequence name="visit_stations_in_order">
+            <Fallback name="A_or_B">
+                <MoveTo name="go_to_StationA" location="StationA"/>
+                <MoveTo name="go_to_StationB_from_A_fail" location="StationB"/>
+            </Fallback>
+            <Fallback name="E_or_B">
+                <MoveTo name="go_to_StationE" location="StationE"/>
+                <MoveTo name="go_to_StationB_from_E_fail" location="StationB"/>
+            </Fallback>
+            <Fallback name="F_or_C">
+                <MoveTo name="go_to_StationF" location="StationF"/>
+                <MoveTo name="go_to_StationC_from_F_fail" location="StationC"/>
+            </Fallback>
+            <Fallback name="D_or_C">
+                <MoveTo name="go_to_StationD" location="StationD"/>
+                <MoveTo name="go_to_StationC_from_D_fail" location="StationC"/>
+            </Fallback>
+        </Sequence>
+    </BehaviorTree>
+</root>

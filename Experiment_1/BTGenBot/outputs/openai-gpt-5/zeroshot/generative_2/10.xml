@@ -1,0 +1,10 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence name="VisitStationsInOrder">
+      <MoveTo target="StationA"/>
+      <MoveTo target="StationB"/>
+      <MoveTo target="StationC"/>
+      <MoveTo target="StationD"/>
+    </Sequence>
+  </BehaviorTree>
+</root>

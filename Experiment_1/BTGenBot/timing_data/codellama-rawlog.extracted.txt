@@ -1,0 +1,318 @@
+Running inference on task file: generative_1.txt
+
+Iteration 1:
+Zero-shot base model result (time: 6.06 seconds):
+One-shot base model result (time: 5.71 seconds):
+Zero-shot finetuned model result (time: 6.23 seconds):
+One-shot finetuned model result (time: 6.35 seconds):
+
+Iteration 2:
+Zero-shot base model result (time: 5.52 seconds):
+One-shot base model result (time: 5.60 seconds):
+Zero-shot finetuned model result (time: 5.54 seconds):
+One-shot finetuned model result (time: 5.62 seconds):
+
+Iteration 3:
+Zero-shot base model result (time: 5.50 seconds):
+One-shot base model result (time: 5.65 seconds):
+Zero-shot finetuned model result (time: 5.53 seconds):
+One-shot finetuned model result (time: 5.64 seconds):
+
+Iteration 4:
+Zero-shot base model result (time: 5.49 seconds):
+One-shot base model result (time: 5.64 seconds):
+Zero-shot finetuned model result (time: 5.54 seconds):
+One-shot finetuned model result (time: 5.61 seconds):
+
+Iteration 5:
+Zero-shot base model result (time: 5.48 seconds):
+One-shot base model result (time: 6.41 seconds):
+Zero-shot finetuned model result (time: 5.55 seconds):
+One-shot finetuned model result (time: 5.70 seconds):
+
+Iteration 6:
+Zero-shot base model result (time: 5.70 seconds):
+One-shot base model result (time: 5.67 seconds):
+Zero-shot finetuned model result (time: 5.60 seconds):
+One-shot finetuned model result (time: 5.69 seconds):
+
+Iteration 7:
+Zero-shot base model result (time: 5.59 seconds):
+One-shot base model result (time: 5.69 seconds):
+Zero-shot finetuned model result (time: 5.55 seconds):
+One-shot finetuned model result (time: 5.67 seconds):
+
+Iteration 8:
+Zero-shot base model result (time: 5.57 seconds):
+One-shot base model result (time: 5.64 seconds):
+Zero-shot finetuned model result (time: 5.55 seconds):
+One-shot finetuned model result (time: 5.68 seconds):
+
+Iteration 9:
+Zero-shot base model result (time: 5.56 seconds):
+One-shot base model result (time: 5.69 seconds):
+Zero-shot finetuned model result (time: 5.60 seconds):
+One-shot finetuned model result (time: 5.70 seconds):
+
+Iteration 10:
+Zero-shot base model result (time: 5.56 seconds):
+One-shot base model result (time: 5.68 seconds):
+Zero-shot finetuned model result (time: 5.58 seconds):
+One-shot finetuned model result (time: 5.66 seconds):
+
+
+
+Running inference on task file: generative_2.txt
+
+Iteration 1:
+Zero-shot base model result (time: 27.14 seconds):
+One-shot base model result (time: 5.08 seconds):
+Zero-shot finetuned model result (time: 27.03 seconds):
+One-shot finetuned model result (time: 5.09 seconds):
+
+Iteration 2:
+Zero-shot base model result (time: 26.97 seconds):
+One-shot base model result (time: 5.09 seconds):
+Zero-shot finetuned model result (time: 27.07 seconds):
+One-shot finetuned model result (time: 5.06 seconds):
+
+Iteration 3:
+Zero-shot base model result (time: 27.13 seconds):
+One-shot base model result (time: 5.76 seconds):
+Zero-shot finetuned model result (time: 26.89 seconds):
+One-shot finetuned model result (time: 5.09 seconds):
+
+Iteration 4:
+Zero-shot base model result (time: 28.01 seconds):
+One-shot base model result (time: 5.15 seconds):
+Zero-shot finetuned model result (time: 27.49 seconds):
+One-shot finetuned model result (time: 5.16 seconds):
+
+Iteration 5:
+Zero-shot base model result (time: 27.42 seconds):
+One-shot base model result (time: 5.14 seconds):
+Zero-shot finetuned model result (time: 27.53 seconds):
+One-shot finetuned model result (time: 5.13 seconds):
+
+Iteration 6:
+Zero-shot base model result (time: 27.43 seconds):
+One-shot base model result (time: 5.15 seconds):
+Zero-shot finetuned model result (time: 29.06 seconds):
+One-shot finetuned model result (time: 5.03 seconds):
+
+Iteration 7:
+Zero-shot base model result (time: 26.74 seconds):
+One-shot base model result (time: 4.98 seconds):
+Zero-shot finetuned model result (time: 26.78 seconds):
+One-shot finetuned model result (time: 5.05 seconds):
+
+Iteration 8:
+Zero-shot base model result (time: 26.71 seconds):
+One-shot base model result (time: 5.03 seconds):
+Zero-shot finetuned model result (time: 26.84 seconds):
+One-shot finetuned model result (time: 5.01 seconds):
+
+Iteration 9:
+Zero-shot base model result (time: 26.78 seconds):
+One-shot base model result (time: 4.99 seconds):
+Zero-shot finetuned model result (time: 26.84 seconds):
+One-shot finetuned model result (time: 5.00 seconds):
+
+Iteration 10:
+Zero-shot base model result (time: 26.73 seconds):
+One-shot base model result (time: 5.10 seconds):
+Zero-shot finetuned model result (time: 26.82 seconds):
+One-shot finetuned model result (time: 5.00 seconds):
+
+
+
+Running inference on task file: generative_3.txt
+
+Iteration 1:
+Zero-shot base model result (time: 24.44 seconds):
+One-shot base model result (time: 53.61 seconds):
+Zero-shot finetuned model result (time: 25.14 seconds):
+One-shot finetuned model result (time: 53.61 seconds):
+
+Iteration 2:
+Zero-shot base model result (time: 25.16 seconds):
+One-shot base model result (time: 53.75 seconds):
+Zero-shot finetuned model result (time: 25.65 seconds):
+One-shot finetuned model result (time: 53.47 seconds):
+
+Iteration 3:
+Zero-shot base model result (time: 24.36 seconds):
+One-shot base model result (time: 51.89 seconds):
+Zero-shot finetuned model result (time: 24.35 seconds):
+One-shot finetuned model result (time: 53.32 seconds):
+
+Iteration 4:
+Zero-shot base model result (time: 24.94 seconds):
+One-shot base model result (time: 53.57 seconds):
+Zero-shot finetuned model result (time: 25.03 seconds):
+One-shot finetuned model result (time: 53.67 seconds):
+
+Iteration 5:
+Zero-shot base model result (time: 25.76 seconds):
+One-shot base model result (time: 53.54 seconds):
+Zero-shot finetuned model result (time: 24.65 seconds):
+One-shot finetuned model result (time: 53.61 seconds):
+
+Iteration 6:
+Zero-shot base model result (time: 26.30 seconds):
+One-shot base model result (time: 52.23 seconds):
+Zero-shot finetuned model result (time: 24.33 seconds):
+One-shot finetuned model result (time: 52.13 seconds):
+
+Iteration 7:
+Zero-shot base model result (time: 24.32 seconds):
+One-shot base model result (time: 52.17 seconds):
+Zero-shot finetuned model result (time: 24.43 seconds):
+One-shot finetuned model result (time: 52.34 seconds):
+
+Iteration 8:
+Zero-shot base model result (time: 24.52 seconds):
+One-shot base model result (time: 52.23 seconds):
+Zero-shot finetuned model result (time: 25.38 seconds):
+One-shot finetuned model result (time: 53.41 seconds):
+
+Iteration 9:
+Zero-shot base model result (time: 24.31 seconds):
+One-shot base model result (time: 53.60 seconds):
+Zero-shot finetuned model result (time: 24.68 seconds):
+One-shot finetuned model result (time: 52.84 seconds):
+
+Iteration 10:
+Zero-shot base model result (time: 24.68 seconds):
+One-shot base model result (time: 52.82 seconds):
+Zero-shot finetuned model result (time: 24.66 seconds):
+One-shot finetuned model result (time: 52.81 seconds):
+
+
+
+Running inference on task file: generative_4.txt
+
+Iteration 1:
+Zero-shot base model result (time: 26.58 seconds):
+One-shot base model result (time: 20.22 seconds):
+Zero-shot finetuned model result (time: 26.60 seconds):
+One-shot finetuned model result (time: 20.27 seconds):
+
+Iteration 2:
+Zero-shot base model result (time: 26.65 seconds):
+One-shot base model result (time: 20.15 seconds):
+Zero-shot finetuned model result (time: 26.71 seconds):
+One-shot finetuned model result (time: 21.67 seconds):
+
+Iteration 3:
+Zero-shot base model result (time: 26.66 seconds):
+One-shot base model result (time: 20.17 seconds):
+Zero-shot finetuned model result (time: 27.13 seconds):
+One-shot finetuned model result (time: 19.97 seconds):
+
+Iteration 4:
+Zero-shot base model result (time: 26.41 seconds):
+One-shot base model result (time: 20.03 seconds):
+Zero-shot finetuned model result (time: 27.22 seconds):
+One-shot finetuned model result (time: 20.21 seconds):
+
+Iteration 5:
+Zero-shot base model result (time: 26.82 seconds):
+One-shot base model result (time: 20.17 seconds):
+Zero-shot finetuned model result (time: 26.73 seconds):
+One-shot finetuned model result (time: 20.21 seconds):
+
+Iteration 6:
+Zero-shot base model result (time: 26.74 seconds):
+One-shot base model result (time: 20.23 seconds):
+Zero-shot finetuned model result (time: 26.70 seconds):
+One-shot finetuned model result (time: 20.20 seconds):
+
+Iteration 7:
+Zero-shot base model result (time: 26.78 seconds):
+One-shot base model result (time: 20.24 seconds):
+Zero-shot finetuned model result (time: 26.66 seconds):
+One-shot finetuned model result (time: 20.20 seconds):
+
+Iteration 8:
+Zero-shot base model result (time: 26.59 seconds):
+One-shot base model result (time: 20.29 seconds):
+Zero-shot finetuned model result (time: 26.67 seconds):
+One-shot finetuned model result (time: 21.03 seconds):
+
+Iteration 9:
+Zero-shot base model result (time: 27.66 seconds):
+One-shot base model result (time: 19.90 seconds):
+Zero-shot finetuned model result (time: 27.13 seconds):
+One-shot finetuned model result (time: 21.04 seconds):
+
+Iteration 10:
+Zero-shot base model result (time: 26.45 seconds):
+One-shot base model result (time: 20.03 seconds):
+Zero-shot finetuned model result (time: 26.50 seconds):
+One-shot finetuned model result (time: 21.96 seconds):
+
+
+
+Running inference on task file: generative_5.txt
+
+Iteration 1:
+Zero-shot base model result (time: 47.51 seconds):
+One-shot base model result (time: 32.84 seconds):
+Zero-shot finetuned model result (time: 47.67 seconds):
+One-shot finetuned model result (time: 32.82 seconds):
+
+Iteration 2:
+Zero-shot base model result (time: 47.64 seconds):
+One-shot base model result (time: 32.85 seconds):
+Zero-shot finetuned model result (time: 47.42 seconds):
+One-shot finetuned model result (time: 32.67 seconds):
+
+Iteration 3:
+Zero-shot base model result (time: 49.19 seconds):
+One-shot base model result (time: 32.97 seconds):
+Zero-shot finetuned model result (time: 47.15 seconds):
+One-shot finetuned model result (time: 32.52 seconds):
+
+Iteration 4:
+Zero-shot base model result (time: 46.99 seconds):
+One-shot base model result (time: 32.37 seconds):
+Zero-shot finetuned model result (time: 47.12 seconds):
+One-shot finetuned model result (time: 32.38 seconds):
+
+Iteration 5:
+Zero-shot base model result (time: 46.98 seconds):
+One-shot base model result (time: 32.54 seconds):
+Zero-shot finetuned model result (time: 46.90 seconds):
+One-shot finetuned model result (time: 32.57 seconds):
+
+Iteration 6:
+Zero-shot base model result (time: 49.35 seconds):
+One-shot base model result (time: 33.10 seconds):
+Zero-shot finetuned model result (time: 46.81 seconds):
+One-shot finetuned model result (time: 33.18 seconds):
+
+Iteration 7:
+Zero-shot base model result (time: 48.90 seconds):
+One-shot base model result (time: 32.59 seconds):
+Zero-shot finetuned model result (time: 47.57 seconds):
+One-shot finetuned model result (time: 32.23 seconds):
+
+Iteration 8:
+Zero-shot base model result (time: 46.60 seconds):
+One-shot base model result (time: 32.32 seconds):
+Zero-shot finetuned model result (time: 46.62 seconds):
+One-shot finetuned model result (time: 32.25 seconds):
+
+Iteration 9:
+Zero-shot base model result (time: 48.55 seconds):
+One-shot base model result (time: 32.61 seconds):
+Zero-shot finetuned model result (time: 47.04 seconds):
+One-shot finetuned model result (time: 32.61 seconds):
+
+Iteration 10:
+Zero-shot base model result (time: 47.17 seconds):
+One-shot base model result (time: 32.58 seconds):
+Zero-shot finetuned model result (time: 47.12 seconds):
+One-shot finetuned model result (time: 33.25 seconds):
+

@@ -1,0 +1,12 @@
+<root main_tree_to_execute="MainTree">
+    <BehaviorTree ID="MainTree">
+        <Sequence>
+            <SetBlackboard output_key="StationA" value="-4.3,-4,180.0" />
+            <MoveTo name="MoveTo"
+                    goal="${StationA}"
+                    mouse_x="-4.3"
+                    mouse_y="-4.0"
+                    head_direction="180.0" />
+        </Sequence>
+    </BehaviorTree>
+</root>

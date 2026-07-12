@@ -1,0 +1,14 @@
+<Plan ID="MainTree">
+    <Control type="sequential" name="name_of_flow">
+      <Fallback>
+        <RetryUntilSuccesful num_attempts="10" until_succesful="">
+          <Sequence>
+            <MoveBase position="2.0;-0.5" />
+          </Sequence>
+        </RetryUntilSuccesful>
+        <Sequence>
+          <GiveFeedbackActionClient msg="Move to (2.0, -0.5) position" />
+        </Sequence>
+      </Fallback>
+    </Control>
+  </Plan>

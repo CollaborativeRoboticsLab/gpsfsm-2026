@@ -1,0 +1,15 @@
+<Plan ID="MainTree">
+    <Sequence>
+      <SetBlackboard value="2.0" output_key="move_x" />
+      <SetBlackboard value="-0.5" output_key="move_y" />
+      <SetBlackboard value="0.0" output_key="move_z" />
+      <SetBlackboard value="2.0" output_key="move_roll" />
+      <SetBlackboard value="0.0" output_key="move_pitch" />
+      <SetBlackboard value="0.0" output_key="move_yaw" />
+      <Control type="sequential" name="name_of_flow">
+        <Sequence>
+          <SubTree ID="MoveRobot" move_x="move_x" move_y="move_y" move_z="move_z" move_roll="move_roll" move_pitch="move_pitch" move_yaw="move_yaw" />
+        </Sequence>
+      </Control>
+    </Sequence>
+  </Plan>

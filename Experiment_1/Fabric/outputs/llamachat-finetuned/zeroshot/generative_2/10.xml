@@ -1,0 +1,9 @@
+<Plan ID="moveToPlanWithCoords">
+        <Sequence>
+            <SetBlackboard value="0.0" output_key="x" />
+            <SetBlackboard value="0.0" output_key="y" />
+            <SetBlackboard value="1.2" output_key="x" />
+            <SetBlackboard value="0.8" output_key="y" />
+            <Nav2Client goal="${x} ${y}" />
+        </Sequence>
+    </Plan>

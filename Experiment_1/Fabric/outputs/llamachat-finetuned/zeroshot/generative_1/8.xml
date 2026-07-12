@@ -1,0 +1,26 @@
+<Plan>
+  <Control type="sequential" name="name_of_flow">
+    <Sequence>
+      <Nav2Client goal="2.0;-0.5" />
+    </Sequence>
+  </Control>
+
+  <Control type="parallel_any" name="name_of_flow">
+    <Sequence>
+      <Nav2Client goal="2.0;-0.5" />
+    </Sequence>
+  </Control>
+
+  <Control type="parallel_all" name="name_of_flow">
+    <Sequence>
+      <Nav2Client goal="2.0;-0.5" />
+    </Sequence>
+  </Control>
+
+  <Control type="recovery" name="name_of_flow">
+    <Sequence>
+      <Nav2Client goal="2.0;-0.5" />
+    </Sequence>
+  </Control>
+
+</Plan>

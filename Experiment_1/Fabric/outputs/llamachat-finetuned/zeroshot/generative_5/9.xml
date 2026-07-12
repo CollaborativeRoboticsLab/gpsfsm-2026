@@ -1,0 +1,40 @@
+<Plan ID="MainTree">
+        <Sequence>
+            <!-- Test (2.0, -0.5) first -->
+            <Sequence>
+                <CheckBlackboard value="2.0" current_topic="d_action_pose" current_value="{2.0}" desired_pose="{d_action_pose}"/>
+                <CheckBlackboard value="-0.5" current_topic="d_action_pose" current_value="{-0.5}" desired_pose="{d_action_pose}"/>
+                < Nav2Action name="move" location="2.0;-0.5" />
+            </Sequence>
+            <!-- Test (1.0, 3.0) next -->
+            <Sequence>
+                <CheckBlackboard value="1.0" current_topic="d_action_pose" current_value="{1.0}" desired_pose="{d_action_pose}"/>
+                <CheckBlackboard value="3.0" current_topic="d_action_pose" current_value="{3.0}" desired_pose="{d_action_pose}"/>
+                < Nav2Action name="move" location="1.0;3.0" />
+            </Sequence>
+            <!-- Test (-3.0, -1.0) next -->
+            <Sequence>
+                <CheckBlackboard value="-3.0" current_topic="d_action_pose" current_value="{-3.0}" desired_pose="{d_action_pose}"/>
+                <CheckBlackboard value="-1.0" current_topic="d_action_pose" current_value="{-1.0}" desired_pose="{d_action_pose}"/>
+                < Nav2Action name="move" location="-3.0;-1.0" />
+            </Sequence>
+            <!-- Test (0.0, -2.0) last -->
+            <Sequence>
+                <CheckBlackboard value="0.0" current_topic="d_action_pose" current_value="{0.0}" desired_pose="{d_action_pose}"/>
+                <CheckBlackboard value="-2.0" current_topic="d_action_pose" current_value="{-2.0}" desired_pose="{d_action_pose}"/>
+                < Nav2Action name="move" location="0.0;-2.0" />
+            </Sequence>
+            <!-- If (2.0, -0.5) cannot be reached -->
+            <Fallback>
+                <Sequence>
+                    <CheckBlackboard value="0.0" current_topic="d_action_pose" current_value="{0.0}" desired_pose="{d_action_pose}"/>
+                    <Nav2Action name="move" location="0.0;-1.5" />
+                </Sequence>
+                <!-- If (1.0, 3.0) cannot be reached -->
+                <Sequence>
+                    <CheckBlackboard value="0.0" current_topic="d_action_pose" current_value="{0.0}" desired_pose="{d_action_pose}"/>
+                    <Nav2Action name="move" location="0.0;2.5" />
+                </Sequence>
+            </Fallback>
+        </Sequence>
+    </Plan>

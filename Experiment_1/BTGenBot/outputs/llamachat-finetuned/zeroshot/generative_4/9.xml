@@ -1,0 +1,48 @@
+<root main_tree_to_execute="MainTree">
+    <BehaviorTree ID="MainTree">
+        <Sequence>
+            ; Visit Stations in sequence
+            <SetBlackboard output_key="StationA" value="0.00;0.00;0.0;" />
+            <MoveTo action="MoveTo" goal="StationA" />
+            <SetBlackboard output_key="StationE" value="0.5;0.5;0.0;" />
+            <SetBlackboard output_key="StationF" value="1.0;1.0;0.0;" />
+            <SetBlackboard output_key="StationD" value="0.75;0.0;0.0;" />
+            <Sequence>
+                <Fallback>
+                    <SubTree ID="StationESubTree" />
+                    <Sequence>
+                        <MoveTo action="MoveTo" goal="StationD" />
+                    </Sequence>
+                </Fallback>
+                <Fallback>
+                    <SubTree ID="StationFSubTree" />
+                    <Sequence>
+                        <MoveTo action="MoveTo" goal="StationD" />
+                    </Sequence>
+                </Fallback>
+            </Sequence>
+        </Sequence>
+    </BehaviorTree>
+
+    <BehaviorTree ID="StationESubTree">
+        <Sequence>
+            <Fallback>
+                <Sequence>
+                    <MoveTo action="MoveTo" goal="StationB" />
+                </Sequence>
+                <SetBlackboard output_key="StationE" value="0.75;0.75;0.0;" />
+            </Fallback>
+        </Sequence>
+    </BehaviorTree>
+
+    <BehaviorTree ID="StationFSubTree">
+        <Sequence>
+            <Fallback>
+                <Sequence>
+                    <MoveTo action="MoveTo" goal="StationD" />
+                </Sequence>
+                <SetBlackboard output_key="StationF" value="1.0;1.0;0.0;" />
+            </Fallback>
+        </Sequence>
+    </BehaviorTree>
+</root>
