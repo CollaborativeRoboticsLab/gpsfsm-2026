@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  
+
   <!-- Primary Meta Tags -->
   <meta name="title" content="A Generative Partially Specified Finite State Machine Approach to Complex Behaviour Planning - Kalana Ratnayake, Michael Pritchard, David Hinwood, Maleen Jayasuriya, Damith Herath">
   <meta name="description" content="IROS 2026 paper introducing GPSFSMs, Fabric, Capabilities2 extensions, and PromptTools for generative finite state machine behaviour planning in ROS 2 robotics.">
@@ -11,7 +12,7 @@
   <meta name="author" content="Kalana Ratnayake, Michael Pritchard, David Hinwood, Maleen Jayasuriya, Damith Herath">
   <meta name="robots" content="index, follow">
   <meta name="language" content="English">
-  
+
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="article">
   <meta property="og:site_name" content="Collaborative Robotics Laboratory">
@@ -51,7 +52,21 @@
   <meta name="msapplication-TileColor" content="#2563eb">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="default">
-  
+
+  <script>
+    (function () {
+      var storedTheme = 'dark';
+
+      try {
+        storedTheme = localStorage.getItem('theme-preference') || 'dark';
+      } catch (error) {
+        storedTheme = 'dark';
+      }
+
+      document.documentElement.setAttribute('data-theme', storedTheme);
+    })();
+  </script>
+
   <!-- Preconnect for performance -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -65,17 +80,20 @@
   <!-- Favicon and App Icons -->
   <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
   <link rel="apple-touch-icon" href="static/images/favicon.ico">
-  
+
   <!-- Critical CSS - Load synchronously -->
   <link rel="stylesheet" href="static/css/bulma.min.css">
   <link rel="stylesheet" href="static/css/index.css">
-  
+
   <!-- Non-critical CSS - Load asynchronously -->
-  <link rel="preload" href="static/css/bulma-carousel.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="static/css/bulma-carousel.min.css" as="style"
+    onload="this.onload=null;this.rel='stylesheet'">
   <link rel="preload" href="static/css/bulma-slider.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <link rel="preload" href="static/css/fontawesome.all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <link rel="preload" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  
+  <link rel="preload" href="static/css/fontawesome.all.min.css" as="style"
+    onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" as="style"
+    onload="this.onload=null;this.rel='stylesheet'">
+
   <!-- Fallback for browsers that don't support preload -->
   <noscript>
     <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
@@ -83,10 +101,10 @@
     <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   </noscript>
-  
+
   <!-- Fonts - Optimized loading -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  
+
   <!-- Defer non-critical JavaScript -->
   <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script defer src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
@@ -94,7 +112,7 @@
   <script defer src="static/js/bulma-carousel.min.js"></script>
   <script defer src="static/js/bulma-slider.min.js"></script>
   <script defer src="static/js/index.js"></script>
-  
+
   <!-- Structured Data for Academic Papers -->
   <script type="application/ld+json">
   {
@@ -172,7 +190,7 @@
     ]
   }
   </script>
-  
+
   <!-- Website/Organization Structured Data -->
   <script type="application/ld+json">
   {
@@ -187,7 +205,14 @@
   }
   </script>
 </head>
+
 <body>
+
+  <button class="theme-toggle" type="button" onclick="toggleTheme()" title="Switch to light mode"
+    aria-label="Switch to light mode">
+    <i class="fas fa-sun theme-toggle-icon" aria-hidden="true"></i>
+    <span class="theme-toggle-label">Light mode</span>
+  </button>
 
 
   <!-- Scroll to Top Button -->
@@ -257,7 +282,6 @@
                   <span class="author-block">
                     <a href="mailto:Damith.Herath@canberra.edu.au">Damith Herath</a>
                   </span>
-                  </div>
 
                   <div class="is-size-5 publication-authors">
                     <span class="author-block">Collaborative Robotics Laboratory, Faculty of Science and Technology, University of Canberra<br>Accepted at IROS 2026</span>
@@ -308,9 +332,7 @@
           </div>
         </div>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
 
 
 <!-- Teaser video-->
@@ -340,10 +362,8 @@
           </p>
         </div>
       </div>
-    </div>
-  </div>
-</section>
-<!-- End paper abstract -->
+    </section>
+    <!-- End teaser video -->
 
 
 <!-- Image carousel -->
@@ -423,10 +443,66 @@
           <h2 class="subtitle has-text-centered">Parallel-any and parallel-all coordination through internal runners.</h2>
         </div>
       </div>
-    </div>
-  </div>
-</section>
-<!-- End video carousel -->
+    </section>
+    <!-- End image carousel -->
+
+
+
+
+    <!-- Youtube video -->
+    <section class="hero is-small is-light">
+      <div class="hero-body">
+        <div class="container">
+          <!-- Paper video. -->
+          <h2 class="title is-3">Video Presentation</h2>
+          <div class="columns is-centered has-text-centered">
+            <div class="column is-four-fifths">
+
+              <div class="publication-video">
+                <!-- TODO: Replace with your YouTube video ID -->
+                <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0"
+                  allow="autoplay; encrypted-media" allowfullscreen></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End youtube video -->
+
+
+    <!-- Video carousel -->
+    <section class="hero is-small">
+      <div class="hero-body">
+        <div class="container">
+          <h2 class="title is-3">Another Carousel</h2>
+          <div id="results-carousel" class="carousel results-carousel">
+            <div class="item item-video1">
+              <!-- TODO: Add poster image for better preview -->
+              <video poster="" id="video1" controls muted loop height="100%" preload="metadata">
+                <!-- Your video file here -->
+                <source src="static/videos/carousel1.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="item item-video2">
+              <!-- TODO: Add poster image for better preview -->
+              <video poster="" id="video2" controls muted loop height="100%" preload="metadata">
+                <!-- Your video file here -->
+                <source src="static/videos/carousel2.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="item item-video3">
+              <!-- TODO: Add poster image for better preview -->
+              <video poster="" id="video3" controls muted loop height="100%" preload="metadata">
+                <!-- Your video file here -->
+                <source src="static/videos/carousel3.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End video carousel -->
 
 
 
@@ -452,9 +528,8 @@
       </p>
         
       </div>
-    </div>
-  </section>
-<!--End paper poster -->
+    </section>
+    <!--End paper poster -->
 
 
 
@@ -475,18 +550,6 @@
       year={2026},
       url={https://github.com/CollaborativeRoboticsLab/gpsfsm-2026}
 }</code></pre>
-    </div>
-</section>
-<!--End BibTex citation -->
-
-
-  <footer class="footer">
-  <div class="container">
-    <div class="footer-layout">
-      <div class="footer-logo-panel">
-        <a href="https://collaborativeroboticslab.github.io/" target="_blank" rel="noopener noreferrer" aria-label="Collaborative Robotics Lab">
-          <img src="static/images/crl_icon_black.png" alt="Collaborative Robotics Lab logo" class="footer-logo">
-        </a>
       </div>
       <div class="footer-info-panels">
         <div class="footer-panel footer-funding-panel">
@@ -497,23 +560,49 @@
         </div>
         <div class="content footer-panel footer-credit-panel">
 
-          <p>
-            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
-            You are free to borrow the source code of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
-            Commons Attribution-ShareAlike 4.0 International License</a>.
-          </p>
 
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-layout">
+          <div class="footer-logo-panel">
+            <a href="https://collaborativeroboticslab.github.io/" target="_blank" rel="noopener noreferrer"
+              aria-label="Collaborative Robotics Lab">
+              <img src="static/images/crl_icon_white.png" alt="Collaborative Robotics Lab logo" class="footer-logo"
+                data-dark-src="static/images/crl_icon_white.png" data-light-src="static/images/crl_icon_black.png">
+            </a>
+          </div>
+          <div class="footer-info-panels">
+            <div class="footer-panel footer-funding-panel">
+              <h3 class="footer-panel-title">Funding</h3>
+              <p>
+                Add your research funding details here, including grant numbers, sponsors, and institutional support
+                acknowledgements.
+              </p>
+            </div>
+            <div class="content footer-panel footer-credit-panel">
+
+              <p>
+                This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template"
+                  target="_blank">Academic Project Page Template</a> which was adopted from the <a
+                  href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+                You are free to borrow the source code of this website, we just ask that you link back to this page in
+                the footer. <br> This website is licensed under a <a rel="license"
+                  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+                  Commons Attribution-ShareAlike 4.0 International License</a>.
+              </p>
+
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
-</footer>
+    </footer>
 
-<!-- Statcounter tracking code -->
-  
-<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+    <!-- Statcounter tracking code -->
+
+    <!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
 
     <!-- End of Statcounter Code -->
 
-  </body>
-  </html>
+</body>
+
+</html>
