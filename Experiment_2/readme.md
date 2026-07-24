@@ -11,3 +11,6 @@ Follow the instructions in [turtlebot_capabilities/run](https://github.com/Colla
 - [turtlebot_5.xml](https://github.com/CollaborativeRoboticsLab/turtlebot_capabilities#examples)
 - [turtlebot_6.xml](https://github.com/CollaborativeRoboticsLab/turtlebot_capabilities#examples)
 - [turtlebot_7.xml](https://github.com/CollaborativeRoboticsLab/turtlebot_capabilities#examples)
+- [turtlebot_7a.xml](https://github.com/CollaborativeRoboticsLab/turtlebot_capabilities#examples)
+
+Iteration 1 shows attempts to run the stack and the issues that were encountered. Iteration 2 shows the final working version of the stack, but shows error such as malformed XML based plans.

@@ -1,0 +1,275 @@
+ubuntu@kalana-laptop:~/colcon_ws$ ros2 launch capabilities2_server capabilities2_server.launch.py
+[INFO] [launch]: All log files can be found below /home/ubuntu/.ros/log/2026-07-24-03-17-28-304847-kalana-laptop-45418
+[INFO] [launch]: Default logging verbosity is set to INFO
+[INFO] [capabilities2_server_node-1]: process started with pid [45433]
+[capabilities2_server_node-1] [INFO] [1784863048.522112645] [capabilities]: Rebuilding capabilities database
+[capabilities2_server_node-1] [INFO] [1784863048.562331196] [capabilities]: Capabilities API connected to db: /home/ubuntu/.ros/capabilities/capabilities.sqlite3
+[capabilities2_server_node-1] [INFO] [1784863048.563419663] [capabilities]: adding capability: fabric_capabilities/interfaces/FabricSetPlanRunner.yaml
+[capabilities2_server_node-1] [INFO] [1784863048.566959572] [capabilities]: interface added to db: fabric_capabilities/FabricSetPlanRunner
+[capabilities2_server_node-1] [INFO] [1784863048.567181339] [capabilities]: adding capability: fabric_capabilities/interfaces/FabricCompletionRunner.yaml
+[capabilities2_server_node-1] [INFO] [1784863048.570296919] [capabilities]: interface added to db: fabric_capabilities/FabricCompletionRunner
+[capabilities2_server_node-1] [INFO] [1784863048.570468031] [capabilities]: adding capability: fabric_capabilities/providers/FabricSetPlanRunner.yaml
+[capabilities2_server_node-1] [INFO] [1784863048.572854139] [capabilities]: provider added to db: fabric_capabilities/FabricSetPlanRunner
+[capabilities2_server_node-1] [INFO] [1784863048.572943558] [capabilities]: adding capability: fabric_capabilities/providers/FabricCompletionRunner.yaml
+[capabilities2_server_node-1] [INFO] [1784863048.575138737] [capabilities]: provider added to db: fabric_capabilities/FabricCompletionRunner
+[capabilities2_server_node-1] [INFO] [1784863048.575651421] [capabilities]: adding capability: nav2_capabilities/interfaces/WaypointRunner.yaml
+[capabilities2_server_node-1] [INFO] [1784863048.585303807] [capabilities]: interface added to db: nav2_capabilities/WaypointRunner
+[capabilities2_server_node-1] [INFO] [1784863048.585589074] [capabilities]: adding capability: nav2_capabilities/interfaces/RobotPoseRunner.yaml
+[capabilities2_server_node-1] [INFO] [1784863048.589838798] [capabilities]: interface added to db: nav2_capabilities/RobotPoseRunner
+[capabilities2_server_node-1] [INFO] [1784863048.589988800] [capabilities]: adding capability: nav2_capabilities/providers/WaypointRunner.yaml
+[capabilities2_server_node-1] [INFO] [1784863048.592621101] [capabilities]: provider added to db: nav2_capabilities/WaypointRunner
+[capabilities2_server_node-1] [INFO] [1784863048.592791652] [capabilities]: adding capability: nav2_capabilities/providers/RobotPoseRunner.yaml
+[capabilities2_server_node-1] [INFO] [1784863048.595413394] [capabilities]: provider added to db: nav2_capabilities/RobotPoseRunner
+[capabilities2_server_node-1] [INFO] [1784863048.596889490] [capabilities]: adding capability: prompt_capabilities/interfaces/PromptTextRunner.yaml
+[capabilities2_server_node-1] [INFO] [1784863048.599903449] [capabilities]: interface added to db: prompt_capabilities/PromptTextRunner
+[capabilities2_server_node-1] [INFO] [1784863048.600131558] [capabilities]: adding capability: prompt_capabilities/interfaces/PromptPoseRunner.yaml
+[capabilities2_server_node-1] [INFO] [1784863048.603682498] [capabilities]: interface added to db: prompt_capabilities/PromptPoseRunner
+[capabilities2_server_node-1] [INFO] [1784863048.603871273] [capabilities]: adding capability: prompt_capabilities/interfaces/PromptCapabilityRunner.yaml
+[capabilities2_server_node-1] [INFO] [1784863048.607017421] [capabilities]: interface added to db: prompt_capabilities/PromptCapabilityRunner
+[capabilities2_server_node-1] [INFO] [1784863048.607668966] [capabilities]: adding capability: prompt_capabilities/interfaces/PromptPlanRunner.yaml
+[capabilities2_server_node-1] [INFO] [1784863048.614990628] [capabilities]: interface added to db: prompt_capabilities/PromptPlanRunner
+[capabilities2_server_node-1] [INFO] [1784863048.615387565] [capabilities]: adding capability: prompt_capabilities/interfaces/PromptSpeechRunner.yaml
+[capabilities2_server_node-1] [INFO] [1784863048.619352293] [capabilities]: interface added to db: prompt_capabilities/PromptSpeechRunner
+[capabilities2_server_node-1] [INFO] [1784863048.619553721] [capabilities]: adding capability: prompt_capabilities/providers/PromptTextRunner.yaml
+[capabilities2_server_node-1] [INFO] [1784863048.622181003] [capabilities]: provider added to db: prompt_capabilities/PromptTextRunner
+[capabilities2_server_node-1] [INFO] [1784863048.622324824] [capabilities]: adding capability: prompt_capabilities/providers/PromptPoseRunner.yaml
+[capabilities2_server_node-1] [INFO] [1784863048.625115172] [capabilities]: provider added to db: prompt_capabilities/PromptPoseRunner
+[capabilities2_server_node-1] [INFO] [1784863048.625274652] [capabilities]: adding capability: prompt_capabilities/providers/PromptCapabilityRunner.yaml
+[capabilities2_server_node-1] [INFO] [1784863048.628018784] [capabilities]: provider added to db: prompt_capabilities/PromptCapabilityRunner
+[capabilities2_server_node-1] [INFO] [1784863048.628153007] [capabilities]: adding capability: prompt_capabilities/providers/PromptPlanRunner.yaml
+[capabilities2_server_node-1] [INFO] [1784863048.630952823] [capabilities]: provider added to db: prompt_capabilities/PromptPlanRunner
+[capabilities2_server_node-1] [INFO] [1784863048.631114667] [capabilities]: adding capability: prompt_capabilities/providers/PromptSpeechRunner.yaml
+[capabilities2_server_node-1] [INFO] [1784863048.633718896] [capabilities]: provider added to db: prompt_capabilities/PromptSpeechRunner
+[capabilities2_server_node-1] [INFO] [1784863048.634977133] [capabilities]: adding capability: capabilities2_runner/interfaces/InputMultiplexRunner.yaml
+[capabilities2_server_node-1] [INFO] [1784863048.638171682] [capabilities]: interface added to db: capabilities2_runner/InputMultiplexRunner
+[capabilities2_server_node-1] [INFO] [1784863048.638540676] [capabilities]: adding capability: capabilities2_runner/interfaces/GetCapabilitySpecsRunner.yaml
+[capabilities2_server_node-1] [INFO] [1784863048.642975868] [capabilities]: interface added to db: capabilities2_runner/GetCapabilitySpecsRunner
+[capabilities2_server_node-1] [INFO] [1784863048.643143844] [capabilities]: adding capability: capabilities2_runner/providers/InputMultiplexRunner.yaml
+[capabilities2_server_node-1] [INFO] [1784863048.645598872] [capabilities]: provider added to db: capabilities2_runner/InputMultiplexRunner
+[capabilities2_server_node-1] [INFO] [1784863048.645754615] [capabilities]: adding capability: capabilities2_runner/providers/GetCapabilitySpecsRunner.yaml
+[capabilities2_server_node-1] [INFO] [1784863048.648098364] [capabilities]: provider added to db: capabilities2_runner/GetCapabilitySpecsRunner
+[capabilities2_server_node-1] [INFO] [1784863048.649988038] [capabilities]: adding capability: fp_perception_capabilities/interfaces/TranscribeRunner.yaml
+[capabilities2_server_node-1] [INFO] [1784863048.655256548] [capabilities]: interface added to db: fp_perception_capabilities/TranscribeRunner
+[capabilities2_server_node-1] [INFO] [1784863048.655591468] [capabilities]: adding capability: fp_perception_capabilities/interfaces/SpeechRunner.yaml
+[capabilities2_server_node-1] [INFO] [1784863048.659432563] [capabilities]: interface added to db: fp_perception_capabilities/SpeechRunner
+[capabilities2_server_node-1] [INFO] [1784863048.659762133] [capabilities]: adding capability: fp_perception_capabilities/interfaces/SentimentRunner.yaml
+[capabilities2_server_node-1] [INFO] [1784863048.663717533] [capabilities]: interface added to db: fp_perception_capabilities/SentimentRunner
+[capabilities2_server_node-1] [INFO] [1784863048.664024581] [capabilities]: adding capability: fp_perception_capabilities/interfaces/ImageAnalysisRunner.yaml
+[capabilities2_server_node-1] [INFO] [1784863048.668774446] [capabilities]: interface added to db: fp_perception_capabilities/ImageAnalysisRunner
+[capabilities2_server_node-1] [INFO] [1784863048.668948152] [capabilities]: adding capability: fp_perception_capabilities/providers/TranscribeRunner.yaml
+[capabilities2_server_node-1] [INFO] [1784863048.672343800] [capabilities]: provider added to db: fp_perception_capabilities/TranscribeRunner
+[capabilities2_server_node-1] [INFO] [1784863048.672509682] [capabilities]: adding capability: fp_perception_capabilities/providers/SpeechRunner.yaml
+[capabilities2_server_node-1] [INFO] [1784863048.674969098] [capabilities]: provider added to db: fp_perception_capabilities/SpeechRunner
+[capabilities2_server_node-1] [INFO] [1784863048.675129119] [capabilities]: adding capability: fp_perception_capabilities/providers/SentimentRunner.yaml
+[capabilities2_server_node-1] [INFO] [1784863048.677554250] [capabilities]: provider added to db: fp_perception_capabilities/SentimentRunner
+[capabilities2_server_node-1] [INFO] [1784863048.677707258] [capabilities]: adding capability: fp_perception_capabilities/providers/ImageAnalysisRunner.yaml
+[capabilities2_server_node-1] [INFO] [1784863048.680235053] [capabilities]: provider added to db: fp_perception_capabilities/ImageAnalysisRunner
+[capabilities2_server_node-1] [ERROR] [1784863048.681436402] [capabilities]: package path does not exist: /opt/ros/humble/share
+[capabilities2_server_node-1] [INFO] [1784863048.760586373] [capabilities]: capabilities server started
+[capabilities2_server_node-1] [INFO] [1784863095.524051613] [capabilities]: waiting for service: /capabilities/get_capability_specs
+[capabilities2_server_node-1] [INFO] [1784863095.524221633] [capabilities]: connected with service: /capabilities/get_capability_specs
+[capabilities2_server_node-1] [INFO] [1784863095.524245097] [capabilities]: emitting STARTED event with bond_id: 
+[capabilities2_server_node-1] [INFO] [1784863095.524273350] [capabilities]: started capability: capabilities2_runner/GetCapabilitySpecsRunner with provider: capabilities2_runner/GetCapabilitySpecsRunner
+[capabilities2_server_node-1] [INFO] [1784863095.532874039] [capabilities]: waiting for service: /prompt/prompt
+[capabilities2_server_node-1] [INFO] [1784863095.666262424] [capabilities]: connected with service: /prompt/prompt
+[capabilities2_server_node-1] [INFO] [1784863095.666329631] [capabilities]: emitting STARTED event with bond_id: 
+[capabilities2_server_node-1] [INFO] [1784863095.666356071] [capabilities]: started capability: prompt_capabilities/PromptCapabilityRunner with provider: prompt_capabilities/PromptCapabilityRunner
+[capabilities2_server_node-1] [INFO] [1784863095.666971138] [capabilities]: bond established with id: c771cb51-4903-4fa5-bd38-f13291414dcc
+[capabilities2_server_node-1] [INFO] [1784863095.700722388] [capabilities]: emitting STARTED event with bond_id: 
+[capabilities2_server_node-1] [INFO] [1784863095.700789594] [capabilities]: started capability: nav2_capabilities/RobotPoseRunner with provider: nav2_capabilities/RobotPoseRunner
+[capabilities2_server_node-1] [INFO] [1784863095.705165000] [capabilities]: waiting for service: /prompt/prompt
+[capabilities2_server_node-1] [INFO] [1784863095.705249309] [capabilities]: connected with service: /prompt/prompt
+[capabilities2_server_node-1] [INFO] [1784863095.705260249] [capabilities]: emitting STARTED event with bond_id: 
+[capabilities2_server_node-1] [INFO] [1784863095.705331764] [capabilities]: started capability: prompt_capabilities/PromptPoseRunner with provider: prompt_capabilities/PromptPoseRunner
+[capabilities2_server_node-1] [INFO] [1784863095.712046232] [capabilities]: waiting for service: /prompt/prompt
+[capabilities2_server_node-1] [INFO] [1784863095.712123037] [capabilities]: connected with service: /prompt/prompt
+[capabilities2_server_node-1] [INFO] [1784863095.712134028] [capabilities]: emitting STARTED event with bond_id: 
+[capabilities2_server_node-1] [INFO] [1784863095.712146000] [capabilities]: started capability: prompt_capabilities/PromptPlanRunner with provider: prompt_capabilities/PromptPlanRunner
+[capabilities2_server_node-1] [INFO] [1784863095.721191577] [capabilities]: waiting for service: /fabric/set_plan
+[capabilities2_server_node-1] [INFO] [1784863095.821480138] [capabilities]: connected with service: /fabric/set_plan
+[capabilities2_server_node-1] [INFO] [1784863095.821607077] [capabilities]: emitting STARTED event with bond_id: 
+[capabilities2_server_node-1] [INFO] [1784863095.821643496] [capabilities]: started capability: fabric_capabilities/FabricSetPlanRunner with provider: fabric_capabilities/FabricSetPlanRunner
+[capabilities2_server_node-1] [INFO] [1784863095.826566252] [capabilities]: waiting for service: /fabric/set_completion
+[capabilities2_server_node-1] [INFO] [1784863095.926777929] [capabilities]: connected with service: /fabric/set_completion
+[capabilities2_server_node-1] [INFO] [1784863095.926903235] [capabilities]: emitting STARTED event with bond_id: 
+[capabilities2_server_node-1] [INFO] [1784863095.926923643] [capabilities]: started capability: fabric_capabilities/FabricCompletionRunner with provider: fabric_capabilities/FabricCompletionRunner
+[capabilities2_server_node-1] [INFO] [1784863095.928062587] [capabilities]: set 'type 4' connection for runner: capabilities2_runner/GetCapabilitySpecsRunner with id: c771cb51-4903-4fa5-bd38-f13291414dcc/0/1
+[capabilities2_server_node-1] [INFO] [1784863095.928606210] [capabilities]: set 'type 4' connection for runner: prompt_capabilities/PromptCapabilityRunner with id: c771cb51-4903-4fa5-bd38-f13291414dcc/1/2
+[capabilities2_server_node-1] [INFO] [1784863095.929025720] [capabilities]: set 'type 4' connection for runner: nav2_capabilities/RobotPoseRunner with id: c771cb51-4903-4fa5-bd38-f13291414dcc/2/3
+[capabilities2_server_node-1] [INFO] [1784863095.929511144] [capabilities]: set 'type 4' connection for runner: prompt_capabilities/PromptPoseRunner with id: c771cb51-4903-4fa5-bd38-f13291414dcc/3/4
+[capabilities2_server_node-1] [INFO] [1784863095.930041482] [capabilities]: set 'type 4' connection for runner: prompt_capabilities/PromptPlanRunner with id: c771cb51-4903-4fa5-bd38-f13291414dcc/4/5
+[capabilities2_server_node-1] [INFO] [1784863095.930671067] [capabilities]: set 'type 4' connection for runner: fabric_capabilities/FabricSetPlanRunner with id: c771cb51-4903-4fa5-bd38-f13291414dcc/5/6
+[capabilities2_server_node-1] [INFO] [1784863095.931734459] [capabilities]: request generated for event :0
+[capabilities2_server_node-1] [INFO] [1784863095.959144442] [capabilities]: get result call succeeded for event :0
+[capabilities2_server_node-1] [INFO] [1784863095.959266963] [capabilities]: GetCapabilitySpecsRunner received response with 30 capability specs
+[capabilities2_server_node-1] [INFO] [1784863095.959678577] [capabilities]: GetCapabilitySpecsRunner creating param_on_success with 30 capability specs
+[capabilities2_server_node-1] [INFO] [1784863095.959721568] [capabilities]: emitting SUCCEEDED event with bond_id: c771cb51-4903-4fa5-bd38-f13291414dcc
+[capabilities2_server_node-1] [INFO] [1784863095.960689861] [capabilities]: Service request complete. Thread closing.
+[capabilities2_server_node-1] [INFO] [1784863095.960698517] [capabilities]: Generating prompt request with flush option: false
+[capabilities2_server_node-1] [INFO] [1784863095.960872745] [capabilities]: Generating prompt request with uuid: prompt-test-uuid
+[capabilities2_server_node-1] [INFO] [1784863095.961034940] [capabilities]: PromptCapabilityRunner generating prompt with 30 capability specs
+[capabilities2_server_node-1] [INFO] [1784863095.961212364] [capabilities]: request generated for event :1
+[capabilities2_server_node-1] [INFO] [1784863095.981609448] [capabilities]: get result call succeeded for event :1
+[capabilities2_server_node-1] [INFO] [1784863095.981714014] [capabilities]: information buffered with uuid prompt-test-uuid
+[capabilities2_server_node-1] [INFO] [1784863095.981733190] [capabilities]: emitting SUCCEEDED event with bond_id: c771cb51-4903-4fa5-bd38-f13291414dcc
+[capabilities2_server_node-1] [INFO] [1784863095.982255624] [capabilities]: Transforming from map to base_link or odom to base_link
+[capabilities2_server_node-1] [INFO] [1784863095.982278848] [capabilities]: Service request complete. Thread closing.
+[capabilities2_server_node-1] [INFO] [1784863096.813594522] [capabilities]: Emitting param_on_success with x: 0.159187, y: -0.037186, z: -0.000005, qx: 0.000079, qy: -0.000608, qz: -0.093443, qw: 0.995624
+[capabilities2_server_node-1] [INFO] [1784863096.813704920] [capabilities]: emitting SUCCEEDED event with bond_id: c771cb51-4903-4fa5-bd38-f13291414dcc
+[capabilities2_server_node-1] [INFO] [1784863096.814263492] [capabilities]: Transformation received from map to base_link. Thread closing for instance 2
+[capabilities2_server_node-1] [INFO] [1784863096.814287777] [capabilities]: Generating prompt request with flush option: false
+[capabilities2_server_node-1] [INFO] [1784863096.814329085] [capabilities]: Generating prompt request with uuid: prompt-test-uuid
+[capabilities2_server_node-1] [INFO] [1784863096.814529582] [capabilities]: Prompt generated: The position of the robot is given as a standard ros2 geometry_msgs::msg::Pose of which the content are x: 0.159187, y: -0.037186, z: -0.000005, qx: 0.000079, qy: -0.000608, qz: -0.093443, qw: 0.995624
+[capabilities2_server_node-1] [INFO] [1784863096.814622037] [capabilities]: request generated for event :3
+[capabilities2_server_node-1] [INFO] [1784863096.815723931] [capabilities]: get result call succeeded for event :3
+[capabilities2_server_node-1] [INFO] [1784863096.815768895] [capabilities]: information buffered with uuid prompt-test-uuid
+[capabilities2_server_node-1] [INFO] [1784863096.815784445] [capabilities]: emitting SUCCEEDED event with bond_id: c771cb51-4903-4fa5-bd38-f13291414dcc
+[capabilities2_server_node-1] [INFO] [1784863096.816004048] [capabilities]: Service request complete. Thread closing.
+[capabilities2_server_node-1] [INFO] [1784863096.816011452] [capabilities]: Generating prompt request with flush option: true
+[capabilities2_server_node-1] [INFO] [1784863096.816105779] [capabilities]: Generating prompt request with uuid: prompt-test-uuid
+[capabilities2_server_node-1] [INFO] [1784863096.816131939] [capabilities]: prompting with : Build a xml plan based on the availbale capabilities to acheive mentioned task of move one meter forward and describe what you see in speech. Return only the xml plan without explanations or comments.
+[capabilities2_server_node-1] [INFO] [1784863096.816151576] [capabilities]: request generated for event :4
+[capabilities2_server_node-1] [INFO] [1784863099.864758029] [capabilities]: get result call succeeded for event :4
+[capabilities2_server_node-1] [INFO] [1784863099.864823302] [capabilities]: response received : <?xml version="1.0" encoding="UTF-8"?>
+[capabilities2_server_node-1] <Plan name="move_forward_and_describe_fabric">
+[capabilities2_server_node-1]   <Control type="sequential" name="main_execution_plan">
+[capabilities2_server_node-1]     <Runner interface="nav2_capabilities/WaypointRunner" provider="nav2_capabilities/WaypointRunner" x="1.159187" y="-0.037186" z="-0.000005" qx="0.000079" qy="-0.000608" qz="-0.093443" qw="0.995624" />
+[capabilities2_server_node-1]     <Runner interface="fp_perception_capabilities/ImageAnalysisRunner" provider="fp_perception_capabilities/ImageAnalysisRunner" use_device="true" prompt="Describe the scene in front of you in a way that would make sense to a nearby person." />
+[capabilities2_server_node-1]     <Runner interface="prompt_capabilities/PromptTextRunner" provider="prompt_capabilities/PromptTextRunner" text="Use the analyzed image description to generate a short, natural sentence I can say aloud to describe what I see." uuid="move_forward_describe_uuid" flush="false" />
+[capabilities2_server_node-1]     <Runner interface="prompt_capabilities/PromptSpeechRunner" provider="prompt_capabilities/PromptSpeechRunner" task="Based on the previous context, generate a single concise sentence that describes what the robot sees after moving forward." flush="true" uuid="move_forward_describe_uuid" />
+[capabilities2_server_node-1]     <Runner interface="fp_perception_capabilities/SpeechRunner" provider="fp_perception_capabilities/SpeechRunner" use_device="true" text="$text" />
+[capabilities2_server_node-1]     <Runner interface="prompt_capabilities/PromptPlanRunner" provider="prompt_capabilities/PromptPlanRunner" replan="false" task="Wait for the next instruction." />
+[capabilities2_server_node-1]     <Runner interface="fabric_capabilities/FabricSetPlanRunner" provider="fabric_capabilities/FabricSetPlanRunner" plan="$plan" />
+[capabilities2_server_node-1]   </Control>
+[capabilities2_server_node-1] </Plan>
+[capabilities2_server_node-1] [INFO] [1784863099.864964668] [capabilities]: updated on_success parameters with received plan
+[capabilities2_server_node-1] [INFO] [1784863099.864975108] [capabilities]: emitting SUCCEEDED event with bond_id: c771cb51-4903-4fa5-bd38-f13291414dcc
+[capabilities2_server_node-1] [INFO] [1784863099.865478886] [capabilities]: Service request complete. Thread closing.
+[capabilities2_server_node-1] [INFO] [1784863099.865583934] [capabilities]: request generated for event :5
+[capabilities2_server_node-1] [INFO] [1784863099.867070853] [capabilities]: get result call succeeded for event :5
+[capabilities2_server_node-1] [INFO] [1784863099.867145924] [capabilities]: emitting SUCCEEDED event with bond_id: c771cb51-4903-4fa5-bd38-f13291414dcc
+[capabilities2_server_node-1] [INFO] [1784863099.867388120] [capabilities]: Service request complete. Thread closing.
+[capabilities2_server_node-1] [INFO] [1784863099.867477669] [capabilities]: request generated for event :6
+[capabilities2_server_node-1] [INFO] [1784863099.868696423] [capabilities]: get result call succeeded for event :6
+[capabilities2_server_node-1] [INFO] [1784863099.868791061] [capabilities]: emitting SUCCEEDED event with bond_id: c771cb51-4903-4fa5-bd38-f13291414dcc
+[capabilities2_server_node-1] [INFO] [1784863099.868848098] [capabilities]: Service request complete. Thread closing.
+[capabilities2_server_node-1] [WARN] [1784863099.919738324] [capabilities]: bond broken for id: c771cb51-4903-4fa5-bd38-f13291414dcc
+[capabilities2_server_node-1] [INFO] [1784863099.919798898] [capabilities]: stopping freed capability: capabilities2_runner/GetCapabilitySpecsRunner
+[capabilities2_server_node-1] [INFO] [1784863099.920319558] [capabilities]: emitting STOPPED event with bond_id: 
+[capabilities2_server_node-1] [INFO] [1784863099.920358511] [capabilities]: runner cleaned. stopping..
+[capabilities2_server_node-1] [INFO] [1784863099.920552606] [capabilities]: stopped capability: capabilities2_runner/GetCapabilitySpecsRunner
+[capabilities2_server_node-1] [INFO] [1784863099.920590337] [capabilities]: stopping freed capability: fabric_capabilities/FabricCompletionRunner
+[capabilities2_server_node-1] [INFO] [1784863099.920951808] [capabilities]: emitting STOPPED event with bond_id: 
+[capabilities2_server_node-1] [INFO] [1784863099.920994238] [capabilities]: runner cleaned. stopping..
+[capabilities2_server_node-1] [INFO] [1784863099.926705038] [capabilities]: stopped capability: fabric_capabilities/FabricCompletionRunner
+[capabilities2_server_node-1] [INFO] [1784863099.926786611] [capabilities]: stopping freed capability: fabric_capabilities/FabricSetPlanRunner
+[capabilities2_server_node-1] [INFO] [1784863099.927321999] [capabilities]: emitting STOPPED event with bond_id: 
+[capabilities2_server_node-1] [INFO] [1784863099.927360542] [capabilities]: runner cleaned. stopping..
+[capabilities2_server_node-1] [INFO] [1784863099.927436004] [capabilities]: stopped capability: fabric_capabilities/FabricSetPlanRunner
+[capabilities2_server_node-1] [INFO] [1784863099.927482812] [capabilities]: stopping freed capability: nav2_capabilities/RobotPoseRunner
+[capabilities2_server_node-1] [INFO] [1784863099.927844182] [capabilities]: emitting STOPPED event with bond_id: 
+[capabilities2_server_node-1] [INFO] [1784863099.944166888] [capabilities]: stopped capability: nav2_capabilities/RobotPoseRunner
+[capabilities2_server_node-1] [INFO] [1784863099.944235788] [capabilities]: stopping freed capability: prompt_capabilities/PromptCapabilityRunner
+[capabilities2_server_node-1] [INFO] [1784863099.944874600] [capabilities]: emitting STOPPED event with bond_id: 
+[capabilities2_server_node-1] [INFO] [1784863099.944943129] [capabilities]: runner cleaned. stopping..
+[capabilities2_server_node-1] [INFO] [1784863099.945127777] [capabilities]: stopped capability: prompt_capabilities/PromptCapabilityRunner
+[capabilities2_server_node-1] [INFO] [1784863099.945151291] [capabilities]: stopping freed capability: prompt_capabilities/PromptPlanRunner
+[capabilities2_server_node-1] [INFO] [1784863099.945569288] [capabilities]: emitting STOPPED event with bond_id: 
+[capabilities2_server_node-1] [INFO] [1784863099.945609513] [capabilities]: runner cleaned. stopping..
+[capabilities2_server_node-1] [INFO] [1784863099.948524641] [capabilities]: stopped capability: prompt_capabilities/PromptPlanRunner
+[capabilities2_server_node-1] [INFO] [1784863099.948587148] [capabilities]: stopping freed capability: prompt_capabilities/PromptPoseRunner
+[capabilities2_server_node-1] [INFO] [1784863099.948984987] [capabilities]: emitting STOPPED event with bond_id: 
+[capabilities2_server_node-1] [INFO] [1784863099.949039740] [capabilities]: runner cleaned. stopping..
+[capabilities2_server_node-1] [INFO] [1784863099.951369235] [capabilities]: stopped capability: prompt_capabilities/PromptPoseRunner
+[capabilities2_server_node-1] [INFO] [1784863099.976895466] [capabilities]: waiting for action: /navigate_to_pose
+[capabilities2_server_node-1] [INFO] [1784863100.077221481] [capabilities]: connected with action: /navigate_to_pose
+[capabilities2_server_node-1] [INFO] [1784863100.077279630] [capabilities]: emitting STARTED event with bond_id: 
+[capabilities2_server_node-1] [INFO] [1784863100.077297003] [capabilities]: started capability: nav2_capabilities/WaypointRunner with provider: nav2_capabilities/WaypointRunner
+[capabilities2_server_node-1] [INFO] [1784863100.077893977] [capabilities]: bond established with id: a1fe76dc-68ad-4619-aa17-b5c17ebc31a3
+[capabilities2_server_node-1] [INFO] [1784863100.087672093] [capabilities]: waiting for service: /perception/image_analysis
+[capabilities2_server_node-1] [INFO] [1784863100.187884104] [capabilities]: connected with service: /perception/image_analysis
+[capabilities2_server_node-1] [INFO] [1784863100.187949958] [capabilities]: emitting STARTED event with bond_id: 
+[capabilities2_server_node-1] [INFO] [1784863100.187974955] [capabilities]: started capability: fp_perception_capabilities/ImageAnalysisRunner with provider: fp_perception_capabilities/ImageAnalysisRunner
+[capabilities2_server_node-1] [INFO] [1784863100.192520531] [capabilities]: waiting for service: /prompt/prompt
+[capabilities2_server_node-1] [INFO] [1784863100.192602496] [capabilities]: connected with service: /prompt/prompt
+[capabilities2_server_node-1] [INFO] [1784863100.192618927] [capabilities]: emitting STARTED event with bond_id: 
+[capabilities2_server_node-1] [INFO] [1784863100.192633564] [capabilities]: started capability: prompt_capabilities/PromptTextRunner with provider: prompt_capabilities/PromptTextRunner
+[capabilities2_server_node-1] [INFO] [1784863100.197805941] [capabilities]: waiting for service: /prompt/prompt
+[capabilities2_server_node-1] [INFO] [1784863100.197925937] [capabilities]: connected with service: /prompt/prompt
+[capabilities2_server_node-1] [INFO] [1784863100.197944932] [capabilities]: emitting STARTED event with bond_id: 
+[capabilities2_server_node-1] [INFO] [1784863100.197963377] [capabilities]: started capability: prompt_capabilities/PromptSpeechRunner with provider: prompt_capabilities/PromptSpeechRunner
+[capabilities2_server_node-1] [INFO] [1784863100.202857670] [capabilities]: waiting for service: /perception/speech
+[capabilities2_server_node-1] [INFO] [1784863100.303141456] [capabilities]: connected with service: /perception/speech
+[capabilities2_server_node-1] [INFO] [1784863100.303224943] [capabilities]: emitting STARTED event with bond_id: 
+[capabilities2_server_node-1] [INFO] [1784863100.303248557] [capabilities]: started capability: fp_perception_capabilities/SpeechRunner with provider: fp_perception_capabilities/SpeechRunner
+[capabilities2_server_node-1] [INFO] [1784863100.309676598] [capabilities]: waiting for service: /prompt/prompt
+[capabilities2_server_node-1] [INFO] [1784863100.309762560] [capabilities]: connected with service: /prompt/prompt
+[capabilities2_server_node-1] [INFO] [1784863100.309783719] [capabilities]: emitting STARTED event with bond_id: 
+[capabilities2_server_node-1] [INFO] [1784863100.309803477] [capabilities]: started capability: prompt_capabilities/PromptPlanRunner with provider: prompt_capabilities/PromptPlanRunner
+[capabilities2_server_node-1] [INFO] [1784863100.315191830] [capabilities]: waiting for service: /fabric/set_plan
+[capabilities2_server_node-1] [INFO] [1784863100.315293882] [capabilities]: connected with service: /fabric/set_plan
+[capabilities2_server_node-1] [INFO] [1784863100.315365807] [capabilities]: emitting STARTED event with bond_id: 
+[capabilities2_server_node-1] [INFO] [1784863100.315381276] [capabilities]: started capability: fabric_capabilities/FabricSetPlanRunner with provider: fabric_capabilities/FabricSetPlanRunner
+[capabilities2_server_node-1] [INFO] [1784863100.320054223] [capabilities]: waiting for service: /fabric/set_completion
+[capabilities2_server_node-1] [INFO] [1784863100.320160553] [capabilities]: connected with service: /fabric/set_completion
+[capabilities2_server_node-1] [INFO] [1784863100.320184117] [capabilities]: emitting STARTED event with bond_id: 
+[capabilities2_server_node-1] [INFO] [1784863100.320205087] [capabilities]: started capability: fabric_capabilities/FabricCompletionRunner with provider: fabric_capabilities/FabricCompletionRunner
+[capabilities2_server_node-1] [INFO] [1784863100.320996987] [capabilities]: set 'type 4' connection for runner: nav2_capabilities/WaypointRunner with id: a1fe76dc-68ad-4619-aa17-b5c17ebc31a3/7/8
+[capabilities2_server_node-1] [INFO] [1784863100.321595724] [capabilities]: set 'type 4' connection for runner: fp_perception_capabilities/ImageAnalysisRunner with id: a1fe76dc-68ad-4619-aa17-b5c17ebc31a3/8/9
+[capabilities2_server_node-1] [INFO] [1784863100.322112407] [capabilities]: set 'type 4' connection for runner: prompt_capabilities/PromptTextRunner with id: a1fe76dc-68ad-4619-aa17-b5c17ebc31a3/9/10
+[capabilities2_server_node-1] [INFO] [1784863100.322735260] [capabilities]: set 'type 4' connection for runner: prompt_capabilities/PromptSpeechRunner with id: a1fe76dc-68ad-4619-aa17-b5c17ebc31a3/10/11
+[capabilities2_server_node-1] [INFO] [1784863100.323339537] [capabilities]: set 'type 4' connection for runner: fp_perception_capabilities/SpeechRunner with id: a1fe76dc-68ad-4619-aa17-b5c17ebc31a3/11/12
+[capabilities2_server_node-1] [INFO] [1784863100.323902367] [capabilities]: set 'type 4' connection for runner: prompt_capabilities/PromptPlanRunner with id: a1fe76dc-68ad-4619-aa17-b5c17ebc31a3/12/13
+[capabilities2_server_node-1] [INFO] [1784863100.324531641] [capabilities]: set 'type 4' connection for runner: fabric_capabilities/FabricSetPlanRunner with id: a1fe76dc-68ad-4619-aa17-b5c17ebc31a3/13/14
+[capabilities2_server_node-1] [INFO] [1784863100.325276363] [capabilities]: goal consist of x: 1.159187, y: -0.037186, z: -0.000005, qx: 0.000079, qy: -0.000608, qz: -0.093443, qw: 0.995624
+[capabilities2_server_node-1] [INFO] [1784863100.325421637] [capabilities]: goal generated for instance 7
+[capabilities2_server_node-1] [INFO] [1784863100.326395600] [capabilities]: goal sent. Waiting for acceptance for instance 7
+[capabilities2_server_node-1] [INFO] [1784863100.327347943] [capabilities]: goal accepted. Waiting for result for instance 7
+[capabilities2_server_node-1] [INFO] [1784863104.269210992] [capabilities]: received result for instance 7
+[capabilities2_server_node-1] [INFO] [1784863104.269281204] [capabilities]: action succeeded for instance 7
+[capabilities2_server_node-1] [INFO] [1784863104.269304257] [capabilities]: emitting SUCCEEDED event with bond_id: a1fe76dc-68ad-4619-aa17-b5c17ebc31a3
+[capabilities2_server_node-1] [INFO] [1784863104.269980310] [capabilities]: action complete. Thread closing for instance 7
+[capabilities2_server_node-1] [INFO] [1784863104.274802528] [capabilities]: request generated for event :8
+[capabilities2_server_node-1] [INFO] [1784863111.786732842] [capabilities]: get result call succeeded for event :8
+[capabilities2_server_node-1] [INFO] [1784863111.786835946] [capabilities]: Image analysis response: We're in a workshop/classroom setting. Directly ahead is a long workbench with a metal rod clamped into a support on top and various small items and equipment spread along it. A microphone stand or tripod is positioned to the left. Under the bench are a couple of red chairs, some cardboard boxes, and a yellow caution sign leaning against a chair. A person in a white long-sleeve top and dark pants is standing to the left (only their torso and legs are visible). The floor is smooth and light-colored. Overall it looks like a practical work area set up for a demonstration or small experiment.
+[capabilities2_server_node-1] [INFO] [1784863111.786943198] [capabilities]: emitting SUCCEEDED event with bond_id: a1fe76dc-68ad-4619-aa17-b5c17ebc31a3
+[capabilities2_server_node-1] [INFO] [1784863111.787326630] [capabilities]: Generating prompt request with flush option: false
+[capabilities2_server_node-1] [INFO] [1784863111.787396191] [capabilities]: Generating prompt request with uuid: move_forward_describe_uuid
+[capabilities2_server_node-1] [INFO] [1784863111.787446135] [capabilities]: Generated prompt: Analysis of the image is: We're in a workshop/classroom setting. Directly ahead is a long workbench with a metal rod clamped into a support on top and various small items and equipment spread along it. A microphone stand or tripod is positioned to the left. Under the bench are a couple of red chairs, some cardboard boxes, and a yellow caution sign leaning against a chair. A person in a white long-sleeve top and dark pants is standing to the left (only their torso and legs are visible). The floor is smooth and light-colored. Overall it looks like a practical work area set up for a demonstration or small experiment.
+[capabilities2_server_node-1] [INFO] [1784863111.787509023] [capabilities]: request generated for event :9
+[capabilities2_server_node-1] [INFO] [1784863111.787347499] [capabilities]: Service request complete. Thread closing.
+[capabilities2_server_node-1] [INFO] [1784863111.788693183] [capabilities]: get result call succeeded for event :9
+[capabilities2_server_node-1] [INFO] [1784863111.788731365] [capabilities]: information buffered with uuid move_forward_describe_uuid
+[capabilities2_server_node-1] [INFO] [1784863111.788746163] [capabilities]: emitting SUCCEEDED event with bond_id: a1fe76dc-68ad-4619-aa17-b5c17ebc31a3
+[capabilities2_server_node-1] [INFO] [1784863111.788914860] [capabilities]: Service request complete. Thread closing.
+[capabilities2_server_node-1] [INFO] [1784863111.788933235] [capabilities]: Generating prompt request with flush option: true
+[capabilities2_server_node-1] [INFO] [1784863111.789050345] [capabilities]: Generating prompt request with uuid: move_forward_describe_uuid
+[capabilities2_server_node-1] [INFO] [1784863111.789082846] [capabilities]: prompting with : Generate a human like verbal response for Based on the previous context, generate a single concise sentence that describes what the robot sees after moving forward.. Return only the speech text without explanations or comments.
+[capabilities2_server_node-1] [INFO] [1784863111.789140325] [capabilities]: request generated for event :10
+[capabilities2_server_node-1] [INFO] [1784863113.444947458] [capabilities]: get result call succeeded for event :10
+[capabilities2_server_node-1] [INFO] [1784863113.445010396] [capabilities]: response received : I see a long workbench with a metal rod clamped on top, tools and small items laid out, a tripod to the left, red chairs and boxes underneath, and a person standing nearby in a bright, clean workshop space.
+[capabilities2_server_node-1] [INFO] [1784863113.445075619] [capabilities]: updated on_success parameters with received speech text
+[capabilities2_server_node-1] [INFO] [1784863113.445085147] [capabilities]: emitting SUCCEEDED event with bond_id: a1fe76dc-68ad-4619-aa17-b5c17ebc31a3
+[capabilities2_server_node-1] [INFO] [1784863113.445323546] [capabilities]: Service request complete. Thread closing.
+[capabilities2_server_node-1] [INFO] [1784863113.445566884] [capabilities]: request generated for event :11
+[capabilities2_server_node-1] [INFO] [1784863133.776704214] [capabilities]: get result call succeeded for event :11
+[capabilities2_server_node-1] [INFO] [1784863133.776851682] [capabilities]: Speech synthesis successful (samples=0, sample_rate=0, channels=0)
+[capabilities2_server_node-1] [INFO] [1784863133.776916374] [capabilities]: emitting SUCCEEDED event with bond_id: a1fe76dc-68ad-4619-aa17-b5c17ebc31a3
+[capabilities2_server_node-1] [INFO] [1784863133.777203985] [capabilities]: Service request complete. Thread closing.
+[capabilities2_server_node-1] [INFO] [1784863133.777206530] [capabilities]: Generating prompt request with flush option: false
+[capabilities2_server_node-1] [INFO] [1784863133.777315335] [capabilities]: Generating prompt request with uuid: 
+[capabilities2_server_node-1] [INFO] [1784863133.777344510] [capabilities]: prompting with : Build a xml plan based on the availbale capabilities to acheive mentioned task of Wait for the next instruction.. Return only the xml plan without explanations or comments.
+[capabilities2_server_node-1] [INFO] [1784863133.777366972] [capabilities]: request generated for event :12
+[capabilities2_server_node-1] [INFO] [1784863133.778197897] [capabilities]: get result call succeeded for event :12
+[capabilities2_server_node-1] [INFO] [1784863133.778242221] [capabilities]: information buffered with uuid fb3594af-ed4e-41a1-ae67-3e43f8b6e90d
+[capabilities2_server_node-1] [INFO] [1784863133.778274441] [capabilities]: updated on_success parameters with received plan
+[capabilities2_server_node-1] [INFO] [1784863133.778292005] [capabilities]: emitting SUCCEEDED event with bond_id: a1fe76dc-68ad-4619-aa17-b5c17ebc31a3
+[capabilities2_server_node-1] [INFO] [1784863133.778514944] [capabilities]: Service request complete. Thread closing.
+[capabilities2_server_node-1] [INFO] [1784863133.778524542] [capabilities]: request generated for event :13
+[capabilities2_server_node-1] [INFO] [1784863133.779339577] [capabilities]: get result call succeeded for event :13
+[capabilities2_server_node-1] [INFO] [1784863133.779376076] [capabilities]: emitting SUCCEEDED event with bond_id: a1fe76dc-68ad-4619-aa17-b5c17ebc31a3
+[capabilities2_server_node-1] [INFO] [1784863133.779595299] [capabilities]: Service request complete. Thread closing.
+[capabilities2_server_node-1] [INFO] [1784863133.779626518] [capabilities]: request generated for event :14
+[capabilities2_server_node-1] [INFO] [1784863133.780173337] [capabilities]: get result call succeeded for event :14
+[capabilities2_server_node-1] [INFO] [1784863133.780212231] [capabilities]: emitting SUCCEEDED event with bond_id: a1fe76dc-68ad-4619-aa17-b5c17ebc31a3
+[capabilities2_server_node-1] [INFO] [1784863133.780265020] [capabilities]: Service request complete. Thread closing.

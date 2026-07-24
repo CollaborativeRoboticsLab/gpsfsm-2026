@@ -1,0 +1,159 @@
+ubuntu@kalana-laptop:~/colcon_ws$ ros2 launch turtlebot_capabilities perception.launch.py
+[INFO] [launch]: All log files can be found below /home/ubuntu/.ros/log/2026-07-24-03-17-34-261166-kalana-laptop-45548
+[INFO] [launch]: Default logging verbosity is set to INFO
+[INFO] [fp_perception_node-1]: process started with pid [45565]
+[fp_perception_node-1] [INFO] [1784863054.630486453] [perception_node]: Initializing PerceptionServer...
+[fp_perception_node-1] [INFO] [1784863054.631093444] [perception_node]: Audio input publish: true
+[fp_perception_node-1] [INFO] [1784863054.631118872] [perception_node]: Audio input topic: perception/microphone
+[fp_perception_node-1] [INFO] [1784863054.631127809] [perception_node]: Audio input frame_id: microphone_frame
+[fp_perception_node-1] [INFO] [1784863054.631135463] [perception_node]: Audio input frequency: 10
+[fp_perception_node-1] [INFO] [1784863054.631143358] [perception_node]: Audio retention window: 100 seconds
+[fp_perception_node-1] [INFO] [1784863054.631150933] [perception_node]: Default audio request window: 10 seconds
+[fp_perception_node-1] [INFO] [1784863054.631159348] [perception_node]: Audio output subscribe: true
+[fp_perception_node-1] [INFO] [1784863054.631167474] [perception_node]: Audio output topic: perception/speaker
+[fp_perception_node-1] [INFO] [1784863054.631176751] [perception_node]: Vision input publish: true
+[fp_perception_node-1] [INFO] [1784863054.631184566] [perception_node]: Vision input topic: perception/camera
+[fp_perception_node-1] [INFO] [1784863054.631193082] [perception_node]: Vision input frame_id: camera_frame
+[fp_perception_node-1] [INFO] [1784863054.631200265] [perception_node]: Vision input frequency: 10
+[fp_perception_node-1] [INFO] [1784863054.631207359] [perception_node]: Transcription enabled: true
+[fp_perception_node-1] [INFO] [1784863054.631214342] [perception_node]: Transcription service: perception/transcription
+[fp_perception_node-1] [INFO] [1784863054.631221766] [perception_node]: Speech synthesis enabled: true
+[fp_perception_node-1] [INFO] [1784863054.631230602] [perception_node]: Speech synthesis service name: perception/speech
+[fp_perception_node-1] [INFO] [1784863054.631239078] [perception_node]: Sentiment analysis enabled: true
+[fp_perception_node-1] [INFO] [1784863054.631246542] [perception_node]: Sentiment analysis service name: perception/sentiment_analysis
+[fp_perception_node-1] [INFO] [1784863054.631256712] [perception_node]: Image analysis enabled: true
+[fp_perception_node-1] [INFO] [1784863054.631264606] [perception_node]: Image analysis service name: perception/image_analysis
+[fp_perception_node-1] [INFO] [1784863054.631298791] [perception_node]: Loading vision driver plugin: fp_perception::DefaultDriver
+[fp_perception_node-1] [INFO] [1784863054.737007206] [perception_node]: Assigned driver name: DefaultDriver
+[fp_perception_node-1] [INFO] [1784863054.737066708] [perception_node]: Assigned driver topic: /oakd/rgb/preview/image_raw
+[fp_perception_node-1] [INFO] [1784863054.737074994] [perception_node]: DefaultDriver subscribing on topic /oakd/rgb/preview/image_raw
+[fp_perception_node-1] [INFO] [1784863054.749762050] [perception_node]: Started. Subscribed to image topic: /oakd/rgb/preview/image_raw
+[fp_perception_node-1] [INFO] [1784863054.749807115] [perception_node]: Started vision driver plugin: fp_perception::DefaultDriver
+[fp_perception_node-1] [INFO] [1784863054.749853953] [perception_node]: Loading microphone driver plugin: fp_perception::MicrophoneAudioDriver
+[fp_perception_node-1] ALSA lib pcm_dsnoop.c:567:(snd_pcm_dsnoop_open) unable to open slave
+[fp_perception_node-1] ALSA lib pcm_dmix.c:1000:(snd_pcm_dmix_open) unable to open slave
+[fp_perception_node-1] ALSA lib pcm.c:2721:(snd_pcm_open_noupdate) Unknown PCM cards.pcm.rear
+[fp_perception_node-1] ALSA lib pcm.c:2721:(snd_pcm_open_noupdate) Unknown PCM cards.pcm.center_lfe
+[fp_perception_node-1] ALSA lib pcm.c:2721:(snd_pcm_open_noupdate) Unknown PCM cards.pcm.side
+[fp_perception_node-1] ALSA lib pcm_dsnoop.c:567:(snd_pcm_dsnoop_open) unable to open slave
+[fp_perception_node-1] ALSA lib pcm_dmix.c:1000:(snd_pcm_dmix_open) unable to open slave
+[fp_perception_node-1] ALSA lib pcm_dmix.c:1000:(snd_pcm_dmix_open) unable to open slave
+[fp_perception_node-1] Cannot connect to server socket err = No such file or directory
+[fp_perception_node-1] Cannot connect to server request channel
+[fp_perception_node-1] jack server is not running or cannot be started
+[fp_perception_node-1] JackShmReadWritePtr::~JackShmReadWritePtr - Init not done for -1, skipping unlock
+[fp_perception_node-1] JackShmReadWritePtr::~JackShmReadWritePtr - Init not done for -1, skipping unlock
+[fp_perception_node-1] [INFO] [1784863056.497827360] [perception_node]: PortAudio device count: 7
+[fp_perception_node-1] [INFO] [1784863056.498008851] [perception_node]: PortAudio device 0 ['HDA NVidia: HDMI 0 (hw:0,3)'] host_api='ALSA' max_input=0 max_output=8 default_sample_rate=44100 low_input_latency=-1 low_output_latency=0.00580499
+[fp_perception_node-1] [INFO] [1784863056.498059176] [perception_node]: PortAudio device 1 ['HDA NVidia: HDMI 1 (hw:0,7)'] host_api='ALSA' max_input=0 max_output=8 default_sample_rate=44100 low_input_latency=-1 low_output_latency=0.00580499
+[fp_perception_node-1] [INFO] [1784863056.498085465] [perception_node]: PortAudio device 2 ['HDA NVidia: HDMI 2 (hw:0,8)'] host_api='ALSA' max_input=0 max_output=8 default_sample_rate=44100 low_input_latency=-1 low_output_latency=0.00580499
+[fp_perception_node-1] [INFO] [1784863056.498118908] [perception_node]: PortAudio device 3 ['HDA NVidia: HDMI 3 (hw:0,9)'] host_api='ALSA' max_input=0 max_output=8 default_sample_rate=44100 low_input_latency=-1 low_output_latency=0.00580499
+[fp_perception_node-1] [INFO] [1784863056.498142022] [perception_node]: PortAudio device 4 ['HD-Audio Generic: HDMI 0 (hw:2,3)'] host_api='ALSA' max_input=0 max_output=8 default_sample_rate=44100 low_input_latency=-1 low_output_latency=0.00580499
+[fp_perception_node-1] [INFO] [1784863056.498165406] [perception_node]: PortAudio device 5 ['HD-Audio Generic: ALC285 Analog (hw:3,0)'] host_api='ALSA' max_input=2 max_output=2 default_sample_rate=48000 low_input_latency=0.00533333 low_output_latency=0.00533333
+[fp_perception_node-1] [INFO] [1784863056.498188920] [perception_node]: PortAudio device 6 ['hdmi'] host_api='ALSA' max_input=0 max_output=8 default_sample_rate=44100 low_input_latency=-1 low_output_latency=0.00580499
+[fp_perception_node-1] [INFO] [1784863056.498293226] [perception_node]: Resolved microphone device_name 'ALC285 Analog' to device_id 5.
+[fp_perception_node-1] [WARN] [1784863056.498319686] [perception_node]: Microphone device id -1 was replaced by 5 (HD-Audio Generic: ALC285 Analog (hw:3,0)).
+[fp_perception_node-1] [INFO] [1784863056.498350755] [perception_node]: Assigned driver name: MicrophoneAudioDriver
+[fp_perception_node-1] [INFO] [1784863056.498371664] [perception_node]: Assigned driver device_id: 5
+[fp_perception_node-1] [INFO] [1784863056.498420786] [perception_node]: Assigned driver device: PortAudio device 5 ['HD-Audio Generic: ALC285 Analog (hw:3,0)'] host_api='ALSA' max_input=2 max_output=2 default_sample_rate=48000 low_input_latency=0.00533333 low_output_latency=0.00533333
+[fp_perception_node-1] [INFO] [1784863056.498445964] [perception_node]: Assigned driver chunk_size: 1920
+[fp_perception_node-1] [INFO] [1784863056.498468015] [perception_node]: Assigned driver sample_rate: 48000
+[fp_perception_node-1] [INFO] [1784863056.498489696] [perception_node]: Assigned driver channels: 1
+[fp_perception_node-1] [INFO] [1784863056.498503241] [perception_node]: Assigned driver capture_buffer_window: 10
+[fp_perception_node-1] [INFO] [1784863056.498513972] [perception_node]: Assigned driver timeout_sec: -1
+[fp_perception_node-1] [INFO] [1784863056.498521446] [perception_node]: Assigned driver buffer size: 480000
+[fp_perception_node-1] [INFO] [1784863056.498528900] [perception_node]: starting on device 5
+[fp_perception_node-1] [INFO] [1784863056.504765141] [perception_node]: Assigned driver capture_sample_rate: 48000
+[fp_perception_node-1] [INFO] [1784863056.504821658] [perception_node]: Assigned driver final buffer size: 480000 samples
+[fp_perception_node-1] [INFO] [1784863056.505137352] [perception_node]: starting callback-driven audio capture...
+[fp_perception_node-1] [INFO] [1784863056.507977094] [perception_node]: Initialized
+[fp_perception_node-1] [INFO] [1784863056.508040283] [perception_node]: Started microphone driver plugin: fp_perception::MicrophoneAudioDriver
+[fp_perception_node-1] [INFO] [1784863056.508560081] [perception_node]: Loading speaker driver plugin: fp_perception::SpeakerAudioDriver
+[fp_perception_node-1] [INFO] [1784863056.511704686] [perception_node]: PortAudio device count: 7
+[fp_perception_node-1] [INFO] [1784863056.511772844] [perception_node]: PortAudio device 0 ['HDA NVidia: HDMI 0 (hw:0,3)'] host_api='ALSA' max_input=0 max_output=8 default_sample_rate=44100 low_input_latency=-1 low_output_latency=0.00580499
+[fp_perception_node-1] [INFO] [1784863056.511796880] [perception_node]: PortAudio device 1 ['HDA NVidia: HDMI 1 (hw:0,7)'] host_api='ALSA' max_input=0 max_output=8 default_sample_rate=44100 low_input_latency=-1 low_output_latency=0.00580499
+[fp_perception_node-1] [INFO] [1784863056.511815465] [perception_node]: PortAudio device 2 ['HDA NVidia: HDMI 2 (hw:0,8)'] host_api='ALSA' max_input=0 max_output=8 default_sample_rate=44100 low_input_latency=-1 low_output_latency=0.00580499
+[fp_perception_node-1] [INFO] [1784863056.511832507] [perception_node]: PortAudio device 3 ['HDA NVidia: HDMI 3 (hw:0,9)'] host_api='ALSA' max_input=0 max_output=8 default_sample_rate=44100 low_input_latency=-1 low_output_latency=0.00580499
+[fp_perception_node-1] [INFO] [1784863056.511849218] [perception_node]: PortAudio device 4 ['HD-Audio Generic: HDMI 0 (hw:2,3)'] host_api='ALSA' max_input=0 max_output=8 default_sample_rate=44100 low_input_latency=-1 low_output_latency=0.00580499
+[fp_perception_node-1] [INFO] [1784863056.511867753] [perception_node]: PortAudio device 5 ['HD-Audio Generic: ALC285 Analog (hw:3,0)'] host_api='ALSA' max_input=2 max_output=2 default_sample_rate=48000 low_input_latency=0.00533333 low_output_latency=0.00533333
+[fp_perception_node-1] [INFO] [1784863056.511884515] [perception_node]: PortAudio device 6 ['hdmi'] host_api='ALSA' max_input=0 max_output=8 default_sample_rate=44100 low_input_latency=-1 low_output_latency=0.00580499
+[fp_perception_node-1] [INFO] [1784863056.511904151] [perception_node]: Resolved speaker device_name 'ALC285 Analog' to device_id 5.
+[fp_perception_node-1] [WARN] [1784863056.511917266] [perception_node]: Speaker device id -1 was replaced by 5 (HD-Audio Generic: ALC285 Analog (hw:3,0)).
+[fp_perception_node-1] [INFO] [1784863056.511930221] [perception_node]: Assigned driver name: SpeakerAudioDriver
+[fp_perception_node-1] [INFO] [1784863056.511941392] [perception_node]: Assigned driver device_id: 5
+[fp_perception_node-1] [INFO] [1784863056.511977560] [perception_node]: Assigned driver device: PortAudio device 5 ['HD-Audio Generic: ALC285 Analog (hw:3,0)'] host_api='ALSA' max_input=2 max_output=2 default_sample_rate=48000 low_input_latency=0.00533333 low_output_latency=0.00533333
+[fp_perception_node-1] [INFO] [1784863056.512026952] [perception_node]: Assigned driver sample_rate: 48000
+[fp_perception_node-1] [INFO] [1784863056.512036450] [perception_node]: Assigned driver channels: 2
+[fp_perception_node-1] [INFO] [1784863056.514161578] [perception_node]: Initialized
+[fp_perception_node-1] [INFO] [1784863056.514222683] [perception_node]: Started speaker driver plugin: fp_perception::SpeakerAudioDriver
+[fp_perception_node-1] [INFO] [1784863056.514802003] [perception_node]: Loading transcription driver plugin: fp_perception::OpenAIDriver
+[fp_perception_node-1] [INFO] [1784863056.525774495] [perception_node]: Assigned driver URI: https://api.openai.com/v1/audio/transcriptions
+[fp_perception_node-1] [INFO] [1784863056.525832303] [perception_node]: Assigned driver Method: POST
+[fp_perception_node-1] [INFO] [1784863056.525847452] [perception_node]: Assigned driver SSL Verify: true
+[fp_perception_node-1] [INFO] [1784863056.525860186] [perception_node]: Assigned driver Auth Type: Bearer
+[fp_perception_node-1] [INFO] [1784863056.525874122] [perception_node]: Assigned driver Timeout: 60 sec
+[fp_perception_node-1] [INFO] [1784863056.525889461] [perception_node]: Assigned driver Connect Timeout: 10 sec
+[fp_perception_node-1] [INFO] [1784863056.525934155] [perception_node]: API key loaded from environment variables: OPENAI_API_KEY
+[fp_perception_node-1] [INFO] [1784863056.525959994] [perception_node]: Assigned driver Name: OpenAIDriver
+[fp_perception_node-1] [INFO] [1784863056.525980292] [perception_node]: Assigned driver Model: whisper-1
+[fp_perception_node-1] [INFO] [1784863056.525992855] [perception_node]: Assigned driver Test Audio Path: install/fp_perception_driver_audio/share/fp_perception_driver_audio/audio/hello-1.wav
+[fp_perception_node-1] [INFO] [1784863056.528751184] [perception_node]: Initialized
+[fp_perception_node-1] [INFO] [1784863056.528837387] [perception_node]: Started transcription driver plugin: fp_perception::OpenAIDriver
+[fp_perception_node-1] [INFO] [1784863056.529357705] [perception_node]: Loading speech synthesis driver plugin: fp_perception::OpenAISpeechDriver
+[fp_perception_node-1] [INFO] [1784863056.546169242] [perception_node]: Assigned driver URI: https://api.openai.com/v1/audio/speech
+[fp_perception_node-1] [INFO] [1784863056.546246938] [perception_node]: Assigned driver Method: POST
+[fp_perception_node-1] [INFO] [1784863056.546263199] [perception_node]: Assigned driver SSL Verify: true
+[fp_perception_node-1] [INFO] [1784863056.546277505] [perception_node]: Assigned driver Auth Type: Bearer
+[fp_perception_node-1] [INFO] [1784863056.546289488] [perception_node]: Assigned driver Timeout: 60 sec
+[fp_perception_node-1] [INFO] [1784863056.546301270] [perception_node]: Assigned driver Connect Timeout: 10 sec
+[fp_perception_node-1] [INFO] [1784863056.546362385] [perception_node]: API key loaded from environment variables: OPENAI_API_KEY
+[fp_perception_node-1] [INFO] [1784863056.546380279] [perception_node]: Assigned driver name: OpenAISpeechDriver
+[fp_perception_node-1] [INFO] [1784863056.546393844] [perception_node]: Assigned driver model: gpt-4o-mini-tts
+[fp_perception_node-1] [INFO] [1784863056.546419703] [perception_node]: Assigned driver test text: Hello this is a test speech for ROS2 perception speech driver.
+[fp_perception_node-1] [INFO] [1784863056.546435923] [perception_node]: Assigned driver test file path: test/speech.wav
+[fp_perception_node-1] [INFO] [1784863056.546448427] [perception_node]: Assigned driver voice: coral
+[fp_perception_node-1] [INFO] [1784863056.546458636] [perception_node]: Assigned driver instructions: Please speak clearly and slowly.
+[fp_perception_node-1] [INFO] [1784863056.546469747] [perception_node]: Assigned driver chunking enabled: true
+[fp_perception_node-1] [INFO] [1784863056.546481289] [perception_node]: Assigned driver chunk max words: 100
+[fp_perception_node-1] [INFO] [1784863056.546495425] [perception_node]: Assigned driver chunk parallel requests: 3
+[fp_perception_node-1] [INFO] [1784863056.549449873] [perception_node]: Initialized
+[fp_perception_node-1] [INFO] [1784863056.549512752] [perception_node]: Started speech synthesis driver plugin: fp_perception::OpenAISpeechDriver
+[fp_perception_node-1] [INFO] [1784863056.550148808] [perception_node]: Loading sentiment driver plugin: fp_perception::SentimentDriver
+[fp_perception_node-1] [INFO] [1784863056.556948009] [perception_node]: Assigned driver URI: https://router.huggingface.co/hf-inference/models/distilbert/distilbert-base-uncased-finetuned-sst-2-english
+[fp_perception_node-1] [INFO] [1784863056.557004345] [perception_node]: Assigned driver Method: POST
+[fp_perception_node-1] [INFO] [1784863056.557018662] [perception_node]: Assigned driver SSL Verify: true
+[fp_perception_node-1] [INFO] [1784863056.557030805] [perception_node]: Assigned driver Auth Type: Bearer
+[fp_perception_node-1] [INFO] [1784863056.557043088] [perception_node]: Assigned driver Timeout: 60 sec
+[fp_perception_node-1] [INFO] [1784863056.557056373] [perception_node]: Assigned driver Connect Timeout: 10 sec
+[fp_perception_node-1] [INFO] [1784863056.557143156] [perception_node]: API key loaded from environment variables: HUGGINGFACE_API_KEY
+[fp_perception_node-1] [INFO] [1784863056.557195996] [perception_node]: Assigned driver Name: SentimentDriver
+[fp_perception_node-1] [INFO] [1784863056.559982277] [perception_node]: Initialized
+[fp_perception_node-1] [INFO] [1784863056.560017784] [perception_node]: Started sentiment driver plugin: fp_perception::SentimentDriver
+[fp_perception_node-1] [INFO] [1784863056.560501985] [perception_node]: Loading image analysis driver plugin: fp_perception::OpenAIImageAnalysisDriver
+[fp_perception_node-1] [INFO] [1784863056.570741508] [perception_node]: Assigned driver URI: https://api.openai.com/v1/responses
+[fp_perception_node-1] [INFO] [1784863056.570807943] [perception_node]: Assigned driver Method: POST
+[fp_perception_node-1] [INFO] [1784863056.570821638] [perception_node]: Assigned driver SSL Verify: true
+[fp_perception_node-1] [INFO] [1784863056.570834032] [perception_node]: Assigned driver Auth Type: Bearer
+[fp_perception_node-1] [INFO] [1784863056.570843620] [perception_node]: Assigned driver Timeout: 60 sec
+[fp_perception_node-1] [INFO] [1784863056.570855512] [perception_node]: Assigned driver Connect Timeout: 10 sec
+[fp_perception_node-1] [INFO] [1784863056.570875179] [perception_node]: API key loaded from environment variables: OPENAI_API_KEY
+[fp_perception_node-1] [INFO] [1784863056.570886510] [perception_node]: Assigned driver Name: OpenAIImageAnalysisDriver
+[fp_perception_node-1] [INFO] [1784863056.570916968] [perception_node]: Assigned driver Model: gpt-5-mini
+[fp_perception_node-1] [INFO] [1784863056.570928459] [perception_node]: Assigned driver Test Image Path: install/fp_perception_driver_image_analysis/share/fp_perception_driver_image_analysis/image/image.png
+[fp_perception_node-1] [INFO] [1784863056.570940492] [perception_node]: Assigned driver Test Prompt: Does this image contain a cat?
+[fp_perception_node-1] [INFO] [1784863056.570951473] [perception_node]: Assigned driver Image Detail: low
+[fp_perception_node-1] [INFO] [1784863056.573729930] [perception_node]: Initialized
+[fp_perception_node-1] [INFO] [1784863056.573787017] [perception_node]: Started image analysis driver plugin: fp_perception::OpenAIImageAnalysisDriver
+[fp_perception_node-1] [INFO] [1784863104.276775472] [perception_node]: Received image analysis request.
+[fp_perception_node-1] [INFO] [1784863113.446155983] [perception_node]: Received speech request with text: I see a long workbench with a metal rod clamped on top, tools and small items laid out, a tripod to the left, red chairs and boxes underneath, and a person standing nearby in a bright, clean workshop space.
+[fp_perception_node-1] [ERROR] [1784863113.446221086] [perception_node]: Voice is empty, using default voice.
+[fp_perception_node-1] [ERROR] [1784863113.478131265] [perception_node]: Instructions are empty, using default instructions.
+[fp_perception_node-1] [INFO] [1784863113.478284864] [perception_node]: Synthesizing speech using 1 chunk(s).
+[fp_perception_node-1] [WARN] [1784863117.656303292] [perception_node]: Incoming audio sample_rate (24000) differs from configured output sample_rate (48000). Resampling.
+[fp_perception_node-1] [INFO] [1784863117.696319366] [perception_node]: Opening speaker stream on PortAudio device 5 ['HD-Audio Generic: ALC285 Analog (hw:3,0)'] host_api='ALSA' max_input=2 max_output=2 default_sample_rate=48000 low_input_latency=0.00533333 low_output_latency=0.00533333
+[fp_perception_node-1] [INFO] [1784863117.701006652] [perception_node]: Opened new speaker stream: int16_48000_2
+[fp_perception_node-1] [INFO] [1784863117.701048701] [perception_node]: Speaker stream info: sample_rate=48000 output_latency=0.0053
+[fp_perception_node-1] [INFO] [1784863117.701064330] [perception_node]: Queueing audio to speaker stream int16_48000_2 and waiting for playback drain.
+[fp_perception_node-1] [INFO] [1784863117.722819141] [perception_node]: Queueing 770400 frames (1540800 samples) to speaker stream.
+[fp_perception_node-1] [INFO] [1784863133.775669436] [perception_node]: Speaker playback drained for stream: int16_48000_2
+[fp_perception_node-1] [INFO] [1784863133.775732755] [perception_node]: Using device audio for speech output.

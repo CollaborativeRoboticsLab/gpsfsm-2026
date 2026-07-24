@@ -1,0 +1,549 @@
+ubuntu@kalana-laptop:~/colcon_ws$ ros2 launch turtlebot_capabilities fabric.launch.py filename:=turtlebot_7.xml
+[INFO] [launch]: All log files can be found below /home/ubuntu/.ros/log/2026-07-24-05-51-15-550579-kalana-laptop-147590
+[INFO] [launch]: Default logging verbosity is set to INFO
+[INFO] [fabric_server-1]: process started with pid [147594]
+[fabric_server-1] [INFO] [1784872275.771291122] [fabric_server]: [server] Loading compatibility validation plugin: fabric::CompatibilityValidation
+[fabric_server-1] [INFO] [1784872275.772677633] [fabric_server]: [server] Initialized compatibility validation plugin: fabric::CompatibilityValidation
+[fabric_server-1] [INFO] [1784872275.772753135] [fabric_server]: [server] Loading parsing plugin: fabric::XMLParser
+[fabric_server-1] [INFO] [1784872275.774298365] [fabric_server]: [server] Initialized parsing plugin: fabric::XMLParser
+[fabric_server-1] [INFO] [1784872276.781086671] [fabric_server]: [Capability client] /capabilities/get_interfaces is not available
+[fabric_server-1] [INFO] [1784872276.913801211] [fabric_server]: [Capability client] /capabilities/get_interfaces connected
+[fabric_server-1] [INFO] [1784872277.014013630] [fabric_server]: [Capability client] /capabilities/get_semantic_interfaces connected
+[fabric_server-1] [INFO] [1784872277.014069786] [fabric_server]: [Capability client] /capabilities/get_providers connected
+[fabric_server-1] [INFO] [1784872277.014083512] [fabric_server]: [Capability client] /capabilities/establish_bond connected
+[fabric_server-1] [INFO] [1784872277.014094192] [fabric_server]: [Capability client] /capabilities/use_capability connected
+[fabric_server-1] [INFO] [1784872277.014105563] [fabric_server]: [Capability client] /capabilities/free_capability connected
+[fabric_server-1] [INFO] [1784872277.014116634] [fabric_server]: [Capability client] /capabilities/trigger_capability connected
+[fabric_server-1] [INFO] [1784872277.014127354] [fabric_server]: [Capability client] /capabilities/connect_capability connected
+[fabric_server-1] [INFO] [1784872277.014133295] [fabric_server]: [Capability client] initialized.
+[fabric_server-1] [INFO] [1784872277.014275082] [fabric_server]: Plan loaded from : /home/ubuntu/colcon_ws/install/turtlebot_capabilities/share/turtlebot_capabilities/plans/turtlebot_7.xml
+[fabric_server-1] [INFO] [1784872277.014336207] [fabric_server]: [server] Fabric node initialized
+[fabric_server-1] [INFO] [1784872277.014493724] [fabric_server]: [server] A new Fabric plan processing starting
+[fabric_server-1] [INFO] [1784872277.014618198] [fabric_server]: [server] Parsing the fabric plan.
+[fabric_server-1] [INFO] [1784872277.014636072] [fabric_server]: Plan being parsed: 
+[fabric_server-1] 
+[fabric_server-1]  <?xml version="1.0" encoding="UTF-8"?>
+[fabric_server-1] <Plan>
+[fabric_server-1]     <Control type="sequential">
+[fabric_server-1]         <Runner interface="prompt_capabilities/PromptTextRunner" provider="prompt_capabilities/PromptTextRunner" flush="false" uuid="prompt-test-uuid" text="World information: Point A is coordinates (1.5, 0.0), Point B is coordinates (-1.5, 0.0)"/>
+[fabric_server-1]         <Runner interface="capabilities2_runner/GetCapabilitySpecsRunner" provider="capabilities2_runner/GetCapabilitySpecsRunner"/>
+[fabric_server-1]         <Runner interface="prompt_capabilities/PromptCapabilityRunner" provider="prompt_capabilities/PromptCapabilityRunner" flush="false" uuid="prompt-test-uuid"/>
+[fabric_server-1]         <Runner interface="nav2_capabilities/RobotPoseRunner" provider="nav2_capabilities/RobotPoseRunner" map="map" odom="odom" robot="base_link"/>
+[fabric_server-1]         <Runner interface="prompt_capabilities/PromptPoseRunner" provider="prompt_capabilities/PromptPoseRunner" flush="false" uuid="prompt-test-uuid"/>
+[fabric_server-1]         <Runner interface="prompt_capabilities/PromptPlanRunner" provider="prompt_capabilities/PromptPlanRunner" replan="false" flush="true" uuid="prompt-test-uuid" task="Go to point A, if there is a person, ask the person&apos;s name. Come back to the origin and repeat the name. If a person is not there move to point B."/>
+[fabric_server-1]         <Runner interface="fabric_capabilities/FabricSetPlanRunner" provider="fabric_capabilities/FabricSetPlanRunner"/>
+[fabric_server-1]     </Control>
+[fabric_server-1] </Plan>
+[fabric_server-1] 
+[fabric_server-1] [INFO] [1784872277.014719810] [fabric_server]: [xml_parser] Adding completion runner to the plan
+[fabric_server-1] [INFO] [1784872277.014755828] [fabric_server]: [xml_parser] CompletionRunner added to the plan
+[fabric_server-1] [INFO] [1784872277.014790343] [fabric_server]: [xml_parser] Completion runner added. Extracting the plan element.
+[fabric_server-1] [INFO] [1784872277.014806613] [fabric_server]: [xml_parser] <Plan> element extracted successfully.
+[fabric_server-1] [INFO] [1784872277.014922542] [fabric_server]: [xml_parser] Plan syntax validation successful
+[fabric_server-1] [INFO] [1784872277.014959622] [fabric_server]: [xml_parser] Creating fabric connection: interface = prompt_capabilities/PromptTextRunner, provider = prompt_capabilities/PromptTextRunner
+[fabric_server-1] [INFO] [1784872277.015048248] [fabric_server]: [xml_parser] Extracted attribute: flush = false (bool)
+[fabric_server-1] [INFO] [1784872277.015198381] [fabric_server]: [xml_parser] Extracted attribute: uuid = prompt-test-uuid (string)
+[fabric_server-1] [INFO] [1784872277.015249167] [fabric_server]: [xml_parser] Extracted attribute: text = World information: Point A is coordinates (1.5, 0.0), Point B is coordinates (-1.5, 0.0) (string)
+[fabric_server-1] [INFO] [1784872277.015445086] [fabric_server]: [xml_parser] Creating fabric connection: interface = capabilities2_runner/GetCapabilitySpecsRunner, provider = capabilities2_runner/GetCapabilitySpecsRunner
+[fabric_server-1] [INFO] [1784872277.015499258] [fabric_server]: [xml_parser] set on_success for id 0 to interface capabilities2_runner/GetCapabilitySpecsRunner
+[fabric_server-1] [INFO] [1784872277.015509227] [fabric_server]: [xml_parser] Creating fabric connection: interface = prompt_capabilities/PromptCapabilityRunner, provider = prompt_capabilities/PromptCapabilityRunner
+[fabric_server-1] [INFO] [1784872277.015524365] [fabric_server]: [xml_parser] Extracted attribute: flush = false (bool)
+[fabric_server-1] [INFO] [1784872277.015538953] [fabric_server]: [xml_parser] Extracted attribute: uuid = prompt-test-uuid (string)
+[fabric_server-1] [INFO] [1784872277.015554812] [fabric_server]: [xml_parser] set on_success for id 1 to interface prompt_capabilities/PromptCapabilityRunner
+[fabric_server-1] [INFO] [1784872277.015564401] [fabric_server]: [xml_parser] Creating fabric connection: interface = nav2_capabilities/RobotPoseRunner, provider = nav2_capabilities/RobotPoseRunner
+[fabric_server-1] [INFO] [1784872277.015578677] [fabric_server]: [xml_parser] Extracted attribute: map = map (string)
+[fabric_server-1] [INFO] [1784872277.015591752] [fabric_server]: [xml_parser] Extracted attribute: odom = odom (string)
+[fabric_server-1] [INFO] [1784872277.015601090] [fabric_server]: [xml_parser] Extracted attribute: robot = base_link (string)
+[fabric_server-1] [INFO] [1784872277.015619805] [fabric_server]: [xml_parser] set on_success for id 2 to interface nav2_capabilities/RobotPoseRunner
+[fabric_server-1] [INFO] [1784872277.015629413] [fabric_server]: [xml_parser] Creating fabric connection: interface = prompt_capabilities/PromptPoseRunner, provider = prompt_capabilities/PromptPoseRunner
+[fabric_server-1] [INFO] [1784872277.015639041] [fabric_server]: [xml_parser] Extracted attribute: flush = false (bool)
+[fabric_server-1] [INFO] [1784872277.015647848] [fabric_server]: [xml_parser] Extracted attribute: uuid = prompt-test-uuid (string)
+[fabric_server-1] [INFO] [1784872277.015661884] [fabric_server]: [xml_parser] set on_success for id 3 to interface prompt_capabilities/PromptPoseRunner
+[fabric_server-1] [INFO] [1784872277.015671182] [fabric_server]: [xml_parser] Creating fabric connection: interface = prompt_capabilities/PromptPlanRunner, provider = prompt_capabilities/PromptPlanRunner
+[fabric_server-1] [INFO] [1784872277.015684497] [fabric_server]: [xml_parser] Extracted attribute: replan = false (bool)
+[fabric_server-1] [INFO] [1784872277.015693243] [fabric_server]: [xml_parser] Extracted attribute: flush = true (bool)
+[fabric_server-1] [INFO] [1784872277.015702290] [fabric_server]: [xml_parser] Extracted attribute: uuid = prompt-test-uuid (string)
+[fabric_server-1] [INFO] [1784872277.015711918] [fabric_server]: [xml_parser] Extracted attribute: task = Go to point A, if there is a person, ask the person's name. Come back to the origin and repeat the name. If a person is not there move to point B. (string)
+[fabric_server-1] [INFO] [1784872277.015736435] [fabric_server]: [xml_parser] set on_success for id 4 to interface prompt_capabilities/PromptPlanRunner
+[fabric_server-1] [INFO] [1784872277.015745862] [fabric_server]: [xml_parser] Creating fabric connection: interface = fabric_capabilities/FabricSetPlanRunner, provider = fabric_capabilities/FabricSetPlanRunner
+[fabric_server-1] [INFO] [1784872277.015759087] [fabric_server]: [xml_parser] set on_success for id 5 to interface fabric_capabilities/FabricSetPlanRunner
+[fabric_server-1] [INFO] [1784872277.015773494] [fabric_server]: [xml_parser] Creating fabric connection: interface = fabric_capabilities/FabricCompletionRunner, provider = fabric_capabilities/FabricCompletionRunner
+[fabric_server-1] [INFO] [1784872277.015783493] [fabric_server]: [xml_parser] Extracted attribute: plan_id = b1cefc70-427f-4738-9609-6995505da05c (string)
+[fabric_server-1] [INFO] [1784872277.015798652] [fabric_server]: [xml_parser] set on_success for id 6 to interface fabric_capabilities/FabricCompletionRunner
+[fabric_server-1] [INFO] [1784872277.015827246] [fabric_server]: Finished parsing the plan
+[fabric_server-1] [INFO] [1784872277.015836102] [fabric_server]: [server] Fabric plan parsing completed successfully.
+[fabric_server-1] [INFO] [1784872277.015843085] [fabric_server]: [server] Getting capabilities required for the plan.
+[fabric_server-1] [INFO] [1784872277.015849678] [fabric_server]: [Capability client] requesting Interface information
+[fabric_server-1] [INFO] [1784872277.033529274] [fabric_server]: [Capability client] received 15 interfaces from server
+[fabric_server-1] 
+[fabric_server-1] [INFO] [1784872277.033599135] [fabric_server]: [Capability client] checking fabric_capabilities/FabricSetPlanRunner for semantic interfaces
+[fabric_server-1] [INFO] [1784872277.034307419] [fabric_server]: [Capability client] checking fabric_capabilities/FabricCompletionRunner for semantic interfaces
+[fabric_server-1] [INFO] [1784872277.034901638] [fabric_server]: [Capability client] checking nav2_capabilities/WaypointRunner for semantic interfaces
+[fabric_server-1] [INFO] [1784872277.035506497] [fabric_server]: [Capability client] checking nav2_capabilities/RobotPoseRunner for semantic interfaces
+[fabric_server-1] [INFO] [1784872277.036139279] [fabric_server]: [Capability client] checking prompt_capabilities/PromptTextRunner for semantic interfaces
+[fabric_server-1] [INFO] [1784872277.036631175] [fabric_server]: [Capability client] checking prompt_capabilities/PromptPoseRunner for semantic interfaces
+[fabric_server-1] [INFO] [1784872277.037384524] [fabric_server]: [Capability client] checking prompt_capabilities/PromptCapabilityRunner for semantic interfaces
+[fabric_server-1] [INFO] [1784872277.038044207] [fabric_server]: [Capability client] checking prompt_capabilities/PromptPlanRunner for semantic interfaces
+[fabric_server-1] [INFO] [1784872277.038630691] [fabric_server]: [Capability client] checking prompt_capabilities/PromptSpeechRunner for semantic interfaces
+[fabric_server-1] [INFO] [1784872277.039097580] [fabric_server]: [Capability client] checking capabilities2_runner/InputMultiplexRunner for semantic interfaces
+[fabric_server-1] [INFO] [1784872277.039566914] [fabric_server]: [Capability client] checking capabilities2_runner/GetCapabilitySpecsRunner for semantic interfaces
+[fabric_server-1] [INFO] [1784872277.040054092] [fabric_server]: [Capability client] checking fp_perception_capabilities/TranscribeRunner for semantic interfaces
+[fabric_server-1] [INFO] [1784872277.040673578] [fabric_server]: [Capability client] checking fp_perception_capabilities/SpeechRunner for semantic interfaces
+[fabric_server-1] [INFO] [1784872277.041241518] [fabric_server]: [Capability client] checking fp_perception_capabilities/SentimentRunner for semantic interfaces
+[fabric_server-1] [INFO] [1784872277.041800330] [fabric_server]: [Capability client] checking fp_perception_capabilities/ImageAnalysisRunner for semantic interfaces
+[fabric_server-1] [INFO] [1784872277.042281607] [fabric_server]: [Capability client] requesting provider for fabric_capabilities/FabricSetPlanRunner
+[fabric_server-1] [INFO] [1784872277.043114606] [fabric_server]: [Capability client] received for fabric_capabilities/FabricSetPlanRunner, default provider: , number of alternative providers: 1
+[fabric_server-1] 
+[fabric_server-1] [INFO] [1784872277.043206639] [fabric_server]: [Capability client] requesting provider for fabric_capabilities/FabricCompletionRunner
+[fabric_server-1] [INFO] [1784872277.043922357] [fabric_server]: [Capability client] received for fabric_capabilities/FabricCompletionRunner, default provider: , number of alternative providers: 1
+[fabric_server-1] 
+[fabric_server-1] [INFO] [1784872277.044008740] [fabric_server]: [Capability client] requesting provider for nav2_capabilities/WaypointRunner
+[fabric_server-1] [INFO] [1784872277.044813435] [fabric_server]: [Capability client] received for nav2_capabilities/WaypointRunner, default provider: , number of alternative providers: 1
+[fabric_server-1] 
+[fabric_server-1] [INFO] [1784872277.044853480] [fabric_server]: [Capability client] requesting provider for nav2_capabilities/RobotPoseRunner
+[fabric_server-1] [INFO] [1784872277.045561985] [fabric_server]: [Capability client] received for nav2_capabilities/RobotPoseRunner, default provider: , number of alternative providers: 1
+[fabric_server-1] 
+[fabric_server-1] [INFO] [1784872277.045614063] [fabric_server]: [Capability client] requesting provider for prompt_capabilities/PromptTextRunner
+[fabric_server-1] [INFO] [1784872277.046309973] [fabric_server]: [Capability client] received for prompt_capabilities/PromptTextRunner, default provider: , number of alternative providers: 1
+[fabric_server-1] 
+[fabric_server-1] [INFO] [1784872277.046428747] [fabric_server]: [Capability client] requesting provider for prompt_capabilities/PromptPoseRunner
+[fabric_server-1] [INFO] [1784872277.047244233] [fabric_server]: [Capability client] received for prompt_capabilities/PromptPoseRunner, default provider: , number of alternative providers: 1
+[fabric_server-1] 
+[fabric_server-1] [INFO] [1784872277.047289067] [fabric_server]: [Capability client] requesting provider for prompt_capabilities/PromptCapabilityRunner
+[fabric_server-1] [INFO] [1784872277.048188601] [fabric_server]: [Capability client] received for prompt_capabilities/PromptCapabilityRunner, default provider: , number of alternative providers: 1
+[fabric_server-1] 
+[fabric_server-1] [INFO] [1784872277.048258192] [fabric_server]: [Capability client] requesting provider for prompt_capabilities/PromptPlanRunner
+[fabric_server-1] [INFO] [1784872277.049292921] [fabric_server]: [Capability client] received for prompt_capabilities/PromptPlanRunner, default provider: , number of alternative providers: 1
+[fabric_server-1] 
+[fabric_server-1] [INFO] [1784872277.049356782] [fabric_server]: [Capability client] requesting provider for prompt_capabilities/PromptSpeechRunner
+[fabric_server-1] [INFO] [1784872277.050150987] [fabric_server]: [Capability client] received for prompt_capabilities/PromptSpeechRunner, default provider: , number of alternative providers: 1
+[fabric_server-1] 
+[fabric_server-1] [INFO] [1784872277.050187566] [fabric_server]: [Capability client] requesting provider for capabilities2_runner/InputMultiplexRunner
+[fabric_server-1] [INFO] [1784872277.050949020] [fabric_server]: [Capability client] received for capabilities2_runner/InputMultiplexRunner, default provider: , number of alternative providers: 1
+[fabric_server-1] 
+[fabric_server-1] [INFO] [1784872277.050998684] [fabric_server]: [Capability client] requesting provider for capabilities2_runner/GetCapabilitySpecsRunner
+[fabric_server-1] [INFO] [1784872277.051805223] [fabric_server]: [Capability client] received for capabilities2_runner/GetCapabilitySpecsRunner, default provider: , number of alternative providers: 1
+[fabric_server-1] 
+[fabric_server-1] [INFO] [1784872277.051872920] [fabric_server]: [Capability client] requesting provider for fp_perception_capabilities/TranscribeRunner
+[fabric_server-1] [INFO] [1784872277.052678287] [fabric_server]: [Capability client] received for fp_perception_capabilities/TranscribeRunner, default provider: , number of alternative providers: 1
+[fabric_server-1] 
+[fabric_server-1] [INFO] [1784872277.052738049] [fabric_server]: [Capability client] requesting provider for fp_perception_capabilities/SpeechRunner
+[fabric_server-1] [INFO] [1784872277.053456302] [fabric_server]: [Capability client] received for fp_perception_capabilities/SpeechRunner, default provider: , number of alternative providers: 1
+[fabric_server-1] 
+[fabric_server-1] [INFO] [1784872277.053551802] [fabric_server]: [Capability client] requesting provider for fp_perception_capabilities/SentimentRunner
+[fabric_server-1] [INFO] [1784872277.054371986] [fabric_server]: [Capability client] received for fp_perception_capabilities/SentimentRunner, default provider: , number of alternative providers: 1
+[fabric_server-1] 
+[fabric_server-1] [INFO] [1784872277.054495219] [fabric_server]: [Capability client] requesting provider for fp_perception_capabilities/ImageAnalysisRunner
+[fabric_server-1] [INFO] [1784872277.055282581] [fabric_server]: [Capability client] received for fp_perception_capabilities/ImageAnalysisRunner, default provider: , number of alternative providers: 1
+[fabric_server-1] 
+[fabric_server-1] [INFO] [1784872277.055319781] [fabric_server]: [server] Capability information retrieval completed successfully.
+[fabric_server-1] [INFO] [1784872277.055328798] [fabric_server]: [server] Validating the fabric plan for compatibility.
+[fabric_server-1] [INFO] [1784872277.055388270] [fabric_server]: [server] Requesting bond from capabilities2 server.
+[fabric_server-1] [INFO] [1784872277.055426042] [fabric_server]: [Capability client] requesting bond id
+[fabric_server-1] [INFO] [1784872277.062677889] [fabric_server]: [Capability client] received bond id : f5818992-35b8-4bdf-87ba-f16cfa6cff84
+[fabric_server-1] 
+[fabric_server-1] [INFO] [1784872277.062745757] [fabric_server]: [server] Establishing bond with id : f5818992-35b8-4bdf-87ba-f16cfa6cff84
+[fabric_server-1] [INFO] [1784872277.063699553] [fabric_server]: Creating bond to capabilities server with id: f5818992-35b8-4bdf-87ba-f16cfa6cff84
+[fabric_server-1] [INFO] [1784872277.080243861] [fabric_server]: Bond started with capabilities server with id: f5818992-35b8-4bdf-87ba-f16cfa6cff84
+[fabric_server-1] [INFO] [1784872277.080292673] [fabric_server]: [server] Bond established with id : f5818992-35b8-4bdf-87ba-f16cfa6cff84
+[fabric_server-1] [INFO] [1784872277.080336255] [fabric_server]: [server] Requesting use of capabilities for the plan.
+[fabric_server-1] [INFO] [1784872277.080349299] [fabric_server]: [Capability client] starting capability 1 : prompt_capabilities/PromptTextRunner
+[fabric_server-1] [INFO] [1784872277.205259832] [fabric_server]: [Capability client] capability prompt_capabilities/PromptTextRunner started successfully.
+[fabric_server-1] 
+[fabric_server-1] [INFO] [1784872277.205324504] [fabric_server]: [Capability client] starting capability 2 : capabilities2_runner/GetCapabilitySpecsRunner
+[fabric_server-1] [INFO] [1784872277.205560859] [fabric_server]: Bond with capabilities server formed with id: f5818992-35b8-4bdf-87ba-f16cfa6cff84
+[fabric_server-1] [INFO] [1784872277.214196162] [fabric_server]: [Capability client] capability capabilities2_runner/GetCapabilitySpecsRunner started successfully.
+[fabric_server-1] 
+[fabric_server-1] [INFO] [1784872277.214331938] [fabric_server]: [Capability client] starting capability 3 : prompt_capabilities/PromptCapabilityRunner
+[fabric_server-1] [INFO] [1784872277.219230974] [fabric_server]: [Capability client] capability prompt_capabilities/PromptCapabilityRunner started successfully.
+[fabric_server-1] 
+[fabric_server-1] [INFO] [1784872277.219333798] [fabric_server]: [Capability client] starting capability 4 : nav2_capabilities/RobotPoseRunner
+[fabric_server-1] [INFO] [1784872277.254991752] [fabric_server]: [Capability client] capability nav2_capabilities/RobotPoseRunner started successfully.
+[fabric_server-1] 
+[fabric_server-1] [INFO] [1784872277.255106769] [fabric_server]: [Capability client] starting capability 5 : prompt_capabilities/PromptPoseRunner
+[fabric_server-1] [INFO] [1784872277.259643853] [fabric_server]: [Capability client] capability prompt_capabilities/PromptPoseRunner started successfully.
+[fabric_server-1] 
+[fabric_server-1] [INFO] [1784872277.259695621] [fabric_server]: [Capability client] starting capability 6 : prompt_capabilities/PromptPlanRunner
+[fabric_server-1] [INFO] [1784872277.266523670] [fabric_server]: [Capability client] capability prompt_capabilities/PromptPlanRunner started successfully.
+[fabric_server-1] 
+[fabric_server-1] [INFO] [1784872277.266587150] [fabric_server]: [Capability client] starting capability 7 : fabric_capabilities/FabricSetPlanRunner
+[fabric_server-1] [INFO] [1784872277.375512498] [fabric_server]: [Capability client] capability fabric_capabilities/FabricSetPlanRunner started successfully.
+[fabric_server-1] 
+[fabric_server-1] [INFO] [1784872277.375618417] [fabric_server]: [Capability client] starting capability 8 : fabric_capabilities/FabricCompletionRunner
+[fabric_server-1] [INFO] [1784872277.480751083] [fabric_server]: [Capability client] capability fabric_capabilities/FabricCompletionRunner started successfully.
+[fabric_server-1] 
+[fabric_server-1] [INFO] [1784872277.480810965] [fabric_server]: [server] Connecting capabilities as per the plan.
+[fabric_server-1] [INFO] [1784872277.480828408] [fabric_server]: [Capability client] configuring connection for prompt_capabilities/PromptTextRunner/0
+[fabric_server-1] [INFO] [1784872277.480848205] [fabric_server]: [Capability client] connection to capabilities2_runner/GetCapabilitySpecsRunner/1 on_success configuration requested
+[fabric_server-1] [INFO] [1784872277.481591555] [fabric_server]: [Capability client] capability connection event configured successfully.
+[fabric_server-1] 
+[fabric_server-1] [INFO] [1784872277.481675624] [fabric_server]: [Capability client] configuring connection for capabilities2_runner/GetCapabilitySpecsRunner/1
+[fabric_server-1] [INFO] [1784872277.481728062] [fabric_server]: [Capability client] connection to prompt_capabilities/PromptCapabilityRunner/2 on_success configuration requested
+[fabric_server-1] [INFO] [1784872277.482218005] [fabric_server]: [Capability client] capability connection event configured successfully.
+[fabric_server-1] 
+[fabric_server-1] [INFO] [1784872277.482308215] [fabric_server]: [Capability client] configuring connection for prompt_capabilities/PromptCapabilityRunner/2
+[fabric_server-1] [INFO] [1784872277.482340386] [fabric_server]: [Capability client] connection to nav2_capabilities/RobotPoseRunner/3 on_success configuration requested
+[fabric_server-1] [INFO] [1784872277.482856568] [fabric_server]: [Capability client] capability connection event configured successfully.
+[fabric_server-1] 
+[fabric_server-1] [INFO] [1784872277.482966465] [fabric_server]: [Capability client] configuring connection for nav2_capabilities/RobotPoseRunner/3
+[fabric_server-1] [INFO] [1784872277.483013513] [fabric_server]: [Capability client] connection to prompt_capabilities/PromptPoseRunner/4 on_success configuration requested
+[fabric_server-1] [INFO] [1784872277.483686791] [fabric_server]: [Capability client] capability connection event configured successfully.
+[fabric_server-1] 
+[fabric_server-1] [INFO] [1784872277.483807939] [fabric_server]: [Capability client] configuring connection for prompt_capabilities/PromptPoseRunner/4
+[fabric_server-1] [INFO] [1784872277.483850500] [fabric_server]: [Capability client] connection to prompt_capabilities/PromptPlanRunner/5 on_success configuration requested
+[fabric_server-1] [INFO] [1784872277.484719707] [fabric_server]: [Capability client] capability connection event configured successfully.
+[fabric_server-1] 
+[fabric_server-1] [INFO] [1784872277.484790881] [fabric_server]: [Capability client] configuring connection for prompt_capabilities/PromptPlanRunner/5
+[fabric_server-1] [INFO] [1784872277.484873967] [fabric_server]: [Capability client] connection to fabric_capabilities/FabricSetPlanRunner/6 on_success configuration requested
+[fabric_server-1] [INFO] [1784872277.485376093] [fabric_server]: [Capability client] capability connection event configured successfully.
+[fabric_server-1] 
+[fabric_server-1] [INFO] [1784872277.485456574] [fabric_server]: [Capability client] configuring connection for fabric_capabilities/FabricSetPlanRunner/6
+[fabric_server-1] [INFO] [1784872277.485504074] [fabric_server]: [Capability client] connection to fabric_capabilities/FabricCompletionRunner/7 on_success configuration requested
+[fabric_server-1] [INFO] [1784872277.486046515] [fabric_server]: [Capability client] capability connection event configured successfully.
+[fabric_server-1] 
+[fabric_server-1] [INFO] [1784872277.486154048] [fabric_server]: [Capability client] configuring connection for fabric_capabilities/FabricCompletionRunner/7
+[fabric_server-1] [INFO] [1784872277.486182762] [fabric_server]: [server] Capabilities connected successfully.
+[fabric_server-1] [INFO] [1784872277.486191478] [fabric_server]: [server] Triggering the first capability in the plan.
+[fabric_server-1] [INFO] [1784872277.487281141] [fabric_server]: [Capability client] first capability triggered successfully.
+[fabric_server-1] [INFO] [1784872277.487314744] [fabric_server]: [server] First capability triggered successfully.
+[fabric_server-1] [INFO] [1784872288.552495034] [fabric_server]: [server] Received the request with a plan
+[fabric_server-1] [INFO] [1784872288.552633625] [fabric_server]: [server] Plan accepted from service request message
+[fabric_server-1] [INFO] [1784872288.554019845] [fabric_server]: [server] Plan completion received for plan id: b1cefc70-427f-4738-9609-6995505da05c
+[fabric_server-1] [INFO] [1784872288.554070892] [fabric_server]: [server] Current plan id matches the received plan id. Proceeding to complete the plan.
+[fabric_server-1] [INFO] [1784872288.554116998] [fabric_server]: [server] Fabric processing completed. Waiting for next plan.
+[fabric_server-1] [INFO] [1784872288.554182792] [fabric_server]: [server] A new Fabric plan processing starting
+[fabric_server-1] [INFO] [1784872288.554240240] [fabric_server]: [server] Parsing the fabric plan.
+[fabric_server-1] [INFO] [1784872288.554250069] [fabric_server]: Plan being parsed: 
+[fabric_server-1] 
+[fabric_server-1]  <Plan name="go_to_A_check_person_then_B_or_origin_repeat_name">
+[fabric_server-1]   <Control type="sequential" name="main_execution_plan">
+[fabric_server-1]     <Control type="sequential" name="go_to_point_A_and_ask_name">
+[fabric_server-1]       <Runner interface="nav2_capabilities/WaypointRunner" provider="nav2_capabilities/WaypointRunner" x="1.5" y="0.0" z="0.0" qx="0.0" qy="0.0" qz="0.0" qw="1.0" />
+[fabric_server-1]       <Runner interface="fp_perception_capabilities/TranscribeRunner" provider="fp_perception_capabilities/TranscribeRunner" use_device="true" audio_request_window="15" />
+[fabric_server-1]       <Runner interface="prompt_capabilities/PromptTextRunner" provider="prompt_capabilities/PromptTextRunner" text="If the transcribed speech indicates a person responded with their name, summarize it as: PERSON_PRESENT name:&ltname&gt. If there is no clear response or no person, summarize as: NO_PERSON." uuid="task_uuid_1" flush="false" />
+[fabric_server-1]       <Runner interface="prompt_capabilities/PromptSpeechRunner" provider="prompt_capabilities/PromptSpeechRunner" task="Say: Hello, I am here to check if someone is present. Please tell me your name." flush="true" uuid="task_uuid_1" />
+[fabric_server-1]       <Runner interface="fp_perception_capabilities/SpeechRunner" provider="fp_perception_capabilities/SpeechRunner" use_device="true" text="&text" />
+[fabric_server-1]       <Runner interface="fp_perception_capabilities/TranscribeRunner" provider="fp_perception_capabilities/TranscribeRunner" use_device="true" audio_request_window="10" />
+[fabric_server-1]       <Runner interface="prompt_capabilities/PromptTextRunner" provider="prompt_capabilities/PromptTextRunner" text="From the latest transcription, determine if a name was provided. If yes, respond strictly in the form: PERSON_PRESENT name:&ltname&gt. If not, respond strictly as: NO_PERSON." uuid="task_uuid_2" flush="false" />
+[fabric_server-1]     </Control>
+[fabric_server-1] 
+[fabric_server-1]     <Control type="recovery" name="if_no_person_go_to_B">
+[fabric_server-1]       <Runner interface="prompt_capabilities/PromptSpeechRunner" provider="prompt_capabilities/PromptSpeechRunner" task="Based on the last summary, if it is NO_PERSON, answer exactly NO_PERSON. If it is PERSON_PRESENT name:&ltname&gt, answer exactly PERSON_PRESENT." flush="true" uuid="task_uuid_2" />
+[fabric_server-1]       <Runner interface="fp_perception_capabilities/SentimentRunner" provider="fp_perception_capabilities/SentimentRunner" text="&text" />
+[fabric_server-1]       <Runner interface="nav2_capabilities/WaypointRunner" provider="nav2_capabilities/WaypointRunner" x="-1.5" y="0.0" z="0.0" qx="0.0" qy="0.0" qz="0.0" qw="1.0" />
+[fabric_server-1]     </Control>
+[fabric_server-1] 
+[fabric_server-1]     <Control type="sequential" name="return_to_origin_and_repeat_name_if_person_present">
+[fabric_server-1]       <Runner interface="nav2_capabilities/WaypointRunner" provider="nav2_capabilities/WaypointRunner" x="0.113663" y="-0.113714" z="0.000001" qx="0.000875" qy="-0.001459" qz="-0.081375" qw="0.996682" />
+[fabric_server-1]       <Runner interface="prompt_capabilities/PromptSpeechRunner" provider="prompt_capabilities/PromptSpeechRunner" task="Using the context so far, if a person was present and a name was given, say: The person's name is &ltname&gt. If no person was present or no name is available, say: I did not get anyone's name." flush="true" uuid="task_uuid_2" />
+[fabric_server-1]       <Runner interface="fp_perception_capabilities/SpeechRunner" provider="fp_perception_capabilities/SpeechRunner" use_device="true" text="&text" />
+[fabric_server-1]     </Control>
+[fabric_server-1] 
+[fabric_server-1]     <Runner interface="prompt_capabilities/PromptPlanRunner" provider="prompt_capabilities/PromptPlanRunner" replan="false" task="Await further instructions or continue with new tasks." />
+[fabric_server-1]     <Runner interface="fabric_capabilities/FabricSetPlanRunner" provider="fabric_capabilities/FabricSetPlanRunner" plan="$plan" />
+[fabric_server-1]   </Control>
+[fabric_server-1] </Plan>
+[fabric_server-1] [INFO] [1784872288.554427273] [fabric_server]: [xml_parser] Adding completion runner to the plan
+[fabric_server-1] [INFO] [1784872288.554443012] [fabric_server]: [xml_parser] CompletionRunner added to the plan
+[fabric_server-1] [INFO] [1784872288.554488869] [fabric_server]: [xml_parser] Completion runner added. Extracting the plan element.
+[fabric_server-1] [INFO] [1784872288.554497685] [fabric_server]: [xml_parser] <Plan> element extracted successfully.
+[fabric_server-1] [INFO] [1784872288.554596692] [fabric_server]: [xml_parser] Plan syntax validation successful
+[fabric_server-1] [INFO] [1784872288.554608925] [fabric_server]: [xml_parser] Creating fabric connection: interface = nav2_capabilities/WaypointRunner, provider = nav2_capabilities/WaypointRunner
+[fabric_server-1] [INFO] [1784872288.554625817] [fabric_server]: [xml_parser] Extracted attribute: x = 1.500000 (double)
+[fabric_server-1] [INFO] [1784872288.554668868] [fabric_server]: [xml_parser] Extracted attribute: y = 0.000000 (double)
+[fabric_server-1] [INFO] [1784872288.554687272] [fabric_server]: [xml_parser] Extracted attribute: z = 0.000000 (double)
+[fabric_server-1] [INFO] [1784872288.554707400] [fabric_server]: [xml_parser] Extracted attribute: qx = 0.000000 (double)
+[fabric_server-1] [INFO] [1784872288.554728851] [fabric_server]: [xml_parser] Extracted attribute: qy = 0.000000 (double)
+[fabric_server-1] [INFO] [1784872288.554749249] [fabric_server]: [xml_parser] Extracted attribute: qz = 0.000000 (double)
+[fabric_server-1] [INFO] [1784872288.554767263] [fabric_server]: [xml_parser] Extracted attribute: qw = 1.000000 (double)
+[fabric_server-1] [INFO] [1784872288.554806086] [fabric_server]: [xml_parser] Creating fabric connection: interface = fp_perception_capabilities/TranscribeRunner, provider = fp_perception_capabilities/TranscribeRunner
+[fabric_server-1] [INFO] [1784872288.554829240] [fabric_server]: [xml_parser] Extracted attribute: use_device = true (bool)
+[fabric_server-1] [INFO] [1784872288.554850430] [fabric_server]: [xml_parser] Extracted attribute: audio_request_window = 15 (int)
+[fabric_server-1] [INFO] [1784872288.554916975] [fabric_server]: [xml_parser] set on_success for id 0 to interface fp_perception_capabilities/TranscribeRunner
+[fabric_server-1] [INFO] [1784872288.554941591] [fabric_server]: [xml_parser] Creating fabric connection: interface = prompt_capabilities/PromptTextRunner, provider = prompt_capabilities/PromptTextRunner
+[fabric_server-1] [INFO] [1784872288.554962030] [fabric_server]: [xml_parser] Extracted attribute: text = If the transcribed speech indicates a person responded with their name, summarize it as: PERSON_PRESENT name:&ltname&gt. If there is no clear response or no person, summarize as: NO_PERSON. (string)
+[fabric_server-1] [INFO] [1784872288.555012254] [fabric_server]: [xml_parser] Extracted attribute: uuid = task_uuid_1 (string)
+[fabric_server-1] [INFO] [1784872288.555039045] [fabric_server]: [xml_parser] Extracted attribute: flush = false (bool)
+[fabric_server-1] [INFO] [1784872288.555069172] [fabric_server]: [xml_parser] set on_success for id 1 to interface prompt_capabilities/PromptTextRunner
+[fabric_server-1] [INFO] [1784872288.555088859] [fabric_server]: [xml_parser] Creating fabric connection: interface = prompt_capabilities/PromptSpeechRunner, provider = prompt_capabilities/PromptSpeechRunner
+[fabric_server-1] [INFO] [1784872288.555109197] [fabric_server]: [xml_parser] Extracted attribute: task = Say: Hello, I am here to check if someone is present. Please tell me your name. (string)
+[fabric_server-1] [INFO] [1784872288.555133944] [fabric_server]: [xml_parser] Extracted attribute: flush = true (bool)
+[fabric_server-1] [INFO] [1784872288.555152589] [fabric_server]: [xml_parser] Extracted attribute: uuid = task_uuid_1 (string)
+[fabric_server-1] [INFO] [1784872288.555183206] [fabric_server]: [xml_parser] set on_success for id 2 to interface prompt_capabilities/PromptSpeechRunner
+[fabric_server-1] [INFO] [1784872288.555224905] [fabric_server]: [xml_parser] Creating fabric connection: interface = fp_perception_capabilities/SpeechRunner, provider = fp_perception_capabilities/SpeechRunner
+[fabric_server-1] [INFO] [1784872288.555244943] [fabric_server]: [xml_parser] Extracted attribute: use_device = true (bool)
+[fabric_server-1] [INFO] [1784872288.555291099] [fabric_server]: [xml_parser] Extracted attribute: text = &text (string)
+[fabric_server-1] [INFO] [1784872288.555326917] [fabric_server]: [xml_parser] set on_success for id 3 to interface fp_perception_capabilities/SpeechRunner
+[fabric_server-1] [INFO] [1784872288.555348017] [fabric_server]: [xml_parser] Creating fabric connection: interface = fp_perception_capabilities/TranscribeRunner, provider = fp_perception_capabilities/TranscribeRunner
+[fabric_server-1] [INFO] [1784872288.555368014] [fabric_server]: [xml_parser] Extracted attribute: use_device = true (bool)
+[fabric_server-1] [INFO] [1784872288.555398221] [fabric_server]: [xml_parser] Extracted attribute: audio_request_window = 10 (int)
+[fabric_server-1] [INFO] [1784872288.555468734] [fabric_server]: [xml_parser] set on_success for id 4 to interface fp_perception_capabilities/TranscribeRunner
+[fabric_server-1] [INFO] [1784872288.555492910] [fabric_server]: [xml_parser] Creating fabric connection: interface = prompt_capabilities/PromptTextRunner, provider = prompt_capabilities/PromptTextRunner
+[fabric_server-1] [INFO] [1784872288.555504081] [fabric_server]: [xml_parser] Extracted attribute: text = From the latest transcription, determine if a name was provided. If yes, respond strictly in the form: PERSON_PRESENT name:&ltname&gt. If not, respond strictly as: NO_PERSON. (string)
+[fabric_server-1] [INFO] [1784872288.555524890] [fabric_server]: [xml_parser] Extracted attribute: uuid = task_uuid_2 (string)
+[fabric_server-1] [INFO] [1784872288.555534919] [fabric_server]: [xml_parser] Extracted attribute: flush = false (bool)
+[fabric_server-1] [INFO] [1784872288.555551830] [fabric_server]: [xml_parser] set on_success for id 5 to interface prompt_capabilities/PromptTextRunner
+[fabric_server-1] [INFO] [1784872288.555571598] [fabric_server]: [xml_parser] Creating fabric connection: interface = prompt_capabilities/PromptSpeechRunner, provider = prompt_capabilities/PromptSpeechRunner
+[fabric_server-1] [INFO] [1784872288.555583290] [fabric_server]: [xml_parser] Extracted attribute: task = Based on the last summary, if it is NO_PERSON, answer exactly NO_PERSON. If it is PERSON_PRESENT name:&ltname&gt, answer exactly PERSON_PRESENT. (string)
+[fabric_server-1] [INFO] [1784872288.555596094] [fabric_server]: [xml_parser] Extracted attribute: flush = true (bool)
+[fabric_server-1] [INFO] [1784872288.555606674] [fabric_server]: [xml_parser] Extracted attribute: uuid = task_uuid_2 (string)
+[fabric_server-1] [INFO] [1784872288.555624487] [fabric_server]: [xml_parser] set on_failure for id 6 to interface prompt_capabilities/PromptSpeechRunner
+[fabric_server-1] [INFO] [1784872288.555637873] [fabric_server]: [xml_parser] Creating fabric connection: interface = fp_perception_capabilities/SentimentRunner, provider = fp_perception_capabilities/SentimentRunner
+[fabric_server-1] [INFO] [1784872288.555649484] [fabric_server]: [xml_parser] Extracted attribute: text = &text (string)
+[fabric_server-1] [INFO] [1784872288.555668270] [fabric_server]: [xml_parser] set on_failure for id 7 to interface fp_perception_capabilities/SentimentRunner
+[fabric_server-1] [INFO] [1784872288.555680473] [fabric_server]: [xml_parser] Creating fabric connection: interface = nav2_capabilities/WaypointRunner, provider = nav2_capabilities/WaypointRunner
+[fabric_server-1] [INFO] [1784872288.555693087] [fabric_server]: [xml_parser] Extracted attribute: x = -1.500000 (double)
+[fabric_server-1] [INFO] [1784872288.555707123] [fabric_server]: [xml_parser] Extracted attribute: y = 0.000000 (double)
+[fabric_server-1] [INFO] [1784872288.555719126] [fabric_server]: [xml_parser] Extracted attribute: z = 0.000000 (double)
+[fabric_server-1] [INFO] [1784872288.555730297] [fabric_server]: [xml_parser] Extracted attribute: qx = 0.000000 (double)
+[fabric_server-1] [INFO] [1784872288.555741237] [fabric_server]: [xml_parser] Extracted attribute: qy = 0.000000 (double)
+[fabric_server-1] [INFO] [1784872288.555752789] [fabric_server]: [xml_parser] Extracted attribute: qz = 0.000000 (double)
+[fabric_server-1] [INFO] [1784872288.555763619] [fabric_server]: [xml_parser] Extracted attribute: qw = 1.000000 (double)
+[fabric_server-1] [INFO] [1784872288.555798004] [fabric_server]: [xml_parser] set on_failure for id 8 to interface nav2_capabilities/WaypointRunner
+[fabric_server-1] [INFO] [1784872288.555840915] [fabric_server]: [xml_parser] ParallelAny connection added to the plan with id 10
+[fabric_server-1] [INFO] [1784872288.555853008] [fabric_server]: [xml_parser] Creating fabric connection: interface = nav2_capabilities/WaypointRunner, provider = nav2_capabilities/WaypointRunner
+[fabric_server-1] [INFO] [1784872288.555887282] [fabric_server]: [xml_parser] Extracted attribute: x = 0.113663 (double)
+[fabric_server-1] [INFO] [1784872288.555903202] [fabric_server]: [xml_parser] Extracted attribute: y = -0.113714 (double)
+[fabric_server-1] [INFO] [1784872288.555916297] [fabric_server]: [xml_parser] Extracted attribute: z = 0.000001 (double)
+[fabric_server-1] [INFO] [1784872288.555928981] [fabric_server]: [xml_parser] Extracted attribute: qx = 0.000875 (double)
+[fabric_server-1] [INFO] [1784872288.555940472] [fabric_server]: [xml_parser] Extracted attribute: qy = -0.001459 (double)
+[fabric_server-1] [INFO] [1784872288.555953106] [fabric_server]: [xml_parser] Extracted attribute: qz = -0.081375 (double)
+[fabric_server-1] [INFO] [1784872288.555966762] [fabric_server]: [xml_parser] Extracted attribute: qw = 0.996682 (double)
+[fabric_server-1] [INFO] [1784872288.555990467] [fabric_server]: [xml_parser] set on_success for id 10 to interface nav2_capabilities/WaypointRunner
+[fabric_server-1] [INFO] [1784872288.556001507] [fabric_server]: [xml_parser] Creating fabric connection: interface = prompt_capabilities/PromptSpeechRunner, provider = prompt_capabilities/PromptSpeechRunner
+[fabric_server-1] [INFO] [1784872288.556025613] [fabric_server]: [xml_parser] Extracted attribute: task = Using the context so far, if a person was present and a name was given, say: The person's name is &ltname&gt. If no person was present or no name is available, say: I did not get anyone's name. (string)
+[fabric_server-1] [INFO] [1784872288.556041954] [fabric_server]: [xml_parser] Extracted attribute: flush = true (bool)
+[fabric_server-1] [INFO] [1784872288.556052714] [fabric_server]: [xml_parser] Extracted attribute: uuid = task_uuid_2 (string)
+[fabric_server-1] [INFO] [1784872288.556071139] [fabric_server]: [xml_parser] set on_success for id 11 to interface prompt_capabilities/PromptSpeechRunner
+[fabric_server-1] [INFO] [1784872288.556082340] [fabric_server]: [xml_parser] Creating fabric connection: interface = fp_perception_capabilities/SpeechRunner, provider = fp_perception_capabilities/SpeechRunner
+[fabric_server-1] [INFO] [1784872288.556094142] [fabric_server]: [xml_parser] Extracted attribute: use_device = true (bool)
+[fabric_server-1] [INFO] [1784872288.556104582] [fabric_server]: [xml_parser] Extracted attribute: text = &text (string)
+[fabric_server-1] [INFO] [1784872288.556120862] [fabric_server]: [xml_parser] set on_success for id 12 to interface fp_perception_capabilities/SpeechRunner
+[fabric_server-1] [INFO] [1784872288.556134678] [fabric_server]: [xml_parser] Creating fabric connection: interface = prompt_capabilities/PromptPlanRunner, provider = prompt_capabilities/PromptPlanRunner
+[fabric_server-1] [INFO] [1784872288.556146070] [fabric_server]: [xml_parser] Extracted attribute: replan = false (bool)
+[fabric_server-1] [INFO] [1784872288.556156549] [fabric_server]: [xml_parser] Extracted attribute: task = Await further instructions or continue with new tasks. (string)
+[fabric_server-1] [INFO] [1784872288.556186716] [fabric_server]: [xml_parser] set on_success for id 13 to interface prompt_capabilities/PromptPlanRunner
+[fabric_server-1] [INFO] [1784872288.556198709] [fabric_server]: [xml_parser] Creating fabric connection: interface = fabric_capabilities/FabricSetPlanRunner, provider = fabric_capabilities/FabricSetPlanRunner
+[fabric_server-1] [INFO] [1784872288.556210731] [fabric_server]: [xml_parser] Extracted attribute: plan = $plan (string)
+[fabric_server-1] [INFO] [1784872288.556226762] [fabric_server]: [xml_parser] set on_success for id 14 to interface fabric_capabilities/FabricSetPlanRunner
+[fabric_server-1] [INFO] [1784872288.556239526] [fabric_server]: [xml_parser] Creating fabric connection: interface = fabric_capabilities/FabricCompletionRunner, provider = fabric_capabilities/FabricCompletionRunner
+[fabric_server-1] [INFO] [1784872288.556251238] [fabric_server]: [xml_parser] Extracted attribute: plan_id = e039325c-ad4c-4b84-abcc-0fad5893c88b (string)
+[fabric_server-1] [INFO] [1784872288.556268651] [fabric_server]: [xml_parser] set on_success for id 15 to interface fabric_capabilities/FabricCompletionRunner
+[fabric_server-1] [INFO] [1784872288.556279150] [fabric_server]: Finished parsing the plan
+[fabric_server-1] [INFO] [1784872288.556287286] [fabric_server]: [server] Fabric plan parsing completed successfully.
+[fabric_server-1] [INFO] [1784872288.556295160] [fabric_server]: [server] Getting capabilities required for the plan.
+[fabric_server-1] [INFO] [1784872288.556302324] [fabric_server]: [Capability client] requesting Interface information
+[fabric_server-1] [INFO] [1784872288.573217751] [fabric_server]: [Capability client] received 15 interfaces from server
+[fabric_server-1] 
+[fabric_server-1] [INFO] [1784872288.573277203] [fabric_server]: [Capability client] checking fabric_capabilities/FabricSetPlanRunner for semantic interfaces
+[fabric_server-1] [INFO] [1784872288.573936855] [fabric_server]: [Capability client] checking fabric_capabilities/FabricCompletionRunner for semantic interfaces
+[fabric_server-1] [INFO] [1784872288.574586509] [fabric_server]: [Capability client] checking nav2_capabilities/WaypointRunner for semantic interfaces
+[fabric_server-1] [INFO] [1784872288.575100136] [fabric_server]: [Capability client] checking nav2_capabilities/RobotPoseRunner for semantic interfaces
+[fabric_server-1] [INFO] [1784872288.575516149] [fabric_server]: [Capability client] checking prompt_capabilities/PromptTextRunner for semantic interfaces
+[fabric_server-1] [INFO] [1784872288.575954355] [fabric_server]: [Capability client] checking prompt_capabilities/PromptPoseRunner for semantic interfaces
+[fabric_server-1] [INFO] [1784872288.576371660] [fabric_server]: [Capability client] checking prompt_capabilities/PromptCapabilityRunner for semantic interfaces
+[fabric_server-1] [INFO] [1784872288.576843830] [fabric_server]: [Capability client] checking prompt_capabilities/PromptPlanRunner for semantic interfaces
+[fabric_server-1] [INFO] [1784872288.577243392] [fabric_server]: [Capability client] checking prompt_capabilities/PromptSpeechRunner for semantic interfaces
+[fabric_server-1] [INFO] [1784872288.577686587] [fabric_server]: [Capability client] checking capabilities2_runner/InputMultiplexRunner for semantic interfaces
+[fabric_server-1] [INFO] [1784872288.578141433] [fabric_server]: [Capability client] checking capabilities2_runner/GetCapabilitySpecsRunner for semantic interfaces
+[fabric_server-1] [INFO] [1784872288.578728349] [fabric_server]: [Capability client] checking fp_perception_capabilities/TranscribeRunner for semantic interfaces
+[fabric_server-1] [INFO] [1784872288.580968027] [fabric_server]: [Capability client] checking fp_perception_capabilities/SpeechRunner for semantic interfaces
+[fabric_server-1] [INFO] [1784872288.581437741] [fabric_server]: [Capability client] checking fp_perception_capabilities/SentimentRunner for semantic interfaces
+[fabric_server-1] [INFO] [1784872288.581863143] [fabric_server]: [Capability client] checking fp_perception_capabilities/ImageAnalysisRunner for semantic interfaces
+[fabric_server-1] [INFO] [1784872288.582435240] [fabric_server]: [Capability client] requesting provider for fabric_capabilities/FabricSetPlanRunner
+[fabric_server-1] [INFO] [1784872288.583234044] [fabric_server]: [Capability client] received for fabric_capabilities/FabricSetPlanRunner, default provider: , number of alternative providers: 1
+[fabric_server-1] 
+[fabric_server-1] [INFO] [1784872288.583294047] [fabric_server]: [Capability client] requesting provider for fabric_capabilities/FabricCompletionRunner
+[fabric_server-1] [INFO] [1784872288.584061583] [fabric_server]: [Capability client] received for fabric_capabilities/FabricCompletionRunner, default provider: , number of alternative providers: 1
+[fabric_server-1] 
+[fabric_server-1] [INFO] [1784872288.584112980] [fabric_server]: [Capability client] requesting provider for nav2_capabilities/WaypointRunner
+[fabric_server-1] [INFO] [1784872288.584770398] [fabric_server]: [Capability client] received for nav2_capabilities/WaypointRunner, default provider: , number of alternative providers: 1
+[fabric_server-1] 
+[fabric_server-1] [INFO] [1784872288.584845139] [fabric_server]: [Capability client] requesting provider for nav2_capabilities/RobotPoseRunner
+[fabric_server-1] [INFO] [1784872288.585520460] [fabric_server]: [Capability client] received for nav2_capabilities/RobotPoseRunner, default provider: , number of alternative providers: 1
+[fabric_server-1] 
+[fabric_server-1] [INFO] [1784872288.585557059] [fabric_server]: [Capability client] requesting provider for prompt_capabilities/PromptTextRunner
+[fabric_server-1] [INFO] [1784872288.586140308] [fabric_server]: [Capability client] received for prompt_capabilities/PromptTextRunner, default provider: , number of alternative providers: 1
+[fabric_server-1] 
+[fabric_server-1] [INFO] [1784872288.586183068] [fabric_server]: [Capability client] requesting provider for prompt_capabilities/PromptPoseRunner
+[fabric_server-1] [INFO] [1784872288.586983095] [fabric_server]: [Capability client] received for prompt_capabilities/PromptPoseRunner, default provider: , number of alternative providers: 1
+[fabric_server-1] 
+[fabric_server-1] [INFO] [1784872288.587019073] [fabric_server]: [Capability client] requesting provider for prompt_capabilities/PromptCapabilityRunner
+[fabric_server-1] [INFO] [1784872288.587762202] [fabric_server]: [Capability client] received for prompt_capabilities/PromptCapabilityRunner, default provider: , number of alternative providers: 1
+[fabric_server-1] 
+[fabric_server-1] [INFO] [1784872288.587812036] [fabric_server]: [Capability client] requesting provider for prompt_capabilities/PromptPlanRunner
+[fabric_server-1] [INFO] [1784872288.588556358] [fabric_server]: [Capability client] received for prompt_capabilities/PromptPlanRunner, default provider: , number of alternative providers: 1
+[fabric_server-1] 
+[fabric_server-1] [INFO] [1784872288.588622853] [fabric_server]: [Capability client] requesting provider for prompt_capabilities/PromptSpeechRunner
+[fabric_server-1] [INFO] [1784872288.589529571] [fabric_server]: [Capability client] received for prompt_capabilities/PromptSpeechRunner, default provider: , number of alternative providers: 1
+[fabric_server-1] 
+[fabric_server-1] [INFO] [1784872288.589572221] [fabric_server]: [Capability client] requesting provider for capabilities2_runner/InputMultiplexRunner
+[fabric_server-1] [INFO] [1784872288.590232434] [fabric_server]: [Capability client] received for capabilities2_runner/InputMultiplexRunner, default provider: , number of alternative providers: 1
+[fabric_server-1] 
+[fabric_server-1] [INFO] [1784872288.590272480] [fabric_server]: [Capability client] requesting provider for capabilities2_runner/GetCapabilitySpecsRunner
+[fabric_server-1] [INFO] [1784872288.590823838] [fabric_server]: [Capability client] received for capabilities2_runner/GetCapabilitySpecsRunner, default provider: , number of alternative providers: 1
+[fabric_server-1] 
+[fabric_server-1] [INFO] [1784872288.590857742] [fabric_server]: [Capability client] requesting provider for fp_perception_capabilities/TranscribeRunner
+[fabric_server-1] [INFO] [1784872288.591433476] [fabric_server]: [Capability client] received for fp_perception_capabilities/TranscribeRunner, default provider: , number of alternative providers: 1
+[fabric_server-1] 
+[fabric_server-1] [INFO] [1784872288.591495283] [fabric_server]: [Capability client] requesting provider for fp_perception_capabilities/SpeechRunner
+[fabric_server-1] [INFO] [1784872288.592211632] [fabric_server]: [Capability client] received for fp_perception_capabilities/SpeechRunner, default provider: , number of alternative providers: 1
+[fabric_server-1] 
+[fabric_server-1] [INFO] [1784872288.592252940] [fabric_server]: [Capability client] requesting provider for fp_perception_capabilities/SentimentRunner
+[fabric_server-1] [INFO] [1784872288.593144318] [fabric_server]: [Capability client] received for fp_perception_capabilities/SentimentRunner, default provider: , number of alternative providers: 1
+[fabric_server-1] 
+[fabric_server-1] [INFO] [1784872288.593193110] [fabric_server]: [Capability client] requesting provider for fp_perception_capabilities/ImageAnalysisRunner
+[fabric_server-1] [INFO] [1784872288.593920911] [fabric_server]: [Capability client] received for fp_perception_capabilities/ImageAnalysisRunner, default provider: , number of alternative providers: 1
+[fabric_server-1] 
+[fabric_server-1] [INFO] [1784872288.593965294] [fabric_server]: [server] Capability information retrieval completed successfully.
+[fabric_server-1] [INFO] [1784872288.593980513] [fabric_server]: [server] Validating the fabric plan for compatibility.
+[fabric_server-1] [INFO] [1784872288.594021921] [fabric_server]: [server] Requesting bond from capabilities2 server.
+[fabric_server-1] [INFO] [1784872288.594035837] [fabric_server]: [Capability client] requesting bond id
+[fabric_server-1] [INFO] [1784872288.599803970] [fabric_server]: [Capability client] received bond id : 7bb30db2-f0d2-419f-a216-f1befc5b241c
+[fabric_server-1] 
+[fabric_server-1] [INFO] [1784872288.599874573] [fabric_server]: [server] Establishing bond with id : 7bb30db2-f0d2-419f-a216-f1befc5b241c
+[fabric_server-1] [INFO] [1784872288.599920330] [fabric_server]: Creating bond to capabilities server with id: 7bb30db2-f0d2-419f-a216-f1befc5b241c
+[fabric_server-1] [INFO] [1784872288.604095903] [fabric_server]: Bond started with capabilities server with id: 7bb30db2-f0d2-419f-a216-f1befc5b241c
+[fabric_server-1] [INFO] [1784872288.604158521] [fabric_server]: Destroying bond to capabilities server with id: f5818992-35b8-4bdf-87ba-f16cfa6cff84
+[fabric_server-1] [INFO] [1784872288.604729286] [fabric_server]: Bond with capabilities server broken with id: f5818992-35b8-4bdf-87ba-f16cfa6cff84
+[fabric_server-1] [INFO] [1784872288.614476894] [fabric_server]: Bond stopped with capabilities server with id: f5818992-35b8-4bdf-87ba-f16cfa6cff84
+[fabric_server-1] [INFO] [1784872288.614546154] [fabric_server]: [server] Stopping and removing old bond with id : f5818992-35b8-4bdf-87ba-f16cfa6cff84
+[fabric_server-1] [INFO] [1784872288.614620404] [fabric_server]: [server] Bond established with id : 7bb30db2-f0d2-419f-a216-f1befc5b241c
+[fabric_server-1] [INFO] [1784872288.614636715] [fabric_server]: [server] Requesting use of capabilities for the plan.
+[fabric_server-1] [INFO] [1784872288.614655921] [fabric_server]: [Capability client] starting capability 1 : nav2_capabilities/WaypointRunner
+[fabric_server-1] [INFO] [1784872288.769577615] [fabric_server]: [Capability client] capability nav2_capabilities/WaypointRunner started successfully.
+[fabric_server-1] 
+[fabric_server-1] [INFO] [1784872288.769641816] [fabric_server]: [Capability client] starting capability 2 : fp_perception_capabilities/TranscribeRunner
+[fabric_server-1] [INFO] [1784872288.769859586] [fabric_server]: Bond with capabilities server formed with id: 7bb30db2-f0d2-419f-a216-f1befc5b241c
+[fabric_server-1] [INFO] [1784872288.880285410] [fabric_server]: [Capability client] capability fp_perception_capabilities/TranscribeRunner started successfully.
+[fabric_server-1] 
+[fabric_server-1] [INFO] [1784872288.880342137] [fabric_server]: [Capability client] starting capability 3 : prompt_capabilities/PromptTextRunner
+[fabric_server-1] [INFO] [1784872288.884896224] [fabric_server]: [Capability client] capability prompt_capabilities/PromptTextRunner started successfully.
+[fabric_server-1] 
+[fabric_server-1] [INFO] [1784872288.884949234] [fabric_server]: [Capability client] starting capability 4 : prompt_capabilities/PromptSpeechRunner
+[fabric_server-1] [INFO] [1784872288.889639787] [fabric_server]: [Capability client] capability prompt_capabilities/PromptSpeechRunner started successfully.
+[fabric_server-1] 
+[fabric_server-1] [INFO] [1784872288.889699390] [fabric_server]: [Capability client] starting capability 5 : fp_perception_capabilities/SpeechRunner
+[fabric_server-1] [INFO] [1784872289.000241734] [fabric_server]: [Capability client] capability fp_perception_capabilities/SpeechRunner started successfully.
+[fabric_server-1] 
+[fabric_server-1] [INFO] [1784872289.000319630] [fabric_server]: [Capability client] starting capability 6 : fp_perception_capabilities/TranscribeRunner
+[fabric_server-1] [INFO] [1784872289.003088595] [fabric_server]: [Capability client] capability fp_perception_capabilities/TranscribeRunner started successfully.
+[fabric_server-1] 
+[fabric_server-1] [INFO] [1784872289.003238117] [fabric_server]: [Capability client] starting capability 7 : prompt_capabilities/PromptTextRunner
+[fabric_server-1] [INFO] [1784872289.005845527] [fabric_server]: [Capability client] capability prompt_capabilities/PromptTextRunner started successfully.
+[fabric_server-1] 
+[fabric_server-1] [INFO] [1784872289.005927131] [fabric_server]: [Capability client] starting capability 8 : prompt_capabilities/PromptSpeechRunner
+[fabric_server-1] [INFO] [1784872289.008448079] [fabric_server]: [Capability client] capability prompt_capabilities/PromptSpeechRunner started successfully.
+[fabric_server-1] 
+[fabric_server-1] [INFO] [1784872289.008626264] [fabric_server]: [Capability client] starting capability 9 : fp_perception_capabilities/SentimentRunner
+[fabric_server-1] [INFO] [1784872289.114057102] [fabric_server]: [Capability client] capability fp_perception_capabilities/SentimentRunner started successfully.
+[fabric_server-1] 
+[fabric_server-1] [INFO] [1784872289.114127705] [fabric_server]: [Capability client] starting capability 10 : nav2_capabilities/WaypointRunner
+[fabric_server-1] [INFO] [1784872289.116345532] [fabric_server]: [Capability client] capability nav2_capabilities/WaypointRunner started successfully.
+[fabric_server-1] 
+[fabric_server-1] [INFO] [1784872289.116389404] [fabric_server]: [Capability client] starting capability 11 : capabilities2_runner/InputMultiplexRunner
+[fabric_server-1] [INFO] [1784872289.118460415] [fabric_server]: [Capability client] capability capabilities2_runner/InputMultiplexRunner started successfully.
+[fabric_server-1] 
+[fabric_server-1] [INFO] [1784872289.118524666] [fabric_server]: [Capability client] starting capability 12 : nav2_capabilities/WaypointRunner
+[fabric_server-1] [INFO] [1784872289.120569176] [fabric_server]: [Capability client] capability nav2_capabilities/WaypointRunner started successfully.
+[fabric_server-1] 
+[fabric_server-1] [INFO] [1784872289.120623719] [fabric_server]: [Capability client] starting capability 13 : prompt_capabilities/PromptSpeechRunner
+[fabric_server-1] [INFO] [1784872289.123427068] [fabric_server]: [Capability client] capability prompt_capabilities/PromptSpeechRunner started successfully.
+[fabric_server-1] 
+[fabric_server-1] [INFO] [1784872289.123481380] [fabric_server]: [Capability client] starting capability 14 : fp_perception_capabilities/SpeechRunner
+[fabric_server-1] [INFO] [1784872289.126310298] [fabric_server]: [Capability client] capability fp_perception_capabilities/SpeechRunner started successfully.
+[fabric_server-1] 
+[fabric_server-1] [INFO] [1784872289.126388806] [fabric_server]: [Capability client] starting capability 15 : prompt_capabilities/PromptPlanRunner
+[fabric_server-1] [INFO] [1784872289.133881657] [fabric_server]: [Capability client] capability prompt_capabilities/PromptPlanRunner started successfully.
+[fabric_server-1] 
+[fabric_server-1] [INFO] [1784872289.133970675] [fabric_server]: [Capability client] starting capability 16 : fabric_capabilities/FabricSetPlanRunner
+[fabric_server-1] [INFO] [1784872289.145766670] [fabric_server]: [Capability client] capability fabric_capabilities/FabricSetPlanRunner started successfully.
+[fabric_server-1] 
+[fabric_server-1] [INFO] [1784872289.145846771] [fabric_server]: [Capability client] starting capability 17 : fabric_capabilities/FabricCompletionRunner
+[fabric_server-1] [INFO] [1784872289.149818701] [fabric_server]: [Capability client] capability fabric_capabilities/FabricCompletionRunner started successfully.
+[fabric_server-1] 
+[fabric_server-1] [INFO] [1784872289.149894835] [fabric_server]: [server] Connecting capabilities as per the plan.
+[fabric_server-1] [INFO] [1784872289.149907308] [fabric_server]: [Capability client] configuring connection for nav2_capabilities/WaypointRunner/8
+[fabric_server-1] [INFO] [1784872289.149918850] [fabric_server]: [Capability client] connection to fp_perception_capabilities/TranscribeRunner/9 on_success configuration requested
+[fabric_server-1] [INFO] [1784872289.150540912] [fabric_server]: [Capability client] capability connection event configured successfully.
+[fabric_server-1] 
+[fabric_server-1] [INFO] [1784872289.150605263] [fabric_server]: [Capability client] configuring connection for fp_perception_capabilities/TranscribeRunner/9
+[fabric_server-1] [INFO] [1784872289.150672359] [fabric_server]: [Capability client] connection to prompt_capabilities/PromptTextRunner/10 on_success configuration requested
+[fabric_server-1] [INFO] [1784872289.151767782] [fabric_server]: [Capability client] capability connection event configured successfully.
+[fabric_server-1] 
+[fabric_server-1] [INFO] [1784872289.151872459] [fabric_server]: [Capability client] configuring connection for prompt_capabilities/PromptTextRunner/10
+[fabric_server-1] [INFO] [1784872289.151930388] [fabric_server]: [Capability client] connection to prompt_capabilities/PromptSpeechRunner/11 on_success configuration requested
+[fabric_server-1] [INFO] [1784872289.152506233] [fabric_server]: [Capability client] capability connection event configured successfully.
+[fabric_server-1] 
+[fabric_server-1] [INFO] [1784872289.152557720] [fabric_server]: [Capability client] configuring connection for prompt_capabilities/PromptSpeechRunner/11
+[fabric_server-1] [INFO] [1784872289.152582106] [fabric_server]: [Capability client] connection to fp_perception_capabilities/SpeechRunner/12 on_success configuration requested
+[fabric_server-1] [INFO] [1784872289.153035149] [fabric_server]: [Capability client] capability connection event configured successfully.
+[fabric_server-1] 
+[fabric_server-1] [INFO] [1784872289.153100883] [fabric_server]: [Capability client] configuring connection for fp_perception_capabilities/SpeechRunner/12
+[fabric_server-1] [INFO] [1784872289.153132001] [fabric_server]: [Capability client] connection to fp_perception_capabilities/TranscribeRunner/13 on_success configuration requested
+[fabric_server-1] [INFO] [1784872289.153595254] [fabric_server]: [Capability client] capability connection event configured successfully.
+[fabric_server-1] 
+[fabric_server-1] [INFO] [1784872289.153676236] [fabric_server]: [Capability client] configuring connection for fp_perception_capabilities/TranscribeRunner/13
+[fabric_server-1] [INFO] [1784872289.153715911] [fabric_server]: [Capability client] connection to prompt_capabilities/PromptTextRunner/14 on_success configuration requested
+[fabric_server-1] [INFO] [1784872289.154215853] [fabric_server]: [Capability client] capability connection event configured successfully.
+[fabric_server-1] 
+[fabric_server-1] [INFO] [1784872289.154273060] [fabric_server]: [Capability client] configuring connection for prompt_capabilities/PromptTextRunner/14
+[fabric_server-1] [INFO] [1784872289.154309299] [fabric_server]: [Capability client] connection to capabilities2_runner/InputMultiplexRunner/18 on_success configuration requested
+[fabric_server-1] [INFO] [1784872289.154893288] [fabric_server]: [Capability client] capability connection event configured successfully.
+[fabric_server-1] 
+[fabric_server-1] [INFO] [1784872289.154974742] [fabric_server]: [Capability client] connection to prompt_capabilities/PromptSpeechRunner/15 on_failure configuration requested
+[fabric_server-1] [INFO] [1784872289.155529747] [fabric_server]: [Capability client] capability connection event configured successfully.
+[fabric_server-1] 
+[fabric_server-1] [INFO] [1784872289.155605079] [fabric_server]: [Capability client] configuring connection for prompt_capabilities/PromptSpeechRunner/15
+[fabric_server-1] [INFO] [1784872289.155646888] [fabric_server]: [Capability client] connection to capabilities2_runner/InputMultiplexRunner/18 on_success configuration requested
+[fabric_server-1] [INFO] [1784872289.156079402] [fabric_server]: [Capability client] capability connection event configured successfully.
+[fabric_server-1] 
+[fabric_server-1] [INFO] [1784872289.156121431] [fabric_server]: [Capability client] connection to fp_perception_capabilities/SentimentRunner/16 on_failure configuration requested
+[fabric_server-1] [INFO] [1784872289.156477272] [fabric_server]: [Capability client] capability connection event configured successfully.
+[fabric_server-1] 
+[fabric_server-1] [INFO] [1784872289.156512919] [fabric_server]: [Capability client] configuring connection for fp_perception_capabilities/SentimentRunner/16
+[fabric_server-1] [INFO] [1784872289.156567271] [fabric_server]: [Capability client] connection to capabilities2_runner/InputMultiplexRunner/18 on_success configuration requested
+[fabric_server-1] [INFO] [1784872289.157025584] [fabric_server]: [Capability client] capability connection event configured successfully.
+[fabric_server-1] 
+[fabric_server-1] [INFO] [1784872289.157086830] [fabric_server]: [Capability client] connection to nav2_capabilities/WaypointRunner/17 on_failure configuration requested
+[fabric_server-1] [INFO] [1784872289.157676350] [fabric_server]: [Capability client] capability connection event configured successfully.
+[fabric_server-1] 
+[fabric_server-1] [INFO] [1784872289.157752303] [fabric_server]: [Capability client] configuring connection for nav2_capabilities/WaypointRunner/17
+[fabric_server-1] [INFO] [1784872289.157792288] [fabric_server]: [Capability client] connection to capabilities2_runner/InputMultiplexRunner/18 on_success configuration requested
+[fabric_server-1] [INFO] [1784872289.158261131] [fabric_server]: [Capability client] capability connection event configured successfully.
+[fabric_server-1] 
+[fabric_server-1] [INFO] [1784872289.158313860] [fabric_server]: [Capability client] configuring connection for capabilities2_runner/InputMultiplexRunner/18
+[fabric_server-1] [INFO] [1784872289.158346171] [fabric_server]: [Capability client] connection to nav2_capabilities/WaypointRunner/19 on_success configuration requested
+[fabric_server-1] [INFO] [1784872289.158816317] [fabric_server]: [Capability client] capability connection event configured successfully.
+[fabric_server-1] 
+[fabric_server-1] [INFO] [1784872289.158873464] [fabric_server]: [Capability client] configuring connection for nav2_capabilities/WaypointRunner/19
+[fabric_server-1] [INFO] [1784872289.158919200] [fabric_server]: [Capability client] connection to prompt_capabilities/PromptSpeechRunner/20 on_success configuration requested
+[fabric_server-1] [INFO] [1784872289.159340233] [fabric_server]: [Capability client] capability connection event configured successfully.
+[fabric_server-1] 
+[fabric_server-1] [INFO] [1784872289.159389927] [fabric_server]: [Capability client] configuring connection for prompt_capabilities/PromptSpeechRunner/20
+[fabric_server-1] [INFO] [1784872289.159436936] [fabric_server]: [Capability client] connection to fp_perception_capabilities/SpeechRunner/21 on_success configuration requested
+[fabric_server-1] [INFO] [1784872289.159856676] [fabric_server]: [Capability client] capability connection event configured successfully.
+[fabric_server-1] 
+[fabric_server-1] [INFO] [1784872289.159907822] [fabric_server]: [Capability client] configuring connection for fp_perception_capabilities/SpeechRunner/21
+[fabric_server-1] [INFO] [1784872289.159934593] [fabric_server]: [Capability client] connection to prompt_capabilities/PromptPlanRunner/22 on_success configuration requested
+[fabric_server-1] [INFO] [1784872289.160383578] [fabric_server]: [Capability client] capability connection event configured successfully.
+[fabric_server-1] 
+[fabric_server-1] [INFO] [1784872289.160456456] [fabric_server]: [Capability client] configuring connection for prompt_capabilities/PromptPlanRunner/22
+[fabric_server-1] [INFO] [1784872289.160485430] [fabric_server]: [Capability client] connection to fabric_capabilities/FabricSetPlanRunner/23 on_success configuration requested
+[fabric_server-1] [INFO] [1784872289.160997755] [fabric_server]: [Capability client] capability connection event configured successfully.
+[fabric_server-1] 
+[fabric_server-1] [INFO] [1784872289.161074880] [fabric_server]: [Capability client] configuring connection for fabric_capabilities/FabricSetPlanRunner/23
+[fabric_server-1] [INFO] [1784872289.161175069] [fabric_server]: [Capability client] connection to fabric_capabilities/FabricCompletionRunner/24 on_success configuration requested
+[fabric_server-1] [INFO] [1784872289.161643902] [fabric_server]: [Capability client] capability connection event configured successfully.
+[fabric_server-1] 
+[fabric_server-1] [INFO] [1784872289.161695900] [fabric_server]: [Capability client] configuring connection for fabric_capabilities/FabricCompletionRunner/24
+[fabric_server-1] [INFO] [1784872289.161724804] [fabric_server]: [server] Capabilities connected successfully.
+[fabric_server-1] [INFO] [1784872289.161736176] [fabric_server]: [server] Triggering the first capability in the plan.
+[fabric_server-1] [INFO] [1784872289.162243211] [fabric_server]: [Capability client] first capability triggered successfully.
+[fabric_server-1] [INFO] [1784872289.162300378] [fabric_server]: [server] First capability triggered successfully.
+[fabric_server-1] [INFO] [1784872372.365792204] [fabric_server]: [server] Received the request with a plan
+[fabric_server-1] [ERROR] [1784872372.365888174] [fabric_server]: Parsing the plan from service request message failed with error: XML_ERROR_EMPTY_DOCUMENT
+[fabric_server-1] [ERROR] [1784872372.365950692] [fabric_server]: [server] Plan received via service request not compatible with the loaded parser.
+[fabric_server-1] [INFO] [1784872372.367151263] [fabric_server]: [server] Plan completion received for plan id: e039325c-ad4c-4b84-abcc-0fad5893c88b
+[fabric_server-1] [INFO] [1784872372.367184415] [fabric_server]: [server] Current plan id matches the received plan id. Proceeding to complete the plan.
+[fabric_server-1] [INFO] [1784872372.367234941] [fabric_server]: [server] Fabric processing completed. Waiting for next plan.
